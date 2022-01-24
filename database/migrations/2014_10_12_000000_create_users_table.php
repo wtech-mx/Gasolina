@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('puesto')->nullable();
             $table->bigInteger('empresa')->nullable();
             $table->bigInteger('id_empresa')->nullable();
-            $table->bigInteger('sucursal')->nullable();
+            $table->bigInteger('id_sucursal')->nullable();
             $table->string('cp')->nullable();
             $table->string('rfc')->nullable();
             $table->string('calle')->nullable();
