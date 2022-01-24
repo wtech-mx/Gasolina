@@ -51,3 +51,59 @@
   left: 15%;
   position: relative;
 }
+
+.btn-floating{
+  position: relative;
+  z-index: 1;
+  margin: 10px;
+  overflow: hidden;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%!important;
+  width: 47px!important;
+  height: 47px!important;
+  color: #000;
+  background-color: #ffc107!important;
+  border-color: #ffc107!important;
+}
+
+
+.btn-menu-fixed {
+  position: fixed;
+  top: 85%;
+  right: 6%;
+}
+
+.modal-dialog {
+  margin: 0px;
+}
+
+.btn-menu {
+  border-radius: 30px;
+  padding: 10px;
+  opacity: 1;
+  background-color: #FFD60A!important;
+}
+
+.bg-modal-content {
+  background: rgba(0,53,102,0.80)!important;
+}
+
+.card-menu {
+  background-color: #FFC300!important;
+  width: 29%;
+  border-radius: 15PX;
+  display: inline-block!important;
+  margin-right: 10px;
+}
+
+.img-card-menu {
+  width: 60%;
+}
+
+
+.card-menu-title {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
