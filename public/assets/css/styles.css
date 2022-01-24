@@ -6,6 +6,14 @@
   background-color: rgba(0, 29, 61, 1);
 }
 
+.icon-style-2 {
+  position: absolute;
+  left: 13px;
+  top: 40px;
+  font-size: 23px;
+  color: #FFD60A;
+}
+
 .icon-style {
   position: absolute;
   left: 13px;
@@ -18,6 +26,7 @@
   background-color: #003566!important;
   border: solid #003566;
   border-radius: 15px;
+  color: #ffffff!important;
 }
 
 .btn-yellow-gas {
@@ -34,4 +43,11 @@
 }
 .form-control{
     border: 1px solid #003566!important;
+}
+
+.input-style::placeholder {
+  color: white;
+  font-weight: bold;
+  left: 15%;
+  position: relative;
 }
