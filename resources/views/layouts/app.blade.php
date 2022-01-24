@@ -12,11 +12,16 @@
     <link rel="icon"       href="{{ asset('images/icons/icon-72x72.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/Rounded-Button.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
 
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
+
 
     <!-- Boostrap -->
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
@@ -26,7 +31,17 @@
 <body class="body-bg">
             @yield('content')
 </body>
+
 <!-- Boostrap -->
 <script src={{ asset('assets/bootstrap/js/bootstrap.min.js') }}></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#table_id').DataTable();
+        });
+
+    </script>
 
 </html>
