@@ -54,7 +54,7 @@
                             <div class="form-group mb-3 position-relative" style="position: relative">
                                 <i class="fa fa-phone icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Telefono</label>
-                                <input class="form-control input-style" type="tel" id="telefono" name="telefono" placeholder="telefono">
+                                <input class="form-control input-style" type="number" id="telefono" name="telefono" placeholder="telefono">
                             </div>
                         </div>
                     </div>

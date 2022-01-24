@@ -89,7 +89,7 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="form-group mb-3 position-relative" placeholder="Contraseña">
+                            <div class="form-group mb-3 position-relative">
                                 <i class="fa fa-lock icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Contraseña</label>
                                 <input type="password" class="form-control input-style" id="password" name="password" placeholder="Contraseña">
