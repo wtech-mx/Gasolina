@@ -1,5 +1,6 @@
 <form method="POST" action="{{ route('update.sucursal', $sucursal->id) }}" enctype="multipart/form-data" role="form">
     @csrf
+    <input type="hidden" name="_method" value="PATCH">
     <div class="mb-3">
         <label class="form-label">Nombre</label>
         <input type="text" class="form-control" id="name" name="name" value="{{$sucursal->name}}">
@@ -14,7 +15,7 @@
     </div>
     <div class="mb-3">
         <label class="form-label">Empresa</label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" id="id_empresa" name="id_empresa">
             <option value="{{$sucursal->id_empresa}}">Seleccionar en caso de cambiar</option>
             @foreach ($empresas as $item)
                 <option value="{{$sucursal->id}}">{{$item->name}}</option>

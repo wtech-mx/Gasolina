@@ -1,5 +1,6 @@
 <form method="POST" action="{{ route('update.empresa', $empresa->id) }}" enctype="multipart/form-data" role="form">
     @csrf
+    <input type="hidden" name="_method" value="PATCH">
     <div class="mb-3">
         <label class="form-label">Nombre</label>
         <input type="text" class="form-control" id="name" name="name" value="{{$empresa->name}}">
