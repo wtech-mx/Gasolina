@@ -1,0 +1,28 @@
+.add {
+  background: #FFD60A;
+  padding: 20px;
+  font-size: 18px;
+  color: #000;
+  border: none;
+  border-radius: 300px;
+  display: block;
+  margin: auto;
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+@media (min-width: 768px) {
+  .limit-content {
+    max-width: 350px;
+    margin-left: auto!important;
+    margin-right: auto!important;
+  }
+}
+
+/*.box {*/
+/*  background-color: rgba(0, 29, 61, 0.6);*/
+/*}*/
+
