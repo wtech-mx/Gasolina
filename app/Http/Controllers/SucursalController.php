@@ -18,11 +18,11 @@ class SucursalController extends Controller
     function index()
     {
             $sucursal_admin = User::
-            where('sucursal', '=', 1)
+            where('empresa', '=', 2)
             ->get();
 
             $sucursal_empresa = User::
-            where('sucursal', '=', 1)
+            where('empresa', '=', 2)
             ->where('id_empresa', '=', auth()->user()->id)
             ->get();
 
@@ -52,7 +52,7 @@ class SucursalController extends Controller
         $sucursal = new User;
         $sucursal->name = $request->get('name');
         $sucursal->id_empresa = $request->get('id_empresa');
-        $sucursal->sucursal = 1;
+        $sucursal->empresa = 2;
         $sucursal->email = $request->get('email');
         $sucursal->password = Hash::make($request->password);
 
@@ -76,7 +76,7 @@ class SucursalController extends Controller
         $sucursal = User::findOrFail($id);
         $sucursal->name = $request->get('name');
         $sucursal->id_empresa = $request->get('id_empresa');
-        $sucursal->sucursal = 1;
+        $sucursal->empresa = 2;
         $sucursal->email = $request->get('email');
         $sucursal->password = Hash::make($request->password);
 

@@ -23,6 +23,15 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 /*|--------------------------------------------------------------------------
+|Usuario
+|--------------------------------------------------------------------------*/
+Route::get('/usuario', [App\Http\Controllers\UserController::class, 'index'])->name('index.usuario');
+Route::get('/create/usuario', [App\Http\Controllers\UserController::class, 'create'])->name('create.usuario');
+Route::post('/store/usuario', [App\Http\Controllers\UserController::class, 'store'])->name('store.usuario');
+Route::get('/edit/usuario/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('edit.usuario');
+Route::patch('/update/usuario/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('update.usuario');
+
+/*|--------------------------------------------------------------------------
 |Empresas
 |--------------------------------------------------------------------------*/
 Route::get('/empresas', [App\Http\Controllers\EmpresaController::class, 'index'])->name('index.empresa');

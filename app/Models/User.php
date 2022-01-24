@@ -25,7 +25,8 @@ class User extends Authenticatable
         'password',
         'apellido',
         'telefono',
-        'sucursal',
+        'id_sucursal',
+        'id_empresa',
     ];
 
     /**
@@ -46,4 +47,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function UserEmpresa()
+    {
+       return $this->belongsTo(User::class,'id_empresa');
+    }
+
+    public function UserSucursal()
+    {
+       return $this->belongsTo(User::class,'id_sucursal');
+    }
 }
