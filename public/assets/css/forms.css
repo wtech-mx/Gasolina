@@ -1,0 +1,66 @@
+.label-custom-yellow {
+  color: #ffd60a;
+}
+
+
+.icon-style-2 {
+  position: absolute;
+  left: 13px;
+  top: 40px;
+  font-size: 23px;
+  color: #FFD60A;
+}
+
+.icon-style {
+  position: absolute;
+  left: 13px;
+  top: 11px;
+  font-size: 23px;
+  color: #FFD60A;
+}
+
+.input-style {
+  background-color: #003566!important;
+  border: solid #003566;
+  border-radius: 15px;
+  color: #ffffff!important;
+}
+
+
+.input-style::placeholder {
+  color: white;
+  font-weight: bold;
+  left: 15%;
+  position: relative;
+}
+.form-control{
+    border: 1px solid #003566!important;
+}
+
+.input-style::placeholder {
+  color: white;
+  font-weight: bold;
+  left: 15%;
+  position: relative;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: #ffd60a!important;
+    color: #000;
+    font-weight: bold;
+    border-radius: 15px 0px 0px 15px!important;
+}
+
+.a-perso{
+    background-color: red;
+    color: #000;
+    font-weight: bold;
+    border-radius: 15px 0px 0px 15px!important;;
+}
+
+.nav-pills .nav-link {
+   background-color: #A08500!important;
+    color: #ffffff!important;
+    text-decoration: none;
+    border-radius: 0px 15px 15px 0px!important;
+}

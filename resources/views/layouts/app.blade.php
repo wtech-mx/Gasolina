@@ -10,8 +10,9 @@
 
     <!-- Css -->
     <link rel="icon"       href="{{ asset('images/icons/icon-72x72.png') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/Rounded-Button.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/buttons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/forms.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
     <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 
 
