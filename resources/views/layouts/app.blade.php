@@ -38,8 +38,9 @@
             </div>
 
             {{--modal--}}
-
+        @auth
             @include('layouts.menu')
+        @endauth
 
 </body>
 
