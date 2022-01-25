@@ -82,7 +82,7 @@
                     <div class="row">
                         <div class="col-sm-6 col-6">
                             <div class="form-group mb-3 position-relative">
-                                <i class="fa fa-user icon-style-2"></i>
+                                <i class="fa fa-cube icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Empresa</label>
                                     <select class="form-select" aria-label="Default select example" id="id_empresa" name="id_empresa">
                                         @foreach ($empresa as $item)
@@ -94,16 +94,13 @@
 
                         <div class="col-sm-6 col-6">
                             <div class="form-group mb-3 position-relative">
-                                <i class="fa fa-font icon-style-2"></i>
-                                <label class="form-label label-custom-yellow">Sucursal</label>
-                                <select class="form-select" aria-label="Default select example" id="id_sucursal" name="id_sucursal">
-                                    @foreach ($sucursal as $item)
-                                        <option value="{{$item->id}}">{{$item->name}}</option>
-                                    @endforeach
-                                </select>
+                                <i class="fa fa-cubes icon-style-2"></i>
+                                    <label class="form-label label-custom-yellow">Sucursal</label>
+                                    <select class="form-control" id="id_sucursal" name="id_sucursal">
+                                        <option value="">Seleccione Sucursal</option>
+                                    </select>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="row">
@@ -114,6 +111,31 @@
                         </div>
                     </div>
 
+                    <!-- Select anidado Empresa-->
+                    <script>
+                        $(document).ready(function () {
+                                    $('#id_empresa').on('change', function () {
+                                    let id = $(this).val();
+                                    //id_empresa no esta en la tabla de automovil
+                                    $('#id_sucursal').empty();
+                                    $('#id_sucursal').append(`<option value="" disabled selected>Procesando..</option>`);
+                                    $.ajax({
+                                    type: 'GET',
+                                    url: '/create/usuario/' + id,
+                                    success: function (response) {
+                                    var response = JSON.parse(response);
+                                    console.log(response);
+                                    //trae los automoviles relacionados con el id_empresaac
+                                    $('#id_sucursal').empty();
+                                    $('#id_sucursal').append(`<option value="" disabled selected>Seleccione Sucursal</option>`);
+                                    response.forEach(element => {
+                                        $('#id_sucursal').append(`<option value="${element['id']}">${element['name']}</option>`);
+                                        });
+                                    }
+                                });
+                            });
+                        });
+                    </script>
                 </form>
             </div>
 </div>

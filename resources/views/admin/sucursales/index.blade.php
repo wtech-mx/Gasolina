@@ -25,7 +25,7 @@
                     <thead class="text-white">
                     <tr>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Correo</th>
+                        <th scope="col">Empresa</th>
                     </tr>
                     </thead>
                     <tbody class="text-white">
@@ -34,7 +34,7 @@
                             <td><a style="text-decoration: none;"
                                 href="{{ route('edit.sucursal', $item->id) }}">{{$item->name}}</a>
                             </td>
-                            <td>{{$item->email}}</td>
+                            <td>{{$item->UserEmpresa->name}}</td>
                         </tr>
                         @endforeach
                     </tbody>

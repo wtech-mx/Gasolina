@@ -31,6 +31,9 @@ Route::post('/store/usuario', [App\Http\Controllers\UserController::class, 'stor
 Route::get('/edit/usuario/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('edit.usuario');
 Route::patch('/update/usuario/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('update.usuario');
 
+Route::patch('/usuario/update/password/{id}', [App\Http\Controllers\UserController::class, 'update_usuario_password'])->name('update_usuario_password.usuario');
+Route::get('/create/usuario/{id}', [App\Http\Controllers\UserController::class, 'GetSucursalAgainstMainCatEdit']);
+
 /*|--------------------------------------------------------------------------
 |Empresas
 |--------------------------------------------------------------------------*/
