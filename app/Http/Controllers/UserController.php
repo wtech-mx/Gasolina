@@ -21,6 +21,12 @@ class UserController extends Controller
             return view('admin.usuarios.index', compact('users'));
     }
 
+    /* Trae las sucursales con la empresa seleccionada  */
+    public function GetSucursalAgainstMainCatEdit($id)
+    {
+        echo json_encode(DB::table('users')->where('id_empresa', $id)->where('id_sucursal', '=', NULL)->get());
+    }
+
     public function create()
     {
             $empresa = DB::table('users')
@@ -85,6 +91,22 @@ class UserController extends Controller
         $empresa->update();
 
         Session::flash('success', 'Se ha actualizado sus datos con exito');
+        return redirect()->route('index.usuario');
+    }
+
+    public function update_usuario_password(Request $request, $id)
+    {
+        $validate = $this->validate($request, [
+            'password' => 'required|string|confirmed|min:8',
+        ]);
+
+        $user = User::findOrFail($id);
+
+        $pass = $user->password = $request->password;
+        $user->password = Hash::make($request->password);
+        $email = $user->email;
+
+        Session::flash('success', 'Se ha actualizado su contrasena con exito');
         return redirect()->route('index.usuario');
     }
 }
