@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use DB;
 use Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class EmpresaController extends Controller
 {
@@ -29,10 +31,22 @@ public function create()
 
 public function store(Request $request)
 {
-    $validate = $this->validate($request, [
+
+    //1/3 - error de validacion en la sweetalert *OBLIGATORIO*
+    $validator = Validator::make($request->all(), [
         'name' => 'required|string|max:191',
         'email' => 'required|string|email|max:191|unique:users',
     ]);
+
+    //2/3- Envia Mensaje de validacion en la Sweetalert
+    if ($validator->fails()) {
+        return redirect()->back()
+            ->with('errorForm', $validator->errors()->getMessages())
+            ->withInput();
+    }
+    try {
+
+    //3/3- Si la validacion es correcta se crea el registro
 
     $empresa = new User;
     $empresa->name = $request->get('name');
@@ -46,9 +60,18 @@ public function store(Request $request)
     $empresa->password = Hash::make($request->password);
 
     $empresa->save();
-    Session::flash('success', 'Se ha actualizado sus datos con exito');
-    return redirect()->route('index.empresa');
+
+    // Redireccion  de suuces or fail dependiedno el caso
+
+        return redirect()->back()
+            ->with('success', 'Empresa Creada Exitosamente!');
+    } catch (\Exception $e) {
+        return redirect()->back()
+            ->with('error', 'Error en el registro!!');
+    }
+
 }
+
 public function edit($id)
 {
         $empresa = User::findOrFail($id);

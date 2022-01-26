@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use DB;
 use Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -42,24 +43,45 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        $validate = $this->validate($request, [
+
+        //1/3 - error de validacion en la sweetalert *OBLIGATORIO*
+        $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191|unique:users',
+            'puesto' => 'required|string|max:191',
         ]);
 
-        $empresa = new User;
-        $empresa->name = $request->get('name');
-        $empresa->apellido = $request->get('apellido');
-        $empresa->telefono = $request->get('telefono');
-        $empresa->puesto = $request->get('puesto');
-        $empresa->id_empresa = $request->get('id_empresa');
-        $empresa->id_sucursal = $request->get('id_sucursal');
-        $empresa->email = $request->get('email');
-        $empresa->password = Hash::make($request->password);
+        //2/3- Envia Mensaje de validacion en la Sweetalert
+        if ($validator->fails()) {
+            return redirect()->back()
+                ->with('errorForm', $validator->errors()->getMessages())
+                ->withInput();
+        }
+        try {
 
-        $empresa->save();
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
-        return redirect()->route('index.usuario');
+        //3/3- Si la validacion es correcta se crea el registro
+
+            $empresa = new User;
+            $empresa->name = $request->get('name');
+            $empresa->apellido = $request->get('apellido');
+            $empresa->telefono = $request->get('telefono');
+            $empresa->puesto = $request->get('puesto');
+            $empresa->id_empresa = $request->get('id_empresa');
+            $empresa->id_sucursal = $request->get('id_sucursal');
+            $empresa->email = $request->get('email');
+            $empresa->password = Hash::make($request->password);
+
+            $empresa->save();
+
+        // Redireccion  de suuces or fail dependiedno el caso
+
+            return redirect()->route('index.usuario')
+                ->with('success', 'Usuario Creada Exitosamente!');
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->with('error', 'Error en el registro!!');
+        }
+
     }
     public function edit($id)
     {

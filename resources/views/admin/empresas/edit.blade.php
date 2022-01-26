@@ -104,13 +104,13 @@
                     <div class="row">
                         <div class="col-12">
                           <div class="col-12 text-center">
-                              <a class="mt-5" type="submit">
-                                  <div class="button">
+                              <button class="mt-5 btn-sinestilo" type="submit">
+                                  <div class="button" >
                                       <div class="icon">
                                           <i class="fa fa-floppy-o"></i>
                                       </div>
                                   </div>
-                              </a>
+                              </button>
                           </div>
                         </div>
                     </div>
@@ -138,13 +138,13 @@
 
                       <div class="row">
                           <div class="col-12 text-center">
-                              <a class="mt-5" type="submit">
-                                  <div class="button">
+                              <button class="mt-5 btn-sinestilo" type="submit">
+                                  <div class="button" >
                                       <div class="icon">
                                           <i class="fa fa-floppy-o"></i>
                                       </div>
                                   </div>
-                              </a>
+                              </button>
                           </div>
                       </div>
                   </form>

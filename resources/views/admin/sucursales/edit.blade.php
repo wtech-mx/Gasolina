@@ -71,13 +71,13 @@
 
                     <div class="row">
                         <div class="col-12 text-center">
-                            <a class="mt-5" type="submit">
-                                <div class="button">
-                                    <div class="icon">
-                                        <i class="fa fa-floppy-o"></i>
-                                    </div>
-                                </div>
-                            </a>
+                              <button class="mt-5 btn-sinestilo" type="submit">
+                                  <div class="button" >
+                                      <div class="icon">
+                                          <i class="fa fa-floppy-o"></i>
+                                      </div>
+                                  </div>
+                              </button>
                         </div>
                     </div>
                 </form>
@@ -95,6 +95,15 @@
                                 <label class="form-label label-custom-yellow">Contraseña</label>
                                 <input type="password" class="form-control input-style" id="password" name="password" placeholder="Contraseña"value="{{$sucursal->password}}">
                             </div>
+                        </div>
+                        <div class="col-12 text-center">
+                              <button class="mt-5 btn-sinestilo" type="submit">
+                                  <div class="button" >
+                                      <div class="icon">
+                                          <i class="fa fa-floppy-o"></i>
+                                      </div>
+                                  </div>
+                              </button>
                         </div>
                     </form>
 

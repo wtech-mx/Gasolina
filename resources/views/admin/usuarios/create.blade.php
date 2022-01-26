@@ -21,7 +21,7 @@
                             <div class="form-group mb-3 position-relative">
                                 <i class="fa fa-user icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Nombre</label>
-                                <input type="text" class="form-control input-style" id="name" name="name" placeholder="Nombre">
+                                <input type="text" class="form-control input-style" id="name" name="name" placeholder="Nombre" value="{{ old('name') }}">
                             </div>
                         </div>
 
@@ -29,7 +29,7 @@
                             <div class="form-group mb-3 position-relative">
                                 <i class="fa fa-font icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Apellido</label>
-                                <input type="text" class="form-control input-style" id="apellido" name="apellido" placeholder="Apellido">
+                                <input type="text" class="form-control input-style" id="apellido" name="apellido" placeholder="Apellido" value="{{ old('apellido') }}">
                             </div>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                             <div class="form-group mb-3 position-relative" style="position: relative">
                                 <i class="fa fa-envelope icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Correo</label>
-                                <input class="form-control input-style"  id="email" name="email" type="text" placeholder="Correo Electronico">
+                                <input class="form-control input-style"  id="email" name="email" type="text" placeholder="Correo Electronico" value="{{ old('email') }}">
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                             <div class="form-group mb-3 position-relative" style="position: relative">
                                 <i class="fa fa-phone icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Telefono</label>
-                                <input class="form-control input-style" type="number" id="telefono" name="telefono" placeholder="telefono">
+                                <input class="form-control input-style" type="number" id="telefono" name="telefono" placeholder="telefono" value="{{ old('telefono') }}">
                             </div>
                         </div>
                     </div>
@@ -59,14 +59,14 @@
                             <div class="form-group mb-3 position-relative" style="position: relative">
                                 <i class="fa fa-street-view icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Puesto</label>
-                                <input type="text" class="form-control input-style" id="puesto" name="puesto" placeholder="Puesto">
+                                <input type="text" class="form-control input-style" id="puesto" name="puesto" placeholder="Puesto" value="{{ old('puestobutton') }}">
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="form-group mb-3 position-relative" placeholder="Contraseña">
+                            <div class="form-group mb-3 position-relative" >
                                 <i class="fa fa-lock icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Contraseña</label>
                                 <input type="password" class="form-control input-style" id="password" name="password" placeholder="Contraseña">
@@ -99,12 +99,20 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-12">
-                            <button class="btn-saved" type="submit">
-                                 <i class="fa fa-save"></i>Guardar
-                            </button>
+                        <div class="col-12 text-center">
+                              <button class="mt-5 btn-sinestilo" type="submit">
+                                  <div class="button">
+                                      <div class="icon">
+                                          <i class="fa fa-floppy-o"></i>
+                                      </div>
+                                  </div>
+                              </button>
                         </div>
                     </div>
+
+                </form>
+            </div>
+</div>
 
                     <!-- Select anidado Empresa-->
                     <script>
@@ -131,9 +139,5 @@
                             });
                         });
                     </script>
-                </form>
-            </div>
-</div>
-
 
 @endsection

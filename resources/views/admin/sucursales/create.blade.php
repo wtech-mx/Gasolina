@@ -58,10 +58,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-12">
-                        <button class="btn-saved" type="submit">
-                            <i class="fa fa-save"></i>Guardar
-                        </button>
+                    <div class="col-12 text-center">
+                              <button class="mt-5 btn-sinestilo" type="submit">
+                                  <div class="button" >
+                                      <div class="icon">
+                                          <i class="fa fa-floppy-o"></i>
+                                      </div>
+                                  </div>
+                              </button>
                     </div>
                 </div>
             </form>
