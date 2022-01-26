@@ -4,21 +4,13 @@
 
 <div class="box">
         <div class="row">
-            <div class="col-12 mt-3">
-                <div class="d-flex justify-content-between p-3">
 
-                    <button class="btn btn-back" type="button">
-                        <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
-                    </button>
-
-                    <h1 class="text-white">Usuarios</h1>
-
-                    <a class="btn btn-back" href="{{ route('create.usuario') }}">
-                        <i class="fa fa-plus btn-icon-back"></i>
-                    </a>
-
-                </div>
-            </div>
+            @extends('layouts.bradgrum')
+            @section('title', 'Empresa')
+            @section('ruta')
+            {{ route('create.usuario') }}
+            @endsection
+            @section('icon', 'fa-plus')
 
             <div class="col-12 p-4">
                 <table class="table display" id="table_id" >

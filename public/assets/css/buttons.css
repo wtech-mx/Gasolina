@@ -15,11 +15,12 @@
 }
 
 .btn-back {
-  border-radius: 30px!important;
-  padding: 5px;
-  width: 40px;
-  opacity: 1;
-  background-color: #FFF!important;
+    border-radius: 30px!important;
+    padding: 5px!important;
+    width: 30px!important;
+    height: 30px!important;
+    opacity: 1;
+    background-color: #FFF!important;
 }
 
 .btn-icon-back {
@@ -27,20 +28,39 @@
   color: #001D3d;
 }
 
-.btn-saved {
-  background: #FFF;
-  padding: 20px;
-  font-size: 18px;
-  color: #000;
-  border: none;
-  border-radius: 300px;
-  display: block;
-  margin: auto;
-  margin-top: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  width: 200px;
+
+
+.button{
+  font-size:1.5rem;
+  border:2px solid #ffd60a;
+  border-radius:100px;
+  width:40px;
+  height:40px;
+  padding:5px;
+  margin: 10% auto;
+
+}
+
+.icon{
+ position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align:center;
+  color: #ffd60a;
+
+}
+
+.icon:hover{
+  color: #000000;
+}
+
+.button:hover{
+  width:150px;
+  background-color: white;
+  color: #000000;
+  border:2px solid white;
+  transition: .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
 }
 
 

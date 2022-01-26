@@ -17,6 +17,7 @@
                     @csrf
                     <div class="form-group" style="position: relative;">
                         <i class="fa fa-star fa-envelope icon-style"></i>
+                        <label class="form-label label-custom-yellow">Correo</label>
                         <input class="form-control  @error('email') is-invalid @enderror input-style" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Correo">
 
                                 @error('email')
@@ -27,6 +28,7 @@
 
                         <div class="form-group mt-5" style="position: relative;">
                             <i class="fa fa-star fa-lock icon-style"></i>
+                            <label class="form-label label-custom-yellow">Contraseña</label>
                             <input class="form-control @error('password') is-invalid @enderror input-style" type="password" name="password" required autocomplete="current-password" placeholder="Contraseña">
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

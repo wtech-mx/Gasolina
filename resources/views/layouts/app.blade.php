@@ -32,14 +32,14 @@
 <body class="body-bg">
             @yield('content')
 
+        @auth
             <div class="btn-menu-fixed">
                 <a class="btn btn-floating" role="button" data-bs-toggle="modal" data-bs-target="#modal-menu">
                     <i class="fa fa-bars text-dark"></i>
                 </a>
             </div>
-
             {{--modal--}}
-        @auth
+
             @include('layouts.menu')
         @endauth
 

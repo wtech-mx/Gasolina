@@ -5,19 +5,13 @@
 
 <div class="box">
     <div class="row">
-        <div class="col-12 mt-3">
-            <div class="d-flex justify-content-between p-3">
 
-                <button class="btn btn-back" type="button">
-                    <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
-                </button>
-
-                <h1 class="text-white">Pagina</h1>
-
-                <h1 class="text-white">-</h1>
-
-            </div>
-        </div>
+            @extends('layouts.bradgrum')
+            @section('title', 'Crear Sucursal')
+            @section('ruta')
+            #
+            @endsection
+            @section('icon', 'fa-pencil')
 
         <div class="col-12 p-4">
             <form method="POST" action="{{ route('store.sucursal') }}" enctype="multipart/form-data" role="form">

@@ -5,21 +5,34 @@
 
 <div class="box">
         <div class="row">
-            <div class="col-12 mt-3">
-                <div class="d-flex justify-content-between p-3">
 
-                    <button class="btn btn-back" type="button">
-                        <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
-                    </button>
+            @extends('layouts.bradgrum')
+            @section('title', 'Editar Empresa')
+            @section('ruta')
+            #
+            @endsection
+            @section('icon', 'fa-pencil')
 
-                    <h1 class="text-white">Pagina</h1>
+            <ul class="nav nav-pills d-flex justify-content-center mb-3 mt-5" id="pills-tab" role="tablist">
 
-                    <h1 class="text-white">-</h1>
+              <li class="nav-item p-2" role="presentation">
+                <a class="nav-link a-perso active show" id="users-registers" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                     <i class="fa fa-user icon-style-2 p-1 "></i>Datos de usuarios
+                </a>
+              </li>
 
-                </div>
-            </div>
+              <li class="nav-item p-2" role="presentation">
+                <a class="nav-link a-perso" id="register-passwords" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                    <i class="fa fa-lock icon-style-2 p-1 "></i> Contraseña
+                </a>
+              </li>
 
-            <div class="col-12 p-4">
+            </ul>
+
+            <div class="tab-content" id="pills-tabContent">
+
+              <div class="tab-pane fade show active p-3" id="pills-home" role="tabpanel" aria-labelledby="users-registers">
+
                 <form method="POST" action="{{ route('update.empresa', $empresa->id) }}" enctype="multipart/form-data" role="form">
                     @csrf
                     <input type="hidden" name="_method" value="PATCH">
@@ -81,7 +94,7 @@
                         <div class="col-sm-4 col-4">
                             <div class="form-group mb-3 position-relative">
                                 <i class="fa fa-font icon-style-2"></i>
-                                <label class="form-label label-custom-yellow">Codigo Postal</label>
+                                <label class="form-label label-custom-yellow">CP</label>
                                 <input type="text" class="form-control input-style" id="cp" name="cp" value="{{$empresa->cp}}">
                             </div>
                         </div>
@@ -89,24 +102,55 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="form-group mb-3 position-relative" >
-                                <i class="fa fa-lock icon-style-2"></i>
-                                <label class="form-label label-custom-yellow">Contraseña</label>
-                                <input type="password" class="form-control input-style" id="password" name="password" value="{{$empresa->password}}">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
                         <div class="col-12">
-                            <button class="btn-saved" type="submit">
-                                 <i class="fa fa-save"></i>Guardar
-                            </button>
+                          <div class="col-12 text-center">
+                              <a class="mt-5" type="submit">
+                                  <div class="button">
+                                      <div class="icon">
+                                          <i class="fa fa-floppy-o"></i>
+                                      </div>
+                                  </div>
+                              </a>
+                          </div>
                         </div>
                     </div>
 
                 </form>
+
+              </div>
+
+              <div class="tab-pane fade p-3" id="pills-profile" role="tabpanel" aria-labelledby="register-passwords">
+
+                  <form method="POST" action="{{ route('update_usuario_password.usuario', $empresa->id) }}"
+                        enctype="multipart/form-data" role="form">
+                      @csrf
+                      <input type="hidden" name="_method" value="PATCH">
+
+                      <div class="row">
+                          <div class="col-sm-12">
+                              <div class="form-group mb-3 position-relative" >
+                                  <i class="fa fa-lock icon-style-2"></i>
+                                  <label class="form-label label-custom-yellow">Contraseña</label>
+                                  <input type="password" class="form-control input-style" id="password" name="password" placeholder="****">
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-12 text-center">
+                              <a class="mt-5" type="submit">
+                                  <div class="button">
+                                      <div class="icon">
+                                          <i class="fa fa-floppy-o"></i>
+                                      </div>
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                  </form>
+
+              </div>
+
             </div>
 </div>
 
