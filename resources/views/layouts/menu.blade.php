@@ -26,7 +26,7 @@
                                         <div class="card card-menu">
                                             <div class="card-body">
                                                 <img class="img-card-menu" src=" {{ asset('assets/img/spray-bottle.png') }}">
-                                                <h4 class="card-title card-menu-title">Producto</h4>
+                                                <h4 class="card-title card-menu-title">Product</h4>
                                             </div>
                                         </div>
                                         <div class="card card-menu">
@@ -51,7 +51,7 @@
                                         </div>
                                         <div class="card card-menu">
                                             <div class="card-body">
-                                                <a style="text-decoration: none;color: #000000" href="{{ route('create.empresa') }}">
+                                                <a style="text-decoration: none;color: #000000" href="{{ route('index.empresa') }}">
                                                     <img class="img-card-menu" src=" {{ asset('assets/img/empresa.png') }}">
                                                     <h4 class="card-title card-menu-title">Empresa</h4>
                                                 </a>
@@ -63,18 +63,18 @@
 
                                         <div class="card card-menu">
                                             <div class="card-body">
-                                                <a style="text-decoration: none;color: #000000" href="{{ route('create.usuario') }}">
-                                                    <img class="img-card-menu" src=" {{ asset('assets/img/team.png') }}">
-                                                    <h4 class="card-title card-menu-title">Users</h4>
+                                                <a  style="text-decoration: none;color: #000000" href="{{ route('index.sucursal') }}">
+                                                    <img class="img-card-menu" src=" {{ asset('assets/img/gasolinera.png') }}">
+                                                    <h4 class="card-title card-menu-title">Sucursal</h4>
                                                 </a>
                                             </div>
                                         </div>
 
                                         <div class="card card-menu">
                                             <div class="card-body">
-                                                <a  style="text-decoration: none;color: #000000" href="{{ route('create.sucursal') }}">
-                                                    <img class="img-card-menu" src=" {{ asset('assets/img/gasolinera.png') }}">
-                                                    <h4 class="card-title card-menu-title">Sucursal</h4>
+                                                <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
+                                                    <img class="img-card-menu" src=" {{ asset('assets/img/team.png') }}">
+                                                    <h4 class="card-title card-menu-title">Users</h4>
                                                 </a>
                                             </div>
                                         </div>

@@ -63,7 +63,7 @@ public function store(Request $request)
 
     // Redireccion  de suuces or fail dependiedno el caso
 
-        return redirect()->back()
+        return redirect()->route('index.empresa')
             ->with('success', 'Empresa Creada Exitosamente!');
     } catch (\Exception $e) {
         return redirect()->back()

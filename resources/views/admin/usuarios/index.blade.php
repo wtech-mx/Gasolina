@@ -6,7 +6,7 @@
         <div class="row">
 
             @extends('layouts.bradgrum')
-            @section('title', 'Empresa')
+            @section('title', 'Usuario')
             @section('ruta')
             {{ route('create.usuario') }}
             @endsection

@@ -9,7 +9,7 @@
             @extends('layouts.bradgrum')
             @section('title', 'Crear Usuario')
             @section('ruta')
-            #
+
             @endsection
             @section('icon', 'fa-pencil')
 
@@ -80,6 +80,7 @@
                                 <i class="fa fa-cube icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Empresa</label>
                                     <select class="form-select" aria-label="Default select example" id="id_empresa" name="id_empresa">
+                                        <option>Seleccione Empresa</option>
                                         @foreach ($empresa as $item)
                                             <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach

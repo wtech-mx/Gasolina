@@ -74,7 +74,7 @@ class SucursalController extends Controller
 
         // Redireccion  de suuces or fail dependiedno el caso
 
-            redirect()->route('index.sucursal')
+        return redirect()->route('index.sucursal')
                 ->with('success', 'Sucursal Creada Exitosamente!');
         } catch (\Exception $e) {
             return redirect()->back()
