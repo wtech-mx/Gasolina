@@ -1,5 +1,5 @@
 <div class="modal fade modal-dialog modal-dialog-centered" role="dialog" tabindex="-1" id="modal-menu" aria-labelledby="modal-menu" style="width: 100%;">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="margin: 0">
             <div class="modal-content bg-modal-content">
                 <div class="modal-body">
                     <div class="row">

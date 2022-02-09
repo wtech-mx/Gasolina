@@ -16,9 +16,10 @@
     <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 
 
+
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>
+>
+
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
@@ -26,6 +27,8 @@
 
     <!-- Boostrap -->
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+
+     @yield('fullcalendar')
 
 </head>
 
