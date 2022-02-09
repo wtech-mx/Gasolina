@@ -1,10 +1,10 @@
-<h2 class="text-left mb-3" style="color: #FFC300!important">Cursps</h2>
+<h2 class="text-left mb-3" style="color: #FFC300!important">Cursos</h2>
 
 
 <div class="card card-menu">
     <div class="card-body">
         <img class="img-card-menu" src=" {{ asset('assets/img/icons/documentos.png') }}">
-        <h4 class="card-title card-menu-title">Documentos</h4>
+        <h4 class="card-title card-menu-title">Documento</h4>
     </div>
 </div>
 

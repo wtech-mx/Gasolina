@@ -39,7 +39,19 @@
 
             <div class="col-12 p-4">
 
-            @include('cursos')
+                @include('actividades')
+
+            </div>
+
+            <div class="col-12 p-4">
+
+                @include('cursos')
+
+            </div>
+
+            <div class="col-12 p-4">
+
+                @include('graficas')
 
             </div>
 

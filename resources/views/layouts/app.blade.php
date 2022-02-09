@@ -13,14 +13,9 @@
     <link rel="stylesheet" href="{{ asset('assets/css/buttons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/forms.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
-    <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-
-
 
     <!-- Scripts -->
 >
-
-
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
 
@@ -28,8 +23,9 @@
     <!-- Boostrap -->
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
 
+     @yield('css')
      @yield('fullcalendar')
-
+     @yield('scripts')
 </head>
 
 <body class="body-bg">
@@ -49,16 +45,8 @@
 </body>
 
 <!-- Boostrap -->
+
     <script src={{ asset('assets/bootstrap/js/bootstrap.min.js') }}></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     @include('sweetalert::alert')
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#table_id').DataTable();
-        });
-
-    </script>
 
 </html>

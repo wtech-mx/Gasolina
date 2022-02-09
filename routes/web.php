@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/registro1', [App\Http\Controllers\HomeController::class, 'index1'])->name('registro1');
+Route::get('/graficas', [App\Http\Controllers\HomeController::class, 'graficas'])->name('graficas');
 
 Auth::routes();
 
