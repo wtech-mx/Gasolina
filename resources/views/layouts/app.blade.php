@@ -8,14 +8,16 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Css -->
+    <!-- Css CUSTOM-->
     <link rel="icon"       href="{{ asset('images/icons/icon-72x72.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/buttons.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/forms.css') }}">
+
     <link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/mobil-menu.css') }}">
+
 
     <!-- Scripts -->
->
+
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
 
@@ -23,29 +25,29 @@
     <!-- Boostrap -->
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
 
-     @yield('css')
+     @yield('css-custom')
      @yield('fullcalendar')
      @yield('scripts')
+
 </head>
 
-<body class="body-bg">
-            @yield('content')
+<body class="body-bg demo1" id="mobile">
+
 
         @auth
-            <div class="btn-menu-fixed">
-                <a class="btn btn-floating" role="button" data-bs-toggle="modal" data-bs-target="#modal-menu">
-                    <i class="fa fa-bars text-dark"></i>
-                </a>
-            </div>
-            {{--modal--}}
-
-            @include('layouts.menu')
+        @include('layouts.menu')
         @endauth
+        <div id="mobileBodyContent">
+         @yield('content')
+        </div>
+
+
+
 
 </body>
 
-<!-- Boostrap -->
-
+    <!-- Boostrap -->
+    <script src={{ asset('assets/js/mobil-menu.js') }}></script>
     <script src={{ asset('assets/bootstrap/js/bootstrap.min.js') }}></script>
     @include('sweetalert::alert')
 

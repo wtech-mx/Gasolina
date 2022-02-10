@@ -6,12 +6,23 @@
 <div class="box">
     <div class="row">
 
-            @extends('layouts.bradgrum')
-            @section('title', 'Editar Sucursal')
-            @section('ruta')
-            #
-            @endsection
-            @section('icon', 'fa-pencil')
+            <div class="col-12 mt-3">
+                <div class="d-flex justify-content-between p-3">
+
+                    <a href="javascript:history.back()" class="btn btn-back">
+                        <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
+                    </a >
+
+                    <h1 class="text-white">Editar Sucursal</h1>
+
+                {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
+
+                    <a class="btn btn-back" href="#">
+                        <i class="fa fa-pencil btn-icon-back"></i>
+                    </a>
+
+                </div>
+            </div>
 
             <ul class="nav nav-pills d-flex justify-content-center mb-3 mt-5" id="pills-tab" role="tablist">
 

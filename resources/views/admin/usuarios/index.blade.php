@@ -5,12 +5,23 @@
 <div class="box">
         <div class="row">
 
-            @extends('layouts.bradgrum')
-            @section('title', 'Usuario')
-            @section('ruta')
-            {{ route('create.usuario') }}
-            @endsection
-            @section('icon', 'fa-plus')
+            <div class="col-12 mt-3">
+                <div class="d-flex justify-content-between p-3">
+
+                    <a href="javascript:history.back()" class="btn btn-back">
+                        <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
+                    </a >
+
+                    <h1 class="text-white">Usuario</h1>
+
+                {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
+
+                    <a class="btn btn-back" href="  {{ route('create.usuario') }}">
+                        <i class="fa fa-plus btn-icon-back"></i>
+                    </a>
+
+                </div>
+            </div>
 
             <div class="col-12 p-4">
                 <table class="table display" id="table_id" >

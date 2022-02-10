@@ -1,102 +1,104 @@
-<div class="modal fade modal-dialog modal-dialog-centered" role="dialog" tabindex="-1" id="modal-menu" aria-labelledby="modal-menu" style="width: 100%;">
-        <div class="modal-dialog modal-dialog-centered" role="document" style="margin: 0">
-            <div class="modal-content bg-modal-content">
-                <div class="modal-body">
-                    <div class="row">
+<div class="redondo">
+    <div id="burgerBtn"></div>
+</div>
 
-                        <div class="col-12">
-                            <div class="d-flex justify-content-between">
-                                <h1 class="text-white" style="font-size: 30px;">Menu</h1>
-                                <button class="btn btn-close btn-menu" type="button" data-bs-dismiss="modal" aria-label="Close" style="opacity: 1;border-radius: 30px!important;padding:6px;">
-                                </button>
-                            </div>
-                        </div>
+  <div id="nav">
+ <div class="d-flex flex-column flex-shrink-0 p-3 text-white" style="width: 280px;">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+      <span class="fs-4">STRUCTURE</span>
+    </a>
+    <hr>
 
-                        <div class="col-12">
-                            <div class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="false" id="carousel-1">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="card card-menu">
-                                            <div class="card-body">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">
+          <img class="img-card-menu2" src=" {{ asset('assets/img/casam.png') }}">
+          Inicio
+        </a>
+      </li>
 
-                                                <img class="img-card-menu" src=" {{ asset('assets/img/tank-truck%20(1).png') }}">
-                                                <h4 class="card-title card-menu-title">Pipa</h4>
-                                            </div>
-                                        </div>
-                                        <div class="card card-menu">
-                                            <div class="card-body">
-                                                <img class="img-card-menu" src=" {{ asset('assets/img/spray-bottle.png') }}">
-                                                <h4 class="card-title card-menu-title">Product</h4>
-                                            </div>
-                                        </div>
-                                        <div class="card card-menu">
-                                            <div class="card-body">
-                                                <img class="img-card-menu" src=" {{ asset('assets/img/dosier.png') }}">
-                                                <h4 class="card-title card-menu-title">Repor</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card card-menu">
-                                            <div class="card-body">
-                                                <img class="img-card-menu" src=" {{ asset('assets/img/barra-grafica.png') }}">
-                                                <h4 class="card-title card-menu-title">Metas</h4>
-                                            </div>
-                                        </div>
-                                        <div class="card card-menu">
-                                            <div class="card-body">
-                                                <img class="img-card-menu" src=" {{ asset('assets/img/roles.png') }}">
-                                                <h4 class="card-title card-menu-title">Roles</h4>
-                                            </div>
-                                        </div>
-                                        <div class="card card-menu">
-                                            <div class="card-body">
-                                                <a style="text-decoration: none;color: #000000" href="{{ route('index.empresa') }}">
-                                                    <img class="img-card-menu" src=" {{ asset('assets/img/empresa.png') }}">
-                                                    <h4 class="card-title card-menu-title">Empresa</h4>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+      <li class="">
+        <a href="#" class="nav-link text-white">
+          <img class="img-card-menu2" src=" {{ asset('assets/img/tank-truck%20(1).png') }}">
+          Pipa
+        </a>
+      </li>
 
-                                    <div class="carousel-item">
+      <li class="">
+        <a href="#" class="nav-link text-white">
+          <img class="img-card-menu2" src=" {{ asset('assets/img/spray-bottle.png') }}">
+          Product
+        </a>
+      </li>
 
-                                        <div class="card card-menu">
-                                            <div class="card-body">
-                                                <a  style="text-decoration: none;color: #000000" href="{{ route('index.sucursal') }}">
-                                                    <img class="img-card-menu" src=" {{ asset('assets/img/gasolinera.png') }}">
-                                                    <h4 class="card-title card-menu-title">Sucursal</h4>
-                                                </a>
-                                            </div>
-                                        </div>
+      <li class="">
+        <a href="#" class="nav-link text-white">
+          <img class="img-card-menu2" src=" {{ asset('assets/img/dosier.png') }}">
+          Repor
+        </a>
+      </li>
 
-                                        <div class="card card-menu">
-                                            <div class="card-body">
-                                                <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
-                                                    <img class="img-card-menu" src=" {{ asset('assets/img/team.png') }}">
-                                                    <h4 class="card-title card-menu-title">Users</h4>
-                                                </a>
-                                            </div>
-                                        </div>
+      <li class="">
+        <a href="{{ route('graficas') }}" class="nav-link text-white">
+          <img class="img-card-menu2" src=" {{ asset('assets/img/barra-grafica.png') }}">
+          Metas
+        </a>
+      </li>
 
-                                    </div>
-                                </div>
+      <li class="">
+        <a href="#" class="nav-link text-white">
+          <img class="img-card-menu2" src="{{ asset('assets/img/roles.png') }}">
+          Roles
+        </a>
+      </li>
 
-                                <div>
-                                    <a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon"></span>
-                                        <span class="visually-hidden">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon"></span>
-                                        <span class="visually-hidden">Next</span>
-                                    </a>
-                                </div>
+      <li class="">
+        <a href="{{ route('index.usuario') }}" class="nav-link text-white">
+          <img class="img-card-menu2" src="{{ asset('assets/img/team.png') }}">
+          Usuarios
+        </a>
+      </li>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     <li class="">
+        <a href="{{ route('index.sucursal') }}" class="nav-link text-white">
+          <img class="img-card-menu2" src="{{ asset('assets/img/gasolinera.png') }}">
+          Sucursales
+        </a>
+      </li>
+
+      <li class="">
+        <a href="{{ route('index.empresa') }}" class="nav-link text-white">
+          <img class="img-card-menu2" src="{{ asset('assets/img/empresa.png') }}">
+          Empresa
+        </a>
+      </li>
+
+
+    </ul>
+    <hr>
+    <div class="dropdown">
+      <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+        <strong> {{ Auth::user()->name }}</strong>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+        <li><a class="dropdown-item" href="#">Perfil </a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+
+            <a class="dropdown-item" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+
+        </li>
+      </ul>
     </div>
+  </div>
+  </div>
+

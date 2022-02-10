@@ -1,17 +1,31 @@
 @extends('layouts.app')
 
+@section('css-custom')
+<link rel="stylesheet" href="{{ asset('assets/css/forms.css') }}">
+@endsection
+
 @section('content')
 
 <div class="box">
         <div class="row">
+
             <div class="col-12 mt-3">
+                <div class="d-flex justify-content-between p-3">
 
-            @extends('layouts.bradgrum')
-            @section('title', 'Crear Usuario')
-            @section('ruta')
+                    <a href="javascript:history.back()" class="btn btn-back">
+                        <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
+                    </a >
 
-            @endsection
-            @section('icon', 'fa-pencil')
+                    <h1 class="text-white">Crear Usuario</h1>
+
+                {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
+
+                    <a class="btn btn-back" href="#">
+                        <i class="fa fa-pencil btn-icon-back"></i>
+                    </a>
+
+                </div>
+            </div>
 
             <div class="col-12 p-4">
                 <form method="POST" action="{{ route('store.usuario') }}" enctype="multipart/form-data" role="form">
