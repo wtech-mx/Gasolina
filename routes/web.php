@@ -53,3 +53,13 @@ Route::get('/create/sucursal', [App\Http\Controllers\SucursalController::class, 
 Route::post('/store/sucursal', [App\Http\Controllers\SucursalController::class, 'store'])->name('store.sucursal');
 Route::get('/edit/sucursal/{id}', [App\Http\Controllers\SucursalController::class, 'edit'])->name('edit.sucursal');
 Route::patch('/update/sucursal/{id}', [App\Http\Controllers\SucursalController::class, 'update'])->name('update.sucursal');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+/*|--------------------------------------------------------------------------
+|Actividades
+|--------------------------------------------------------------------------*/
+//Route Hooks - Do not delete//
+	Route::view('actividades', 'livewire.actividades.index')->middleware('auth');

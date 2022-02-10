@@ -25,12 +25,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    public function index1()
-    {
-        return view('admin.elementos.1');
-    }
-    public function graficas()
-    {
-        return view('admin.graficas.index');
-    }
 }
