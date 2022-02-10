@@ -11,63 +11,63 @@
 
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="home" class="nav-link {{ Request::is('home') ? 'active' : '' }}" aria-current="page">
+        <a href="{{ route('home') }}" class="nav-link nav-menuiem {{ Request::is('home') ? 'active' : '' }}" aria-current="page">
           <img class="img-card-menu2" src=" {{ asset('assets/img/casam.png') }}">
           Inicio
         </a>
       </li>
 
       <li class="">
-        <a href="#" class="nav-link text-white">
+        <a href="#" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src=" {{ asset('assets/img/tank-truck%20(1).png') }}">
           Pipa
         </a>
       </li>
 
       <li class="">
-        <a href="#" class="nav-link text-white">
+        <a href="#" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src=" {{ asset('assets/img/spray-bottle.png') }}">
           Product
         </a>
       </li>
 
       <li class="">
-        <a href="#" class="nav-link text-white">
+        <a href="#" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src=" {{ asset('assets/img/dosier.png') }}">
           Repor
         </a>
       </li>
 
       <li class="">
-        <a href="{{ route('graficas') }}" class="nav-link text-white">
+        <a href="{{ route('graficas') }}" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src=" {{ asset('assets/img/barra-grafica.png') }}">
           Metas
         </a>
       </li>
 
       <li class="">
-        <a href="#" class="nav-link text-white">
+        <a href="#" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src="{{ asset('assets/img/roles.png') }}">
           Roles
         </a>
       </li>
 
       <li class="">
-        <a href="{{ route('index.usuario') }}" class="nav-link {{ Request::is('usuario') ? 'active' : '' }} text-white">
+        <a href="{{ route('index.usuario') }}" class="nav-link nav-menuiem {{ Request::is('usuario') ? 'active' : '' }} text-white">
           <img class="img-card-menu2" src="{{ asset('assets/img/team.png') }}">
           Usuarios
         </a>
       </li>
 
      <li class="">
-        <a href="{{ route('index.sucursal') }}" class="nav-link {{ Request::is('sucursales') ? 'active' : '' }} text-white">
+        <a href="{{ route('index.sucursal') }}" class="nav-link nav-menuiem {{ Request::is('sucursales') ? 'active' : '' }} text-white">
           <img class="img-card-menu2" src="{{ asset('assets/img/gasolinera.png') }}">
           Sucursales
         </a>
       </li>
 
       <li class="">
-        <a href="{{ route('index.empresa') }}" class="nav-link text-white">
+        <a href="{{ route('index.empresa') }}" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src="{{ asset('assets/img/empresa.png') }}">
           Empresa
         </a>
@@ -82,7 +82,12 @@
         <strong> {{ Auth::user()->name }}</strong>
       </a>
       <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-        <li><a class="dropdown-item" href="#">Perfil </a></li>
+        <li>
+            <a class="dropdown-item" href="{{ route('edit.usuario', $userId) }}">
+                Perfil
+            </a>
+        </li>
+
         <li><hr class="dropdown-divider"></li>
         <li>
 

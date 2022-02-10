@@ -282,3 +282,7 @@ html {
     clip-path: polygon(0% 0%, 0% 100%, 85% 100%, 100% 50%, 85% 0%);
     text-decoration: none;
 }
+
+.nav-menuiem:hover {
+    background-color: #001d3d!important;
+}

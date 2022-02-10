@@ -38,6 +38,7 @@
 
 
         @auth
+        <p style="display: none">{{ $userId = Auth::id() }}</p>
         @include('layouts.menu')
         @endauth
         <div id="mobileBodyContent">

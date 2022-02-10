@@ -57,6 +57,16 @@
     width: 10%;
 }
 
+.img-card-menu-element{
+    width: 90px;
+}
+
+.card-menu-title-element{
+    font-size: 9px;
+    text-align: center!important;
+    text-decoration: none;
+    color: #000000;
+}
 .card-menu-title {
   margin-top: 20px;
   font-size: 12px;
