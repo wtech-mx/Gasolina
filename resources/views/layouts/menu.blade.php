@@ -11,7 +11,7 @@
 
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="home" class="nav-link {{ Request::is('home') ? 'active' : '' }}" aria-current="page">
           <img class="img-card-menu2" src=" {{ asset('assets/img/casam.png') }}">
           Inicio
         </a>
@@ -53,14 +53,14 @@
       </li>
 
       <li class="">
-        <a href="{{ route('index.usuario') }}" class="nav-link text-white">
+        <a href="{{ route('index.usuario') }}" class="nav-link {{ Request::is('usuario') ? 'active' : '' }} text-white">
           <img class="img-card-menu2" src="{{ asset('assets/img/team.png') }}">
           Usuarios
         </a>
       </li>
 
      <li class="">
-        <a href="{{ route('index.sucursal') }}" class="nav-link text-white">
+        <a href="{{ route('index.sucursal') }}" class="nav-link {{ Request::is('sucursales') ? 'active' : '' }} text-white">
           <img class="img-card-menu2" src="{{ asset('assets/img/gasolinera.png') }}">
           Sucursales
         </a>

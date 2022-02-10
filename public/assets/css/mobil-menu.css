@@ -46,6 +46,8 @@ html {
   transform: scale(0.85);
   margin-left: 260px;
   height: 900px!important;
+  backdrop-filter: blur(6px);
+  border-radius: 30px;
 }
 
 #header {
@@ -272,3 +274,11 @@ html {
   visibility: hidden;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: #ffd60a!important;
+    color: #000!important;
+    font-weight: bold;
+    border-radius: 15px 0px 0px 15px!important;;
+    clip-path: polygon(0% 0%, 0% 100%, 85% 100%, 100% 50%, 85% 0%);
+    text-decoration: none;
+}

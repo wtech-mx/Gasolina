@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('css-custom')
+<link rel="stylesheet" href="{{ asset('assets/css/forms.css') }}">
+@endsection
+
 @section('content')
 
 

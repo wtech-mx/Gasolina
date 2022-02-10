@@ -2,7 +2,6 @@
   color: #ffd60a;
 }
 
-
 .icon-style-2 {
   left: 13px;
   top: 40px;
@@ -50,12 +49,12 @@
 }
 
 .nav-pills .nav-link {
-   background-color: #A08500!important;
-    color: #ffffff;
-    font-weight: bold;
-    border-radius: 15px 0px 0px 15px!important;
-    clip-path: polygon(0% 0%, 0% 100%, 85% 100%, 100% 50%, 85% 0%);
-    text-decoration: none;
+   /*background-color: #A08500!important;*/
+   /* color: #ffffff;*/
+   /* font-weight: bold;*/
+   /* border-radius: 15px 0px 0px 15px!important;*/
+   /* clip-path: polygon(0% 0%, 0% 100%, 85% 100%, 100% 50%, 85% 0%);*/
+   /* text-decoration: none;*/
 }
 
 Input:Focus {

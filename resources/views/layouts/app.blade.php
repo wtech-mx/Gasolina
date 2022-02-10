@@ -11,12 +11,15 @@
     <!-- Css CUSTOM-->
     <link rel="icon"       href="{{ asset('images/icons/icon-72x72.png') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/buttons.css') }}">
-
     <link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/mobil-menu.css') }}">
 
 
+
     <!-- Scripts -->
+    <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js"></script>--}}
 
     <!-- Fonts -->
     <link rel="stylesheet" href="{{ asset('assets/fonts/font-awesome.min.css') }}">
@@ -49,6 +52,17 @@
     <!-- Boostrap -->
     <script src={{ asset('assets/js/mobil-menu.js') }}></script>
     <script src={{ asset('assets/bootstrap/js/bootstrap.min.js') }}></script>
+
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#table_id').DataTable();
+        });
+
+    </script>
+
     @include('sweetalert::alert')
 
 </html>
