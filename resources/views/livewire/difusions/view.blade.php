@@ -12,7 +12,7 @@
 
                     <h1 class="text-white">Empresa</h1>
 
-                {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
+                    {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
 
                     <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#createDataModal">
                         <i class="fa fa-plus btn-icon-back"></i>
