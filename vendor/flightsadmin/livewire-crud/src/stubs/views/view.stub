@@ -19,7 +19,6 @@
                 </div>
             </div>
 
-
 						@include('livewire.{{modelNamePluralLowerCase}}.create')
 						@include('livewire.{{modelNamePluralLowerCase}}.update')
 
@@ -27,13 +26,13 @@
 				<div class="table-responsive">
 
 					<table class="table display" id="table_id" >
-						<thead class="thead">
+						<thead class="text-white">
 							<tr>
 								<td>#</td> {{tableHeader}}
 								<td>ACTIONS</td>
 							</tr>
 						</thead>
-						<tbody>
+						<tbody class="text-white">
 							@foreach(${{modelNamePluralLowerCase}} as $row)
 							<tr>
 								<td>{{ $loop->iteration }}</td> {{tableBody}}
