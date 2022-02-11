@@ -1,0 +1,71 @@
+@section('title', __('{{modelTitle}}s'))
+<div class="row">
+
+            <div class="col-12 mt-3">
+                <div class="d-flex justify-content-between p-3">
+
+                    <a href="javascript:history.back()" class="btn btn-back">
+                        <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
+                    </a >
+
+                    <h1 class="text-white">Empresa</h1>
+
+                    {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
+
+                    <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#createDataModal">
+                        <i class="fa fa-plus btn-icon-back"></i>
+                    </a>
+
+                </div>
+            </div>
+
+
+						@include('livewire.{{modelNamePluralLowerCase}}.create')
+						@include('livewire.{{modelNamePluralLowerCase}}.update')
+
+				<div class="col-12 p-4">
+				<div class="table-responsive">
+
+					<table class="table display" id="table_id" >
+						<thead class="thead">
+							<tr>
+								<td>#</td> {{tableHeader}}
+								<td>ACTIONS</td>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach(${{modelNamePluralLowerCase}} as $row)
+							<tr>
+								<td>{{ $loop->iteration }}</td> {{tableBody}}
+								<td width="90">
+
+								<div class="btn-group">
+
+                                      <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Action
+                                      </button>
+
+									<ul class="dropdown-menu">
+                                        <li>
+                                            <a data-bs-toggle="modal" data-bs-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})">
+                                                <i class="fa fa-edit"></i>Edit
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item" onclick="confirm('Confirm Delete Difusion id {{$row->id}}? \nDeleted Difusions cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})">
+                                                <i class="fa fa-trash"></i> Delete
+                                            </a>
+                                        </li>
+									</ul>
+								</div>
+								</td>
+							@endforeach
+						</tbody>
+					</table>
+
+
+					</div>
+				</div>
+
+</div>
