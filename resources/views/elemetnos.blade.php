@@ -1,4 +1,13 @@
-                <h2 class="text-left mb-3" style="color: #FFC300!important">Elementos</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h2 class="text-left" style="color: #FFC300!important">Elementos</h2>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex justify-content-end">
+                            <a href="{{ route('elementos') }}" class="text-left" style="color: #FFC300!important">Todos</a>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="false" id="carousel-1">
 

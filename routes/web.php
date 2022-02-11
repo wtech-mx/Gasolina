@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('/registro1', [App\Http\Controllers\HomeController::class, 'index1'])->name('registro1');
 Route::get('/graficas', [App\Http\Controllers\HomeController::class, 'graficas'])->name('graficas');
+Route::get('/elementos', [App\Http\Controllers\HomeController::class, 'elementos'])->name('elementos');
 
 Auth::routes();
 
@@ -54,5 +55,4 @@ Route::post('/store/sucursal', [App\Http\Controllers\SucursalController::class, 
 Route::get('/edit/sucursal/{id}', [App\Http\Controllers\SucursalController::class, 'edit'])->name('edit.sucursal');
 Route::patch('/update/sucursal/{id}', [App\Http\Controllers\SucursalController::class, 'update'])->name('update.sucursal');
 
-//Route Hooks - Do not delete//
-	Route::view('difusion', 'livewire.difusions.index')->middleware('auth');
+
