@@ -17,7 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/registro1', [App\Http\Controllers\HomeController::class, 'index1'])->name('registro1');
 Route::get('/graficas', [App\Http\Controllers\HomeController::class, 'graficas'])->name('graficas');
 Route::get('/elementos', [App\Http\Controllers\HomeController::class, 'elementos'])->name('elementos');
 
@@ -55,5 +54,25 @@ Route::post('/store/sucursal', [App\Http\Controllers\SucursalController::class, 
 Route::get('/edit/sucursal/{id}', [App\Http\Controllers\SucursalController::class, 'edit'])->name('edit.sucursal');
 Route::patch('/update/sucursal/{id}', [App\Http\Controllers\SucursalController::class, 'update'])->name('update.sucursal');
 
-Route::view('difusion', 'livewire.difusions.index')->middleware('auth');
+/*|--------------------------------------------------------------------------
+|Funciones responsabilidades y autoridades
+|--------------------------------------------------------------------------*/
+Route::get('/funciones-responsabilidades', [App\Http\Controllers\ElementoFuncionesController::class, 'index'])->name('index.funciones');
+Route::patch('/update/funciones', [App\Http\Controllers\ElementoFuncionesController::class, 'update'])->name('update.funciones');
 
+/*|--------------------------------------------------------------------------
+|Control de documentos y registros
+|--------------------------------------------------------------------------*/
+Route::get('/control-documentos', [App\Http\Controllers\ElementoFuncionesController::class, 'index_2'])->name('index.documentos');
+Route::patch('/update/documentos/{id}', [App\Http\Controllers\ElementoFuncionesController::class, 'update_2'])->name('update.documentos');
+
+/*|--------------------------------------------------------------------------
+|Calendario Admin
+|--------------------------------------------------------------------------*/
+
+Route::post('/calendar', [App\Http\Controllers\CalendarioController::class, 'store_calendar'])->name('calendar.store_calendar');
+Route::get('/calendar/show', [App\Http\Controllers\CalendarioController::class, 'show_calendar'])->name('calendar.show_calendar');
+Route::patch('/calendar/destroy/{id}', [App\Http\Controllers\CalendarioController::class, 'destroy_calendar'])->name('calendar.destroy_calendar');
+Route::patch('/calendar/update/{id}', [App\Http\Controllers\CalendarioController::class, 'update_calendar'])->name('calendar.update_calendar');
+
+Route::view('difusion', 'livewire.difusions.index')->middleware('auth');

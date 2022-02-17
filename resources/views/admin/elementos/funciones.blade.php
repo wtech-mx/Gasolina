@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
+@php
+   $fecha = date("Y-m-d");
+@endphp
 <div class="box">
         <div class="row">
 
@@ -35,19 +37,28 @@
                           </thead>
                           <tbody class="text-white">
                             <tr>
-                              <th scope="row"><i class="fa-solid fa-circle-check"></i> <i class="fa-solid fa-file-lines"></i></th>
-                              <td>1</td>
-                              <td>Otto</td>
-                              <td>no</td>
-                            </tr>
-                            <tr>
-                              <th scope="row"><i class="fa-solid fa-circle-check"></i> <i class="fa-solid fa-file-lines"></i></th>
-                              <td>2</td>
-                              <td>Thornton</td>
-                              <td>si</td>
+                              <th scope="row">
+                                <form method="POST" action="{{ route('update.funciones') }}" enctype="multipart/form-data" role="form">
+                                    @csrf
+                                    <input type="hidden" name="_method" value="PATCH">
+                                    <input type="hidden" name="start" id="start" value="{{ $fecha }}">
+                                    <button class="btn-sinestilo" type="submit">
+                                        <i class="fa fa-check-circle-o"></i>
+                                    </button>
+                                </form>
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                </a>
+
+                              </th>
+                              <td>6</td>
+                              <td>V-01-01 Matriz de responsabilidades.</td>
+                              <td>SI</td>
                             </tr>
                           </tbody>
                       </table>
+                    @include('admin.elementos.modal')
+
             </div>
 
         </div>

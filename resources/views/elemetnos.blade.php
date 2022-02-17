@@ -15,7 +15,7 @@
 
                         <div class="carousel-item active">
                             <div class="card card-menu">
-                                <a style="text-decoration: none;" href="{{ route('registro1') }}">
+                                <a style="text-decoration: none;" href="{{ route('index.funciones') }}">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/1.png') }}">
                                         <h4 class="card-title card-menu-title-element">Funciones Responsabilidades y autoridades</h4>
@@ -23,10 +23,12 @@
                                 </a>
                             </div>
                             <div class="card card-menu">
-                                <div class="card-body">
-                                    <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Control de documentos y registros</h4>
-                                </div>
+                                <a style="text-decoration: none;" href="{{ route('index.documentos') }}">
+                                    <div class="card-body">
+                                        <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
+                                        <h4 class="card-title card-menu-title-element">Control de documentos y registros</h4>
+                                    </div>
+                                </a>
                             </div>
                             <div class="card card-menu">
                                 <div class="card-body">
