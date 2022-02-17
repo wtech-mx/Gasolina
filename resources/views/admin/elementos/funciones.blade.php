@@ -29,31 +29,32 @@
                    <table class="table display" id="table_id" >
                         <thead class="text-white">
                             <tr>
-                              <th scope="col">Acciones</th>
                               <th scope="col">ID</th>
                               <th scope="col">Registro</th>
                               <th scope="col">Configurado</th>
+                              <th scope="col">Acciones</th>
                             </tr>
                           </thead>
+
                           <tbody class="text-white">
                             <tr>
-                              <th scope="row">
-                                <form method="POST" action="{{ route('update.funciones') }}" enctype="multipart/form-data" role="form">
+                              <td>6</td>
+                              <td>V-01-01 Matriz de responsabilidades.</td>
+                              <td>SI</td>
+                              <td >
+                                <form method="POST" action="{{ route('update.funciones') }}" enctype="multipart/form-data" role="form" style="display: inline-block;">
                                     @csrf
                                     <input type="hidden" name="_method" value="PATCH">
                                     <input type="hidden" name="start" id="start" value="{{ $fecha }}">
                                     <button class="btn-sinestilo" type="submit">
-                                        <i class="fa fa-check-circle-o"></i>
+                                        <i class="fa fa-check-circle-o text-white"></i>
                                     </button>
                                 </form>
                                 <a data-bs-toggle="modal" data-bs-target="#exampleModal">
                                     <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                 </a>
 
-                              </th>
-                              <td>6</td>
-                              <td>V-01-01 Matriz de responsabilidades.</td>
-                              <td>SI</td>
+                              </td>
                             </tr>
                           </tbody>
                       </table>

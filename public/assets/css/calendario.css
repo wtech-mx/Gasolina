@@ -1,0 +1,28 @@
+#calendar{
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.fc .fc-col-header-cell-cushion{
+   text-decoration: none;
+    color: #000000;
+}
+
+.fc .fc-daygrid-day-number{
+     text-decoration: none;
+    color: #000000;
+}
+
+.fc .fc-daygrid-more-link {
+     text-decoration: none;
+    color: #000000;
+}
+
+.fc-direction-ltr .fc-list-day-text, .fc-direction-rtl .fc-list-day-side-text {
+     text-decoration: none;
+     color: #000000;
+     font-weight: bold;
+}
