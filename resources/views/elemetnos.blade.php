@@ -2,18 +2,16 @@
                     <div class="col-6">
                         <h2 class="text-left" style="color: #FFC300!important">Elementos</h2>
                     </div>
+
                     <div class="col-6">
                         <div class="d-flex justify-content-end">
-                            <a href="{{ route('elementos') }}" class="text-left" style="color: #FFC300!important">Todos</a>
+                             <a class="btn text-white" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Más <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
-                </div>
 
-                <div class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="false" id="carousel-1">
-
-                    <div class="carousel-inner">
-
-                        <div class="carousel-item active">
+                    <div class="col-12">
                             <div class="card card-menu">
                                 <a style="text-decoration: none;" href="{{ route('index.funciones') }}">
                                     <div class="card-body">
@@ -26,7 +24,7 @@
                                 <a style="text-decoration: none;" href="{{ route('index.documentos') }}">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Control de documentos y registros</h4>
+                                        <h4 class="card-title card-menu-title-element">Control de documentos y registros<br>-</h4>
                                     </div>
                                 </a>
                             </div>
@@ -36,9 +34,13 @@
                                     <h4 class="card-title card-menu-title-element">Politica <br>-<br>-</h4>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="carousel-item">
+                    </div>
+                </div>
+
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body d-inline-block" style="background: none;">
+
                             <div class="card card-menu">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/4.png') }}">
@@ -59,10 +61,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a  style="text-decoration: none;color: #000000" href="{{ route('index.sucursal') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/7.png') }}">
@@ -71,7 +70,7 @@
                                 </div>
                             </div>
 
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/8.png') }}">
@@ -80,7 +79,7 @@
                                 </div>
                             </div>
 
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/9.png') }}">
@@ -88,11 +87,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="carousel-item">
-
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a  style="text-decoration: none;color: #000000" href="{{ route('index.sucursal') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/10.png') }}">
@@ -101,7 +96,7 @@
                                 </div>
                             </div>
 
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/11.png') }}">
@@ -110,7 +105,7 @@
                                 </div>
                             </div>
 
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/12.png') }}">
@@ -118,11 +113,7 @@
                                     </a>
                                 </div>
                             </div>
-
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a  style="text-decoration: none;color: #000000" href="{{ route('index.sucursal') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/13.png') }}">
@@ -131,16 +122,16 @@
                                 </div>
                             </div>
 
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/14.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Integridad mecanica y aseguramiento de la calidad</h4>
+                                        <h4 class="card-title card-menu-title-element">Integridad mecanica y aseguramiento de la calidad<br>-<br></h4>
                                     </a>
                                 </div>
                             </div>
 
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/15.png') }}">
@@ -148,10 +139,9 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="carousel-item">
-                            <div class="card card-menu">
+
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a  style="text-decoration: none;color: #000000" href="{{ route('index.sucursal') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/16.png') }}">
@@ -160,7 +150,7 @@
                                 </div>
                             </div>
 
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/17.png') }}">
@@ -169,7 +159,7 @@
                                 </div>
                             </div>
 
-                            <div class="card card-menu">
+                            <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/18.png') }}">
@@ -177,18 +167,6 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
 
                     </div>
-
-                    <div class="d-flex justify-content-end mt-3">
-                        <button href="#carousel-1" role="button" data-bs-slide="prev" class="btn-circular" >
-                            <i class="fa fa-arrow-left "></i>
-                        </button>
-
-                        <button href="#carousel-1" role="button" data-bs-slide="next" class="btn-circular" >
-                            <i class="fa fa-arrow-right "></i>
-                        </button>
-                    </div>
-
                 </div>
