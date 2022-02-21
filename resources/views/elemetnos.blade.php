@@ -21,7 +21,7 @@
                                 </a>
                             </div>
                             <div class="card card-menu">
-                                <a style="text-decoration: none;" href="">
+                               <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento2">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
                                         <h4 class="card-title card-menu-title-element">Control de documentos y registros<br>-</h4>
@@ -172,5 +172,12 @@
                 </div>
 
 @include('modal-elementos.elemento1')
+@include('modal-elementos.elemento2')
+@include('modal-elementos.elemento3')
+@include('modal-elementos.elemento4')
+@include('modal-elementos.elemento5')
+@include('modal-elementos.elemento6')
+@include('modal-elementos.elemento7')
 @include('modal-elementos.elemento8')
-
+@include('modal-elementos.elemento9')
+@include('modal-elementos.elemento10')

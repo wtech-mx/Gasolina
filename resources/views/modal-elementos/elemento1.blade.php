@@ -19,16 +19,16 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-
+                <div class="accordion accordion-flush" id="accordionExample">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                      <button class="accordion-button btn-grid collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        VII-01-01
+                    <h2 class="accordion-header" id="element1">
+                      <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                         V-01-01
                       </button>
                     </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
+                            <h5 class="text-center" style="font-size: 15px">Matriz de responsabilidades.</h5>
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
                             <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
@@ -75,117 +75,6 @@
                       </div>
                     </div>
                   </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingTwo">
-                      <button class="accordion-button btn-grid collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        VII-02-02
-                      </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                            {{--nav tittle arrow--}}
-                            <div class="d-flex justify-content-center">
-                            <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Acción-correctiva" type="button" role="tab" aria-controls="Acción-correctiva" aria-selected="true">
-                                    Acción correctiva
-                                </button>
-                              </li>
-                            </ul>
-                            </div>
-                             {{--nav tittle arrow--}}
-                             {{--nav content --}}
-                            <div class="tab-content" id="pills-tabContent">
-                              <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="" enctype="multipart/form-data" role="form">
-
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Fecha</label>
-                                          <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                              <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
-                                              </div>
-                                            </div>
-                                            <input type="date" class="form-control" id="" placeholder="">
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Descripcion</label>
-                                          <div class="input-group mb-2">
-                                              <textarea name="" id="" cols="100" rows="5"></textarea>
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                  </form>
-                              </div>
-                            </div>
-                            {{--nav content --}}
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                      <button class="accordion-button btn-grid collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        VII-03-02
-                      </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                            {{--nav tittle arrow--}}
-                            <div class="d-flex justify-content-center">
-                            <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Acción-correctiva" type="button" role="tab" aria-controls="Acción-correctiva" aria-selected="true">
-                                    Acción correctiva
-                                </button>
-                              </li>
-                            </ul>
-                            </div>
-                             {{--nav tittle arrow--}}
-                             {{--nav content --}}
-                            <div class="tab-content" id="pills-tabContent">
-                              <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="" enctype="multipart/form-data" role="form">
-
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Fecha</label>
-                                          <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                              <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
-                                              </div>
-                                            </div>
-                                            <input type="date" class="form-control" id="" placeholder="">
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Descripcion</label>
-                                          <div class="input-group mb-2">
-                                              <textarea name="" id="" cols="100" rows="5"></textarea>
-                                          </div>
-                                        </div>
-                                    </div>
-
-                                  </form>
-                              </div>
-                            </div>
-                            {{--nav content --}}
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
 
             </div>
