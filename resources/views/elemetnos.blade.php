@@ -13,7 +13,7 @@
 
                     <div class="col-12">
                             <div class="card card-menu">
-                                <a style="text-decoration: none;" href="{{ route('index.funciones') }}">
+                                <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento1">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/1.png') }}">
                                         <h4 class="card-title card-menu-title-element">Funciones Responsabilidades y autoridades</h4>
@@ -21,7 +21,7 @@
                                 </a>
                             </div>
                             <div class="card card-menu">
-                                <a style="text-decoration: none;" href="{{ route('index.documentos') }}">
+                                <a style="text-decoration: none;" href="">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
                                         <h4 class="card-title card-menu-title-element">Control de documentos y registros<br>-</h4>
@@ -72,7 +72,7 @@
 
                             <div class="card card-menu mt-3">
                                 <div class="card-body">
-                                    <a style="text-decoration: none;color: #000000" href="{{ route('index.usuario') }}">
+                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento8">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/8.png') }}">
                                         <h4 class="card-title card-menu-title-element">Comunicacion , participacion y consulta</h4>
                                     </a>
@@ -170,3 +170,7 @@
 
                     </div>
                 </div>
+
+@include('modal-elementos.elemento1')
+@include('modal-elementos.elemento8')
+
