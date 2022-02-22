@@ -121,7 +121,7 @@
                             </div>
                             <div class="card card-menu mt-3">
                                 <div class="card-body">
-                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento3">
+                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento13">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/13.png') }}">
                                         <h4 class="card-title card-menu-title-element">Competencia del personal <br>-<br>-</h4>
                                     </a>

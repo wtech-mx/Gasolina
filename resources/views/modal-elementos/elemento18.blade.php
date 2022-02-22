@@ -84,7 +84,7 @@
                         XVIII-01-03
                       </button>
                     </h2>
-                    <div id="element_18_2collapse" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#accordionExample18">
+                    <div id="element_18_2collapse" class="accordion-collapse collapse " aria-labelledby="element1" data-bs-parent="#accordionExample18">
                       <div class="accordion-body">
                             <h5 class="text-center" style="font-size: 15px">Información para el seguimiento del Sistema de Administración, Anexo I.</h5>
                             {{--nav tittle arrow--}}
