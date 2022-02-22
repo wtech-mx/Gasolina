@@ -29,9 +29,5 @@ class HomeController extends Controller
     {
         return view('admin.graficas.index');
     }
-    public function elementos()
-    {
-        return view('admin.elementos.index');
-    }
 
 }
