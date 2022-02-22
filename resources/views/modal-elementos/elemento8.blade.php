@@ -8,7 +8,7 @@
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title text-center" id="elemento8" style="font-size: 16px;">
+        <h5 class="modal-title text-center"  style="font-size: 16px;">
             Comunicacion , participacion y consulta
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -19,14 +19,14 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="accordionExample">
+                <div class="accordion accordion-flush" id="accordionExample8">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
+                    <h2 class="accordion-header">
                       <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                          VII-01-01
                       </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample8">
                       <div class="accordion-body">
                             <h5 class="text-center" style="font-size: 15px">Matriz de registro y seguimiento de comunicación interna y externa.</h5>
                             {{--nav tittle arrow--}}
@@ -81,7 +81,7 @@
                         VII-02-02
                       </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample8">
                       <div class="accordion-body">
                              <h5 class="text-center" style="font-size: 15px">Matriz de registro y seguimiento de actos o condiciones inseguras.</h5>
                             {{--nav tittle arrow--}}
@@ -136,7 +136,7 @@
                         VII-03-02
                       </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample8">
                       <div class="accordion-body">
                             <h5 class="text-center" style="font-size: 15px">Matriz de control, seguimiento y cierre de quejas y sugerencias.</h5>
                             {{--nav tittle arrow--}}

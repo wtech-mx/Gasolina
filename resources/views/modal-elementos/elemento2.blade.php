@@ -8,7 +8,7 @@
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title text-center" id="elemento2" style="font-size: 16px;">
+        <h5 class="modal-title text-center"  style="font-size: 16px;">
            Control de documentos y registros
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -22,7 +22,7 @@
                 <div class="accordion accordion-flush" id="accordionExample">
 
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="element2_1">
+                    <h2 class="accordion-header" >
                       <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element2_one" aria-expanded="true" aria-controls="element2_one">
                          VIII-01-01
                       </button>
@@ -78,7 +78,7 @@
                   </div>
 
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="element2_2">
+                    <h2 class="accordion-header">
                       <button class="accordion-button btn-grid collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#element2_two" aria-expanded="false" aria-controls="element2_two">
                        VIII-01-02
                       </button>
