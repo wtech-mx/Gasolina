@@ -29,10 +29,12 @@
                                 </a>
                             </div>
                             <div class="card card-menu">
-                                <div class="card-body">
-                                    <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/3.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Politica <br>-<br>-</h4>
-                                </div>
+                                <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento3">
+                                    <div class="card-body">
+                                        <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/3.png') }}">
+                                        <h4 class="card-title card-menu-title-element">Politica <br>-<br>-</h4>
+                                    </div>
+                                </a>
                             </div>
 
                     </div>
@@ -181,3 +183,11 @@
 @include('modal-elementos.elemento8')
 @include('modal-elementos.elemento9')
 @include('modal-elementos.elemento10')
+@include('modal-elementos.elemento11')
+@include('modal-elementos.elemento12')
+@include('modal-elementos.elemento13')
+@include('modal-elementos.elemento14')
+@include('modal-elementos.elemento15')
+@include('modal-elementos.elemento16')
+@include('modal-elementos.elemento17')
+@include('modal-elementos.elemento18')

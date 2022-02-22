@@ -19,14 +19,14 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="accordionExample">
+                <div class="accordion accordion-flush" id="element_1">
                   <div class="accordion-item">
                     <h2 class="accordion-header" id="element1">
-                      <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element_1collapse" aria-expanded="true" aria-controls="element_1collapse">
                          V-01-01
                       </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#accordionExample">
+                    <div id="element_1collapse" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#element_1">
                       <div class="accordion-body">
                             <h5 class="text-center" style="font-size: 15px">Matriz de responsabilidades.</h5>
                             {{--nav tittle arrow--}}
