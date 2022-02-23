@@ -39,13 +39,10 @@ class CalendarioController extends Controller
         $title = $datosEvento['title'];
         $check = $datosEvento['check'];
 
-        switch ($color) {
-            case ($color == "#2ECC71"):
-                $respuesta = Calendario::where('id', '=', $id)->update($datosEvento);
-                break;
-            case ($color == '#4298D6'):
-                $respuesta = Tareas::where('id', '=', $id)->update($datosEvento);
-                break;
+        if($color == "#2ECC71"){
+            $respuesta = Calendario::where('id', '=', $id)->update($datosEvento);
+        }else{
+            $respuesta = Tareas::where('id', '=', $id)->update($datosEvento);
         }
     }
 
@@ -54,15 +51,12 @@ class CalendarioController extends Controller
         $datosEvento = request();
         $color = $datosEvento['color'];
 
-        switch ($color) {
-            case ($color == "#2ECC71"):
-                Calendario::destroy($id);
-                break;
-            case ($color == '#4298D6'):
-                $seguro = Tareas::findOrFail($id);
-                $seguro->start = NULL;
-                $seguro->update();
-                break;
+        if($color == "#2ECC71"){
+            Calendario::destroy($id);
+        }else{
+            $seguro = Tareas::findOrFail($id);
+            $seguro->start = NULL;
+            $seguro->update();
         }
 
         return response()->json($id);
