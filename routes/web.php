@@ -61,3 +61,9 @@ Route::post('/calendar', [App\Http\Controllers\CalendarioController::class, 'sto
 Route::get('/calendar/show', [App\Http\Controllers\CalendarioController::class, 'show_calendar'])->name('calendar.show_calendar');
 Route::patch('/calendar/destroy/{id}', [App\Http\Controllers\CalendarioController::class, 'destroy_calendar'])->name('calendar.destroy_calendar');
 Route::patch('/calendar/update/{id}', [App\Http\Controllers\CalendarioController::class, 'update_calendar'])->name('calendar.update_calendar');
+
+/*|--------------------------------------------------------------------------
+|Elementos
+|--------------------------------------------------------------------------*/
+Route::post('/activar', [App\Http\Controllers\ElementosController::class, 'store'])->name('elemento.store');
+Route::post('/elemento/store', [App\Http\Controllers\CorrectivaController::class, 'store'])->name('correctiva.store');

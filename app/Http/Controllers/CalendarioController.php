@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Calendario;
-use App\Models\DetalleFormato;
+use App\Models\Elementos;
 use Illuminate\Support\Facades\DB;
 
 class CalendarioController extends Controller
@@ -19,7 +19,7 @@ class CalendarioController extends Controller
     public function show_calendar()
     {
             $json2 = $data2['calendario'] = Calendario::all();
-            $json3 = $data3['formato'] = DetalleFormato::all();
+            $json3 = $data3['formato'] = Elementos::all();
 
             //los convieerte en array
             $decode2 = json_decode($json2);
@@ -43,7 +43,7 @@ class CalendarioController extends Controller
                 $respuesta = Calendario::where('id', '=', $id)->update($datosEvento);
                 break;
             case ($color == '#4298D6'):
-                $respuesta = DetalleFormato::where('id', '=', $id)->update($datosEvento);
+                $respuesta = Elementos::where('id', '=', $id)->update($datosEvento);
                 break;
         }
     }
@@ -58,7 +58,7 @@ class CalendarioController extends Controller
                 Calendario::destroy($id);
                 break;
             case ($color == '#4298D6'):
-                $seguro = DetalleFormato::findOrFail($id);
+                $seguro = Elementos::findOrFail($id);
                 $seguro->start = NULL;
                 $seguro->update();
                 break;

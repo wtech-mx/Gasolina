@@ -66,7 +66,7 @@
             $('#id_user').val(info.event.extendedProps.id_user);
             $('#title').val(info.event.title);
             $('#color').val(info.event.backgroundColor);
-            $('#exampleModal').modal();
+            $('#exampleModal').modal('toggle');
 
             console.log('Fecha', dia)
             },

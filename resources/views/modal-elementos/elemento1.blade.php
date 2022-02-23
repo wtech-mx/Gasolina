@@ -1,7 +1,9 @@
 @section('css-custom')
 <link rel="stylesheet" href="{{ asset('assets/css/modal-elements.css') }}">
 @endsection
-
+@php
+   $fecha = date("Y-m-d");
+@endphp
 <!-- Modal -->
 <div class="modal fade" id="elemento1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="elemento1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -29,6 +31,24 @@
                     <div id="element_1collapse" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#element_1">
                       <div class="accordion-body">
                             <h5 class="text-center" style="font-size: 15px">Matriz de responsabilidades.</h5>
+                            <form method="POST" action="{{ route('elemento.store') }}" enctype="multipart/form-data" role="form">
+                                @csrf
+                                {{-- Tareas elementos --}}
+                                <input type="hidden" name="elemntos" id="elemntos" value="1">
+                                <input type="hidden" name="consultar" id="consultar" value="0">
+                                <input type="hidden" name="generar" id="generar" value="0">
+                                <input type="hidden" name="actualizar" id="actualizar" value="0">
+                                <input type="hidden" name="difundir" id="difundir" value="0">
+                                <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                {{-- Calendario --}}
+                                <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                <input type="hidden" name="title" id="title" value="V-01-01">
+                                <input type="hidden" name="color" id="color" value="#2367D9">
+                                <input type="hidden" name="start" id="start" value="{{$fecha}}">
+
+                            <button type="submit" class="btn btn-dark">Activar</button>
+                            </form>
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
                             <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
@@ -43,8 +63,8 @@
                              {{--nav content --}}
                             <div class="tab-content" id="pills-tabContent">
                               <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="" enctype="multipart/form-data" role="form">
-
+                                 <form method="POST" action="{{ route('correctiva.store') }}" enctype="multipart/form-data" role="form">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-sm-12 col-12 text-left">
                                           <label class="" for="inlineFormInputGroup">Fecha</label>
@@ -54,7 +74,7 @@
                                                   <i class="fa fa-calendar" style="font-size: 150%;}"></i>
                                               </div>
                                             </div>
-                                            <input type="date" class="form-control" id="" placeholder="">
+                                            <input type="date" class="form-control" name="fecha" id="fecha" value="{{$fecha}}">
                                           </div>
                                         </div>
                                     </div>
@@ -63,11 +83,12 @@
                                         <div class="col-sm-12 col-12 text-left">
                                           <label class="" for="inlineFormInputGroup">Descripcion</label>
                                           <div class="input-group mb-2">
-                                              <textarea name="" id="" cols="100" rows="5"></textarea>
+                                              <textarea name="descripcion" id="descripcion" cols="100" rows="5"></textarea>
                                           </div>
                                         </div>
                                     </div>
 
+                                    <button type="submit" class="btn btn-dark">Guardar</button>
                                   </form>
                               </div>
                             </div>
