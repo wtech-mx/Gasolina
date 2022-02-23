@@ -39,12 +39,12 @@ class TareasController extends Controller
             $tarea->start = $request->get('start');
 
             if($request->get('end') == NULL){
-                $tarea->color = '#03FE42';
+                $tarea->color = '#549227';
                 $tarea->end = $request->get('start');
             }else{
                 switch($request->get('end')){
                     case($request->get('end') == 1):
-                        $tarea->color = '#0238E6';
+                        $tarea->color = '#004E9A';
                         $fecha = date($request->get('start'));
                         $nuevafecha = strtotime ( '+1 month' , strtotime ( $fecha ) ) ;
                         $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
@@ -52,7 +52,7 @@ class TareasController extends Controller
                     break;
 
                     case($request->get('end') == 2):
-                        $tarea->color = '#BE07E8';
+                        $tarea->color = '#4D446F';
                         $fecha = date($request->get('start'));
                         $nuevafecha = strtotime ( '+6 month' , strtotime ( $fecha ) ) ;
                         $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
@@ -61,7 +61,7 @@ class TareasController extends Controller
                     break;
 
                     case($request->get('end') == 3):
-                        $tarea->color = '#E89A1E';
+                        $tarea->color = '#632A00';
                         $fecha = date($request->get('start'));
                         $nuevafecha = strtotime ( '+12 month' , strtotime ( $fecha ) ) ;
                         $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
