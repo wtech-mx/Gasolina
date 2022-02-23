@@ -37,6 +37,7 @@ class CalendarioController extends Controller
         $datosEvento = request()->except(['_token', '_method']);
         $color = $datosEvento['color'];
         $title = $datosEvento['title'];
+        $check = $datosEvento['check'];
 
         switch ($color) {
             case ($color == "#2ECC71"):

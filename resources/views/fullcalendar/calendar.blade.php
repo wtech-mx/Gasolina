@@ -125,7 +125,7 @@
             colorAlert =("#2ECC71");
             estatusDefault = 0;
             checkDefault = 0;
-            imageDefault = ("{{asset('assets/img/icon/checked.png') }}");
+            imageDefault = ("{{asset('assets/img/icons/checked.png') }}");
 
             nuevoEvento={
                 id:$('#txtID').val(),
@@ -141,7 +141,7 @@
                 '_token':$("meta[name='csrf-token']").attr("content"),
                 '_method':method
             }
-            console.log('Fecha nuevo',nuevoEvento)
+            console.log('nuevoEvento',nuevoEvento)
             return (nuevoEvento);
         }
 
@@ -160,7 +160,7 @@
                 '_token':$("meta[name='csrf-token']").attr("content"),
                 '_method':method
             }
-            console.log('Fecha nuevo 1',nuevoEvento)
+            console.log('editarDatosGUI',nuevoEvento)
             return (nuevoEvento);
         }
 
