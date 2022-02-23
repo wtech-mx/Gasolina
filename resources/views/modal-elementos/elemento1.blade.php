@@ -29,7 +29,7 @@
                       </button>
                     </h2>
                     <div id="element_1collapse" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#element_1">
-                      <div class="accordion-body">
+                      <div class="accordion-body" style="padding: 0rem">
                             <h5 class="text-center" style="font-size: 15px">Matriz de responsabilidades.</h5>
                             <form method="POST" action="{{ route('elemento.store') }}" enctype="multipart/form-data" role="form">
                                 @csrf
@@ -49,20 +49,29 @@
 
                             <button type="submit" class="btn btn-dark">Activar</button>
                             </form>
+
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
+
                             <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
                               <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Acción-correctiva" type="button" role="tab" aria-controls="Acción-correctiva" aria-selected="true">
-                                    Acción correctiva
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                    Opcion 1
+                                </button>
+                              </li>
+
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                    Opcion 2
                                 </button>
                               </li>
                             </ul>
+
                             </div>
                              {{--nav tittle arrow--}}
                              {{--nav content --}}
                             <div class="tab-content" id="pills-tabContent">
-                              <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
+                              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                  <form method="POST" action="{{ route('correctiva.store') }}" enctype="multipart/form-data" role="form">
                                     @csrf
                                     <div class="row">
@@ -98,8 +107,56 @@
                                     </div>
                                   </form>
                               </div>
+                              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                 <form method="POST" action="{{ route('correctiva.store') }}" enctype="multipart/form-data" role="form">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-sm-6 col-6 text-left">
+                                          <label class="" for="inlineFormInputGroup">Fecha Inicio</label>
+                                          <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                              <div class="input-group-text">
+                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
+                                              </div>
+                                            </div>
+                                            <input type="date" class="form-control" name="fecha" id="fecha" value="{{$fecha}}">
+                                          </div>
+                                        </div>
+
+                                        <div class="col-sm-6 col-6 text-left">
+                                          <label class="" for="inlineFormInputGroup">Fecha Fin</label>
+                                          <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                              <div class="input-group-text">
+                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
+                                              </div>
+                                            </div>
+                                            <input type="date" class="form-control" name="fecha" id="fecha" value="{{$fecha}}">
+                                          </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-sm-12 col-12 text-left">
+                                          <label class="" for="inlineFormInputGroup">Descripcion</label>
+                                          <div class="input-group mb-2">
+                                              <textarea name="descripcion" id="descripcion" cols="100" rows="5"></textarea>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                      <button class="mt-2 btn-sinestilo" type="submit">
+                                          <div class="button_n">
+                                              <div class="icon_n">
+                                                  <i class="fa fa-floppy-o"></i>
+                                              </div>
+                                          </div>
+                                      </button>
+                                    </div>
+                                 </form>
+                              </div>
                             </div>
-                            {{--nav content --}}
+
                       </div>
                     </div>
                   </div>
