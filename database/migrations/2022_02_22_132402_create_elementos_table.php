@@ -27,6 +27,7 @@ class CreateElementosTable extends Migration
             $table->tinyInteger('ejecutar')->nullable();
             $table->tinyInteger('entrada')->nullable();
             $table->tinyInteger('salida')->nullable();
+            $table->tinyInteger('ordinaria')->nullable();
             $table->tinyInteger('extraordinaria')->nullable();
             $table->tinyInteger('programado')->nullable();
             $table->tinyInteger('actualizar')->nullable();

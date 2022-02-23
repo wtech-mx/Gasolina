@@ -32,45 +32,64 @@
                             <h5 class="text-center" style="font-size: 15px">Matriz de calibración y monitoreo de dispensarios.</h5>
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
-                            <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Acción-correctiva" type="button" role="tab" aria-controls="Acción-correctiva" aria-selected="true">
-                                    Acción correctiva
-                                </button>
-                              </li>
-                            </ul>
+
+                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home17" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                        Opcion 1
+                                    </button>
+                                  </li>
+
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile17" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                        Opcion 2
+                                    </button>
+                                  </li>
+                                </ul>
                             </div>
-                             {{--nav tittle arrow--}}
-                             {{--nav content --}}
+                            {{--nav tittle arrow--}}
+                            {{--nav content --}}
                             <div class="tab-content" id="pills-tabContent">
-                              <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="" enctype="multipart/form-data" role="form">
+                                <div class="tab-pane fade show active" id="pills-home17" role="tabpanel" aria-labelledby="pills-home-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.1">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="ordinaria" id="ordinaria" value="0">
+                                      <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Fecha</label>
-                                          <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                              <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
-                                              </div>
-                                            </div>
-                                            <input type="date" class="form-control" id="" placeholder="">
-                                          </div>
-                                        </div>
-                                    </div>
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-01-01">
+                                      <input type="hidden" name="color" id="color" value="#2367D9">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Descripcion</label>
-                                          <div class="input-group mb-2">
-                                              <textarea name="" id="" cols="100" rows="5"></textarea>
-                                          </div>
-                                        </div>
-                                    </div>
+                                      @include('modal-elementos.formulario1')
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile17" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
 
-                                  </form>
-                              </div>
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.1">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="ordinaria" id="ordinaria" value="0">
+                                      <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-01-01">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
+
+                                      @include('modal-elementos.formulario2')
+                                   </form>
+                                </div>
                             </div>
                             {{--nav content --}}
                       </div>
@@ -88,45 +107,64 @@
                              <h5 class="text-center" style="font-size: 15px">Matriz de calibración y monitoreo de Tanque.</h5>
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
-                            <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Acción-correctiva" type="button" role="tab" aria-controls="Acción-correctiva" aria-selected="true">
-                                    Acción correctiva
-                                </button>
-                              </li>
-                            </ul>
+
+                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home18" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                        Opcion 1
+                                    </button>
+                                  </li>
+
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile18" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                        Opcion 2
+                                    </button>
+                                  </li>
+                                </ul>
                             </div>
-                             {{--nav tittle arrow--}}
-                             {{--nav content --}}
+                            {{--nav tittle arrow--}}
+                            {{--nav content --}}
                             <div class="tab-content" id="pills-tabContent">
-                              <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="" enctype="multipart/form-data" role="form">
+                                <div class="tab-pane fade show active" id="pills-home18" role="tabpanel" aria-labelledby="pills-home-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.2">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="ordinaria" id="ordinaria" value="0">
+                                      <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Fecha</label>
-                                          <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                              <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
-                                              </div>
-                                            </div>
-                                            <input type="date" class="form-control" id="" placeholder="">
-                                          </div>
-                                        </div>
-                                    </div>
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-01-02">
+                                      <input type="hidden" name="color" id="color" value="#2367D9">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Descripcion</label>
-                                          <div class="input-group mb-2">
-                                              <textarea name="" id="" cols="100" rows="5"></textarea>
-                                          </div>
-                                        </div>
-                                    </div>
+                                      @include('modal-elementos.formulario1')
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile18" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
 
-                                  </form>
-                              </div>
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.2">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="ordinaria" id="ordinaria" value="0">
+                                      <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-01-02">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
+
+                                      @include('modal-elementos.formulario2')
+                                   </form>
+                                </div>
                             </div>
                             {{--nav content --}}
                       </div>
@@ -144,45 +182,64 @@
                             <h5 class="text-center" style="font-size: 15px">Matriz de calibración y monitoreo de Jarra de Monitoreo.</h5>
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
-                            <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Acción-correctiva" type="button" role="tab" aria-controls="Acción-correctiva" aria-selected="true">
-                                    Acción correctiva
-                                </button>
-                              </li>
-                            </ul>
+
+                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home19" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                        Opcion 1
+                                    </button>
+                                  </li>
+
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile19" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                        Opcion 2
+                                    </button>
+                                  </li>
+                                </ul>
                             </div>
-                             {{--nav tittle arrow--}}
-                             {{--nav content --}}
+                            {{--nav tittle arrow--}}
+                            {{--nav content --}}
                             <div class="tab-content" id="pills-tabContent">
-                              <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="" enctype="multipart/form-data" role="form">
+                                <div class="tab-pane fade show active" id="pills-home19" role="tabpanel" aria-labelledby="pills-home-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.3">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="ordinaria" id="ordinaria" value="0">
+                                      <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Fecha</label>
-                                          <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                              <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
-                                              </div>
-                                            </div>
-                                            <input type="date" class="form-control" id="" placeholder="">
-                                          </div>
-                                        </div>
-                                    </div>
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-01-03">
+                                      <input type="hidden" name="color" id="color" value="#2367D9">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Descripcion</label>
-                                          <div class="input-group mb-2">
-                                              <textarea name="" id="" cols="100" rows="5"></textarea>
-                                          </div>
-                                        </div>
-                                    </div>
+                                      @include('modal-elementos.formulario1')
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile19" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
 
-                                  </form>
-                              </div>
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.3">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="ordinaria" id="ordinaria" value="0">
+                                      <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-01-03">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
+
+                                      @include('modal-elementos.formulario2')
+                                   </form>
+                                </div>
                             </div>
                             {{--nav content --}}
                       </div>
@@ -200,45 +257,64 @@
                             <h5 class="text-center" style="font-size: 15px">Matriz de calibración y monitoreo de Regleta de Medicion.</h5>
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
-                            <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Acción-correctiva" type="button" role="tab" aria-controls="Acción-correctiva" aria-selected="true">
-                                    Acción correctiva
-                                </button>
-                              </li>
-                            </ul>
+
+                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home20" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                        Opcion 1
+                                    </button>
+                                  </li>
+
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile20" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                        Opcion 2
+                                    </button>
+                                  </li>
+                                </ul>
                             </div>
-                             {{--nav tittle arrow--}}
-                             {{--nav content --}}
+                            {{--nav tittle arrow--}}
+                            {{--nav content --}}
                             <div class="tab-content" id="pills-tabContent">
-                              <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="" enctype="multipart/form-data" role="form">
+                                <div class="tab-pane fade show active" id="pills-home20" role="tabpanel" aria-labelledby="pills-home-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.4">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="ordinaria" id="ordinaria" value="0">
+                                      <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Fecha</label>
-                                          <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                              <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
-                                              </div>
-                                            </div>
-                                            <input type="date" class="form-control" id="" placeholder="">
-                                          </div>
-                                        </div>
-                                    </div>
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-01-04">
+                                      <input type="hidden" name="color" id="color" value="#2367D9">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Descripcion</label>
-                                          <div class="input-group mb-2">
-                                              <textarea name="" id="" cols="100" rows="5"></textarea>
-                                          </div>
-                                        </div>
-                                    </div>
+                                      @include('modal-elementos.formulario1')
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile20" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
 
-                                  </form>
-                              </div>
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.4">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="ordinaria" id="ordinaria" value="0">
+                                      <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-01-04">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
+
+                                      @include('modal-elementos.formulario2')
+                                   </form>
+                                </div>
                             </div>
                             {{--nav content --}}
                       </div>
@@ -256,45 +332,62 @@
                             <h5 class="text-center" style="font-size: 15px">Matriz de alta y seguimiento de acción preventiva o correctiva.</h5>
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
-                            <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Acción-correctiva" type="button" role="tab" aria-controls="Acción-correctiva" aria-selected="true">
-                                    Acción correctiva
-                                </button>
-                              </li>
-                            </ul>
+
+                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home21" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                        Opcion 1
+                                    </button>
+                                  </li>
+
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile21" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                        Opcion 2
+                                    </button>
+                                  </li>
+                                </ul>
                             </div>
-                             {{--nav tittle arrow--}}
-                             {{--nav content --}}
+                            {{--nav tittle arrow--}}
+                            {{--nav content --}}
                             <div class="tab-content" id="pills-tabContent">
-                              <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="" enctype="multipart/form-data" role="form">
+                                <div class="tab-pane fade show active" id="pills-home21" role="tabpanel" aria-labelledby="pills-home-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.5">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="seguimiento" id="seguimiento" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Fecha</label>
-                                          <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                              <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
-                                              </div>
-                                            </div>
-                                            <input type="date" class="form-control" id="" placeholder="">
-                                          </div>
-                                        </div>
-                                    </div>
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-02-01">
+                                      <input type="hidden" name="color" id="color" value="#2367D9">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Descripcion</label>
-                                          <div class="input-group mb-2">
-                                              <textarea name="" id="" cols="100" rows="5"></textarea>
-                                          </div>
-                                        </div>
-                                    </div>
+                                      @include('modal-elementos.formulario1')
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile21" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
 
-                                  </form>
-                              </div>
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.5">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="seguimiento" id="seguimiento" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-02-01">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
+
+                                      @include('modal-elementos.formulario2')
+                                   </form>
+                                </div>
                             </div>
                             {{--nav content --}}
                       </div>
@@ -312,45 +405,62 @@
                             <h5 class="text-center" style="font-size: 15px">Incidencias en operaciones</h5>
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
-                            <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                              <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#Acción-correctiva" type="button" role="tab" aria-controls="Acción-correctiva" aria-selected="true">
-                                    Acción correctiva
-                                </button>
-                              </li>
-                            </ul>
+
+                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home22" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                        Opcion 1
+                                    </button>
+                                  </li>
+
+                                  <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile22" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                        Opcion 2
+                                    </button>
+                                  </li>
+                                </ul>
                             </div>
-                             {{--nav tittle arrow--}}
-                             {{--nav content --}}
+                            {{--nav tittle arrow--}}
+                            {{--nav content --}}
                             <div class="tab-content" id="pills-tabContent">
-                              <div class="tab-pane fade show active" id="Acción-correctiva" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="" enctype="multipart/form-data" role="form">
+                                <div class="tab-pane fade show active" id="pills-home22" role="tabpanel" aria-labelledby="pills-home-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.6">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="seguimiento" id="seguimiento" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Fecha</label>
-                                          <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                              <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
-                                              </div>
-                                            </div>
-                                            <input type="date" class="form-control" id="" placeholder="">
-                                          </div>
-                                        </div>
-                                    </div>
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-03-01">
+                                      <input type="hidden" name="color" id="color" value="#2367D9">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
 
-                                    <div class="row">
-                                        <div class="col-sm-12 col-12 text-left">
-                                          <label class="" for="inlineFormInputGroup">Descripcion</label>
-                                          <div class="input-group mb-2">
-                                              <textarea name="" id="" cols="100" rows="5"></textarea>
-                                          </div>
-                                        </div>
-                                    </div>
+                                      @include('modal-elementos.formulario1')
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="pills-profile22" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                      @csrf
 
-                                  </form>
-                              </div>
+                                      {{-- Tareas elementos --}}
+                                      <input type="hidden" name="elementos" id="elementos" value="11.6">
+                                      <input type="hidden" name="consultar" id="consultar" value="0">
+                                      <input type="hidden" name="seguimiento" id="seguimiento" value="0">
+                                      <input type="hidden" name="difundir" id="difundir" value="0">
+                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                      {{-- Calendario --}}
+                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                      <input type="hidden" name="title" id="title" value="XIV-03-01">
+                                      <input type="hidden" name="url" id="url" value="#exampleModal">
+
+                                      @include('modal-elementos.formulario2')
+                                   </form>
+                                </div>
                             </div>
                             {{--nav content --}}
                       </div>

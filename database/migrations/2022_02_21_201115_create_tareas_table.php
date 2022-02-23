@@ -16,7 +16,7 @@ class CreateTareasTable extends Migration
         Schema::create('tareas', function (Blueprint $table) {
             $table->id();
             $table->text('descripcion');
-            $table->integer('elementos');
+            $table->float('elementos');
 
             $table->unsignedBigInteger('id_user')->nullable();
             $table->foreign('id_user')
