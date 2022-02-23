@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sucursal extends Model
+class Tareas extends Model
 {
     use HasFactory;
-    protected $table = "users";
+
+    protected $table = "tareas";
     protected $primarykey = "id";
 
     protected $fillable = [
-        'name',
-        'emal',
-        'sucursal',
-        'id_empresa',
+        'id_user',
+        'descripcion',
+        'elementos',
         'image',
         'title',
         'color',
@@ -29,5 +29,4 @@ class Sucursal extends Model
     {
        return $this->belongsTo(User::class,'id');
     }
-
 }

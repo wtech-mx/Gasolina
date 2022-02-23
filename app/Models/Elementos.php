@@ -13,8 +13,7 @@ class Elementos extends Model
     protected $primarykey = "id";
 
     protected $fillable = [
-        'id_user',
-        'elemntos',
+        'id_tareas',
         'consultar',
         'seguimiento',
         'difundir',
@@ -27,17 +26,10 @@ class Elementos extends Model
         'actualizar',
         'alta',
         'evaluar',
-        'image',
-        'title',
-        'color',
-        'url',
-        'estatus',
-        'start',
-        'end',
     ];
 
-    public function User()
+    public function Tareas()
     {
-        return $this->belongsTo(User::class, 'id');
+        return $this->belongsTo(Tareas::class, 'id');
     }
 }

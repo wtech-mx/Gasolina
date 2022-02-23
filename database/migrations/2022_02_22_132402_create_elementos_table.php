@@ -15,12 +15,6 @@ class CreateElementosTable extends Migration
     {
         Schema::create('elementos', function (Blueprint $table) {
             $table->id();
-
-            $table->unsignedBigInteger('id_user')->nullable();
-            $table->foreign('id_user')
-                ->references('id')->on('users')
-                ->inDelete('set null');
-
             $table->unsignedBigInteger('id_tareas');
             $table->foreign('id_tareas')
                 ->references('id')->on('tareas')

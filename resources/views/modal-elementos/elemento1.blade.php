@@ -31,24 +31,6 @@
                     <div id="element_1collapse" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#element_1">
                       <div class="accordion-body" style="padding: 0rem">
                             <h5 class="text-center" style="font-size: 15px">Matriz de responsabilidades.</h5>
-                            <form method="POST" action="{{ route('elemento.store') }}" enctype="multipart/form-data" role="form">
-                                @csrf
-                                {{-- Tareas elementos --}}
-                                <input type="hidden" name="elemntos" id="elemntos" value="1">
-                                <input type="hidden" name="consultar" id="consultar" value="0">
-                                <input type="hidden" name="generar" id="generar" value="0">
-                                <input type="hidden" name="actualizar" id="actualizar" value="0">
-                                <input type="hidden" name="difundir" id="difundir" value="0">
-                                <input type="hidden" name="correctiva" id="correctiva" value="0">
-
-                                {{-- Calendario --}}
-                                <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                <input type="hidden" name="title" id="title" value="V-01-01">
-                                <input type="hidden" name="color" id="color" value="#2367D9">
-                                <input type="hidden" name="start" id="start" value="{{$fecha}}">
-
-                            <button type="submit" class="btn btn-dark">Activar</button>
-                            </form>
 
                             {{--nav tittle arrow--}}
                             <div class="d-flex justify-content-center">
@@ -72,8 +54,21 @@
                              {{--nav content --}}
                             <div class="tab-content" id="pills-tabContent">
                               <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                 <form method="POST" action="{{ route('correctiva.store') }}" enctype="multipart/form-data" role="form">
+                                 <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                     @csrf
+                                    {{-- Tareas elementos --}}
+                                    <input type="hidden" name="elementos" id="elementos" value="1">
+                                    <input type="hidden" name="consultar" id="consultar" value="0">
+                                    <input type="hidden" name="generar" id="generar" value="0">
+                                    <input type="hidden" name="actualizar" id="actualizar" value="0">
+                                    <input type="hidden" name="difundir" id="difundir" value="0">
+                                    <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                    {{-- Calendario --}}
+                                    <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                    <input type="hidden" name="title" id="title" value="V-01-01">
+                                    <input type="hidden" name="color" id="color" value="#2367D9">
+                                    <input type="hidden" name="url" id="url" value="#exampleModal">
                                     <div class="row">
                                         <div class="col-sm-12 col-12 text-left">
                                           <label class="" for="inlineFormInputGroup">Fecha</label>
@@ -83,7 +78,7 @@
                                                   <i class="fa fa-calendar" style="font-size: 150%;}"></i>
                                               </div>
                                             </div>
-                                            <input type="date" class="form-control" name="fecha" id="fecha" value="{{$fecha}}">
+                                            <input type="date" class="form-control" name="start" id="start" value="{{$fecha}}">
                                           </div>
                                         </div>
                                     </div>
@@ -108,8 +103,22 @@
                                   </form>
                               </div>
                               <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                 <form method="POST" action="{{ route('correctiva.store') }}" enctype="multipart/form-data" role="form">
+                                 <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                     @csrf
+
+                                    {{-- Tareas elementos --}}
+                                    <input type="hidden" name="elementos" id="elementos" value="1">
+                                    <input type="hidden" name="consultar" id="consultar" value="0">
+                                    <input type="hidden" name="generar" id="generar" value="0">
+                                    <input type="hidden" name="actualizar" id="actualizar" value="0">
+                                    <input type="hidden" name="difundir" id="difundir" value="0">
+                                    <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                    {{-- Calendario --}}
+                                    <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                    <input type="hidden" name="title" id="title" value="V-01-01">
+                                    <input type="hidden" name="url" id="url" value="#exampleModal">
+
                                     <div class="row">
                                         <div class="col-sm-6 col-6 text-left">
                                           <label class="" for="inlineFormInputGroup">Fecha Inicio</label>
@@ -119,7 +128,7 @@
                                                   <i class="fa fa-calendar" style="font-size: 150%;}"></i>
                                               </div>
                                             </div>
-                                            <input type="date" class="form-control" name="fecha" id="fecha" value="{{$fecha}}">
+                                            <input type="date" class="form-control" name="start" id="start" value="{{$fecha}}">
                                           </div>
                                         </div>
 
@@ -131,7 +140,12 @@
                                                   <i class="fa fa-calendar" style="font-size: 150%;}"></i>
                                               </div>
                                             </div>
-                                            <input type="date" class="form-control" name="fecha" id="fecha" value="{{$fecha}}">
+                                            <select class="form-select" aria-label="Default select example" name="end" id="end">
+                                                <option selected>Selecciona fin</option>
+                                                <option value="1">Mensual</option>
+                                                <option value="2">Semestral</option>
+                                                <option value="3">Anual</option>
+                                            </select>
                                           </div>
                                         </div>
                                     </div>

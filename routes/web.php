@@ -65,5 +65,5 @@ Route::patch('/calendar/update/{id}', [App\Http\Controllers\CalendarioController
 /*|--------------------------------------------------------------------------
 |Elementos
 |--------------------------------------------------------------------------*/
-Route::post('/activar', [App\Http\Controllers\ElementosController::class, 'store'])->name('elemento.store');
+Route::post('/tareas', [App\Http\Controllers\TareasController::class, 'store'])->name('tareas.store');
 Route::post('/elemento/store', [App\Http\Controllers\CorrectivaController::class, 'store'])->name('correctiva.store');

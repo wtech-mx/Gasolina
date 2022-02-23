@@ -18,6 +18,11 @@ class CreateTareasTable extends Migration
             $table->text('descripcion');
             $table->integer('elementos');
 
+            $table->unsignedBigInteger('id_user')->nullable();
+            $table->foreign('id_user')
+                ->references('id')->on('users')
+                ->inDelete('set null');
+
             $table->string('image');
             $table->string('title');
             $table->string('color');
