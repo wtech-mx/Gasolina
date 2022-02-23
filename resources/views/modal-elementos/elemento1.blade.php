@@ -87,8 +87,15 @@
                                           </div>
                                         </div>
                                     </div>
-
-                                    <button type="submit" class="btn btn-dark">Guardar</button>
+                                    <div class="d-flex justify-content-center">
+                                      <button class="mt-2 btn-sinestilo" type="submit">
+                                          <div class="button_n">
+                                              <div class="icon_n">
+                                                  <i class="fa fa-floppy-o"></i>
+                                              </div>
+                                          </div>
+                                      </button>
+                                    </div>
                                   </form>
                               </div>
                             </div>

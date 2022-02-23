@@ -43,7 +43,16 @@
   height:40px;
   padding:5px;
   margin: 10% auto;
+}
 
+.button_n{
+  font-size:1.5rem;
+  border:2px solid #003566;
+  border-radius:100px;
+  width:40px;
+  height:40px;
+  padding:5px;
+  margin: 10% auto;
 }
 
 .icon{
@@ -52,11 +61,22 @@
   transform: translateY(-50%);
   text-align:center;
   color: #ffd60a;
+}
 
+.icon_n{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align:center;
+  color: #003566;
 }
 
 .icon:hover{
   color: #000000;
+}
+
+.icon_n:hover{
+  color: #ffffff;
 }
 
 .button:hover{
@@ -65,7 +85,13 @@
   color: #000000;
   border:2px solid white;
   transition: .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
+}
+.button_n:hover{
+  width:150px;
+  background-color: #003566;
+  color: #003566;
+  border:2px solid #003566;
+  transition: .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .btn-sinestilo{
