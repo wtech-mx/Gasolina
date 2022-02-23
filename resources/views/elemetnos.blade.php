@@ -1,3 +1,6 @@
+@php
+   $fecha = date("Y-m-d");
+@endphp
                 <div class="row">
                     <div class="col-6">
                         <h2 class="text-left" style="color: #FFC300!important">Elementos</h2>

@@ -1,9 +1,7 @@
 @section('css-custom')
 <link rel="stylesheet" href="{{ asset('assets/css/modal-elements.css') }}">
 @endsection
-@php
-   $fecha = date("Y-m-d");
-@endphp
+
 <!-- Modal -->
 <div class="modal fade" id="elemento1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="elemento1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -125,7 +123,7 @@
                                           <div class="input-group mb-2">
                                             <div class="input-group-prepend">
                                               <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
+                                                  <i class="fa fa-calendar-plus-o" style="font-size: 150%;}"></i>
                                               </div>
                                             </div>
                                             <input type="date" class="form-control" name="start" id="start" value="{{$fecha}}">
@@ -137,7 +135,7 @@
                                           <div class="input-group mb-2">
                                             <div class="input-group-prepend">
                                               <div class="input-group-text">
-                                                  <i class="fa fa-calendar" style="font-size: 150%;}"></i>
+                                                  <i class="fa fa-calendar-check-o" style="font-size: 150%;}"></i>
                                               </div>
                                             </div>
                                             <select class="form-select" aria-label="Default select example" name="end" id="end">

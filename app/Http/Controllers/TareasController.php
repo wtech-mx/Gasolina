@@ -5,11 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Tareas;
 use App\Models\Elementos;
+use Illuminate\Support\Facades\Validator;
 
 class TareasController extends Controller
 {
     public function store(Request $request)
     {
+
+            //1/3 - error de validacion en la sweetalert *OBLIGATORIO*
+            $validator = Validator::make($request->all(), [
+                'start' => 'required|string|max:191',
+                'descripcion' => 'required|string|max:191',
+            ]);
+
+            //2/3- Envia Mensaje de validacion en la Sweetalert
+            if ($validator->fails()) {
+                return redirect()->back()
+                    ->with('errorForm', $validator->errors()->getMessages())
+                    ->withInput();
+            }
+            try {
+            //3/3- Si la validacion es correcta se crea el registro
 
             $tarea = new Tareas;
             $tarea->id_user = auth()->user()->id;
@@ -37,12 +53,19 @@ class TareasController extends Controller
 
                     case($request->get('end') == 2):
                         $tarea->color = '#BE07E8';
+                        $fecha = date($request->get('start'));
+                        $nuevafecha = strtotime ( '+6 month' , strtotime ( $fecha ) ) ;
+                        $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
+                        $tarea->end = $nuevafecha;
 
                     break;
 
                     case($request->get('end') == 3):
                         $tarea->color = '#E89A1E';
-
+                        $fecha = date($request->get('start'));
+                        $nuevafecha = strtotime ( '+12 month' , strtotime ( $fecha ) ) ;
+                        $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
+                        $tarea->end = $nuevafecha;
                     break;
                 }
             }
@@ -64,9 +87,15 @@ class TareasController extends Controller
             $elementos->alta = $request->get('alta');
             $elementos->evaluar = $request->get('evaluar');
             $elementos->generar = $request->get('generar');
+
             $elementos->save();
 
-            return redirect()->back();
+            return redirect()->route('home')
+                ->with('success', 'La tarea fue Creada Exitosamente!');
+        } catch (\Exception $e) {
+            return redirect()->back()
+                ->with('error', 'Error en el registro!!');
+        }
 
     }
 }
