@@ -21,7 +21,11 @@ class CreateElementosTable extends Migration
                 ->references('id')->on('users')
                 ->inDelete('set null');
 
-            $table->integer('elemntos');
+            $table->unsignedBigInteger('id_tareas');
+            $table->foreign('id_tareas')
+                ->references('id')->on('tareas')
+                ->inDelete('set null');
+
             $table->tinyInteger('consultar')->nullable();
             $table->tinyInteger('seguimiento')->nullable();
             $table->tinyInteger('difundir')->nullable();
@@ -35,14 +39,6 @@ class CreateElementosTable extends Migration
             $table->tinyInteger('alta')->nullable();
             $table->tinyInteger('evaluar')->nullable();
             $table->tinyInteger('generar')->nullable();
-
-            $table->string('image');
-            $table->string('title');
-            $table->string('color');
-            $table->string('url')->nullable();
-            $table->integer('estatus');
-            $table->date('start');
-            $table->date('end');
 
             $table->timestamps();
         });
