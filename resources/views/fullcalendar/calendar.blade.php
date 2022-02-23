@@ -39,6 +39,7 @@
 
             limpiarFormulario();
             $('#txtFecha').val("");
+
             $('#txtFecha').val(info.dateStr);
             $("#btnAgregar").prop("disabled",false);
             $("#btnModificar").prop("disabled",true);
@@ -64,8 +65,12 @@
             $('#txtFecha').val(anio+"-"+mes+"-"+dia);
 
             $('#id_user').val(info.event.extendedProps.id_user);
-            $('#title').val(info.event.title);
+            $('#txtTitle').val(info.event.title);
+            $('#descripcion').val(info.event.extendedProps.descripcion);
             $('#color').val(info.event.backgroundColor);
+            $('#estatus').val(info.event.extendedProps.estatus);
+            $('#check').val(info.event.extendedProps.check);
+            $('#image').val(info.event.extendedProps.image);
             $('#exampleModal').modal('toggle');
 
             console.log('Fecha', dia)
@@ -73,13 +78,27 @@
 
             events:"{{ route('calendar.show_calendar') }}",
 
-            eventContent: function(arg) {
+              eventContent: function(arg) {
 
                 let arrayOfDomNodes = []
                 let contenedorEventWrap = document.createElement('div');
 
                 let titleArg = arg.event.title;
-            },
+                let imageArg = arg.event.extendedProps.image;
+                let checkArg = arg.event.extendedProps.check;
+
+                if (checkArg == 1){
+                    let imgEvent = '<img width="16px" height="16px" style="margin-left: 10px" src="'+imageArg+'" >';
+                    let titleEvent ='<p> </p>';
+
+                    contenedorEventWrap.classList = "d-flex ml-5";
+                    contenedorEventWrap.innerHTML = imgEvent+titleEvent;
+
+                    arrayOfDomNodes = [contenedorEventWrap ]
+                    return { domNodes: arrayOfDomNodes }
+                }
+
+              },
 
         });
 
@@ -104,13 +123,19 @@
 
         function recolectarDatosGUI(method){
             colorAlert =("#2ECC71");
-
+            estatusDefault = 0;
+            checkDefault = 0;
+            imageDefault = ("{{asset('assets/img/icon/checked.png') }}");
 
             nuevoEvento={
                 id:$('#txtID').val(),
-                title:$('#title').val(),
+                title:$('#txtTitle').val(),
+                descripcion:$('#descripcion').val(),
                 id_user:$('#id_user').val(),
                 color:$('#color').val()+colorAlert,
+                estatus:$('#estatus').val()+estatusDefault,
+                check:$('#check').val()+checkDefault,
+                image:$('#image').val()+imageDefault,
                 end:$('#txtFecha').val(),
                 start:$('#txtFecha').val(),
                 '_token':$("meta[name='csrf-token']").attr("content"),
@@ -123,9 +148,13 @@
         function editarDatosGUI(method){
             nuevoEvento={
                 id:$('#txtID').val(),
-                title:$('#title').val(),
+                title:$('#txtTitle').val(),
                 id_user:$('#id_user').val(),
+                descripcion:$('#descripcion').val(),
                 color:$('#color').val(),
+                estatus:$('#estatus').val(),
+                check:$('#check').val(),
+                image:$('#image').val(),
                 start:$('#txtFecha').val(),
                 end:$('#txtFecha').val(),
                 '_token':$("meta[name='csrf-token']").attr("content"),
@@ -153,10 +182,14 @@
 
         function limpiarFormulario(){
             $('#txtID').val("");
-            $('#title').val("");
+            $('#txtTitle').val("");
+            $('#descripcion').val("");
             $('#id_user').val("");
             $('#txtFecha').val("");
             $('#color').val("");
+            $('#estatus').val("");
+            $('#check').val("");
+            $('#image').val("");
         }
         });
     </script>
