@@ -35,6 +35,7 @@ class TareasController extends Controller
             $tarea->title = $request->get('title');
             $tarea->image = $request->get('image');
             $tarea->estatus = 0;
+            $tarea->check = 0;
             $tarea->url = $request->get('url');
             $tarea->start = $request->get('start');
 

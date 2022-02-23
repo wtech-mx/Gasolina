@@ -27,7 +27,8 @@ class CreateTareasTable extends Migration
             $table->string('title');
             $table->string('color');
             $table->string('url')->nullable();
-            $table->integer('estatus');
+            $table->tinyInteger('estatus');
+            $table->tinyInteger('check');
             $table->date('start');
             $table->date('end');
 

@@ -36,7 +36,7 @@
 
                 <div class="form-group col-12 mb-3">
                     <label for="">Título</label>
-                    <input class="form-control" type="text" name="title" id="title" >
+                    <input class="form-control" type="text" name="txtTitle" id="txtTitle" >
                 </div>
 
                 <label for="">Description</label>
