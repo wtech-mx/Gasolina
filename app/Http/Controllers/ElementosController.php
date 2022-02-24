@@ -3,39 +3,45 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Elementos;
+use App\Models\Tareas;
+use Carbon\Carbon;
 
 class ElementosController extends Controller
 {
-    public function store(Request $request)
+    public function pendientes()
     {
+        $tareas = Tareas::
+        where('id_user', '=', auth()->user()->id)
+        ->where('check', '=', 0)
+        ->get();
 
-            $elementos = new Elementos;
-            $elementos->id_user = auth()->user()->id;
-            $elementos->elemntos = $request->get('elemntos');
-            $elementos->consultar = $request->get('consultar');
-            $elementos->seguimiento = $request->get('seguimiento');
-            $elementos->difundir = $request->get('difundir');
-            $elementos->correctiva = $request->get('correctiva');
-            $elementos->ejecutar = $request->get('ejecutar');
-            $elementos->entrada = $request->get('entrada');
-            $elementos->salida = $request->get('salida');
-            $elementos->extraordinaria = $request->get('extraordinaria');
-            $elementos->programado = $request->get('programado');
-            $elementos->actualizar = $request->get('actualizar');
-            $elementos->alta = $request->get('alta');
-            $elementos->evaluar = $request->get('evaluar');
-            $elementos->generar = $request->get('generar');
+        return view('actividades.pendientes', compact('tareas'));
 
-            $elementos->title = $request->get('title');
-            $elementos->image = $request->get('image');
-            $elementos->color = $request->get('color');
-            $elementos->estatus = 0;
-            $elementos->start = $request->get('start');
-            $elementos->end = $request->get('start');
-            $elementos->save();
+    }
 
-            return redirect()->back();
+    public function terminadas()
+    {
+        $tareas = Tareas::
+        where('id_user', '=', auth()->user()->id)
+        ->where('check', '=', 1)
+        ->get();
+
+        return view('actividades.terminadas', compact('tareas'));
+
+    }
+
+    public function por_vencer()
+    {
+        $hoy = Carbon::today();
+        $fecha = date("Y-m-d",strtotime($hoy."+ 5 days"));
+
+        $tareas = Tareas::
+        where('id_user', '=', auth()->user()->id)
+        ->where('check', '=', 0)
+        ->where('end', '<=', $fecha)
+        ->get();
+
+        return view('actividades.vencer', compact('tareas'));
 
     }
 }

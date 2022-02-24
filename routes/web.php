@@ -68,3 +68,10 @@ Route::patch('/calendar/update/{id}', [App\Http\Controllers\CalendarioController
 
 Route::post('/tareas', [App\Http\Controllers\TareasController::class, 'store'])->name('tareas.store');
 Route::post('/elemento/store', [App\Http\Controllers\CorrectivaController::class, 'store'])->name('correctiva.store');
+
+/*|--------------------------------------------------------------------------
+|Actividades
+|--------------------------------------------------------------------------*/
+Route::get('/pendientes', [App\Http\Controllers\ElementosController::class, 'pendientes'])->name('elementos.pendientes');
+Route::get('/terminadas', [App\Http\Controllers\ElementosController::class, 'terminadas'])->name('elementos.terminadas');
+Route::get('/vencer', [App\Http\Controllers\ElementosController::class, 'por_vencer'])->name('elementos.por_vencer');
