@@ -27,9 +27,4 @@ class Elementos extends Model
         'alta',
         'evaluar',
     ];
-
-    public function Tareas()
-    {
-        return $this->belongsTo(Tareas::class, 'id');
-    }
 }

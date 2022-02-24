@@ -32,7 +32,7 @@
             </div>
 
             <div class="col-12 p-4">
-                
+
             @include('elemetnos')
 
             </div>

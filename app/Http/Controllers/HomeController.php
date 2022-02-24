@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\Models\User;
+use App\Models\Tareas;
 
 class HomeController extends Controller
 {
@@ -23,7 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $tareas = Tareas::
+        where('id_user', '=', auth()->user()->id)
+        ->get();
+
+        return view('home', compact('tareas'));
     }
     public function graficas()
     {

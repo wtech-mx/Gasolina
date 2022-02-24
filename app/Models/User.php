@@ -57,4 +57,9 @@ class User extends Authenticatable
     {
        return $this->belongsTo(User::class,'id_sucursal');
     }
+
+    public function Tareas()
+    {
+       return $this->belongsTo('App\Models\Tareas','id_user');
+    }
 }

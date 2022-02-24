@@ -29,4 +29,9 @@ class Tareas extends Model
     {
        return $this->belongsTo(User::class,'id');
     }
+
+    public function Elementos()
+    {
+       return $this->belongsTo('App\Models\Elementos','id_tareas');
+    }
 }

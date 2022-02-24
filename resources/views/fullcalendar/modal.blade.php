@@ -13,7 +13,6 @@
             <div class="form-row">
 
                 <div class="form-group col-12">
-                  {{--<label for="">id</label>--}}
                   <input class="form-control" type="hidden" name="txtID" id="txtID">
                 </div>
 
@@ -51,6 +50,18 @@
                     </select>
                 </div>
             </div>
+            {{-- @foreach ($tareas as $item)
+                @switch ($item)
+                    @case ($item->Elementos->consultar == 0):
+                        <input type="text" value="Hola">
+                        @break;
+                    @case ($item->Elementos->seguimiento == 0):
+                        <input type="text" value="Adios">
+                        @break;
+                @endswitch
+            @endforeach --}}
+
+
         </div>
 
         <div class="modal-footer">

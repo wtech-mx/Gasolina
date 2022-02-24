@@ -196,4 +196,5 @@
 
 @endsection
 
+
 @include('fullcalendar.modal')
