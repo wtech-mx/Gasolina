@@ -18,6 +18,7 @@
     <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 
 
+
     <!-- Scripts -->
 {{--    <script src="{{ asset('js/app.js') }}" ></script>--}}
 
@@ -35,7 +36,7 @@
      @yield('css-custom')
      @yield('fullcalendar')
      @yield('scripts')
-
+     @yield('graficas_js')
 </head>
 
 <body class="body-bg demo1" id="mobile">
