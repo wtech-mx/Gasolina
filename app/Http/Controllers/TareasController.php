@@ -38,6 +38,29 @@ class TareasController extends Controller
             $tarea->check = 0;
             $tarea->url = $request->get('url');
             $tarea->start = $request->get('start');
+            $tarea->num_veces = $request->get('num_veces');
+
+            if($tarea->num_veces == true){
+
+                $tarea->color = '#549227';
+                $num_veces = $tarea->num_veces;
+
+                $dia = $tarea->start;
+
+                $año_actual = date("Y");
+                $mes_actual = date("m");
+
+                $num_veces_month = "+".$num_veces." month";
+
+                $num_veces_month = $año_actual."-".$mes_actual."-".$dia;
+
+                $nuevafecha = strtotime ( $num_veces_month , strtotime ( $num_veces_month ) ) ;
+
+                $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
+                $tarea->start = $nuevafecha;
+                $tarea->end = $nuevafecha;
+                $tarea->save();
+            }
 
             if($request->get('end') == NULL){
                 $tarea->color = '#549227';

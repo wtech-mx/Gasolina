@@ -45,6 +45,11 @@
                                     Opcion 2
                                 </button>
                               </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-tres" type="button" role="tab" aria-controls="pills-tres" aria-selected="false">
+                                    Opcion 3
+                                </button>
+                              </li>
                             </ul>
 
                             </div>
@@ -89,6 +94,26 @@
                                     <input type="hidden" name="url" id="url" value="#exampleModal">
 
                                     @include('modal-elementos.formulario2')
+                                 </form>
+                              </div>
+                              <div class="tab-pane fade" id="pills-tres" role="tabpanel" aria-labelledby="pills-tres-tab">
+                                 <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                    @csrf
+
+                                    {{-- Tareas elementos --}}
+                                    <input type="hidden" name="elementos" id="elementos" value="1">
+                                    <input type="hidden" name="consultar" id="consultar" value="0">
+                                    <input type="hidden" name="generar" id="generar" value="0">
+                                    <input type="hidden" name="actualizar" id="actualizar" value="0">
+                                    <input type="hidden" name="difundir" id="difundir" value="0">
+                                    <input type="hidden" name="correctiva" id="correctiva" value="0">
+
+                                    {{-- Calendario --}}
+                                    <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                    <input type="hidden" name="title" id="title" value="V-01-01">
+                                    <input type="hidden" name="url" id="url" value="#exampleModal">
+
+                                    @include('modal-elementos.formulario3')
                                  </form>
                               </div>
                             </div>

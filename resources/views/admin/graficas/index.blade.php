@@ -33,8 +33,6 @@
           </figure>
         </div>
 
-
-
         <script type="text/javascript">
             Highcharts.chart('container', {
                 chart: {
