@@ -97,7 +97,7 @@
                                  </form>
                               </div>
                               <div class="tab-pane fade" id="pills-tres" role="tabpanel" aria-labelledby="pills-tres-tab">
-                                 <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
+                                 <form method="POST" action="{{ route('tareas.formulario_3') }}" enctype="multipart/form-data" role="form">
                                     @csrf
 
                                     {{-- Tareas elementos --}}

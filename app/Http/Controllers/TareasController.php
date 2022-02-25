@@ -38,29 +38,6 @@ class TareasController extends Controller
             $tarea->check = 0;
             $tarea->url = $request->get('url');
             $tarea->start = $request->get('start');
-            $tarea->num_veces = $request->get('num_veces');
-
-            if($tarea->num_veces == true){
-
-                $tarea->color = '#549227';
-                $num_veces = $tarea->num_veces;
-
-                $dia = $tarea->start;
-
-                $año_actual = date("Y");
-                $mes_actual = date("m");
-
-                $num_veces_month = "+".$num_veces." month";
-
-                $num_veces_month = $año_actual."-".$mes_actual."-".$dia;
-
-                $nuevafecha = strtotime ( $num_veces_month , strtotime ( $num_veces_month ) ) ;
-
-                $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
-                $tarea->start = $nuevafecha;
-                $tarea->end = $nuevafecha;
-                $tarea->save();
-            }
 
             if($request->get('end') == NULL){
                 $tarea->color = '#549227';
@@ -93,7 +70,6 @@ class TareasController extends Controller
                     break;
                 }
             }
-
             $tarea->save();
 
             $elementos = new Elementos;
@@ -122,4 +98,62 @@ class TareasController extends Controller
         }
 
     }
+
+    public function formulario_3(Request $request)
+    {
+        for ($i = 0; $i < $request->get('num_veces'); $i++){
+            $tarea = new Tareas;
+            $tarea->id_user = auth()->user()->id;
+            $tarea->elementos = $request->get('elementos');
+            $tarea->descripcion = $request->get('descripcion');
+
+            $tarea->title = $request->get('title');
+            $tarea->image = $request->get('image');
+            $tarea->estatus = 0;
+            $tarea->check = 0;
+            $tarea->url = $request->get('url');
+            $tarea->start = $request->get('start');
+            $tarea->color = '#549227';
+
+            $dia = $tarea->start;
+
+            $año_actual = date("Y");
+            $mes_actual = date("m");
+
+            $num_month = "+".$i." month";
+
+            $num_veces_month = $año_actual."-".$request->get('mes')."-".$dia;
+
+            $nuevafecha = strtotime ( $num_month , strtotime ( $num_veces_month ) ) ;
+
+            $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
+            $tarea->end = $nuevafecha;
+            $tarea->start = $nuevafecha;
+
+            $tarea->save();
+
+            $elementos = new Elementos;
+            $elementos->id_tareas = $tarea->id;
+            $elementos->consultar = $request->get('consultar');
+            $elementos->seguimiento = $request->get('seguimiento');
+            $elementos->difundir = $request->get('difundir');
+            $elementos->correctiva = $request->get('correctiva');
+            $elementos->ejecutar = $request->get('ejecutar');
+            $elementos->entrada = $request->get('entrada');
+            $elementos->salida = $request->get('salida');
+            $elementos->extraordinaria = $request->get('extraordinaria');
+            $elementos->programado = $request->get('programado');
+            $elementos->actualizar = $request->get('actualizar');
+            $elementos->alta = $request->get('alta');
+            $elementos->evaluar = $request->get('evaluar');
+            $elementos->generar = $request->get('generar');
+
+            $elementos->save();
+        }
+
+        return redirect()->route('home')
+        ->with('success', 'La tarea fue Creada Exitosamente!');
+    }
+
+
 }
