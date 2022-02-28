@@ -13,7 +13,7 @@
 <div class="card card-menu" style="background-color: #ffffff!important">
     <div class="card-body">
         <a style="text-decoration: none;color: #000000" href="{{ route('elementos.terminadas') }}">
-            <img class="img-card-menu" src=" {{ asset('assets/img/icons/fechas.png') }}">
+            <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista.png') }}">
             <h4 class="card-title card-menu-title">Terminadas</h4>
         </a>
     </div>
@@ -22,7 +22,7 @@
 <div class="card card-menu" style="background-color: #ffffff!important">
     <div class="card-body">
         <a style="text-decoration: none;color: #000000" href="{{ route('elementos.por_vencer') }}">
-            <img class="img-card-menu" src=" {{ asset('assets/img/icons/calendario-de-escritorio.png') }}">
+            <img class="img-card-menu" src=" {{ asset('assets/img/icons/timetable.png') }}">
             <h4 class="card-title card-menu-title">Por Vencer</h4>
         </a>
     </div>

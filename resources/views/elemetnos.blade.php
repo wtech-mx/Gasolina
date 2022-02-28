@@ -19,7 +19,7 @@
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento1">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/1.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Funciones Responsabilidades y autoridades</h4>
+                                        <h4 class="card-title card-menu-title-element">Funciones Responsabilidades <br> y autoridades</h4>
                                     </div>
                                 </a>
                             </div>
@@ -27,7 +27,7 @@
                                <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento2">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Control de documentos y registros<br>-</h4>
+                                        <h4 class="card-title card-menu-title-element">Control de documentos y registros
                                     </div>
                                 </a>
                             </div>
