@@ -30,8 +30,11 @@ class Tareas extends Model
        return $this->belongsTo(User::class,'id');
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
     public function Elementos()
     {
-       return $this->belongsTo('App\Models\Elementos','id_tareas');
+        return $this->hasOne('App\Models\Elementos', 'id', 'id_tareas');
     }
 }

@@ -54,16 +54,6 @@
                     </select>
                 </div>
             </div>
-            {{-- @foreach ($tareas as $item)
-                @switch ($item)
-                    @case ($item->Elementos->consultar == 0):
-                        <input type="text" value="Hola">
-                        @break;
-                    @case ($item->Elementos->seguimiento == 0):
-                        <input type="text" value="Adios">
-                        @break;
-                @endswitch
-            @endforeach --}}
 
             <div class="d-flex justify-content-around mt-5">
             <button class="btn  " id="btnAgregar" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">

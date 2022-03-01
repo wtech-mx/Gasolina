@@ -76,3 +76,7 @@ Route::post('/elemento/store', [App\Http\Controllers\CorrectivaController::class
 Route::get('/pendientes', [App\Http\Controllers\ElementosController::class, 'pendientes'])->name('elementos.pendientes');
 Route::get('/terminadas', [App\Http\Controllers\ElementosController::class, 'terminadas'])->name('elementos.terminadas');
 Route::get('/vencer', [App\Http\Controllers\ElementosController::class, 'por_vencer'])->name('elementos.por_vencer');
+
+
+Route::view('ejecutar', 'livewire.ejecutars.index')->name('ejecutar.index')->middleware('auth');
+Route::get('imprimir/ejecutar/{id}', [App\Http\Livewire\Ejecutars::class, 'pdf_ejecutar'])->name('print.ejecutar');

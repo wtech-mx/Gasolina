@@ -45,6 +45,7 @@
             $("#btnModificar").prop("disabled",true);
             $("#btnBorrar").prop("disabled",true);
             $('#exampleModal').modal('toggle');
+            $('#exampleModal2').modal('toggle');
             },
 
             eventClick:function (info) {
@@ -71,9 +72,19 @@
             $('#estatus').val(info.event.extendedProps.estatus);
             $('#check').val(info.event.extendedProps.check);
             $('#image').val(info.event.extendedProps.image);
-            $('#exampleModal').modal('toggle');
+
+
+            let titleArg = info.event.title;
+
+            if (titleArg == 'X-01-01'){
+                $('#exampleModal2').modal('toggle');
+
+            }else{
+                $('#exampleModal').modal('toggle');
+            }
 
             console.log('Fecha', dia)
+
             },
 
             events:"{{ route('calendar.show_calendar') }}",
@@ -180,6 +191,22 @@
                 );
         }
 
+        function EnviarInformacion(accion,ObjEvento){
+            $.ajax(
+                    {
+                    type:"POST",
+                        url: "{{route('calendar.store_calendar')}}"+accion,
+                        data:ObjEvento,
+                        success:function (msg){
+                            console.log('Mensaje',msg);
+                            $('#exampleModal2').modal('toggle');
+                            calendar.refetchEvents();
+                            },
+                        error:function(){alert("hay un error");}
+                    }
+                );
+        }
+
         function limpiarFormulario(){
             $('#txtID').val("");
             $('#txtTitle').val("");
@@ -198,3 +225,4 @@
 
 
 @include('fullcalendar.modal')
+@include('fullcalendar.elemento6')

@@ -83,7 +83,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento8">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/8.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Comunicacion , participacion y consulta</h4>
+                                        <h4 class="card-title card-menu-title-element">Comunicacion , participacion y consulta<br>-<br></h4>
                                     </a>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento12">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/12.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Mejores practicas y estandares <br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Mejores practicas y estandares </h4>
                                     </a>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento14">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/14.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Integridad mecanica y aseguramiento de la calidad<br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Integridad mecanica y aseguramiento de la calidad</h4>
                                     </a>
                                 </div>
                             </div>
