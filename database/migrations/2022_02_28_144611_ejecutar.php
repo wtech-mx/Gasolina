@@ -28,8 +28,10 @@ class Ejecutar extends Migration
             $table->string('operador');
             $table->string('identificacion');
             $table->string('producto');
-            $table->text('remision');
-            $table->text('factura');
+            $table->text('remision')->nullable();
+            $table->text('factura')->nullable();
+            $table->string('nota');
+            $table->string('cantidad');
             $table->timestamps();
         });
     }
