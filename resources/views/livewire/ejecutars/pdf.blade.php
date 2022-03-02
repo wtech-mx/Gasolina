@@ -1,203 +1,49 @@
-<!DOCTYPE html>
-    <html>
-        <style type="text/css" media="screen">
-            body{
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-            }
-            .img-log{
-                padding: 20px;
-                width:50%;
-            }
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-            .cotizacion{
-                position: absolute;
-                right: 3%;
-                top: 0%;
-                padding: 30px;
-                font-size: 80px;
-            }
-            .fecha{
-                right: 5%;
-                padding: 35px;
-            }
-            .mensaje{
-                padding: 20px 0px 0px 0px;
-            }
-            .from{
-                font-size: 40px;
-            }
-            .para{
-                font-size: 20px;
-            }
-            .tabla-completa{
-                width: 100%;
-                padding: 30px;
-            }
-            .tabla-azul{
-                padding: 100px;
-            }
-            .tr{
-                background-color: #51b9d8;
-                height: 40px;
-            }
-            td{
-                height: 40px;
-            }
-            tbody{
-                text-align: center;
-                font-size: 120%;
-            }
-            .costos{
-                position: absolute;
-                right: 5%;
-                padding: 30px;
-                font-size: 20px;
-            }
-            .totalsub{
-                padding: 30px;
-            }
-            .sub{
-                padding: 30px;
-            }
-            .tota{
-                padding: 30px;
-            }
-            .datos-contacto{
-                font-size: 20px;
-                text-decoration: none;
-            }
-            .gracias{
-                position: absolute;
-                right: 5%;
-                padding: 30px;
-                font-size: 30px;
-            }
-            .footer{
+    <title>Hello, world!</title>
+  </head>
+  <body>
 
-            }
-            .pag{
-                position: absolute;
-                text-decoration: none;
-                color: #191E25;
-                left: 40%;
-                display:block;
-            }
-            .container{
-                z-index: 1000;
-            }
-            .padre {
-                padding: 0 1rem;
-            }
-            .hijo_uno {
-            /* IMPORTANTE */
-            width: 200px;
-            margin-left: auto;
-            margin-right: auto;
-            }
-        </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="container-fluid">
 
-        <body style="background-color: #191E25 ;">
-            <div class="container">
-                <div class="row" style="padding: 20px 0px 0px 0px;">
-                    <div style="width: 50%; float:left">
-                        <img alt="Bootstrap Image Preview" src="{{ asset('img/logoHeader.png') }}" style="width:80%; right: 5%;">
-                    </div>
-                    <div style="width: 35%; float:right">
-                        <img alt="Bootstrap Image Preview" src="https://checkn-go.com.mx/img/logo-check.png" style="width:70%;">
-                    </div>
-                </div>
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
 
-                <div class="padre">
-                    <div class="hijo_uno">
-                        <h3 style="color: #00d62e;font-size: 40px;">Remision</h3>
-                    </div>
-                </div>
+	<div class="row">
+		<div class="col-md-12">
+		</div>
+	</div>
 
-                <div class="row" >
-                    <div style="width: 50%; float:left">
-                        <blockquote class="blockquote">
-                            <p class="display-4 from" style="color: #00d62e;font-size: 25px;">
-                                <strong>Datos del automovil </strong>
-                            </p>
-                        </blockquote>
-                    </div>
+	<div class="row">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+		</div>
+	</div>
 
-                    <div style="width: 50%; float:right">
-                        <blockquote class="blockquote">
-                            <p class="display-4 from" style="color: #00d62e;font-size: 25px;">
-                                <strong>Datos del cliente </strong>
-                            </p>
-                        </blockquote>
-                    </div>
-                </div>
+</div>
 
 
-
-                <div class="row" style="position: relative;">
-                    <div class="col-md-12">
-                        <p style="color: #ccc;font-size: 25px; padding-left: 25px;">
-                            <strong style="color: #00d62e">Fecha: </strong>{{$ejecutar->recibido}}
-                        </p>
-                        <table id="ejemplo" class="table text-white tabla-completa" style="color: #ffffff;width: 100%;padding: 30px;">
-                            <thead class="tabla-azul" style="padding: 100px;">
-                                <tr class="tr" style="background-color: #00d62e;height: 40px; color: #191E25;">
-                                    <th >
-                                        Reparaciòn
-                                    </th>
-                                    <th>
-                                        Importe
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody style="text-align: center;font-size: 120%;">
-                                <tr>
-                                    <td>
-                                        {{$ejecutar->tanque}}
-                                    </td>
-                                    <td>
-                                        {{$ejecutar->operador}}
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="row" style="padding: 0px 0px 20px 0px;position: relative;">
-                            <div class="col-8">
-                            </div>
-                            <div class="col-4 mb-5">
-                                <p style="color: #ccc;font-size: 25px; padding-left: 35px;">
-                                    <strong style="color: #00d62e">Total </strong>${{$ejecutar->salida}}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mt-5">
-                    <div class="col-md-6">
-                        <address class="text-white datos-contacto" style="color: #ccc;font-size: 20px;text-decoration: none;">
-                            <p>
-                            <ul style="color: #ccc"> <p><strong>Nota: estos precios no Incluyen IVA</strong></p>
-                                <li>Atentamente: Alejandro Díaz</li>
-                                <li>Email: <a style="text-decoration: none;color:#fff" href="mailto:adiazm@eago.com.mx?subject=cotizacion" "email me">adiazm@eago.com.mx</a></li>
-                                <li>Telefono:<a style="text-decoration: none;color:#fff" href="tel:56 20453763" title="">5620453763</a></li>
-                            </ul>
-                            </p><br>
-                        </address>
-                    </div>
-                </div>
-                <div class="contenedor-azul"style="background-color:#1993B8;position: absolute;width: 60%;height:1%;left: 20%;right: 20%;">
-                </div>
-
-                <div class="row footer">
-                    <div class="col-md-12">
-                        <h3 class="text-center text-white " style="color: #ccc">
-                            <a  class="text-center text-white pag" href="https://checkn-go.com.mx" target="blank" title="pagina eago" style="position: absolute;text-decoration: none;color: #fff;left: 40%;display:block;">checkn-go.com.mx
-                            </a>
-                        </h3>
-                    </div>
-                </div>
-            </div>
-        </body>
-    </html>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -56,17 +56,17 @@
             </div>
 
             <div class="d-flex justify-content-around mt-5">
-            <button class="btn  " id="btnAgregar" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                <i class="fa fa-plus-circle" aria-hidden="true"></i> Agregar
-            </button>
+                <button class="btn  " id="btnAgregar" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i> Agregar
+                </button>
 
-            <button class="btn  text-dark " id="btnModificar" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
-                <i class="fa fa-retweet" aria-hidden="true"></i> Modificar
-            </button>
+                <button class="btn  text-dark " id="btnModificar" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                    <i class="fa fa-retweet" aria-hidden="true"></i> Modificar
+                </button>
 
-            <button class="btn  " id="btnBorrar" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
-                <i class="fa fa-trash" aria-hidden="true"></i> Borrar
-            </button>
+                <button class="btn  " id="btnBorrar" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                    <i class="fa fa-trash" aria-hidden="true"></i> Borrar
+                </button>
             </div>
 
         </div>

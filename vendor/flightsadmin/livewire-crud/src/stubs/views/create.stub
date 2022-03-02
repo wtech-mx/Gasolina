@@ -1,19 +1,31 @@
 <!-- Modal -->
 <div wire:ignore.self class="modal fade" id="createDataModal" tabindex="-1" aria-labelledby="createDataModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="createDataModalLabel">Create New {{modelTitle}}</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-           <div class="modal-body">
-				<form>{{form}}
+    <div class="modal-dialog modal-dialog-centered">
+         <div class="modal-content" style="border-radius: 30px;">
+
+            <div class="modal-body" style="border-radius: 30px!important;border: 2px solid #FFC300;background-color: #001d3d;">
+
+                <div class="d-flex justify-content-between">
+                    <h5 class="modal-title mb-5 text-white">Nuevo Tanque</h5>
+                     <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close" style="background: transparent url({{asset('assets/img/icons/cancel.png') }}) center/1.5em auto no-repeat;">
+                     </button>
+                </div>
+
+                <form class="row">
+                    {{form}}
                 </form>
+
+                <div class="d-flex justify-content-around mt-5">
+                    <button class="btn" wire:click.prevent="store()"  style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                        <i class="fa fa-plus-circle" aria-hidden="true"></i> Guardar
+                    </button>
+
+                    <button class="btn"  data-bs-dismiss="modal"  style="background-color:#001d3d;color:  grey!important; border: 2px solid grey!important;">
+                        <i class="fa fa-trash" aria-hidden="true"></i> Cancelar
+                    </button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" wire:click.prevent="store()" class="btn btn-primary close-modal">Save</button>
-            </div>
+
         </div>
     </div>
 </div>

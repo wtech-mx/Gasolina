@@ -21,56 +21,40 @@
 						@include('livewire.ejecutars.update')
 
 				<div class="col-12 p-4">
-				<div class="table-responsive">
+				    <div class="table-responsive" style="overflow: hidden;">
 
-					<table class="table display" id="table_id" >
-						<thead class="text-white">
-							<tr>
-                                <th>Operador</th>
-								<th>Recibido</th>
-								<th>Salida</th>
-								<td>ACTIONS</td>
-							</tr>
-						</thead>
-						<tbody class="text-white">
-							@foreach($ejecutars as $row)
-							<tr>
-                                <td>{{ $row->operador }}</td>
-								<td>{{ $row->recibido }}</td>
-								<td>{{ $row->salida }}</td>
-								<td width="90">
+                        <table class="table display" id="table_id" >
+                            <thead class="text-white">
+                                <tr>
+                                    <th>Operador</th>
+                                    <th>Recibido</th>
+                                    <th>Salida</th>
+                                    <td>ACTIONS</td>
+                                </tr>
+                            </thead>
+                            <tbody class="text-white">
+                                @foreach($ejecutars as $row)
+                                <tr>
+                                    <td>{{ $row->operador }}</td>
+                                    <td>{{ $row->recibido }}</td>
+                                    <td>{{ $row->salida }}</td>
+                                    <td >
 
-								<div class="btn-group">
+                                    <div class="btn-group">
+                                        <a href="" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                        </a>
 
-                                      <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Action
-                                      </button>
+                                        <a href="{{route('print.ejecutar', $row->id)}}" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                            <i class="fa fa-download" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
 
-									<ul class="dropdown-menu">
-                                        <li>
-                                            <a data-bs-toggle="modal" data-bs-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})">
-                                                <i class="fa fa-edit"></i>Edit
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a class="mt-5" href="{{route('print.ejecutar', $row->id)}}">
-                                                Descargar
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a class="dropdown-item" onclick="confirm('Confirm Delete Difusion id {{$row->id}}? \nDeleted Difusions cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})">
-                                                <i class="fa fa-trash"></i> Delete
-                                            </a>
-                                        </li>
-									</ul>
-								</div>
-								</td>
-							@endforeach
-						</tbody>
-					</table>
-
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
 
 					</div>
 				</div>
