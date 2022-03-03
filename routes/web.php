@@ -80,3 +80,13 @@ Route::get('/vencer', [App\Http\Controllers\ElementosController::class, 'por_ven
 
 Route::view('ejecutar', 'livewire.ejecutars.index')->name('ejecutar.index')->middleware('auth');
 Route::get('imprimir/ejecutar/{id}', [App\Http\Livewire\Ejecutars::class, 'pdf_ejecutar'])->name('print.ejecutar');
+
+/*|--------------------------------------------------------------------------
+|Actividades
+|--------------------------------------------------------------------------*/
+Route::get('/consulta', [App\Http\Controllers\ConsultaController::class, 'index'])->name('consulta.index');
+
+Route::get('/exportar/consulta', [App\Http\Controllers\ConsultaController::class, 'export'])->name('consulta.export');
+Route::get('/exportar/consulta/pre', [App\Http\Controllers\ConsultaController::class, 'exportpre'])->name('consulta.exportpre');
+Route::get('/exportar/consulta/diseño', [App\Http\Controllers\ConsultaController::class, 'exportdiseño'])->name('consulta.exportdiseño');
+Route::get('/exportar/consulta/nom', [App\Http\Controllers\ConsultaController::class, 'exportnom'])->name('consulta.exportnom');
