@@ -227,7 +227,9 @@ html {
   margin-left: 0;
 }
 .navigation #burgerBtn {
-  border-color: transparent;
+    border-color: transparent;
+    top: 55% !important;
+    right: 45% !important;
 }
 .navigation #burgerBtn:before {
   -webkit-transform: rotate(45deg);
