@@ -20,7 +20,7 @@
 						@include('livewire.ejecutars.create')
 						@include('livewire.ejecutars.update')
 
-				<div class="col-12 p-4">
+				<div class="col-12 mt4-4">
 				    <div class="table-responsive" style="overflow: hidden;">
 
                         <table class="table display" id="table_id" >
