@@ -17,8 +17,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/graficas', [App\Http\Controllers\HomeController::class, 'graficas'])->name('graficas');
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -82,7 +80,7 @@ Route::view('ejecutar', 'livewire.ejecutars.index')->name('ejecutar.index')->mid
 Route::get('imprimir/ejecutar/{id}', [App\Http\Livewire\Ejecutars::class, 'pdf_ejecutar'])->name('print.ejecutar');
 
 /*|--------------------------------------------------------------------------
-|Actividades
+|Consulta (Actividades)
 |--------------------------------------------------------------------------*/
 Route::get('/consulta', [App\Http\Controllers\ConsultaController::class, 'index'])->name('consulta.index');
 
@@ -90,3 +88,6 @@ Route::get('/exportar/consulta', [App\Http\Controllers\ConsultaController::class
 Route::get('/exportar/consulta/pre', [App\Http\Controllers\ConsultaController::class, 'exportpre'])->name('consulta.exportpre');
 Route::get('/exportar/consulta/diseño', [App\Http\Controllers\ConsultaController::class, 'exportdiseño'])->name('consulta.exportdiseño');
 Route::get('/exportar/consulta/nom', [App\Http\Controllers\ConsultaController::class, 'exportnom'])->name('consulta.exportnom');
+
+
+Route::get('/graficas', [App\Http\Controllers\ElementosController::class, 'graficas'])->name('graficas');

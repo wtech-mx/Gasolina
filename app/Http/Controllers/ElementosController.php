@@ -44,4 +44,23 @@ class ElementosController extends Controller
         return view('actividades.vencer', compact('tareas'));
 
     }
+
+    public function graficas()
+    {
+        $hoy = Carbon::today();
+        $fecha = date("Y-m-d",strtotime($hoy."- 6 month"));
+
+        $T1 = Tareas::where('id_user', '=', auth()->user()->id)->where('end', '>=', $fecha)->get();
+        $conteoTotal = count($T1);
+
+        $V1 = Tareas::where('id_user', '=', auth()->user()->id)->where('end', '>=', $fecha)->where('check', '=', 1)->get();
+        $conteoTerminadas = count($V1);
+        $porcentajeTerminadas = (100 / $conteoTotal) * $conteoTerminadas;
+
+        $conteoNoTerminadas = $conteoTotal - $conteoTerminadas;
+        $porcentajeNoTerminadas = (100 / $conteoTotal) * $conteoNoTerminadas;
+
+        return view('admin.graficas.index', compact('porcentajeTerminadas', 'porcentajeNoTerminadas'));
+
+    }
 }

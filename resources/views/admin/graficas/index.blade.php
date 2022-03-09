@@ -6,6 +6,17 @@
     @endsection
 
 @section('content')
+<style>
+    rect{
+      fill: none!important;
+    }
+    .highcharts-credits{
+        fill: #001d3d!important;
+    }
+    .highcharts-title{
+        fill: #ffff!important;
+    }
+</style>
 
     <div class="row">
 
@@ -17,8 +28,6 @@
                     </a >
 
                     <h1 class="text-white">Metas</h1>
-
-                {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
 
                     <a class="btn btn-back" href=" {{ route('create.empresa') }}">
                         <i class="fa fa-plus btn-icon-back"></i>
@@ -34,6 +43,8 @@
         </div>
 
         <script type="text/javascript">
+            var noTer = '{{$porcentajeNoTerminadas}}';
+            var Ter = '{{$porcentajeTerminadas}}';
             Highcharts.chart('container', {
                 chart: {
                     type: 'pie',
@@ -44,7 +55,7 @@
                     }
                 },
                 title: {
-                    text: 'Browser market shares at a specific website, 2014'
+                    text: 'Grafica Semestral'
                 },
                 accessibility: {
                     point: {
@@ -67,19 +78,15 @@
                 },
                 series: [{
                     type: 'pie',
-                    name: 'Browser share',
+                    name: 'Tareas',
                     data: [
-                        ['Firefox', 45.0],
-                        ['IE', 26.8],
+                        ['Cumplidas', + Ter],
                         {
-                            name: 'Chrome',
-                            y: 12.8,
+                            name: 'Sin cumplir',
+                            y: + noTer,
                             sliced: true,
                             selected: true
                         },
-                        ['Safari', 8.5],
-                        ['Opera', 6.2],
-                        ['Others', 0.7]
                     ]
                 }]
             });
