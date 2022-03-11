@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/menu.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/mobil-menu.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/calendario.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 
 
@@ -79,6 +80,7 @@
             $('#createDataModal').modal('hide');
         });
     </script>
+
     @include('sweetalert::alert')
 
 

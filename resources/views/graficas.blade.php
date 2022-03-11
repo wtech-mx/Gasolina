@@ -1,4 +1,4 @@
-<h2 class="text-left mb-3" style="color: #ffffff!important">Graficas</h2>
+<h2 class="text-left title-cardso mt-3 mb-3" style="color: #ffffff!important">Graficas</h2>
 
 
 <div class="card card-menu" style="background-color: #ffffff!important">

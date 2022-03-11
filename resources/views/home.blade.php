@@ -7,7 +7,7 @@
 <div class="box">
         <div class="row">
 
-            <div class="col-12 mt-3">
+            <div class="col-xs-12 col-sm-12 col-lg-6 mt-3">
                 <div class="d-flex justify-content-between p-3">
 
                     <a href="javascript:history.back()" class="btn btn-back">
@@ -23,46 +23,31 @@
                     </a>
 
                 </div>
-            </div>
 
-            <div class="col-12 p-4">
-
-            <div class=" d-flex justify-content-between bg-white p-2 rounded-pill">
-                <a href=""> <span class="badge badge-pill"
-                        style="background-color: #2ECC71">Diaria</span> </a>
-                <a href=""> <span class="badge badge-pill"
-                        style="background-color: #2980B9">Mensual</span> </a>
-                <a href=""> <span class="badge badge-pill"
-                        style="background-color: #8E44AD;color: #faf7f7">Semestral</span> </a>
-                <a href=""> <span class="badge badge-pill"
-                        style="background-color: #FF0000">No realizada</span> </a>
-            </div>
+                <div class=" d-flex justify-content-between bg-white p-2 rounded-pill">
+                    <a href=""> <span class="badge badge-pill"
+                            style="background-color: #2ECC71">Diaria</span> </a>
+                    <a href=""> <span class="badge badge-pill"
+                            style="background-color: #2980B9">Mensual</span> </a>
+                    <a href=""> <span class="badge badge-pill"
+                            style="background-color: #8E44AD;color: #faf7f7">Semestral</span> </a>
+                    <a href=""> <span class="badge badge-pill"
+                            style="background-color: #FF0000">No realizada</span> </a>
+                </div>
 
                 <div id='calendar'></div>
 
             </div>
 
-            <div class="col-12 p-4">
+            <div class="col-xs-12 col-sm-12 col-lg-6 p-4 ">
 
-            @include('elemetnos')
-
-            </div>
-
-            <div class="col-12 p-4">
+                @include('elemetnos')
 
                 @include('actividades')
 
-            </div>
-
-            <div class="col-12 p-4">
-
-                @include('cursos')
-
-            </div>
-
-            <div class="col-12 p-4">
-
                 @include('graficas')
+
+                 @include('cursos')
 
             </div>
 

@@ -3,7 +3,7 @@
 @endphp
                 <div class="row">
                     <div class="col-6">
-                        <h2 class="text-left" style="color: #FFC300!important">Elementos</h2>
+                        <h2 class="text-left title-cardso" style="color: #FFC300!important">Elementos</h2>
                     </div>
 
                     <div class="col-6">
@@ -27,7 +27,7 @@
                                <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento2">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Control de documentos y registros
+                                        <h4 class="card-title card-menu-title-element">Control de documentos y registros  <br>-  </h4>
                                     </div>
                                 </a>
                             </div>
@@ -35,7 +35,7 @@
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento3">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/3.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Politica <br>-<br>-</h4>
+                                        <h4 class="card-title card-menu-title-element">Politica <br>-</h4>
                                     </div>
                                 </a>
                             </div>
@@ -58,7 +58,7 @@
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento5">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/5.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Rquisitos legales <br>-<br>-</h4>
+                                    <h4 class="card-title card-menu-title-element">Rquisitos legales <br>-</h4>
                                 </div>
                                 </a>
                             </div>
@@ -66,7 +66,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento6">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/6.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Control de actividades y procesos </h4>
+                                        <h4 class="card-title card-menu-title-element">Control de actividades y procesos<br>- </h4>
                                     </a>
                                 </div>
                             </div>
@@ -135,7 +135,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento14">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/14.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Integridad mecanica y aseguramiento de la calidad</h4>
+                                        <h4 class="card-title card-menu-title-element">Integridad mecanica y aseguramiento de la calidad <br>-</h4>
                                     </a>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento16">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/16.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Auditorias <br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Auditorias <br></h4>
                                     </a>
                                 </div>
                             </div>
