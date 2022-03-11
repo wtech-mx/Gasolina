@@ -29,85 +29,24 @@
 
                     <h1 class="text-white">Metas</h1>
 
-                    <a class="btn btn-back" href=" {{ route('create.empresa') }}">
+                    <a class="btn btn-back">
                         <i class="fa fa-plus btn-icon-back"></i>
                     </a>
 
                 </div>
         </div>
 
-        <div class="col-12">
-          <figure class="highcharts-figure">
-            <div id="container"></div>
-          </figure>
-        </div>
-
-        <script type="text/javascript">
-            var noTer = '{{$porcentajeNoTerminadas}}';
-            var Ter = '{{$porcentajeTerminadas}}';
-            Highcharts.chart('container', {
-                chart: {
-                    type: 'pie',
-                    options3d: {
-                        enabled: true,
-                        alpha: 45,
-                        beta: 0
-                    }
-                },
-                title: {
-                    text: 'Grafica Semestral'
-                },
-                accessibility: {
-                    point: {
-                        valueSuffix: '%'
-                    }
-                },
-                tooltip: {
-                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-                },
-                plotOptions: {
-                    pie: {
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        depth: 35,
-                        dataLabels: {
-                            enabled: true,
-                            format: '{point.name}'
-                        }
-                    }
-                },
-                series: [{
-                    type: 'pie',
-                    name: 'Tareas',
-                    data: [
-                        ['Cumplidas', + Ter],
-                        {
-                            name: 'Sin cumplir',
-                            y: + noTer,
-                            sliced: true,
-                            selected: true
-                        },
-                    ]
-                }]
-            });
-		</script>
-
        <div class="col-12 d-flex justify-content-center">
 
                     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                       <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                            Actividades
-                        </button>
-                      </li>
-                      <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-                            Preventivo
+                        <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                            Semestral
                         </button>
                       </li>
                       <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
-                            Correctivo
+                            Anual
                         </button>
                       </li>
                     </ul>
@@ -116,44 +55,74 @@
 
 
        <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="tab-pane fade show active" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
-                    <div class="row mt-4">
-                        <div class="col-6">
-                            <div class="form-group mb-3 position-relative text-center">
-                                <i class="fa fa-calendar icon-style-2"></i>
-                                <label class="form-label label-custom-yellow">Desde*</label>
-                                <input type="date" class="form-control input-style">
-                            </div>
-                        </div>
+                <div class="col-12">
+                    <figure class="highcharts-figure">
+                      <div id="container"></div>
+                    </figure>
+                </div>
+                @include('admin.graficas.semestral')
 
-                        <div class="col-6">
-                            <div class="form-group mb-3 position-relative text-center">
-                                <i class="fa fa-calendar icon-style-2"></i>
-                                <label class="form-label label-custom-yellow">Hasta*</label>
-                                <input type="date" class="form-control input-style">
-                            </div>
-                        </div>
-
-                        <div class="col-12 text-center">
-                            <button class="btn-sinestilo mt-5" type="submit">
-                                <div class="button" >
-                                    <div class="icon">
-                                        <i class="fa fa-check"></i>
-                                    </div>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-
-              </div>
-
-              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <table class="table" id="table_id" >
+                    <thead class="text-white">
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Estatus</th>
+                        <th scope="col">Fecha Fin</th>
+                    </tr>
+                    </thead>
+                    <tbody class="text-white">
+                        @foreach ($T1 as $item)
+                        <tr>
+                            <td>{{$item->title}}</td>
+                            <td>
+                                @if ($item->check == 1)
+                                <b>Terminada</b>
+                                @else
+                                    <b>No terminada</b>
+                                @endif
+                            </td>
+                            <td>{{$item->end}}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
 
               </div>
 
               <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="col-12">
+                        <figure class="highcharts-figure">
+                        <div id="container2"></div>
+                        </figure>
+                    </div>
+                    @include('admin.graficas.anual')
 
+                    <table class="table" id="table_id2" >
+                        <thead class="text-white">
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Estatus</th>
+                            <th scope="col">Fecha Fin</th>
+                        </tr>
+                        </thead>
+                        <tbody class="text-white">
+                            @foreach ($T1_anual as $item)
+                            <tr>
+                                <td>{{$item->title}}</td>
+                                <td>
+                                    @if ($item->check == 1)
+                                    <b>Terminada</b>
+                                    @else
+                                        <b>No terminada</b>
+                                    @endif
+                                </td>
+                                <td>{{$item->end}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
               </div>
 
      </div>

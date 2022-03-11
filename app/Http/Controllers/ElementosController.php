@@ -47,6 +47,8 @@ class ElementosController extends Controller
 
     public function graficas()
     {
+         // -------------Semestral----------------------------------------------------------------------------------------------
+
         $hoy = Carbon::today();
         $fecha = date("Y-m-d",strtotime($hoy."- 6 month"));
 
@@ -60,7 +62,21 @@ class ElementosController extends Controller
         $conteoNoTerminadas = $conteoTotal - $conteoTerminadas;
         $porcentajeNoTerminadas = (100 / $conteoTotal) * $conteoNoTerminadas;
 
-        return view('admin.graficas.index', compact('porcentajeTerminadas', 'porcentajeNoTerminadas'));
+        // -------------Anual----------------------------------------------------------------------------------------------
+
+        $fecha_anual = date("Y-m-d",strtotime($hoy."- 12 month"));
+
+        $T1_anual = Tareas::where('id_user', '=', auth()->user()->id)->where('end', '>=', $fecha_anual)->get();
+        $conteoTotal_anual = count($T1_anual);
+
+        $V1_anual = Tareas::where('id_user', '=', auth()->user()->id)->where('end', '>=', $fecha_anual)->where('check', '=', 1)->get();
+        $conteoTerminadas_anual = count($V1_anual);
+        $porcentajeTerminadas_anual = (100 / $conteoTotal_anual) * $conteoTerminadas_anual;
+
+        $conteoNoTerminadas_anual = $conteoTotal_anual - $conteoTerminadas_anual;
+        $porcentajeNoTerminadas_anual = (100 / $conteoTotal_anual) * $conteoNoTerminadas_anual;
+
+        return view('admin.graficas.index', compact('porcentajeTerminadas', 'porcentajeNoTerminadas', 'T1','porcentajeTerminadas_anual', 'porcentajeNoTerminadas_anual', 'T1_anual'));
 
     }
 }

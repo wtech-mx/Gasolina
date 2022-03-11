@@ -62,4 +62,41 @@ class CalendarioController extends Controller
         return response()->json($id);
     }
 
+    public function temp(Request $request)
+    {
+        for ($i = 0; $i < $request->get('num_veces'); $i++){
+            $tarea = new Calendario;
+            $tarea->id_user = auth()->user()->id;
+            $tarea->descripcion = $request->get('descripcion');
+
+            $tarea->title = $request->get('title');
+            $tarea->image = $request->get('image');
+            $tarea->estatus = 0;
+            $tarea->check = 0;
+            $tarea->start = $request->get('start');
+            $tarea->color = '#D34E24';
+
+            $dia = $tarea->start;
+
+            $año_actual = date("Y");
+            $mes_actual = date("m");
+
+            $num_month = "+".$i." month";
+
+            $num_veces_month = $año_actual."-".$request->get('mes')."-".$dia;
+
+            $nuevafecha = strtotime ( $num_month , strtotime ( $num_veces_month ) ) ;
+
+            $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
+            $tarea->end = $nuevafecha;
+            $tarea->start = $nuevafecha;
+
+            $tarea->save();
+
+        }
+
+        return redirect()->route('home')
+        ->with('success', 'La tarea fue Creada Exitosamente!');
+    }
+
 }

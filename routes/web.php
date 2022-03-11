@@ -60,6 +60,8 @@ Route::get('/calendar/show', [App\Http\Controllers\CalendarioController::class, 
 Route::patch('/calendar/destroy/{id}', [App\Http\Controllers\CalendarioController::class, 'destroy_calendar'])->name('calendar.destroy_calendar');
 Route::patch('/calendar/update/{id}', [App\Http\Controllers\CalendarioController::class, 'update_calendar'])->name('calendar.update_calendar');
 
+Route::post('/calendario/temp', [App\Http\Controllers\CalendarioController::class, 'temp'])->name('calendar.temp');
+
 /*|--------------------------------------------------------------------------
 |Elementos
 |--------------------------------------------------------------------------*/

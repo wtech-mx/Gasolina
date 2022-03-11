@@ -1,3 +1,7 @@
+@php
+   $fecha = date("Y-m-d");
+@endphp
+
 @section('fullcalendar')
 
     <link href='{{ asset('assets/css/main.css') }}' rel='stylesheet' />
@@ -45,7 +49,6 @@
             $("#btnModificar").prop("disabled",true);
             $("#btnBorrar").prop("disabled",true);
             $('#exampleModal').modal('toggle');
-            $('#exampleModal2').modal('toggle');
             },
 
             eventClick:function (info) {
@@ -76,7 +79,7 @@
 
             let titleArg = info.event.title;
 
-            if (titleArg == 'X-01-01'){
+            if (titleArg == 'VII-01-01'){
                 $('#exampleModal2').modal('toggle');
 
             }else{
@@ -147,7 +150,7 @@
                 estatus:$('#estatus').val()+estatusDefault,
                 check:$('#check').val()+checkDefault,
                 image:$('#image').val()+imageDefault,
-                end:$('#txtFecha').val(),
+                end:$('#txtFechaEnd').val(),
                 start:$('#txtFecha').val(),
                 '_token':$("meta[name='csrf-token']").attr("content"),
                 '_method':method
@@ -184,22 +187,6 @@
                         success:function (msg){
                             console.log('Mensaje',msg);
                             $('#exampleModal').modal('toggle');
-                            calendar.refetchEvents();
-                            },
-                        error:function(){alert("hay un error");}
-                    }
-                );
-        }
-
-        function EnviarInformacion(accion,ObjEvento){
-            $.ajax(
-                    {
-                    type:"POST",
-                        url: "{{route('calendar.store_calendar')}}"+accion,
-                        data:ObjEvento,
-                        success:function (msg){
-                            console.log('Mensaje',msg);
-                            $('#exampleModal2').modal('toggle');
                             calendar.refetchEvents();
                             },
                         error:function(){alert("hay un error");}
