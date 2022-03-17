@@ -1,16 +1,14 @@
 <!doctype html>
 <html lang="en">
+
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
-    <title>Hello, world!</title>
+    <title>Documento Pdf</title>
+    <link rel="stylesheet" href="{{ public_path('assets/bootstrap/css/bootstrapv3.3.6.min.css') }}" type="text/css">
   </head>
-  <body style="background-color:#003566!important">
 
+  <body style="background-color:#003566!important">
     <style>
 
         .container-fluid{
@@ -69,7 +67,6 @@
             </p>
 		</div>
 
-
 		<div class="col-12 text-center">
             <p class="font-weight-bold">
              Nº CRE: PL/20543/EXP/ES/2017 <br>
@@ -125,7 +122,6 @@
 
 		</div>
 
-
         <div class="col-8 text-center mt-5">
             ELABORÓ
             <div class="row">
@@ -173,145 +169,139 @@
             </div>
         </div>
 
+        <!-- segunda hoja -->
+{{--        si se descomenta es parte del codigo no se porque se tarda mucho en cargar--}}
+        <div class="row mt-5">
+
+{{--            <div class="col-4">--}}
+{{--                <img class="img-card-menu mt-5" src="{{ asset('assets/img/pfd/2.png') }}">--}}
+{{--            </div>--}}
+
+{{--            <div class="col-4">--}}
+{{--                <p class="text-center tittle_header">--}}
+{{--                    SISTEMA DE ADMINISTRACIÓN DE--}}
+{{--                    SEGURIDAD INDUSTRIAL, SEGURIDAD--}}
+{{--                    OPERATIVA Y PROTECCIÓN AL MEDIO--}}
+{{--                    AMBIENTE (SASISOPA) y SISTEMA DE--}}
+{{--                    GESTIÓN DE LAS MEDICIONES (SGM)--}}
+{{--                </p>--}}
+{{--            </div>--}}
+
+{{--            <div class="col-4">--}}
+{{--                <p class="text-center mt-5">--}}
+{{--                    SAC XIB CHAAC, S.A. DE C.V.--}}
+{{--                </p>--}}
+{{--            </div>--}}
 
 
-	</div>
+{{--            <div class="col-12 text-center">--}}
+{{--                <p class="font-weight-bold">--}}
+{{--                 Nº CRE: PL/20543/EXP/ES/2017 <br>--}}
+{{--                 POLÍTICA DOCUMENTADA--}}
+{{--                </p>--}}
+{{--            </div>--}}
 
-    <!-- segunda hoja -->
+{{--            <div class="col-4 font-weight-bold text-center bg-yellow">--}}
+{{--                CODIGO: I-01-01--}}
+{{--            </div>--}}
 
-	<div class="row mt-5">
+{{--            <div class="col-4 font-weight-bold text-center bg-yellow">--}}
+{{--                N° REV.:00--}}
+{{--            </div>--}}
 
-		<div class="col-4">
-            <img class="img-card-menu mt-5" src="{{ asset('assets/img/pfd/2.png') }}">
-		</div>
+{{--            <div class="col-4 font-weight-bold text-center bg-yellow">--}}
+{{--                FECHA DE APROBACIÓN: 04/07/2019--}}
+{{--            </div>--}}
 
-		<div class="col-4">
-            <p class="text-center tittle_header">
-                SISTEMA DE ADMINISTRACIÓN DE
-                SEGURIDAD INDUSTRIAL, SEGURIDAD
-                OPERATIVA Y PROTECCIÓN AL MEDIO
-                AMBIENTE (SASISOPA) y SISTEMA DE
-                GESTIÓN DE LAS MEDICIONES (SGM)
-            </p>
-		</div>
+{{--            <div class="col-12 ">--}}
 
-		<div class="col-4">
-            <p class="text-center mt-5">
-                SAC XIB CHAAC, S.A. DE C.V.
-            </p>
-		</div>
+{{--                <p class="p-5">--}}
+{{--                    La Estación de Servicio está consciente de la importancia de la protección al Medio Ambiente, Seguridad Operativa y Seguridad--}}
+{{--                    Industrial, la correcta Gestión de las Mediciones y del estricto cumplimiento de las leyes, reglamentos y normas que le aplican que--}}
+{{--                    son aspectos esenciales y parte integral del Sistema de Administración (SASISOPA) y del Sistema de Gestión de Medición que--}}
+{{--                    asegura un liderazgo sustentable en el tiempo así mismo nos dará orientación para la gestión de las actividades y procesos de--}}
+{{--                    medición y para la confirmación metrológica del equipo de medición utilizado para apoyar y demostrar el cumplimiento de los--}}
+{{--                    requisitos metrológicos. En este marco, la Estación de Servicio se compromete a: <br> <br>--}}
 
+{{--                    <ul>--}}
 
-		<div class="col-12 text-center">
-            <p class="font-weight-bold">
-             Nº CRE: PL/20543/EXP/ES/2017 <br>
-             POLÍTICA DOCUMENTADA
-            </p>
-		</div>
+{{--                        <li>--}}
+{{--                            Trabajar de manera segura, saludable y responsable con las personas y el ambiente, cumpliendo con los requisitos legales--}}
+{{--                            normativos y otros requisitos legales aplicables a nuestros contratistas, subcontratistas y/o proveedores, que interactúen--}}
+{{--                            con del Sistema de Administración.--}}
+{{--                        </li>--}}
 
-		<div class="col-4 font-weight-bold text-center bg-yellow">
-            CODIGO: I-01-01
-		</div>
+{{--                        <li>--}}
 
-		<div class="col-4 font-weight-bold text-center bg-yellow">
-            N° REV.:00
-		</div>
+{{--                            Motivar y capacitar a nuestros colaboradores para que efectúen sus labores cumpliendo con las disposiciones de protección--}}
+{{--                            al Medio Ambiente, Seguridad Operativa y Seguridad Industrial de la organización.--}}
+{{--                        </li>--}}
 
-		<div class="col-4 font-weight-bold text-center bg-yellow">
-            FECHA DE APROBACIÓN: 04/07/2019
-		</div>
+{{--                        <li>--}}
+{{--                            Identificar y evaluar los peligros, riesgos y aspectos ambientales inherentes a nuestros procesos que puedan afectar la--}}
+{{--                            eficiencia del Sistema de Administración, esto, con la finalidad de prevenir y controlar incidentes, accidentes, enfermedades,--}}
+{{--                            daños a la salud e impactos negativos al entorno relacionados con el trabajo de nuestros colaboradores, contratistas y--}}
+{{--                            visitantes.--}}
+{{--                        </li>--}}
 
-		<div class="col-12 ">
+{{--                        <li>--}}
+{{--                            Realizar inspecciones periódicas a fin de evaluar la eficiencia y desempeño del Sistema de Administración para identificar--}}
+{{--                            oportunidades de mejora y adaptar métodos de prevención que nos lleven a una mejora continua del sistema.--}}
+{{--                            Cumplir con los objetivos establecidos en el Sistema de Administración en Protección al Medio Ambiente, Seguridad--}}
+{{--                            Operativa y Seguridad Industrial.--}}
+{{--                        </li>--}}
 
-            <p class="p-5">
-                La Estación de Servicio está consciente de la importancia de la protección al Medio Ambiente, Seguridad Operativa y Seguridad
-                Industrial, la correcta Gestión de las Mediciones y del estricto cumplimiento de las leyes, reglamentos y normas que le aplican que
-                son aspectos esenciales y parte integral del Sistema de Administración (SASISOPA) y del Sistema de Gestión de Medición que
-                asegura un liderazgo sustentable en el tiempo así mismo nos dará orientación para la gestión de las actividades y procesos de
-                medición y para la confirmación metrológica del equipo de medición utilizado para apoyar y demostrar el cumplimiento de los
-                requisitos metrológicos. En este marco, la Estación de Servicio se compromete a: <br> <br>
+{{--                        <li>--}}
+{{--                            Esto refleja el compromiso de la Estación de Servicio a mantener la mejora continua del desempeño en materia de--}}
+{{--                            Seguridad Industrial, Seguridad Operativa y protección al medio ambiente en un sistema integrado de administración que--}}
+{{--                            está orientado a la búsqueda permanente de oportunidades y nuevos desafíos.--}}
+{{--                        </li>--}}
 
-                <ul>
+{{--                        <li>--}}
+{{--                            En relación a nuestra Política del Sistema de Gestión de las mediciones la Alta Dirección se compromete a lo siguiente:--}}
+{{--                             La buena práctica profesional y con calidad de todas las actividades y procesos desprendidos del SGM.--}}
+{{--                        </li>--}}
 
-                    <li>
-                        Trabajar de manera segura, saludable y responsable con las personas y el ambiente, cumpliendo con los requisitos legales
-                        normativos y otros requisitos legales aplicables a nuestros contratistas, subcontratistas y/o proveedores, que interactúen
-                        con del Sistema de Administración.
-                    </li>
+{{--                        <li>--}}
+{{--                            Todo el personal relacionado con las actividades y procesos de medición descritas en el SGM deberá conocer y--}}
+{{--                            familiarizarse con la documentación y los procedimientos aplicables en su área de trabajo.--}}
+{{--                            Asegurar la mejora continua para el SGM.--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
 
-                    <li>
+{{--                    En relación a nuestra Política del Sistema de Gestión de las mediciones la Alta Dirección se compromete a lo siguiente:<br> <br>--}}
 
-                        Motivar y capacitar a nuestros colaboradores para que efectúen sus labores cumpliendo con las disposiciones de protección
-                        al Medio Ambiente, Seguridad Operativa y Seguridad Industrial de la organización.
-                    </li>
+{{--                    <ul>--}}
+{{--                        <li>--}}
+{{--                            La buena práctica profesional y con calidad de todas las actividades y procesos desprendidos del SGM.--}}
+{{--                        </li>--}}
 
-                    <li>
-                        Identificar y evaluar los peligros, riesgos y aspectos ambientales inherentes a nuestros procesos que puedan afectar la
-                        eficiencia del Sistema de Administración, esto, con la finalidad de prevenir y controlar incidentes, accidentes, enfermedades,
-                        daños a la salud e impactos negativos al entorno relacionados con el trabajo de nuestros colaboradores, contratistas y
-                        visitantes.
-                    </li>
+{{--                        <li>--}}
+{{--                            Todo el personal relacionado con las actividades y procesos de medición descritas en el SGM deberá conocer y--}}
+{{--                            familiarizarse con la documentación y los procedimientos aplicables en su área de trabajo.--}}
+{{--                        </li>--}}
 
-                    <li>
-                        Realizar inspecciones periódicas a fin de evaluar la eficiencia y desempeño del Sistema de Administración para identificar
-                        oportunidades de mejora y adaptar métodos de prevención que nos lleven a una mejora continua del sistema.
-                        Cumplir con los objetivos establecidos en el Sistema de Administración en Protección al Medio Ambiente, Seguridad
-                        Operativa y Seguridad Industrial.
-                    </li>
+{{--                        <li>--}}
+{{--                            Asegurar la mejora continua para el SGM.--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
 
-                    <li>
-                        Esto refleja el compromiso de la Estación de Servicio a mantener la mejora continua del desempeño en materia de
-                        Seguridad Industrial, Seguridad Operativa y protección al medio ambiente en un sistema integrado de administración que
-                        está orientado a la búsqueda permanente de oportunidades y nuevos desafíos.
-                    </li>
-
-                    <li>
-                        En relación a nuestra Política del Sistema de Gestión de las mediciones la Alta Dirección se compromete a lo siguiente:
-                         La buena práctica profesional y con calidad de todas las actividades y procesos desprendidos del SGM.
-                    </li>
-
-                    <li>
-                        Todo el personal relacionado con las actividades y procesos de medición descritas en el SGM deberá conocer y
-                        familiarizarse con la documentación y los procedimientos aplicables en su área de trabajo.
-                        Asegurar la mejora continua para el SGM.
-                    </li>
-                </ul>
-
-                En relación a nuestra Política del Sistema de Gestión de las mediciones la Alta Dirección se compromete a lo siguiente:<br> <br>
-
-                <ul>
-                    <li>
-                        La buena práctica profesional y con calidad de todas las actividades y procesos desprendidos del SGM.
-                    </li>
-
-                    <li>
-                        Todo el personal relacionado con las actividades y procesos de medición descritas en el SGM deberá conocer y
-                        familiarizarse con la documentación y los procedimientos aplicables en su área de trabajo.
-                    </li>
-
-                    <li>
-                        Asegurar la mejora continua para el SGM.
-                    </li>
-                </ul>
-
-                    <br>
+{{--                        <br>--}}
 
 
-            </p>
+{{--                </p>--}}
 
-            <p class="text-center">
-                C. VICTOR MANUEL PEREZ CARRILLO
-            </p>
+{{--                <p class="text-center">--}}
+{{--                    C. VICTOR MANUEL PEREZ CARRILLO--}}
+{{--                </p>--}}
 
-		</div>
+{{--            </div>--}}
 
-	</div>
+        </div>
 
 </div>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+</div>
+  
   </body>
 </html>
