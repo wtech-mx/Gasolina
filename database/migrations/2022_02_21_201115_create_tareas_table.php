@@ -29,7 +29,6 @@ class CreateTareasTable extends Migration
             $table->string('url')->nullable();
             $table->tinyInteger('estatus');
             $table->tinyInteger('check');
-            $table->date('num_veces');
             $table->date('start');
             $table->date('end');
 
