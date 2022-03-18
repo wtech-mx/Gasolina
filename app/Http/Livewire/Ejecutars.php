@@ -79,7 +79,6 @@ class Ejecutars extends Component
     public function store()
     {
         $this->validate([
-		'cliente' => 'required',
 		'tanque' => 'required',
 		'recibido' => 'required',
 		'salida' => 'required',
