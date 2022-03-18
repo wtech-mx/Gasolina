@@ -25,6 +25,12 @@ class User extends Authenticatable
         'password',
         'apellido',
         'telefono',
+        'cp',
+        'rfc',
+        'calle',
+        'puesto',
+        'empresa',
+        'firma',
         'id_sucursal',
         'id_empresa',
     ];

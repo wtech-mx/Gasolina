@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tareas;
+use App\Http\Livewire\Ejecutars;
 use App\Models\Elementos;
 use Illuminate\Support\Facades\Validator;
 
@@ -78,7 +79,8 @@ class TareasController extends Controller
             $elementos->seguimiento = $request->get('seguimiento');
             $elementos->difundir = $request->get('difundir');
             $elementos->correctiva = $request->get('correctiva');
-            $elementos->ejecutar = $request->get('ejecutar');
+            // $elementos->ejecutar = $request->get('ejecutar');
+            $elementos->ejecutar = 0;
             $elementos->entrada = $request->get('entrada');
             $elementos->salida = $request->get('salida');
             $elementos->extraordinaria = $request->get('extraordinaria');
@@ -89,6 +91,14 @@ class TareasController extends Controller
             $elementos->generar = $request->get('generar');
 
             $elementos->save();
+
+            $ejecutar = new Ejecutars;
+            $ejecutar->id_user = auth()->user()->id;
+            $ejecutar->id_tarea = $tarea->id;
+            $ejecutar->cantidad_antes = 0;
+            $ejecutar->cantidad_despues = 0;
+
+            $ejecutar->save();
 
             return redirect()->route('home')
                 ->with('success', 'La tarea fue Creada Exitosamente!');
@@ -149,6 +159,14 @@ class TareasController extends Controller
             $elementos->generar = $request->get('generar');
 
             $elementos->save();
+
+            $ejecutar = new Ejecutars;
+            $ejecutar->id_user = auth()->user()->id;
+            $ejecutar->id_tarea = $tarea->id;
+            $ejecutar->cantidad_antes = 0;
+            $ejecutar->cantidad_despues = 0;
+
+            $ejecutar->save();
         }
 
         return redirect()->route('home')

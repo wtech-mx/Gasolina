@@ -126,6 +126,15 @@
                                             </div>
 
                                         </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group mb-3 position-relative" style="position: relative">
+                                            <i class="fa fa-street-view icon-style-2"></i>
+                                            <label class="form-label label-custom-yellow">Firma</label>
+                                            <input type="file" class="form-control input-style" id="firma" name="firma">
+                                        </div>
+                                    </div>
+                                </div>
 
                       <div class="row">
                           <div class="col-12 text-center">

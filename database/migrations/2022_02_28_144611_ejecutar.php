@@ -21,17 +21,22 @@ class Ejecutar extends Migration
                 ->references('id')->on('users')
                 ->inDelete('set null');
 
-            $table->string('cliente');
-            $table->string('tanque');
-            $table->datetime('recibido');
-            $table->time('salida');
-            $table->string('operador');
-            $table->string('identificacion');
-            $table->string('producto');
+            $table->unsignedBigInteger('id_tarea')->nullable();
+            $table->foreign('id_tarea')
+                ->references('id')->on('tareas')
+                ->inDelete('set null');
+
+            $table->string('cliente')->nullable();
+            $table->string('tanque')->nullable();
+            $table->datetime('recibido')->nullable();
+            $table->time('salida')->nullable();
+            $table->string('operador')->nullable();
+            $table->string('identificacion')->nullable();
+            $table->string('producto')->nullable();
             $table->text('remision')->nullable();
             $table->text('factura')->nullable();
-            $table->string('nota');
-            $table->string('cantidad');
+            $table->string('nota')->nullable();
+            $table->string('cantidad')->nullable();
             $table->timestamps();
         });
     }

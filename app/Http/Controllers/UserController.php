@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use DB;
 use Session;
+use Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -108,7 +109,19 @@ class UserController extends Controller
         $empresa->id_empresa = $request->get('id_empresa');
         $empresa->id_sucursal = $request->get('id_sucursal');
         $empresa->email = $request->get('email');
-        $empresa->password = Hash::make($request->password);
+
+        if($request->hasFile("firma")){
+
+            $imagen = $request->file("firma");
+            $nombreimagen = time() . "." .$imagen->guessExtension();
+            $ruta = public_path("firma/");
+
+            //$imagen->move($ruta,$nombreimagen);
+            copy($imagen->getRealPath(),$ruta.$nombreimagen);
+
+            $empresa->firma = $nombreimagen;
+
+        }
 
         $empresa->update();
 

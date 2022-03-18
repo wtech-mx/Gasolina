@@ -21,8 +21,17 @@ class EjecutarFactory extends Factory
 			'operador' => $this->faker->name,
 			'identificacion' => $this->faker->name,
 			'producto' => $this->faker->name,
+			'nota' => $this->faker->name,
+			'cantidad' => $this->faker->name,
 			'remision' => $this->faker->name,
 			'factura' => $this->faker->name,
+			'producto_tanqute' => $this->faker->name,
+			'cantidad_antes' => $this->faker->name,
+			'cantidad_despues' => $this->faker->name,
+			'energia' => $this->faker->name,
+			'suspender' => $this->faker->name,
+			'trillada_antes' => $this->faker->name,
+			'trillada_despues' => $this->faker->name,
         ];
     }
 }
