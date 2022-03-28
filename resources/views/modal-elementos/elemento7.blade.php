@@ -54,6 +54,7 @@
                                       @csrf
                                       {{-- Tareas elementos --}}
                                       <input type="hidden" name="elementos" id="elementos" value="7">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="1">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="evaluar" id="evaluar" value="0">
                                       <input type="hidden" name="difundir" id="difundir" value="0">
@@ -74,6 +75,7 @@
 
                                       {{-- Tareas elementos --}}
                                       <input type="hidden" name="elementos" id="elementos" value="7">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="1">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="evaluar" id="evaluar" value="0">
                                       <input type="hidden" name="difundir" id="difundir" value="0">
@@ -127,7 +129,8 @@
                                    <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                       @csrf
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="7.1">
+                                      <input type="hidden" name="elementos" id="elementos" value="7">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="2">
                                       <input type="hidden" name="alta" id="alta" value="0">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="evaluar" id="evaluar" value="0">
@@ -148,7 +151,8 @@
                                       @csrf
 
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="7.1">
+                                      <input type="hidden" name="elementos" id="elementos" value="7">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="2">
                                       <input type="hidden" name="alta" id="alta" value="0">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="evaluar" id="evaluar" value="0">

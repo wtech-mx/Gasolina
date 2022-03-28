@@ -8,6 +8,11 @@ use Carbon\Carbon;
 
 class ElementosController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function pendientes()
     {
         $tareas = Tareas::

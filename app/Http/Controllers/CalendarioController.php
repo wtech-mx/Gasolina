@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\DB;
 
 class CalendarioController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function store_calendar(Request $request)
     {
         $datosEvento = request()->except(['_token', '_method'], []);

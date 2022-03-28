@@ -12,6 +12,11 @@ use Illuminate\Support\Facades\Validator;
 
 class EmpresaController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
 function index()
 {
         $empresa = User::

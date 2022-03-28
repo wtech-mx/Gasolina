@@ -54,7 +54,8 @@
                                    <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                       @csrf
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.1">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="1">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="ordinaria" id="ordinaria" value="0">
                                       <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
@@ -75,7 +76,8 @@
                                       @csrf
 
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.1">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="1">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="ordinaria" id="ordinaria" value="0">
                                       <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
@@ -129,7 +131,8 @@
                                    <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                       @csrf
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.2">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="2">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="ordinaria" id="ordinaria" value="0">
                                       <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
@@ -150,7 +153,8 @@
                                       @csrf
 
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.2">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="2">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="ordinaria" id="ordinaria" value="0">
                                       <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
@@ -204,7 +208,8 @@
                                    <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                       @csrf
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.3">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="3">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="ordinaria" id="ordinaria" value="0">
                                       <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
@@ -225,7 +230,8 @@
                                       @csrf
 
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.3">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="3">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="ordinaria" id="ordinaria" value="0">
                                       <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
@@ -279,7 +285,8 @@
                                    <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                       @csrf
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.4">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="4">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="ordinaria" id="ordinaria" value="0">
                                       <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
@@ -300,7 +307,8 @@
                                       @csrf
 
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.4">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="4">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="ordinaria" id="ordinaria" value="0">
                                       <input type="hidden" name="extraordinaria" id="extraordinaria" value="0">
@@ -354,7 +362,8 @@
                                    <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                       @csrf
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.5">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="5">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="seguimiento" id="seguimiento" value="0">
                                       <input type="hidden" name="difundir" id="difundir" value="0">
@@ -374,7 +383,8 @@
                                       @csrf
 
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.5">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="5">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="seguimiento" id="seguimiento" value="0">
                                       <input type="hidden" name="difundir" id="difundir" value="0">
@@ -427,7 +437,8 @@
                                    <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                       @csrf
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.6">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="6">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="seguimiento" id="seguimiento" value="0">
                                       <input type="hidden" name="difundir" id="difundir" value="0">
@@ -447,7 +458,8 @@
                                       @csrf
 
                                       {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="11.6">
+                                      <input type="hidden" name="elementos" id="elementos" value="11">
+                                      <input type="hidden" name="num_elementos" id="num_elementos" value="6">
                                       <input type="hidden" name="consultar" id="consultar" value="0">
                                       <input type="hidden" name="seguimiento" id="seguimiento" value="0">
                                       <input type="hidden" name="difundir" id="difundir" value="0">

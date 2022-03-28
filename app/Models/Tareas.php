@@ -15,6 +15,7 @@ class Tareas extends Model
     protected $fillable = [
         'id_user',
         'descripcion',
+        'num_elementos',
         'elementos',
         'image',
         'title',

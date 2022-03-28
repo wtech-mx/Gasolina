@@ -4,12 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tareas;
-use App\Http\Livewire\Ejecutars;
+use App\Models\Ejecutar;
 use App\Models\Elementos;
 use Illuminate\Support\Facades\Validator;
 
 class TareasController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function store(Request $request)
     {
 
@@ -31,6 +36,7 @@ class TareasController extends Controller
             $tarea = new Tareas;
             $tarea->id_user = auth()->user()->id;
             $tarea->elementos = $request->get('elementos');
+            $tarea->num_elementos = $request->get('num_elementos');
             $tarea->descripcion = $request->get('descripcion');
 
             $tarea->title = $request->get('title');
@@ -92,7 +98,7 @@ class TareasController extends Controller
 
             $elementos->save();
 
-            $ejecutar = new Ejecutars;
+            $ejecutar = new Ejecutar;
             $ejecutar->id_user = auth()->user()->id;
             $ejecutar->id_tarea = $tarea->id;
             $ejecutar->cantidad_antes = 0;
@@ -115,6 +121,7 @@ class TareasController extends Controller
             $tarea = new Tareas;
             $tarea->id_user = auth()->user()->id;
             $tarea->elementos = $request->get('elementos');
+            $tarea->num_elementos = $request->get('num_elementos');
             $tarea->descripcion = $request->get('descripcion');
 
             $tarea->title = $request->get('title');
@@ -160,12 +167,11 @@ class TareasController extends Controller
 
             $elementos->save();
 
-            $ejecutar = new Ejecutars;
+            $ejecutar = new Ejecutar;
             $ejecutar->id_user = auth()->user()->id;
             $ejecutar->id_tarea = $tarea->id;
             $ejecutar->cantidad_antes = 0;
             $ejecutar->cantidad_despues = 0;
-
             $ejecutar->save();
         }
 

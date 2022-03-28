@@ -81,12 +81,11 @@
 
             if (titleArg == 'VII-01-01'){
                 $('#exampleModal2').modal('toggle');
-
             }else{
                 $('#exampleModal').modal('toggle');
             }
 
-            console.log('Fecha', dia)
+            console.log('ID', info)
 
             },
 

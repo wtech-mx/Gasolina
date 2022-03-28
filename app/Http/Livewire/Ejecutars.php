@@ -89,8 +89,6 @@ class Ejecutars extends Component
 		'cantidad' => 'required',
 		'cantidad_antes' => 'required',
 		'cantidad_despues' => 'required',
-		'energia' => 'required',
-		'suspender' => 'required',
         ]);
 
         Ejecutar::create([
@@ -115,18 +113,7 @@ class Ejecutars extends Component
 			'trillada_despues' => $this-> trillada_despues
         ]);
 
-        $tarea = Tareas::where('id_user', '=', auth()->user()->id)
-        ->where('elementos', '=', 3)
-        ->where('check', '=', 0)
-        ->first();
 
-        $elemento = Elementos::where('id_tareas', '=', $tarea->id)
-        ->first();
-
-        $record = Elementos::find($elemento->id);
-        $record->update([
-        'ejecutar' => 1
-        ]);
 
         $this->resetInput();
 		$this->emit('closeModal');

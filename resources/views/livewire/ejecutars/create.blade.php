@@ -114,12 +114,12 @@
 
                         <div class="form-group mt-3">
                             <label style="color: #FFC300;" for="energia">Cortó el suministro de energía eléctrica de la bomba sumergible del tanque de almacenamiento en el que se efectuará la descarga de producto *</label>
-                            <input class="form-check-input" type="checkbox"  id="energia" checked>@error('energia') <span class="error text-danger">{{ $message }}</span> @enderror
+                            <input class="form-check-input" type="checkbox"  id="energia" checked>
                         </div>
 
                         <div class="form-group mt-3">
                             <label style="color: #FFC300;" for="suspender">Suspendió el despacho al público de las islas adyacentes al área de descarga *</label>
-                            <input class="form-check-input" type="checkbox"  id="suspender" checked>@error('suspender') <span class="error text-danger">{{ $message }}</span> @enderror
+                            <input class="form-check-input" type="checkbox"  id="suspender" checked>
                         </div>
 
                         <div class="form-group mt-3">

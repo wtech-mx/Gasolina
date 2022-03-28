@@ -15,14 +15,14 @@ class CreateTareasTable extends Migration
     {
         Schema::create('tareas', function (Blueprint $table) {
             $table->id();
-            $table->text('descripcion');
-            $table->float('elementos');
-
             $table->unsignedBigInteger('id_user')->nullable();
             $table->foreign('id_user')
                 ->references('id')->on('users')
                 ->inDelete('set null');
 
+            $table->text('descripcion');
+            $table->integer('elementos');
+            $table->integer('num_elementos')->nullable();
             $table->string('image');
             $table->string('title');
             $table->string('color');
