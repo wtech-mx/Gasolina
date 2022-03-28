@@ -14,7 +14,7 @@ class CalendarioController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function store_calendar(Request $request)
     {
         $datosEvento = request()->except(['_token', '_method'], []);
@@ -24,8 +24,13 @@ class CalendarioController extends Controller
 
     public function show_calendar()
     {
-            $json2 = $data2['calendario'] = Calendario::all();
-            $json3 = $data3['formato'] = Tareas::all();
+            $json2 = $data2['calendario'] = Calendario::
+            where('id_user', '=', auth()->user()->id)
+            ->get();
+            
+            $json3 = $data3['formato'] = Tareas::
+            where('id_user', '=', auth()->user()->id)
+            ->get();
 
             //los convieerte en array
             $decode2 = json_decode($json2);

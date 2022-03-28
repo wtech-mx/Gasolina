@@ -1,5 +1,36 @@
+@php
+    $userId = auth()->user()->admin;
+@endphp
 <h2 class="text-left title-cardso mt-3 mb-3" style="color: #ffffff!important">Mis actividades</h2>
 
+@if ($userId == 1)
+<div class="card card-menu" style="background-color: #ffffff!important">
+    <div class="card-body">
+        <a style="text-decoration: none;color: #000000" href="{{ route('elementos.pendientes_admin') }}">
+            <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista-de-deseos.png') }}">
+            <h4 class="card-title card-menu-title">Pendientes</h4>
+        </a>
+    </div>
+</div>
+
+<div class="card card-menu" style="background-color: #ffffff!important">
+    <div class="card-body">
+        <a style="text-decoration: none;color: #000000" href="{{ route('elementos.terminadas_admin') }}">
+            <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista.png') }}">
+            <h4 class="card-title card-menu-title">Terminadas</h4>
+        </a>
+    </div>
+</div>
+
+<div class="card card-menu" style="background-color: #ffffff!important">
+    <div class="card-body">
+        <a style="text-decoration: none;color: #000000" href="{{ route('elementos.por_vencer_admin') }}">
+            <img class="img-card-menu" src=" {{ asset('assets/img/icons/timetable.png') }}">
+            <h4 class="card-title card-menu-title">Por Vencer</h4>
+        </a>
+    </div>
+</div>
+@else
 <div class="card card-menu" style="background-color: #ffffff!important">
     <div class="card-body">
         <a style="text-decoration: none;color: #000000" href="{{ route('elementos.pendientes') }}">
@@ -26,3 +57,4 @@
         </a>
     </div>
 </div>
+@endif

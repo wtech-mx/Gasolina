@@ -71,7 +71,14 @@ Route::post('/tareas/form', [App\Http\Controllers\TareasController::class, 'form
 Route::post('/elemento/store', [App\Http\Controllers\CorrectivaController::class, 'store'])->name('correctiva.store');
 
 /*|--------------------------------------------------------------------------
-|Actividades
+|Actividades Admin
+|--------------------------------------------------------------------------*/
+Route::get('/admin/pendientes', [App\Http\Controllers\ElementosController::class, 'pendientes_admin'])->name('elementos.pendientes_admin');
+Route::get('/admin/terminadas', [App\Http\Controllers\ElementosController::class, 'terminadas_admin'])->name('elementos.terminadas_admin');
+Route::get('/admin/vencer', [App\Http\Controllers\ElementosController::class, 'por_vencer_admin'])->name('elementos.por_vencer_admin');
+
+/*|--------------------------------------------------------------------------
+|Actividades User
 |--------------------------------------------------------------------------*/
 Route::get('/pendientes', [App\Http\Controllers\ElementosController::class, 'pendientes'])->name('elementos.pendientes');
 Route::get('/terminadas', [App\Http\Controllers\ElementosController::class, 'terminadas'])->name('elementos.terminadas');
@@ -98,3 +105,5 @@ Route::view('difundir', 'livewire.difundirs.index')->name('difundir.index')->mid
 Route::get('imprimir/difundir/{id}', [App\Http\Livewire\Difundirs::class, 'pdf_difundir'])->name('print.difundir');
 
 Route::get('/graficas', [App\Http\Controllers\ElementosController::class, 'graficas'])->name('graficas');
+
+Route::get('/admin/graficas', [App\Http\Controllers\ElementosController::class, 'graficas_admin'])->name('graficas_admin');
