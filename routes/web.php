@@ -91,5 +91,10 @@ Route::get('/exportar/consulta/pre', [App\Http\Controllers\ConsultaController::c
 Route::get('/exportar/consulta/diseño', [App\Http\Controllers\ConsultaController::class, 'exportdiseño'])->name('consulta.exportdiseño');
 Route::get('/exportar/consulta/nom', [App\Http\Controllers\ConsultaController::class, 'exportnom'])->name('consulta.exportnom');
 
+/*|--------------------------------------------------------------------------
+|Difundir (Actividades)
+|--------------------------------------------------------------------------*/
+Route::view('difundir', 'livewire.difundirs.index')->name('difundir.index')->middleware('auth');
+Route::get('imprimir/difundir/{id}', [App\Http\Livewire\Difundirs::class, 'pdf_difundir'])->name('print.difundir');
 
 Route::get('/graficas', [App\Http\Controllers\ElementosController::class, 'graficas'])->name('graficas');
