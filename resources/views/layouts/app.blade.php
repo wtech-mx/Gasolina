@@ -64,16 +64,27 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#table_id').DataTable();
+            $('#table_id').DataTable({
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'
+                }
+            });
         });
 
         $(document).ready(function() {
-            $('#table_id2').DataTable();
+            $('#table_id2').DataTable({
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'
+                }
+            });
         });
 
         $(document).ready(function() {
             $('#table_id3').DataTable({
-                "iDisplayLength": 4
+                "iDisplayLength": 4,
+                language: {
+                    url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'
+                }
             });
         });
 

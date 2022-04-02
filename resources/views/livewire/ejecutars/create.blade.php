@@ -34,7 +34,7 @@
 
                     <div class="tab-pane fade show active p-3 row" id="pills-home" role="tabpanel" aria-labelledby="users-registers">
                         <form>
-                         <input wire:model="id_user" type="hidden" class="form-control" id="id_user" value="{{auth()->user()->id}}">@error('id_user') <span class="error hidden-danger">{{ $message }}</span> @enderror
+                         <input wire:model="id_user" type="hidden" class="form-control" id="id_user" value="{{auth()->user()->id}}">
                          <input wire:model="cliente" type="hidden" class="form-control" id="cliente" value="324 - PL/20543/EXP/ES/2017 - SAC XIB CHAAC, S.A. DE C.V." disabled>@error('cliente') <span class="error text-danger">{{ $message }}</span> @enderror
 
                         <div class="form-group mt-3">

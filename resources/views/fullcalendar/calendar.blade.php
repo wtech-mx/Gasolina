@@ -79,7 +79,7 @@
 
             let titleArg = info.event.title;
 
-            if (titleArg == 'VII-01-01'){
+            if (titleArg == 'V-01-01'){
                 $('#exampleModal2').modal('toggle');
             }else{
                 $('#exampleModal').modal('toggle');

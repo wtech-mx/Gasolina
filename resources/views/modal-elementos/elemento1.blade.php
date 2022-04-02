@@ -23,63 +23,63 @@
 
                     {{-------Descarga---------}}
                     <div class="accordion-item">
-                      <h2 class="accordion-header" >
-                        <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
-                           Descarga
-                        </button>
-                      </h2>
-                      <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
-                        <div class="accordion-body">
-                              <h5 class="text-center" style="font-size: 15px">Matriz para la identificación de peligros y análisis de riesgos.</h5>
+                        <h2 class="accordion-header" >
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
+                            Descarga
+                            </button>
+                        </h2>
+                        <div id="element7_one" class="accordion-collapse collapse " aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
+                            <div class="accordion-body">
+                                <h5 class="text-center" style="font-size: 15px">Matriz para la identificación de peligros y análisis de riesgos.</h5>
 
-                              <table class="table" id="table_id3" >
-                                <thead class="text-white">
-                                <tr>
-                                    <th scope="col">Tanque</th>
-                                    <th scope="col">Recibido</th>
-                                    <th scope="col">Salida</th>
-                                    <th scope="col">Acciones</th>
-                                </tr>
-                                </thead>
-                                <tbody class="text-white">
-                                    @foreach ($ejecutar as $item)
+                                <table class="table" id="table_id3" >
+                                    <thead class="text-white">
                                     <tr>
-                                        <td>
-                                            @switch($item)
-                                                @case($item->tanque == '1')
-                                                    TAS011-TAS001-Tanque de almacenamiento...
-                                                @break;
-
-                                                @case($item->tanque == '2')
-                                                    TAS012-TAS001-Tanque de almacenamiento...
-                                                @break;
-
-                                                @case($item->tanque == '3')
-                                                    TAS013-TAS001-Tanque de almacenamiento...
-                                                @break;
-
-                                            @endswitch
-                                        </td>
-
-                                        <td>{{$item->recibido}}</td>
-                                        <td>{{$item->salida}}</td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <a href="" style="color: #ffffff;font-size: 16px;padding: 5px;">
-                                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                                </a>
-
-                                                <a href="{{route('print.ejecutar', $item->id)}}" style="color: #ffffff;font-size: 16px;padding: 5px">
-                                                    <i class="fa fa-download" aria-hidden="true"></i>
-                                                </a>
-                                            </div>
-                                        </td>
+                                        <th scope="col">Tanque</th>
+                                        <th scope="col">Recibido</th>
+                                        <th scope="col">Salida</th>
+                                        <th scope="col">Acciones</th>
                                     </tr>
-                                    @endforeach
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody class="text-white">
+                                        @foreach ($ejecutar as $item)
+                                        <tr>
+                                            <td>
+                                                @switch($item)
+                                                    @case($item->tanque == '1')
+                                                        TAS011-TAS001-Tanque de almacenamiento...
+                                                    @break;
+
+                                                    @case($item->tanque == '2')
+                                                        TAS012-TAS001-Tanque de almacenamiento...
+                                                    @break;
+
+                                                    @case($item->tanque == '3')
+                                                        TAS013-TAS001-Tanque de almacenamiento...
+                                                    @break;
+
+                                                @endswitch
+                                            </td>
+
+                                            <td>{{$item->recibido}}</td>
+                                            <td>{{$item->salida}}</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    {{-- <a href="" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </a> --}}
+
+                                                    <a href="{{route('print.ejecutar', $item->id)}}" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                        <i class="fa fa-download" aria-hidden="true"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                      </div>
                     </div>
 
                     {{-------Formulario---------}}
@@ -89,7 +89,7 @@
                            Formulario
                         </button>
                       </h2>
-                      <div id="element7_two" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
+                      <div id="element7_two" class="accordion-collapse collapse show" aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
                         <div class="accordion-body">
                               <h5 class="text-center" style="font-size: 15px">Matriz de aspectos e impactos ambientales.</h5>
                               {{--nav tittle arrow--}}
@@ -157,25 +157,25 @@
                                     </form>
                                   </div>
                                   <div class="tab-pane fade" id="pills-tres" role="tabpanel" aria-labelledby="pills-tres-tab">
-                                    <form method="POST" action="{{ route('tareas.formulario_3') }}" enctype="multipart/form-data" role="form">
-                                       @csrf
+                                        <form method="POST" action="{{ route('tareas.formulario_3') }}" enctype="multipart/form-data" role="form">
+                                            @csrf
 
-                                       {{-- Tareas elementos --}}
-                                       <input type="hidden" name="elementos" id="elementos" value="1">
-                                       <input type="hidden" name="consultar" id="consultar" value="0">
-                                       <input type="hidden" name="generar" id="generar" value="0">
-                                       <input type="hidden" name="actualizar" id="actualizar" value="0">
-                                       <input type="hidden" name="difundir" id="difundir" value="0">
-                                       <input type="hidden" name="correctiva" id="correctiva" value="0">
+                                            {{-- Tareas elementos --}}
+                                            <input type="hidden" name="elementos" id="elementos" value="1">
+                                            <input type="hidden" name="consultar" id="consultar" value="0">
+                                            <input type="hidden" name="generar" id="generar" value="0">
+                                            <input type="hidden" name="actualizar" id="actualizar" value="0">
+                                            <input type="hidden" name="difundir" id="difundir" value="0">
+                                            <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                       {{-- Calendario --}}
-                                       <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                       <input type="hidden" name="title" id="title" value="V-01-01">
-                                       <input type="hidden" name="url" id="url" value="#exampleModal">
+                                            {{-- Calendario --}}
+                                            <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
+                                            <input type="hidden" name="title" id="title" value="V-01-01">
+                                            <input type="hidden" name="url" id="url" value="#exampleModal">
 
-                                       @include('modal-elementos.formulario3')
-                                    </form>
-                                 </div>
+                                            @include('modal-elementos.formulario3')
+                                        </form>
+                                   </div>
                               </div>
                               {{--nav content --}}
                         </div>
@@ -196,23 +196,23 @@
                                     <div class="col-9 text-left">
                                         <label class="" for="inlineFormInputGroup">Elemento a consultar</label>
                                         <div class="input-group mb-2">
-                                            <form method="POST" action="{{ route('tareas.formulario_3') }}" enctype="multipart/form-data" role="form">
-
-
-                                                @csrf
-                                                <select class="form-select" aria-label="Default select example" name="mes" id="mes">
-                                                    <option selected>Selecciona elemento</option>
-                                                    <option value="1">V-01-01 Matriz de responsabilidades.</option>
-                                                </select>
-
-                                                <button class="mt-2 btn-sinestilo" type="submit">
-                                                    <div class="button_n">
-                                                        <div class="icon_n">
-                                                            <i class="fa fa-floppy-o"></i>
-                                                        </div>
-                                                    </div>
-                                                </button>
-                                            </form>
+                                            <div class="row">
+                                                <div class="col-10">
+                                                    <select class="form-select" aria-label="Default select example" name="mes" id="mes">
+                                                        <option selected>Selecciona elemento</option>
+                                                        <option value="1">X-01-01 Cédula para identificar el producto que será descargado.</option>
+                                                        <option value="2">X-01-02 Formato de verificación y evaluación del procedimiento de descarga de autotanque.</option>
+                                                        <option value="3">X-02-01 Formato de verificación y evaluación del procedimiento de despacho.</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-2">
+                                                    <a href="{{ route('ejecutar.index') }}">
+                                                            <div class="icon_n">
+                                                                <i class="fa fa-file-text-o"></i>
+                                                            </div>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 

@@ -19,13 +19,12 @@ class UserController extends Controller
 
     function index()
     {
-            $users = User::
-            where('empresa', '=', NULL)
+        $users = User::where('empresa', '=', NULL)
             ->where('id_empresa', '!=', NULL)
             ->where('id_sucursal', '!=', NULL)
             ->get();
 
-            return view('admin.usuarios.index', compact('users'));
+        return view('admin.usuarios.index', compact('users'));
     }
 
     /* Trae las sucursales con la empresa seleccionada  */
@@ -36,15 +35,15 @@ class UserController extends Controller
 
     public function create()
     {
-            $empresa = DB::table('users')
+        $empresa = DB::table('users')
             ->where('empresa', '=', 1)
             ->get();
 
-            $sucursal = DB::table('users')
+        $sucursal = DB::table('users')
             ->where('empresa', '=', 2)
             ->get();
 
-            return view('admin.usuarios.create', compact('empresa', 'sucursal'));
+        return view('admin.usuarios.create', compact('empresa', 'sucursal'));
     }
 
     public function store(Request $request)
@@ -65,7 +64,7 @@ class UserController extends Controller
         }
         try {
 
-        //3/3- Si la validacion es correcta se crea el registro
+            //3/3- Si la validacion es correcta se crea el registro
 
             $empresa = new User;
             $empresa->name = $request->get('name');
@@ -79,7 +78,7 @@ class UserController extends Controller
 
             $empresa->save();
 
-        // Redireccion  de suuces or fail dependiedno el caso
+            // Redireccion  de suuces or fail dependiedno el caso
 
             return redirect()->route('index.usuario')
                 ->with('success', 'Usuario Creada Exitosamente!');
@@ -87,21 +86,20 @@ class UserController extends Controller
             return redirect()->back()
                 ->with('error', 'Error en el registro!!');
         }
-
     }
     public function edit($id)
     {
-            $usuario = User::findOrFail($id);
+        $usuario = User::findOrFail($id);
 
-            $empresa = DB::table('users')
+        $empresa = DB::table('users')
             ->where('empresa', '=', 1)
             ->get();
 
-            $sucursal = DB::table('users')
+        $sucursal = DB::table('users')
             ->where('empresa', '=', 2)
             ->get();
 
-            return view('admin.usuarios.edit', compact('empresa', 'sucursal', 'usuario'));
+        return view('admin.usuarios.edit', compact('empresa', 'sucursal', 'usuario'));
     }
 
     public function update(Request $request, $id)
@@ -115,17 +113,16 @@ class UserController extends Controller
         $empresa->id_sucursal = $request->get('id_sucursal');
         $empresa->email = $request->get('email');
 
-        if($request->hasFile("firma")){
+        if ($request->hasFile("firma")) {
 
             $imagen = $request->file("firma");
-            $nombreimagen = time() . "." .$imagen->guessExtension();
+            $nombreimagen = time() . "." . $imagen->guessExtension();
             $ruta = public_path("firma/");
 
             //$imagen->move($ruta,$nombreimagen);
-            copy($imagen->getRealPath(),$ruta.$nombreimagen);
+            copy($imagen->getRealPath(), $ruta . $nombreimagen);
 
             $empresa->firma = $nombreimagen;
-
         }
 
         $empresa->update();

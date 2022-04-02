@@ -20,10 +20,10 @@
 						@include('livewire.ejecutars.create')
 						@include('livewire.ejecutars.update')
 
-				<div class="col-12 mt4-4">
+				<div class="col-12 mt-4">
 				    <div class="table-responsive" style="overflow: hidden;">
 
-                        <table class="table display" id="table_id" >
+                        <table class="table display" id="table_id">
                             <thead class="text-white">
                                 <tr>
                                     <th>Operador</th>

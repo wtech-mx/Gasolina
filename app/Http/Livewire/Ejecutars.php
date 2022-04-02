@@ -92,7 +92,7 @@ class Ejecutars extends Component
         ]);
 
         Ejecutar::create([
-			'id_user' => $this-> id_user,
+			'id_user' => auth()->user()->id,
 			'cliente' => $this-> cliente,
 			'tanque' => $this-> tanque,
 			'recibido' => $this-> recibido,

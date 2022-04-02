@@ -17,7 +17,7 @@ class CreateMediosDifundirTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_difundir')->nullable();
             $table->foreign('id_difundir')
-                ->references('id')->on('difundir')
+                ->references('id')->on('difundirs')
                 ->inDelete('set null');
 
             $table->string('comunicacion');
