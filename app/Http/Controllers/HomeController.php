@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Models\User;
 use App\Models\Tareas;
-use App\Models\Ejecutar;
+use App\Models\xElemento;
 
 class HomeController extends Controller
 {
@@ -31,11 +31,11 @@ class HomeController extends Controller
         where('id_user', '=', auth()->user()->id)
         ->get();
 
-        $ejecutar = Ejecutar::
+        $xElemento = xElemento::
         where('id_user', '=', auth()->user()->id)
         ->get();
 
-        return view('home', compact('tareas', 'ejecutar'));
+        return view('home', compact('tareas', 'xElemento'));
     }
     public function graficas()
     {

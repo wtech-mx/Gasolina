@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tareas;
+use App\Models\xElemento;
 use Carbon\Carbon;
 
 class ElementosController extends Controller
@@ -40,7 +41,11 @@ class ElementosController extends Controller
         where('check', '=', 1)
         ->get();
 
-        return view('admin.actividades.terminadas', compact('tareas'));
+        $xElemento = xElemento::
+        where('estado', '=', 1)
+        ->get();
+
+        return view('admin.actividades.terminadas', compact('tareas', 'xElemento'));
 
     }
 
@@ -51,7 +56,12 @@ class ElementosController extends Controller
         ->where('check', '=', 1)
         ->get();
 
-        return view('actividades.terminadas', compact('tareas'));
+        $xElemento = xElemento::
+        where('id_user', '=', auth()->user()->id)
+        ->where('estado', '=', 1)
+        ->get();
+
+        return view('actividades.terminadas', compact('tareas', 'xElemento'));
 
     }
 

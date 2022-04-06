@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddElementoToEjecutars extends Migration
+class AddPreguntasToXElemento extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class AddElementoToEjecutars extends Migration
      */
     public function up()
     {
-        Schema::table('ejecutars', function (Blueprint $table) {
-            $table->string('elemento')->nullable()->after('id_tarea');
+        Schema::table('x_elemento', function (Blueprint $table) {
+
+            for($i=1; $i<=49; $i++){
+                $table->string('pregunta'.$i)->nullable()->after('factura');
+            }
+
         });
     }
 
@@ -25,7 +29,7 @@ class AddElementoToEjecutars extends Migration
      */
     public function down()
     {
-        Schema::table('ejecutars', function (Blueprint $table) {
+        Schema::table('x_elemento', function (Blueprint $table) {
             //
         });
     }

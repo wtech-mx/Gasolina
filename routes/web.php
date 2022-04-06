@@ -85,8 +85,16 @@ Route::get('/terminadas', [App\Http\Controllers\ElementosController::class, 'ter
 Route::get('/vencer', [App\Http\Controllers\ElementosController::class, 'por_vencer'])->name('elementos.por_vencer');
 
 
-Route::view('ejecutar', 'livewire.ejecutars.index')->name('ejecutar.index')->middleware('auth');
-Route::get('imprimir/ejecutar/{id}', [App\Http\Livewire\Ejecutars::class, 'pdf_ejecutar'])->name('print.ejecutar');
+// Route::get('imprimir/ejecutar/{id}', [App\Http\Livewire\Ejecutars::class, 'pdf_ejecutar'])->name('print.ejecutar');
+
+/*|--------------------------------------------------------------------------
+|X Elemento
+|--------------------------------------------------------------------------*/
+Route::post('/xlemento', [App\Http\Controllers\xElementoController::class, 'store'])->name('xelemento.store');
+Route::get('/xlemento/x-01-02', [App\Http\Controllers\xElementoController::class, 'create_preguntas'])->name('xelemento.create_preguntas');
+Route::post('/xlemento/x-01-02', [App\Http\Controllers\xElementoController::class, 'store_preguntas'])->name('xelemento.store_preguntas');
+
+Route::get('/xlemento/x-02-01', [App\Http\Controllers\xElementoController::class, 'create_x_02_01'])->name('x_02_01.create_preguntas');
 
 /*|--------------------------------------------------------------------------
 |Consulta (Actividades)
@@ -107,3 +115,9 @@ Route::get('imprimir/difundir/{id}', [App\Http\Livewire\Difundirs::class, 'pdf_d
 Route::get('/graficas', [App\Http\Controllers\ElementosController::class, 'graficas'])->name('graficas');
 
 Route::get('/admin/graficas', [App\Http\Controllers\ElementosController::class, 'graficas_admin'])->name('graficas_admin');
+
+/*|--------------------------------------------------------------------------
+|Configuracion
+|--------------------------------------------------------------------------*/
+Route::get('/configuracion', [App\Http\Controllers\ConfiguracionController::class, 'index'])->name('index.configuracion');
+

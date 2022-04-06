@@ -32,13 +32,6 @@
       </li>
 
       <li class="">
-        <a href="#" class="nav-link nav-menuiem text-white">
-          <img class="img-card-menu2" src=" {{ asset('assets/img/dosier.png') }}">
-          Repor
-        </a>
-      </li>
-
-      <li class="">
         <a href="{{ route('graficas') }}" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src=" {{ asset('assets/img/barra-grafica.png') }}">
           Metas
@@ -70,6 +63,13 @@
         <a href="{{ route('index.empresa') }}" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src="{{ asset('assets/img/empresa.png') }}">
           Empresa
+        </a>
+      </li>
+
+      <li class="">
+        <a href="#" class="nav-link nav-menuiem text-white">
+          <img class="img-card-menu2" src=" {{ asset('assets/img/dosier.png') }}">
+          Configuración
         </a>
       </li>
 

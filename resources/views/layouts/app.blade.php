@@ -81,6 +81,8 @@
 
         $(document).ready(function() {
             $('#table_id3').DataTable({
+                "info": false,
+                responsive: true,
                 "iDisplayLength": 4,
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'

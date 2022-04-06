@@ -53,7 +53,7 @@
                         <option value="1">Realizado</option>
                     </select> --}}
                     <br><br>
-                  <a href="{{ route('ejecutar.index') }}"><button type="button" class="btn btn-outline-info">Ejecutar</button></a>
+                  {{-- <a href="{{ route('ejecutar.index') }}"><button type="button" class="btn btn-outline-info">Ejecutar</button></a> --}}
                   <a href="{{ route('consulta.index') }}"><button type="button" class="btn btn-outline-secondary">Difundir</button></a>
                   <a href=""><button type="button" class="btn btn-outline-warning">Correctiva</button></a>
                 </div>
