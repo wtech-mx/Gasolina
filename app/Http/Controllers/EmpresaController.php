@@ -12,11 +12,16 @@ use Illuminate\Support\Facades\Validator;
 
 class EmpresaController extends Controller
 {
-    public function __construct()
+
+    function __construct()
     {
-        $this->middleware('auth');
+         $this->middleware('auth');
+         $this->middleware('permission:empresa-list|empresa-create|empresa-edit|empresa-delete', ['only' => ['index','store']]);
+         $this->middleware('permission:empresa-create', ['only' => ['create','store']]);
+         $this->middleware('permission:empresa-edit', ['only' => ['edit','update']]);
+         $this->middleware('permission:empresa-delete', ['only' => ['destroy']]);
     }
-    
+
 function index()
 {
         $empresa = User::

@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Validator;
 
 class SucursalController extends Controller
 {
-    public function __construct()
+
+    function __construct()
     {
-        $this->middleware('auth');
+         $this->middleware('auth');
+
     }
 
     function index()

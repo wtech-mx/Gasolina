@@ -9,6 +9,8 @@ use Session;
 use Image;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Arr;
 
 class UserController extends Controller
 {
@@ -43,7 +45,9 @@ class UserController extends Controller
             ->where('empresa', '=', 2)
             ->get();
 
-        return view('admin.usuarios.create', compact('empresa', 'sucursal'));
+        $roles = Role::pluck('name','name')->all();
+
+        return view('admin.usuarios.create', compact('empresa', 'sucursal','roles'));
     }
 
     public function store(Request $request)
@@ -91,6 +95,10 @@ class UserController extends Controller
     {
         $usuario = User::findOrFail($id);
 
+        $roles = Role::pluck('name','name')->all();
+
+        $userRole = $usuario->roles->pluck('name','name')->all();
+
         $empresa = DB::table('users')
             ->where('empresa', '=', 1)
             ->get();
@@ -99,7 +107,7 @@ class UserController extends Controller
             ->where('empresa', '=', 2)
             ->get();
 
-        return view('admin.usuarios.edit', compact('empresa', 'sucursal', 'usuario'));
+        return view('admin.usuarios.edit', compact('empresa', 'sucursal', 'usuario','userRole','roles'));
     }
 
     public function update(Request $request, $id)
@@ -126,6 +134,10 @@ class UserController extends Controller
         }
 
         $empresa->update();
+
+        DB::table('model_has_roles')->where('model_id',$id)->delete();
+
+        $empresa->assignRole($request->input('roles'));
 
         Session::flash('success', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.usuario');

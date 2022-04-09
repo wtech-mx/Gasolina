@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\RoleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +22,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function() {
 
-
+    Route::resource('roles', RoleController::class);
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 

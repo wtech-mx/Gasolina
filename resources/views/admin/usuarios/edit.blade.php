@@ -125,6 +125,14 @@
                                                 </div>
                                             </div>
 
+                                           <div class="col-sm-12 col-12">
+                                                <div class="form-group mb-3 position-relative">
+                                                    <i class="fa fa-cubes icon-style-2"></i>
+                                                    <label class="form-label label-custom-yellow">Role</label>
+                                                       {!! Form::select('roles[]', $roles,$userRole, array('class' => 'form-control','multiple')) !!}
+                                                </div>
+                                            </div>
+
                                         </div>
                                 <div class="row">
                                     <div class="col-sm-12">
