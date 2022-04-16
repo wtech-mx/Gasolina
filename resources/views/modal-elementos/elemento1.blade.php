@@ -106,13 +106,33 @@
                                         </form>
 
                                         <div id="X-01-01" style="display: none;">
+                                            <a class="btn" href="{{route('difundir_x_01_01.index')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                                                Difundir
+                                            </a>
+
+                                            <a class="btn text-dark" href="{{route('preventiva_x_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                                                Accion Correctiva
+                                            </a>
                                                @include('modal-elementos.fomularios X.x-01-01')
                                         </div>
                                         <div id="X-01-02" style="display: none;">
-                                            <a href="{{route('xelemento.create_preguntas')}}">Ir al formulario</a>
+
+                                            <a class="btn" href="{{route('xelemento.create_preguntas')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                                                Ejecutar
+                                            </a>
+
+                                            <a class="btn text-dark" href="{{route('difundir_x_01_02.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                                                Difundir
+                                            </a>
+
+                                            <a class="btn  " href="{{route('preventiva_x_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                                Accion Correctiva
+                                            </a>
+
                                         </div>
                                         <div id="X-02-01" style="display: none;">
-                                            <a href="{{route('x_02_01.create_preguntas')}}">Ir al formulario</a>
+                                            <a href="{{route('x_02_01.create_preguntas')}}">Ejecutar</a>
+
                                         </div>
                                         <div id="X-04-01" style="display: none;">
                                             <h5>X-04-01</h5>

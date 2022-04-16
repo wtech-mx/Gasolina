@@ -53,6 +53,17 @@
                             <td>{{$fecha}}</td>
                         </tr>
                         @endforeach
+                        @foreach ($preventivas as $item)
+                        @php
+                            $dato = $item->updated_at;
+                            $fecha = date('d-m-Y',strtotime($dato));
+                        @endphp
+                        <tr>
+                            <td>{{$item->elemento}}</td>
+                            <td>{{$item->descripcion}}</td>
+                            <td>{{$fecha}}</td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

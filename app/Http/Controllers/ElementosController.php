@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Livewire\Preventivas;
 use Illuminate\Http\Request;
 use App\Models\Tareas;
 use App\Models\xElemento;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class ElementosController extends Controller
 {
@@ -45,7 +47,11 @@ class ElementosController extends Controller
         where('estado', '=', 1)
         ->get();
 
-        return view('admin.actividades.terminadas', compact('tareas', 'xElemento'));
+        $preventivas = DB::table('preventivas')
+        ->where('estado', '=', 1)
+        ->get();
+
+        return view('admin.actividades.terminadas', compact('tareas', 'xElemento', 'preventivas'));
 
     }
 
@@ -61,7 +67,12 @@ class ElementosController extends Controller
         ->where('estado', '=', 1)
         ->get();
 
-        return view('actividades.terminadas', compact('tareas', 'xElemento'));
+        $preventivas = DB::table('preventivas')
+        ->where('id_user', '=', auth()->user()->id)
+        ->where('estado', '=', 1)
+        ->get();
+
+        return view('actividades.terminadas', compact('tareas', 'xElemento', 'preventivas'));
 
     }
 
@@ -106,7 +117,10 @@ class ElementosController extends Controller
         $conteoTotal = count($T1);
 
         $V1 = Tareas::where('end', '>=', $fecha)->where('check', '=', 1)->get();
-        $conteoTerminadas = count($V1);
+        $preventiva_term = DB::table('preventivas')->where('estado', '=', 1)->get();
+        $suma = count($V1) + count($preventiva_term);
+        $conteoTerminadas = $suma;
+
         $porcentajeTerminadas = (100 / $conteoTotal) * $conteoTerminadas;
 
         $conteoNoTerminadas = $conteoTotal - $conteoTerminadas;
@@ -141,7 +155,11 @@ class ElementosController extends Controller
         $conteoTotal = count($T1);
 
         $V1 = Tareas::where('id_user', '=', auth()->user()->id)->where('end', '>=', $fecha)->where('check', '=', 1)->get();
-        $conteoTerminadas = count($V1);
+        $preventiva_term = DB::table('preventivas')->where('id_user', '=', auth()->user()->id)->where('updated_at', '>=', $fecha)->where('estado', '=', 1)->get();
+        $xElemento = xElemento::where('id_user', '=', auth()->user()->id)->where('updated_at', '>=', $fecha)->where('estado', '=', 1)->get();
+        $suma = count($V1) + count($preventiva_term)+ count($xElemento);
+        $conteoTerminadas = $suma;
+
         $porcentajeTerminadas = (100 / $conteoTotal) * $conteoTerminadas;
 
         $conteoNoTerminadas = $conteoTotal - $conteoTerminadas;
@@ -155,7 +173,10 @@ class ElementosController extends Controller
         $conteoTotal_anual = count($T1_anual);
 
         $V1_anual = Tareas::where('id_user', '=', auth()->user()->id)->where('end', '>=', $fecha_anual)->where('check', '=', 1)->get();
-        $conteoTerminadas_anual = count($V1_anual);
+        $preventiva_term = DB::table('preventivas')->where('id_user', '=', auth()->user()->id)->where('updated_at', '>=', $fecha_anual)->where('estado', '=', 1)->get();
+        $xElemento = xElemento::where('id_user', '=', auth()->user()->id)->where('updated_at', '>=', $fecha_anual)->where('estado', '=', 1)->get();
+        $suma = count($V1) + count($preventiva_term)+ count($xElemento);
+        $conteoTerminadas_anual = $suma;
         $porcentajeTerminadas_anual = (100 / $conteoTotal_anual) * $conteoTerminadas_anual;
 
         $conteoNoTerminadas_anual = $conteoTotal_anual - $conteoTerminadas_anual;
