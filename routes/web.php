@@ -118,6 +118,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::view('difundir', 'livewire.difundirs.index')->name('difundir.index')->middleware('auth');
     Route::view('/difundir/x-01-01', 'livewire.difundirs.index')->name('difundir_x_01_01.index');
     Route::view('/difundir/x-01-02', 'livewire.difundirs.index')->name('difundir_x_01_02.index');
+    Route::view('/difundir/x-02-01', 'livewire.difundirs.index')->name('difundir_x_02_01.index');
 
     Route::get('imprimir/difundir/{id}', [App\Http\Livewire\Difundirs::class, 'pdf_difundir'])->name('print.difundir');
 
@@ -134,5 +135,7 @@ Route::group(['middleware' => ['auth']], function() {
     |Preventiva (Actividades)
     |--------------------------------------------------------------------------*/
     Route::view('/preventiva/x-01-01', 'livewire.Preventivas.index')->name('preventiva_x_01_01.index');
+    Route::view('/preventiva/x-01-02', 'livewire.Preventivas.index')->name('preventiva_x_01_02.index');
+    Route::view('/preventiva/x-02-01', 'livewire.Preventivas.index')->name('preventiva_x_02_01.index');
 
 });

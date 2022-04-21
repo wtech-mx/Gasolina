@@ -53,7 +53,7 @@ class Preventivas extends Component
 
         Preventiva::create([
             'id_user' => auth()->user()->id,
-			'elemento' => 'x-01-01',
+			'elemento' => $this-> elemento,
             'estado' => '1',
 			'fecha' => $current,
 			'descripcion' => $this-> descripcion,

@@ -50,7 +50,7 @@ class Difundirs extends Component
 
     public function store()
     {
-        $this->validate([
+      $validate =  $this->validate([
 		'descripcion' => 'required',
 		'tipo' => 'required',
 		'inicial' => 'required',
@@ -59,9 +59,12 @@ class Difundirs extends Component
 
         $current = Carbon::now()->toDateString();
 
+//     $url = $_SERVER['REQUEST_URI'];
+//     $rest = substr($url, -7);
+
         Difundir::create([
 			'id_user' => auth()->user()->id,
-			'id_elemento' => 'x-01-01',
+			'id_elemento' => $this-> id_elemento,
 			'fecha' => $current,
 			'descripcion' => $this-> descripcion,
 			'tipo' => $this-> tipo,

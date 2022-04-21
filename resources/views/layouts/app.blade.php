@@ -92,6 +92,37 @@
 
     </script>
 
+    <script type="text/javascript">
+        $('#agregar').click(function(){
+        agregar();
+    });
+
+    function agregar(){
+        var vendedor=$('#vendedor').val();
+        var refaccion=$('#refaccion').val();
+        var cantidad=$('#cantidad').val();
+        var id_co=$('#id_co').val();
+        var fila='<tr>'+
+        '<td><select wire:model.defer="id_elemento" class="form-control" id="id_elemento">'+
+            '<option value="">Seleccionar medio</option>'+
+            '<option value="1">Buzon de observaciones quejas y/o sugerencias.</option>'+
+            '<option value="2">Cartel o manta</option>'+
+            '<option value="3">Circulares internas</option>'+
+            '<option value="4">Correo interno</option>'+
+            '<option value="5">Encuestas</option>'+
+            '<option value="6">Otro</option>'+
+            '<option value="7">Publicaciones internas</option>'+
+            '<option value="8">Reuniones en grupo</option>'+
+            '<option value="9">Tablero de anuncios (vitrinas)</option>'+
+            '<option value="10">Video</option>'+
+            '</select></td>'+
+        '<td><input type="text" class="form-control" placeholder="Especificar" id="especificar[]" name="especificar[]"></td>'+
+        '</tr>';
+
+        $('#tabla_id').append(fila);
+    }
+    </script>
+
 	@livewireScripts
 
     <script type="text/javascript">

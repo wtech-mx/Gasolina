@@ -20,15 +20,11 @@ class CreateDifundirTable extends Migration
                 ->references('id')->on('users')
                 ->inDelete('set null');
 
-            $table->unsignedBigInteger('id_elemento')->nullable();
-            $table->foreign('id_elemento')
-                ->references('id')->on('tareas')
-                ->inDelete('set null');
-
+            $table->string('id_elemento');
             $table->date('fecha');
 
             $table->string('descripcion');
-            $table->boolean('tipo');
+            $table->string('tipo');
             $table->date('inicial');
             $table->date('final');
 

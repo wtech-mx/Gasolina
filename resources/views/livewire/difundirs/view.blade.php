@@ -8,7 +8,7 @@
                         <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                     </a >
 
-                    <h1 class="text-white">Empresa</h1>
+                    <h1 class="text-white">Difundir</h1>
 
                     {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
 
@@ -28,9 +28,9 @@
                         <table class="table display" id="table_id" >
                             <thead class="text-white">
                                 <tr>
-                                    <td>#</td> 
-								<th>Id User</th>
-								<th>Id Elemento</th>
+                                    <td>#</td>
+								<th>Solicita</th>
+								<th>Elemento</th>
 								<th>Fecha</th>
 								<th>Descripcion</th>
 								<th>Tipo</th>
@@ -43,8 +43,8 @@
                             <tbody class="text-white">
                                 @foreach($difundirs as $row)
                                 <tr>
-                                    <td>{{ $loop->iteration }}</td> 
-								<td>{{ $row->id_user }}</td>
+                                <td>{{ $loop->iteration }}</td>
+								<td>{{ $row->user->name }}</td>
 								<td>{{ $row->id_elemento }}</td>
 								<td>{{ $row->fecha }}</td>
 								<td>{{ $row->descripcion }}</td>
@@ -54,19 +54,15 @@
 
                                     <td >
 
-                                        <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px;">
-                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                        </a>
-
                                         <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
                                             <i class="fa fa-download" aria-hidden="true"></i>
                                         </a>
 
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModal" class="dropdown-item" wire:click="edit({{$row->id}})" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                        <a  data-bs-toggle="modal" data-bs-target="#updateModal" wire:click="edit({{$row->id}})" style="color: #ffffff;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-eye" aria-hidden="true"></i>
                                         </a>
 
-                                        <a class="dropdown-item" onclick="confirm('Confirm Delete Difusion id {{$row->id}}? \nDeleted Difusions cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                        <a onclick="confirm('Confirm Delete Difusion id {{$row->id}}? \nDeleted Difusions cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})" style="color: #ffffff;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>
@@ -78,3 +74,5 @@
 				</div>
 
 </div>
+
+

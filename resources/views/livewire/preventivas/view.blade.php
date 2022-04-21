@@ -8,7 +8,7 @@
                         <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                     </a >
 
-                    <h1 class="text-white">Empresa</h1>
+                    <h1 class="text-white">Accion Correctiva</h1>
 
                     {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
 

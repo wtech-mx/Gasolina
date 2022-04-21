@@ -1,3 +1,7 @@
+@php
+    $url = $_SERVER['PHP_SELF'];
+    $rest = substr($url, -7);
+@endphp
 <!-- Modal -->
 <div wire:ignore.self class="modal fade" id="createDataModal" tabindex="-1" aria-labelledby="createDataModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -10,6 +14,14 @@
                      <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close" style="background: transparent url({{asset('assets/img/icons/cancel.png') }}) center/1.5em auto no-repeat;">
                      </button>
                 </div>
+
+            <div class="form-group text-white mb-3">
+                <label for="tipo">Seleccionar elemento</label>
+                <select wire:model.defer="elemento" class="form-control" id="elemento">
+                    <option value="">Seleccionar elemento</option>
+                    <option value="{{$rest}}">{{$rest}}</option>
+                </select>@error('tipo') <span class="error text-danger">{{ $message }}</span> @enderror
+            </div>
 
             <div class="form-group text-white">
                 <label for="cliente">Cliente</label>
