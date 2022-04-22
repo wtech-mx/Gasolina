@@ -13,7 +13,7 @@ class Preventivas extends Component
     use WithPagination;
 
 	protected $paginationTheme = 'bootstrap';
-    public $selected_id, $keyWord, $descripcion, $estatus, $fecha;
+    public $selected_id, $keyWord, $elemento, $descripcion, $estatus, $fecha;
     public $updateMode = false;
 
     public function render()
@@ -47,6 +47,7 @@ class Preventivas extends Component
     {
         $this->validate([
             'descripcion' => 'required',
+            'elemento' => 'required',
             ]);
 
         $current = Carbon::now()->toDateString();

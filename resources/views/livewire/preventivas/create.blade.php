@@ -1,5 +1,5 @@
 @php
-    $url = $_SERVER['PHP_SELF'];
+    $url = $_SERVER['REQUEST_URI'];
     $rest = substr($url, -7);
 @endphp
 <!-- Modal -->
@@ -16,11 +16,11 @@
                 </div>
 
             <div class="form-group text-white mb-3">
-                <label for="tipo">Seleccionar elemento</label>
+                <label for="elemento">Seleccionar elemento</label>
                 <select wire:model.defer="elemento" class="form-control" id="elemento">
                     <option value="">Seleccionar elemento</option>
                     <option value="{{$rest}}">{{$rest}}</option>
-                </select>@error('tipo') <span class="error text-danger">{{ $message }}</span> @enderror
+                </select>@error('elemento') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
             <div class="form-group text-white">
@@ -44,7 +44,7 @@
 
             <div class="form-group text-white">
                 <label for="descripcion">Descripcion</label>
-                <input wire:model="descripcion" type="text" class="form-control" id="descripcion" placeholder="Descripcion">@error('descripcion') <span class="error text-danger">{{ $message }}</span> @enderror
+                <input wire:model.defer="descripcion" type="text" class="form-control" id="descripcion" placeholder="Descripcion">@error('descripcion') <span class="error text-danger">{{ $message }}</span> @enderror
             </div>
 
                 </form>

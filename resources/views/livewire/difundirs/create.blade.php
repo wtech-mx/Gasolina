@@ -1,5 +1,5 @@
 @php
-    $url = $_SERVER['PHP_SELF'];
+    $url = $_SERVER['REQUEST_URI'];
     $rest = substr($url, -7);
 @endphp
 <!-- Modal -->

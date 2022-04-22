@@ -5,7 +5,9 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Difundir;
+use App\Models\MedioDifundir;
 use Carbon\Carbon;
+use GuzzleHttp\Psr7\Request;
 
 class Difundirs extends Component
 {
@@ -71,6 +73,22 @@ class Difundirs extends Component
 			'inicial' => $this-> inicial,
 			'final' => $this-> final
         ]);
+
+        // dd($this->comunicacion);
+        // $comunicacion = $this->comunicacion;
+        // $descripcion = $this->descripcion;
+
+
+        // for ($count = 0; $count < count($comunicacion); $count++) {
+        //     $data = array(
+        //         'comunicacion' => $comunicacion[$count],
+        //         'descripcion' => $descripcion[$count],
+        //         // 'id_cotizacion' => $id_cotizacion[$count],
+        //     );
+        //     $insert_data[] = $data;
+        // }
+
+        // MedioDifundir::insert($insert_data);
 
         $this->resetInput();
 		$this->emit('closeModal');

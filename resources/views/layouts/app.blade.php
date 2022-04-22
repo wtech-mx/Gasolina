@@ -98,25 +98,23 @@
     });
 
     function agregar(){
-        var vendedor=$('#vendedor').val();
-        var refaccion=$('#refaccion').val();
-        var cantidad=$('#cantidad').val();
-        var id_co=$('#id_co').val();
+        var comunicacion=$('#comunicacion').val();
+        var descripcion=$('#descripcion').val();
         var fila='<tr>'+
-        '<td><select wire:model.defer="id_elemento" class="form-control" id="id_elemento">'+
+        '<td><select wire:model.defer="comunicacion[]" class="form-control" id="comunicacion[]">'+
             '<option value="">Seleccionar medio</option>'+
-            '<option value="1">Buzon de observaciones quejas y/o sugerencias.</option>'+
-            '<option value="2">Cartel o manta</option>'+
-            '<option value="3">Circulares internas</option>'+
-            '<option value="4">Correo interno</option>'+
-            '<option value="5">Encuestas</option>'+
-            '<option value="6">Otro</option>'+
-            '<option value="7">Publicaciones internas</option>'+
-            '<option value="8">Reuniones en grupo</option>'+
-            '<option value="9">Tablero de anuncios (vitrinas)</option>'+
-            '<option value="10">Video</option>'+
+            '<option value="Buzon de observaciones quejas y/o sugerencias.">Buzon de observaciones quejas y/o sugerencias.</option>'+
+            '<option value="Cartel o manta">Cartel o manta</option>'+
+            '<option value="Circulares internas">Circulares internas</option>'+
+            '<option value="Correo interno">Correo interno</option>'+
+            '<option value="Encuestas">Encuestas</option>'+
+            '<option value="Otro">Otro</option>'+
+            '<option value="Publicaciones internas">Publicaciones internas</option>'+
+            '<option value="Reuniones en grupo">Reuniones en grupo</option>'+
+            '<option value="Tablero de anuncios (vitrinas)">Tablero de anuncios (vitrinas)</option>'+
+            '<option value="Video">Video</option>'+
             '</select></td>'+
-        '<td><input type="text" class="form-control" placeholder="Especificar" id="especificar[]" name="especificar[]"></td>'+
+        '<td><input type="text" class="form-control" placeholder="Especificar" id="descripcion[]" name="descripcion[]"></td>'+
         '</tr>';
 
         $('#tabla_id').append(fila);
