@@ -29,6 +29,7 @@ class UserController extends Controller
         return view('admin.usuarios.index', compact('users'));
     }
 
+
     /* Trae las sucursales con la empresa seleccionada  */
     public function GetSucursalAgainstMainCatEdit($id)
     {

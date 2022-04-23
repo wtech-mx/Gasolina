@@ -5,11 +5,11 @@
 <!-- Modal -->
 <div class="modal fade" id="elemento4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="elemento4" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content" style="width: 200%">
 
       <div class="modal-header">
         <h5 class="modal-title text-center"  style="font-size: 16px;">
-            Objetivos,Metas e indicadores
+            IV-01-01 Matriz de objetivos metas e indicadores.
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -19,77 +19,68 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="element_4">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" >
-                      <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element_4collapse" aria-expanded="true" aria-controls="element_4collapse">
-                          IV-01-01
-                      </button>
-                    </h2>
-                    <div id="element_4collapse" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#element_4">
-                      <div class="accordion-body">
-                            <h5 class="text-center" style="font-size: 15px">Matriz de objetivos metas e indicadores.</h5>
-                            {{--nav tittle arrow--}}
-                            <div class="d-flex justify-content-center">
+                <div class="accordion accordion-flush" id="accordionExample7">
 
-                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home9" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                                        Opcion 1
-                                    </button>
-                                  </li>
+                    {{-------Descarga---------}}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" >
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
+                            Consultar
+                            </button>
+                        </h2>
+                        <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
+                            <div class="accordion-body">
 
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile9" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                        Opcion 2
-                                    </button>
-                                  </li>
-                                </ul>
+                                <table class="table" id="table_id" >
+                                    <thead class="text-white">
+                                    <tr>
+                                        <th scope="col">P. y/o actividad</th>
+                                        <th scope="col">Actividad</th>
+                                        <th scope="col">Programado</th>
+                                        <th scope="col">Ejecucion</th>
+                                        <th scope="col">Ejecutado</th>
+                                        <th scope="col">P. ejecutar</th>
+                                        <th scope="col">No ejecutado</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="text-white">
+                                        <tr>
+                                            <td>I-01-01 Política documentada.</td>
+                                            <td>Consultar.</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>1</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            {{--nav tittle arrow--}}
-                            {{--nav content --}}
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-home9" role="tabpanel" aria-labelledby="pills-home-tab">
-                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
-                                      @csrf
-                                      {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="4">
-                                      <input type="hidden" name="consultar" id="consultar" value="0">
-                                      <input type="hidden" name="difundir" id="difundir" value="0">
-                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
-
-                                      {{-- Calendario --}}
-                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                      <input type="hidden" name="title" id="title" value="IV-01-01">
-                                      <input type="hidden" name="color" id="color" value="#2367D9">
-                                      <input type="hidden" name="url" id="url" value="#exampleModal">
-
-                                      @include('modal-elementos.formulario1')
-                                    </form>
-                                </div>
-                                <div class="tab-pane fade" id="pills-profile9" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
-                                      @csrf
-
-                                      {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="4">
-                                      <input type="hidden" name="consultar" id="consultar" value="0">
-                                      <input type="hidden" name="difundir" id="difundir" value="0">
-                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
-
-                                      {{-- Calendario --}}
-                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                      <input type="hidden" name="title" id="title" value="IV-01-01">
-                                      <input type="hidden" name="url" id="url" value="#exampleModal">
-
-                                      @include('modal-elementos.formulario2')
-                                   </form>
-                                </div>
-                            </div>
-                            {{--nav content --}}
-                      </div>
+                        </div>
                     </div>
-                  </div>
+
+
+                    {{-------Formulario---------}}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="element1">
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_tree" aria-expanded="true" aria-controls="element7_tree">
+                                Actividades
+                            </button>
+                        </h2>
+                        <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
+                            <div class="accordion-body">
+                                    <a class="btn text-dark" href="{{route('difundir_iv_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                                        Difundir
+                                    </a>
+
+                                    <a class="btn  " href="{{route('preventiva_iv_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                        Accion Correctiva
+                                    </a>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

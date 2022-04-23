@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Models\User;
 use App\Models\Tareas;
+use App\Models\ViElemento;
 use App\Models\xElemento;
 use Carbon\Carbon;
 
@@ -36,7 +37,11 @@ class HomeController extends Controller
         where('id_user', '=', auth()->user()->id)
         ->get();
 
-        return view('home', compact('tareas', 'xElemento'));
+        $vi_elemento = ViElemento::get();
+
+        $difundir = DB::table('difundirs')->get();
+
+        return view('home', compact('tareas', 'xElemento', 'vi_elemento', 'difundir'));
     }
     public function graficas()
     {

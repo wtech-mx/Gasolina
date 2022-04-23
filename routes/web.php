@@ -112,6 +112,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/exportar/consulta/diseño', [App\Http\Controllers\ConsultaController::class, 'exportdiseño'])->name('consulta.exportdiseño');
     Route::get('/exportar/consulta/nom', [App\Http\Controllers\ConsultaController::class, 'exportnom'])->name('consulta.exportnom');
 
+
+    Route::get('/puesto/vi-02-04', [App\Http\Controllers\ViElementoController::class, 'puesto'])->name('consulta.puesto');
+    Route::get('/puesto/formato/vi-02-04', [App\Http\Controllers\ViElementoController::class, 'puesto_formato'])->name('consulta.puesto_formato');
+
     /*|--------------------------------------------------------------------------
     |Difundir (Actividades)
     |--------------------------------------------------------------------------*/
@@ -119,6 +123,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::view('/difundir/x-01-01', 'livewire.difundirs.index')->name('difundir_x_01_01.index');
     Route::view('/difundir/x-01-02', 'livewire.difundirs.index')->name('difundir_x_01_02.index');
     Route::view('/difundir/x-02-01', 'livewire.difundirs.index')->name('difundir_x_02_01.index');
+
+    Route::view('/difundir/iii-01-01', 'livewire.difundirs.index')->name('difundir_iii_01_01.index');
+    Route::view('/difundir/iv-01-01', 'livewire.difundirs.index')->name('difundir_iv_01_01.index');
+
+    Route::view('/difundir/vi-01-01', 'livewire.difundirs.index')->name('difundir_vi_01_01.index');
+    Route::view('/difundir/vi-01-03', 'livewire.difundirs.index')->name('difundir_vi_01_03.index');
 
     Route::get('imprimir/difundir/{id}', [App\Http\Livewire\Difundirs::class, 'pdf_difundir'])->name('print.difundir');
 
@@ -137,5 +147,31 @@ Route::group(['middleware' => ['auth']], function() {
     Route::view('/preventiva/x-01-01', 'livewire.Preventivas.index')->name('preventiva_x_01_01.index');
     Route::view('/preventiva/x-01-02', 'livewire.Preventivas.index')->name('preventiva_x_01_02.index');
     Route::view('/preventiva/x-02-01', 'livewire.Preventivas.index')->name('preventiva_x_02_01.index');
+
+    Route::view('/preventiva/iii-01-01', 'livewire.Preventivas.index')->name('preventiva_iii_01_01.index');
+    Route::view('/preventiva/iv-01-01', 'livewire.Preventivas.index')->name('preventiva_iv_01_01.index');
+
+    Route::view('/preventiva/vi-01-01', 'livewire.Preventivas.index')->name('preventiva_vi_01_01.index');
+    Route::view('/preventiva/vi-01-03', 'livewire.Preventivas.index')->name('preventiva_vi_01_03.index');
+
+    /*|--------------------------------------------------------------------------
+    |Evaluacion (VI-01-01)
+    |--------------------------------------------------------------------------*/
+    Route::get('/evaluacion', [App\Http\Controllers\ViElementoController::class, 'index'])->name('index.evaluacion');
+
+    Route::get('/edit/evaluacion/{id}', [App\Http\Controllers\ViElementoController::class, 'edit_empresario'])->name('edit_empresario.evaluacion');
+    Route::patch('/evaluacion/update/{id}', [App\Http\Controllers\ViElementoController::class, 'update_empresario'])->name('update_empresario.evaluacion');
+
+    Route::get('/edit/evaluacion/gerente/{id}', [App\Http\Controllers\ViElementoController::class, 'edit_gerente'])->name('edit_gerente.evaluacion');
+    Route::patch('/evaluacion/gerente/update/{id}', [App\Http\Controllers\ViElementoController::class, 'update_gerente'])->name('update_gerente.evaluacion');
+
+    Route::get('/edit/evaluacion/gasolinero/{id}', [App\Http\Controllers\ViElementoController::class, 'edit_gasolinero'])->name('edit_gasolinero.evaluacion');
+    Route::patch('/evaluacion/gasolinero/update/{id}', [App\Http\Controllers\ViElementoController::class, 'update_gasolinero'])->name('update_gasolinero.evaluacion');
+
+    Route::get('/edit/evaluacion/administrativo/{id}', [App\Http\Controllers\ViElementoController::class, 'edit_administrativo'])->name('edit_administrativo.evaluacion');
+    Route::patch('/evaluacion/administrativo/update/{id}', [App\Http\Controllers\ViElementoController::class, 'update_administrativo'])->name('update_administrativo.evaluacion');
+
+    Route::get('/edit/evaluacion/mantenimiento/{id}', [App\Http\Controllers\ViElementoController::class, 'edit_mantenimiento'])->name('edit_mantenimiento.evaluacion');
+    Route::patch('/evaluacion/mantenimiento/update/{id}', [App\Http\Controllers\ViElementoController::class, 'update_mantenimiento'])->name('update_mantenimiento.evaluacion');
 
 });

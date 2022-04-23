@@ -5,11 +5,11 @@
 <!-- Modal -->
 <div class="modal fade" id="elemento3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="elemento3" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content" style="width: 200%">
 
       <div class="modal-header">
         <h5 class="modal-title text-center" id="elemento3" style="font-size: 16px;">
-           Politica
+            III-01-01 Matriz de requisitos legales.
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -19,79 +19,111 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="element_1">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="politica">
-                      <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element_1collapse" aria-expanded="true" aria-controls="element_1collapse">
-                         I-01-01
-                      </button>
-                    </h2>
-                    <div id="element_1collapse" class="accordion-collapse collapse show" aria-labelledby="politica" data-bs-parent="#element_1">
-                      <div class="accordion-body">
-                            <h5 class="text-center" style="font-size: 15px">Política documentada.</h5>
-                            {{--nav tittle arrow--}}
-                            <div class="d-flex justify-content-center">
+                <div class="accordion accordion-flush" id="accordionExample7">
 
-                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home7" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                                        Opcion 1
-                                    </button>
-                                  </li>
+                    {{-------Descarga---------}}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" >
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
+                            Consultar/Actualizar
+                            </button>
+                        </h2>
+                        <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
+                            <div class="accordion-body">
 
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile7" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                        Opcion 2
-                                    </button>
-                                  </li>
-                                </ul>
+                                <table class="table" id="table_id" >
+                                    <thead class="text-white">
+                                    <tr>
+                                        <th scope="col">Normas</th>
+                                        <th scope="col">Marco</th>
+                                        <th scope="col">Descrip.</th>
+                                        <th scope="col">Ambito</th>
+                                        <th scope="col">Mecanismos Cum.</th>
+                                        <th scope="col">Mecanismos Esp.</th>
+                                        <th scope="col">Perio.</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="text-white">
+                                        <tr>
+                                            <td>RES/811/2015</td>
+                                            <td>4. Obligaciones del Permisionario</td>
+                                            <td>4.5. El Permisionario debe elaborar los documentos...</td>
+                                            <td>SGM</td>
+                                            <td>I Política.</td>
+                                            <td>Manual del Sistema..</td>
+                                            <td>1 año</td>
+                                            <td>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </a>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nom-009-STPS-2011</td>
+                                            <td>5. Obligaciones del patrón:</td>
+                                            <td>5.1 Contar con un análisis de las condiciones...</td>
+                                            <td>Seguridad.</td>
+                                            <td>II Identificación de peligros..</td>
+                                            <td>1 Procedimiento para la identificación..</td>
+                                            <td>1 año</td>
+                                            <td>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </a>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>RES/811/2015</td>
+                                            <td>2. Sistema de Gestión de..</td>
+                                            <td>4.3. El SGM deberá contener la organización..</td>
+                                            <td>SGM</td>
+                                            <td>V Funciones, responsabilidades..</td>
+                                            <td>E05-P01. Procedimiento de funciones..</td>
+                                            <td>1 año</td>
+                                            <td>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </a>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            {{--nav tittle arrow--}}
-                            {{--nav content --}}
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-home7" role="tabpanel" aria-labelledby="pills-home-tab">
-                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
-                                      @csrf
-                                      {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="3">
-                                      <input type="hidden" name="consultar" id="consultar" value="0">
-                                      <input type="hidden" name="generar" id="generar" value="0">
-                                      <input type="hidden" name="difundir" id="difundir" value="0">
-                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
-
-                                      {{-- Calendario --}}
-                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                      <input type="hidden" name="title" id="title" value="I-01-01">
-                                      <input type="hidden" name="color" id="color" value="#2367D9">
-                                      <input type="hidden" name="url" id="url" value="#exampleModal">
-
-                                      @include('modal-elementos.formulario1')
-                                    </form>
-                                </div>
-                                <div class="tab-pane fade" id="pills-profile7" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
-                                      @csrf
-
-                                      {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="3">
-                                      <input type="hidden" name="consultar" id="consultar" value="0">
-                                      <input type="hidden" name="generar" id="generar" value="0">
-                                      <input type="hidden" name="difundir" id="difundir" value="0">
-                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
-
-                                      {{-- Calendario --}}
-                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                      <input type="hidden" name="title" id="title" value="I-01-01">
-                                      <input type="hidden" name="url" id="url" value="#exampleModal">
-
-                                      @include('modal-elementos.formulario2')
-                                   </form>
-                                </div>
-                            </div>
-                            {{--nav content --}}
-                      </div>
+                        </div>
                     </div>
-                  </div>
+
+
+                    {{-------Formulario---------}}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="element1">
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_tree" aria-expanded="true" aria-controls="element7_tree">
+                                Actividades
+                            </button>
+                        </h2>
+                        <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
+                            <div class="accordion-body">
+                                    <a class="btn text-dark" href="{{route('difundir_iii_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                                        Difundir
+                                    </a>
+
+                                    <a class="btn  " href="{{route('preventiva_iii_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                        Accion Correctiva
+                                    </a>
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

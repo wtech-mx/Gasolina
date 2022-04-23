@@ -66,4 +66,8 @@ class User extends Authenticatable
     {
        return $this->belongsTo('App\Models\Tareas','id_user');
     }
+    public function ViElemento()
+    {
+        return $this->hasOne('App\Models\ViElemento', 'id_user');
+    }
 }

@@ -1,6 +1,12 @@
 @php
     $url = $_SERVER['REQUEST_URI'];
-    $rest = substr($url, -7);
+    if ($url == '/difundir/iv-01-01') {
+        $rest = substr($url, -8);
+    }elseif ($url == '/difundir/iii-01-01') {
+        $rest = substr($url, -9);
+    }else {
+        $rest = substr($url, -7);
+    }
 @endphp
 <!-- Modal -->
 <div wire:ignore.self class="modal fade" id="createDataModal" tabindex="-1" aria-labelledby="createDataModalLabel" aria-hidden="true">

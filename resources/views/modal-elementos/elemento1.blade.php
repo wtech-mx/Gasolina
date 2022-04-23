@@ -96,16 +96,13 @@
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="ejecutar" role="tabpanel" aria-labelledby="ejecutar-tab">
                                         <form action="index.php" method="post">
-                                            <select id="status" name="status" class="form-select" onChange="mostrar(this.value);">
+                                            <select id="status" name="status" class="form-select">
                                                 <option value="">Seleccione Elemento</option>
-                                                <option value="X-01-01">X-01-01</option>
-                                                <option value="X-01-02">X-01-02</option>
-                                                <option value="X-02-01">X-02-01</option>
-                                                <option value="X-04-01">X-04-01</option>
+                                                <option value="5">X-01-01</option>
                                              </select>
                                         </form>
 
-                                        <div id="X-01-01" style="display: none;">
+                                        <div style="display: none;">
                                             <a class="btn" href="{{route('difundir_x_01_01.index')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
                                                 Difundir
                                             </a>
@@ -113,39 +110,6 @@
                                             <a class="btn text-dark" href="{{route('preventiva_x_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
                                                 Accion Correctiva
                                             </a>
-                                               @include('modal-elementos.fomularios X.x-01-01')
-                                        </div>
-                                        <div id="X-01-02" style="display: none;">
-
-                                            <a class="btn" href="{{route('xelemento.create_preguntas')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                                Ejecutar
-                                            </a>
-
-                                            <a class="btn text-dark" href="{{route('difundir_x_01_02.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
-                                                Difundir
-                                            </a>
-
-                                            <a class="btn  " href="{{route('preventiva_x_01_02.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
-                                                Accion Correctiva
-                                            </a>
-
-                                        </div>
-                                        <div id="X-02-01" style="display: none;">
-                                            <a class="btn" href="{{route('x_02_01.create_preguntas')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                                Ejecutar
-                                            </a>
-
-                                            <a class="btn" href="{{route('difundir_x_02_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
-                                                Difundir
-                                            </a>
-
-                                            <a class="btn text-dark" href="{{route('preventiva_x_02_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
-                                                Accion Correctiva
-                                            </a>
-
-                                        </div>
-                                        <div id="X-04-01" style="display: none;">
-                                            <h5>X-04-01</h5>
                                         </div>
                                     </div>
 
@@ -250,7 +214,6 @@
         </div>
 
       </div>
-    @include('modal-elementos.fomularios X.script')
     </div>
   </div>
 </div>

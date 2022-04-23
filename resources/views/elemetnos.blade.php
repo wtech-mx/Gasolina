@@ -35,7 +35,7 @@
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento3">
                                     <div class="card-body">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/3.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Politica <br>-</h4>
+                                        <h4 class="card-title card-menu-title-element">Requisitos legales <br>-</h4>
                                     </div>
                                 </a>
                             </div>
@@ -66,7 +66,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento6">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/6.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Control de actividades y procesos<br>- </h4>
+                                        <h4 class="card-title card-menu-title-element">Competencia personal<br>- </h4>
                                     </a>
                                 </div>
                             </div>

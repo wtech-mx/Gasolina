@@ -38,6 +38,10 @@ class Difundir extends Model
     {
         return $this->hasOne('App\Models\User', 'id', 'id_user');
     }
+    public function Users()
+    {
+       return $this->belongsTo('App\Models\User','id_user');
+    }
     public function MedioDifundir()
     {
         return $this->hasOne('App\Models\MedioDifundir', 'id', 'id_difundir');
