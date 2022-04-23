@@ -25,7 +25,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" >
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
-                            Consulta VI-01-01
+                            Consulta VII-01-01
                             </button>
                         </h2>
                         <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
@@ -58,7 +58,7 @@
                                                 <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
                                                 <td>
                                                     <div class="btn-group">
-                                                        <a href="{{route('index.evaluacion')}}"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+                                                        <a href="{{route('difundir.index')}}"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
                                                     </div>
                                                 </td>
                                             </tr>
