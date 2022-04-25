@@ -67,7 +67,7 @@
       </li>
 
       <li class="">
-        <a href="#" class="nav-link nav-menuiem text-white">
+        <a href="{{ route('index.configuracion') }}" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src=" {{ asset('assets/img/dosier.png') }}">
           Configuración
         </a>

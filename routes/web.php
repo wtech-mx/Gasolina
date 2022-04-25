@@ -140,6 +140,7 @@ Route::group(['middleware' => ['auth']], function() {
     |Configuracion
     |--------------------------------------------------------------------------*/
     Route::get('/configuracion', [App\Http\Controllers\ConfiguracionController::class, 'index'])->name('index.configuracion');
+    Route::patch('/configuracion/update', [App\Http\Controllers\ConfiguracionController::class, 'update_firmas'])->name('update_firmas.configuracion');
 
     /*|--------------------------------------------------------------------------
     |Preventiva (Actividades)

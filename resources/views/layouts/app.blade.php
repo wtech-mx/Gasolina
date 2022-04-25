@@ -93,32 +93,32 @@
     </script>
 
     <script type="text/javascript">
-        $('#agregar').click(function(){
-        agregar();
-    });
+            $('#agregar').click(function(){
+            agregar();
+        });
 
-    function agregar(){
-        var comunicacion=$('#comunicacion').val();
-        var descripcion=$('#descripcion').val();
-        var fila='<tr>'+
-        '<td><select wire:model.defer="comunicacion[]" class="form-control" id="comunicacion[]">'+
-            '<option value="">Seleccionar medio</option>'+
-            '<option value="Buzon de observaciones quejas y/o sugerencias.">Buzon de observaciones quejas y/o sugerencias.</option>'+
-            '<option value="Cartel o manta">Cartel o manta</option>'+
-            '<option value="Circulares internas">Circulares internas</option>'+
-            '<option value="Correo interno">Correo interno</option>'+
-            '<option value="Encuestas">Encuestas</option>'+
-            '<option value="Otro">Otro</option>'+
-            '<option value="Publicaciones internas">Publicaciones internas</option>'+
-            '<option value="Reuniones en grupo">Reuniones en grupo</option>'+
-            '<option value="Tablero de anuncios (vitrinas)">Tablero de anuncios (vitrinas)</option>'+
-            '<option value="Video">Video</option>'+
-            '</select></td>'+
-        '<td><input type="text" class="form-control" placeholder="Especificar" id="descripcion[]" name="descripcion[]"></td>'+
-        '</tr>';
+        function agregar(){
+            var comunicacion=$('#comunicacion').val();
+            var descripcion=$('#descripcion').val();
+            var fila='<tr>'+
+            '<td><select wire:model.defer="comunicacion[]" class="form-control" id="comunicacion[]">'+
+                '<option value="">Seleccionar medio</option>'+
+                '<option value="Buzon de observaciones quejas y/o sugerencias.">Buzon de observaciones quejas y/o sugerencias.</option>'+
+                '<option value="Cartel o manta">Cartel o manta</option>'+
+                '<option value="Circulares internas">Circulares internas</option>'+
+                '<option value="Correo interno">Correo interno</option>'+
+                '<option value="Encuestas">Encuestas</option>'+
+                '<option value="Otro">Otro</option>'+
+                '<option value="Publicaciones internas">Publicaciones internas</option>'+
+                '<option value="Reuniones en grupo">Reuniones en grupo</option>'+
+                '<option value="Tablero de anuncios (vitrinas)">Tablero de anuncios (vitrinas)</option>'+
+                '<option value="Video">Video</option>'+
+                '</select></td>'+
+            '<td><input type="text" class="form-control" placeholder="Especificar" id="descripcion[]" name="descripcion[]"></td>'+
+            '</tr>';
 
-        $('#tabla_id').append(fila);
-    }
+            $('#tabla_id').append(fila);
+        }
     </script>
 
 	@livewireScripts
