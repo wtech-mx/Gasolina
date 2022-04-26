@@ -26,13 +26,15 @@
 
                 <div class=" d-flex justify-content-between bg-white p-2 rounded-pill">
                     <a href=""> <span class="badge badge-pill"
-                            style="background-color: #2ECC71">Diaria</span> </a>
+                            style="background-color: {{$config->color_diaria}}">Diaria</span> </a>
                     <a href=""> <span class="badge badge-pill"
-                            style="background-color: #2980B9">Mensual</span> </a>
+                            style="background-color: {{$config->color_mensual}}">Mensual</span> </a>
                     <a href=""> <span class="badge badge-pill"
-                            style="background-color: #8E44AD;color: #faf7f7">Semestral</span> </a>
+                            style="background-color: {{$config->color_semestral}};color: #faf7f7">Semestral</span> </a>
+                            <a href=""> <span class="badge badge-pill"
+                                style="background-color: {{$config->color_año}};color: #faf7f7">Anual</span> </a>
                     <a href=""> <span class="badge badge-pill"
-                            style="background-color: #FF0000">No realizada</span> </a>
+                            style="background-color: {{$config->color_no_realizada}}">No realizada</span> </a>
                 </div>
 
                 <div id='calendar'></div>

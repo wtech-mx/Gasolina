@@ -32,6 +32,9 @@ class CreateConfiguracionTable extends Migration
             $table->string('color_no_realizada')->nullable();
             $table->string('color_elemento')->nullable();
 
+            $table->string('color_temporalidad')->nullable();
+            $table->string('color_año')->nullable();
+
             $table->timestamps();
         });
     }

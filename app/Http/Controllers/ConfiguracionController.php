@@ -108,4 +108,18 @@ class ConfiguracionController extends Controller
         Session::flash('success', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.configuracion');
     }
+
+    public function update_ajustes(Request $request){
+
+        $tanque = Configuracion::first();
+        $tanque->color_diaria = $request->get('color_diaria');
+        $tanque->color_mensual = $request->get('color_mensual');
+        $tanque->color_semestral = $request->get('color_semestral');
+        $tanque->color_semestral = $request->get('color_año');
+        $tanque->color_no_realizada = $request->get('color_no_realizada');
+        $tanque->save();
+
+        Session::flash('success', 'Se ha actualizado sus datos con exito');
+        return redirect()->route('index.configuracion');
+    }
 }

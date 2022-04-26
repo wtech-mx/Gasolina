@@ -11,7 +11,7 @@
                     <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                 </a >
 
-                <h1 class="text-white">Editar Usuario</h1>
+                <h1 class="text-white">Configuración</h1>
 
             {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
 
@@ -26,7 +26,7 @@
 
           <li class="nav-item p-2" role="presentation">
             <a class="nav-link a-perso active show" id="estacion-servicio" data-bs-toggle="pill" data-bs-target="#pills-servicio" type="button" role="tab" aria-controls="pills-servicio" aria-selected="true">
-                 <i class="fa fa-user icon-style-2 p-1 "></i>Estacion de Servicio
+                <i class="fa fa-tachometer" aria-hidden="true"></i>Estacion de Servicio
             </a>
           </li>
 
@@ -38,15 +38,15 @@
 
           <li class="nav-item p-2" role="presentation">
             <a class="nav-link a-perso" id="otros-ajustes" data-bs-toggle="pill" data-bs-target="#pills-otros" type="button" role="tab" aria-controls="pills-otros" aria-selected="false">
-                <i class="fa fa-lock icon-style-2 p-1 "></i> Otros Ajustes
+                <i class="fa fa-cogs" aria-hidden="true"></i> Otros Ajustes
             </a>
           </li>
 
-          <li class="nav-item p-2" role="presentation">
+          {{-- <li class="nav-item p-2" role="presentation">
             <a class="nav-link a-perso" id="roles-permisos" data-bs-toggle="pill" data-bs-target="#pills-permisos" type="button" role="tab" aria-controls="pills-permisos" aria-selected="false">
-                <i class="fa fa-lock icon-style-2 p-1 "></i> Roles y permisos
+                <i class="fa fa-users" aria-hidden="true"></i> Roles y permisos
             </a>
-          </li>
+          </li> --}}
 
         </ul>
 
@@ -64,8 +64,8 @@
             </div>
 
             <div class="tab-pane fade p-3" id="pills-otros" role="tabpanel" aria-labelledby="otros-ajustes">
-                <h1>Otros Ajustes</h1>
-
+                <h1 class="text-white">Notificaciones Calendario</h1>
+                @include('admin.configuracion.ajustes')
             </div>
 
             <div class="tab-pane fade p-3" id="pills-permisos" role="tabpanel" aria-labelledby="roles-permisos">

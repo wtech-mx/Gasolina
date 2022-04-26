@@ -29,6 +29,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $config = DB::table('configuracion')->first();
+
         $tareas = Tareas::
         where('id_user', '=', auth()->user()->id)
         ->get();
@@ -41,7 +43,7 @@ class HomeController extends Controller
 
         $difundir = DB::table('difundirs')->get();
 
-        return view('home', compact('tareas', 'xElemento', 'vi_elemento', 'difundir'));
+        return view('home', compact('tareas', 'xElemento', 'vi_elemento', 'difundir', 'config'));
     }
     public function graficas()
     {

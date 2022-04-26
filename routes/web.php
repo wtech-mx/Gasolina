@@ -142,6 +142,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/configuracion', [App\Http\Controllers\ConfiguracionController::class, 'index'])->name('index.configuracion');
     Route::patch('/configuracion/update', [App\Http\Controllers\ConfiguracionController::class, 'update_firmas'])->name('update_firmas.configuracion');
     Route::patch('/configuracion/estacion/update', [App\Http\Controllers\ConfiguracionController::class, 'update_estacion'])->name('update_estacion.configuracion');
+    Route::patch('/configuracion/ajustes/update', [App\Http\Controllers\ConfiguracionController::class, 'update_ajustes'])->name('update_ajustes.configuracion');
 
     /*|--------------------------------------------------------------------------
     |Preventiva (Actividades)

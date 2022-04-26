@@ -20,6 +20,8 @@ class ConfiguracionSeeder extends Seeder
             'color_semestral' => '#8E44AD',
             'color_no_realizada' => '#FF0000',
             'color_elemento' => '#549227',
+            'color_temporalidad' => '#D34E24',
+            'color_año' => '#632A00',
         ]);
     }
 }

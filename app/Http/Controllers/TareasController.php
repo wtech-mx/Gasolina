@@ -14,10 +14,10 @@ class TareasController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function store(Request $request)
     {
-
+        $config = DB::table('configuracion')->first();
             //1/3 - error de validacion en la sweetalert *OBLIGATORIO*
             $validator = Validator::make($request->all(), [
                 'start' => 'required|string|max:191',
@@ -47,12 +47,12 @@ class TareasController extends Controller
             $tarea->start = $request->get('start');
 
             if($request->get('end') == NULL){
-                $tarea->color = '#549227';
+                $tarea->color = $config->color_elemento;
                 $tarea->end = $request->get('start');
             }else{
                 switch($request->get('end')){
                     case($request->get('end') == 1):
-                        $tarea->color = '#004E9A';
+                        $tarea->color = $config->color_mensual;
                         $fecha = date($request->get('start'));
                         $nuevafecha = strtotime ( '+1 month' , strtotime ( $fecha ) ) ;
                         $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
@@ -60,7 +60,7 @@ class TareasController extends Controller
                     break;
 
                     case($request->get('end') == 2):
-                        $tarea->color = '#4D446F';
+                        $tarea->color = $config->color_semestral;
                         $fecha = date($request->get('start'));
                         $nuevafecha = strtotime ( '+6 month' , strtotime ( $fecha ) ) ;
                         $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
@@ -69,7 +69,7 @@ class TareasController extends Controller
                     break;
 
                     case($request->get('end') == 3):
-                        $tarea->color = '#632A00';
+                        $tarea->color = $config->color_año;
                         $fecha = date($request->get('start'));
                         $nuevafecha = strtotime ( '+12 month' , strtotime ( $fecha ) ) ;
                         $nuevafecha = date ( 'Y-m-j' , $nuevafecha );
@@ -117,6 +117,7 @@ class TareasController extends Controller
 
     public function formulario_3(Request $request)
     {
+        $config = DB::table('configuracion')->first();
         for ($i = 0; $i < $request->get('num_veces'); $i++){
             $tarea = new Tareas;
             $tarea->id_user = auth()->user()->id;
@@ -130,7 +131,7 @@ class TareasController extends Controller
             $tarea->check = 0;
             $tarea->url = $request->get('url');
             $tarea->start = $request->get('start');
-            $tarea->color = '#549227';
+            $tarea->color = $config->color_elemento;
 
             $dia = $tarea->start;
 

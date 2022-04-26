@@ -27,7 +27,7 @@ class CalendarioController extends Controller
             $json2 = $data2['calendario'] = Calendario::
             where('id_user', '=', auth()->user()->id)
             ->get();
-            
+
             $json3 = $data3['formato'] = Tareas::
             where('id_user', '=', auth()->user()->id)
             ->get();
@@ -45,12 +45,13 @@ class CalendarioController extends Controller
 
     public function update_calendar(Request $request, $id)
     {
+        $config = DB::table('configuracion')->first();
         $datosEvento = request()->except(['_token', '_method']);
         $color = $datosEvento['color'];
         $title = $datosEvento['title'];
         $check = $datosEvento['check'];
 
-        if($color == "#2ECC71"){
+        if($color == $config->color_diaria){
             $respuesta = Calendario::where('id', '=', $id)->update($datosEvento);
         }else{
             $respuesta = Tareas::where('id', '=', $id)->update($datosEvento);
@@ -59,10 +60,11 @@ class CalendarioController extends Controller
 
     public function destroy_calendar($id)
     {
+        $config = DB::table('configuracion')->first();
         $datosEvento = request();
         $color = $datosEvento['color'];
 
-        if($color == "#2ECC71"){
+        if($color == $config->color_diaria){
             Calendario::destroy($id);
         }else{
             $seguro = Tareas::findOrFail($id);
@@ -75,6 +77,7 @@ class CalendarioController extends Controller
 
     public function temp(Request $request)
     {
+        $config = DB::table('configuracion')->first();
         for ($i = 0; $i < $request->get('num_veces'); $i++){
             $tarea = new Calendario;
             $tarea->id_user = auth()->user()->id;
@@ -85,7 +88,7 @@ class CalendarioController extends Controller
             $tarea->estatus = 0;
             $tarea->check = 0;
             $tarea->start = $request->get('start');
-            $tarea->color = '#D34E24';
+            $tarea->color = $config->temporalidad;
 
             $dia = $tarea->start;
 
