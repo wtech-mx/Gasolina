@@ -121,6 +121,46 @@
         }
     </script>
 
+    <script type="text/javascript">
+        var agregar3 = document.getElementById('proveedor3');
+        var contenedor3 = document.getElementById('nuevo-form3');
+        var cont = 0;
+
+        agregar3.addEventListener('click', function(){
+            cont ++;
+            var _form3 = '<div class="col-6 mt-3"><p for=""><input class="form-check-input" type="checkbox" value="1" id="estatus[]" name="estatus[]" checked>'+
+                            '<strong>Dispensario '+cont+'</strong></p>'+
+                            '<label for="">Pistola 1</label>'+
+                            '<select class="form-control" id="pistola1[]" name="pistola1[]">'+
+                                '<option value="">Seleccionar tipo</option>'+
+                                '<option value="Magna">Magna</option>'+
+                                '<option value="Disel">Disel</option>'+
+                                '<option value="Premium">Premium</option>'+
+                            '</select>'+
+                            '<label for="">Pistola 2</label>'+
+                            '<select class="form-control" id="pistola2[]" name="pistola2[]">'+
+                                '<option value="">Seleccionar tipo</option>'+
+                                '<option value="Magna">Magna</option>'+
+                                '<option value="Disel">Disel</option>'+
+                                '<option value="Premium">Premium</option>'+
+                            '</select>'+
+                            '<label for="">Pistola 3</label>'+
+                            '<select class="form-control" id="pistola3[]" name="pistola3[]">'+
+                                '<option value="">Seleccionar tipo</option>'+
+                                '<option value="Magna">Magna</option>'+
+                                '<option value="Disel">Disel</option>'+
+                                '<option value="Premium">Premium</option>'+
+                            '</select></div>';
+
+            contenedor3.innerHTML += _form3;
+        })
+
+        //remove fields group
+        // $("body").on("click",".remove",function(){
+        //     $(this).parents("._form").remove();
+        // });
+    </script>
+
 	@livewireScripts
 
     <script type="text/javascript">
