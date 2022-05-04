@@ -3,13 +3,13 @@
 @endsection
 
 <!-- Modal -->
-<div class="modal fade" id="elemento5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="elemento5" aria-hidden="true">
+<div class="modal fade" id="elemento5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="elemento1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title text-center"  style="font-size: 16px;">
-            Rquisitos legales
+        <h5 class="modal-title text-center" id="elemento1" style="font-size: 16px;">
+            V-01-01 Matriz de responsabilidades.
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -19,93 +19,101 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="element_5">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" >
-                      <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element_5collapse" aria-expanded="true" aria-controls="element_5collapse">
-                          III-01-01
-                      </button>
-                    </h2>
-                    <div id="element_5collapse" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#element_5">
-                      <div class="accordion-body">
-                            <h5 class="text-center" style="font-size: 15px">MMatriz de requisitos legales.</h5>
-                            {{--nav tittle arrow--}}
-                            <div class="d-flex justify-content-center">
+                <div class="accordion accordion-flush" id="accordionExample7">
 
-                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home10" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                                        Opcion 1
-                                    </button>
-                                  </li>
+                    {{-------Descarga---------}}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" >
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
+                            Consultar
+                            </button>
+                        </h2>
+                        <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
+                            <div class="accordion-body">
 
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile10" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                        Opcion 2
-                                    </button>
-                                  </li>
-                                </ul>
+                                <table class="table" id="table_id" >
+                                    <thead class="text-white">
+                                    <tr>
+                                        <th scope="col">Tipo</th>
+                                        <th scope="col">Reglas</th>
+                                        <th scope="col">Fecha</th>
+                                        <th scope="col">Revision</th>
+                                        <th scope="col">Ultima fecha</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="text-white">
+                                        <tr>
+                                            <td>Regla</td>
+                                            <td>I Política.</td>
+                                            <td>03/07/2019</td>
+                                            <td>00</td>
+                                            <td>06/02/2020</td>
+                                            <td>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </a>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Procedimientos y/o Actividades</td>
+                                            <td>I-01 Procedimiento de elaboración y comunicación de la política.</td>
+                                            <td>03/07/2019</td>
+                                            <td>00</td>
+                                            <td>06/02/2020</td>
+                                            <td>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </a>
+                                                <a href="#" style="color: #ffffff;font-size: 16px;padding: 5px">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            {{--nav tittle arrow--}}
-                            {{--nav content --}}
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-home10" role="tabpanel" aria-labelledby="pills-home-tab">
-                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
-                                      @csrf
-                                      {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="5">
-                                      <input type="hidden" name="consultar" id="consultar" value="0">
-                                      <input type="hidden" name="actualizar" id="actualizar" value="0">
-                                      <input type="hidden" name="evaluar" id="evaluar" value="0">
-                                      <input type="hidden" name="difundir" id="difundir" value="0">
-                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
-
-                                      {{-- Calendario --}}
-                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                      <input type="hidden" name="title" id="title" value="III-01-01">
-                                      <input type="hidden" name="color" id="color" value="#2367D9">
-                                      <input type="hidden" name="url" id="url" value="#exampleModal">
-
-                                      @include('modal-elementos.formulario1')
-                                    </form>
-                                </div>
-                                <div class="tab-pane fade" id="pills-profile10" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
-                                      @csrf
-
-                                      {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="5">
-                                      <input type="hidden" name="consultar" id="consultar" value="0">
-                                      <input type="hidden" name="actualizar" id="actualizar" value="0">
-                                      <input type="hidden" name="evaluar" id="evaluar" value="0">
-                                      <input type="hidden" name="difundir" id="difundir" value="0">
-                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
-
-                                      {{-- Calendario --}}
-                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                      <input type="hidden" name="title" id="title" value="III-01-01">
-                                      <input type="hidden" name="url" id="url" value="#exampleModal">
-
-                                      @include('modal-elementos.formulario2')
-                                   </form>
-                                </div>
-                            </div>
-                            {{--nav content --}}
-                      </div>
+                        </div>
                     </div>
+
+
+                    {{-------Formulario---------}}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="element1">
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_tree" aria-expanded="true" aria-controls="element7_tree">
+                                Actividades
+                            </button>
+                        </h2>
+                        <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
+                            <div class="accordion-body">
+                                    <a class="btn text-dark" href="#" style="background-color:#001d3d;color:  #852ecc!important; border: 2px solid #852ecc!important">
+                                        Generar
+                                    </a>
+
+                                    <a class="btn text-dark" href="{{route('index.actualizar')}}" style="background-color:#001d3d;color:  #2e9fcc!important; border: 2px solid #2e9fcc!important">
+                                        Actializar
+                                    </a>
+
+                                    <a class="btn" href="{{route('difundir_i_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
+                                        Difundir
+                                    </a>
+
+                                    <a class="btn text-dark" href="{{route('preventiva_i_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                        Accion Correctiva
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+
                   </div>
-                </div>
 
             </div>
         </div>
-
+        @include('modal-elementos.formularios ii.script')
       </div>
-
-{{--      <div class="modal-footer">--}}
-{{--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>--}}
-{{--        <button type="button" class="btn btn-primary">Understood</button>--}}
-{{--      </div>--}}
-
     </div>
   </div>
 </div>

@@ -45,6 +45,7 @@ class HomeController extends Controller
 
         return view('home', compact('tareas', 'xElemento', 'vi_elemento', 'difundir', 'config'));
     }
+    
     public function graficas()
     {
         return view('admin.graficas.index');

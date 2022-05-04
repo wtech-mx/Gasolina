@@ -94,15 +94,6 @@ Route::group(['middleware' => ['auth']], function() {
     // Route::get('imprimir/ejecutar/{id}', [App\Http\Livewire\Ejecutars::class, 'pdf_ejecutar'])->name('print.ejecutar');
 
     /*|--------------------------------------------------------------------------
-    |X Elemento
-    |--------------------------------------------------------------------------*/
-    Route::post('/xlemento', [App\Http\Controllers\xElementoController::class, 'store'])->name('xelemento.store');
-    Route::get('/xlemento/x-01-02', [App\Http\Controllers\xElementoController::class, 'create_preguntas'])->name('xelemento.create_preguntas');
-    Route::post('/xlemento/x-01-02', [App\Http\Controllers\xElementoController::class, 'store_preguntas'])->name('xelemento.store_preguntas');
-
-    Route::get('/xlemento/x-02-01', [App\Http\Controllers\xElementoController::class, 'create_x_02_01'])->name('x_02_01.create_preguntas');
-
-    /*|--------------------------------------------------------------------------
     |Consulta (Actividades)
     |--------------------------------------------------------------------------*/
     Route::get('/consulta', [App\Http\Controllers\ConsultaController::class, 'index'])->name('consulta.index');
@@ -120,6 +111,8 @@ Route::group(['middleware' => ['auth']], function() {
     |Difundir (Actividades)
     |--------------------------------------------------------------------------*/
     Route::view('difundir', 'livewire.difundirs.index')->name('difundir.index')->middleware('auth');
+    Route::view('/difundir/i-01-01', 'livewire.difundirs.index')->name('difundir_i_01_01.index');
+
     Route::view('/difundir/x-01-01', 'livewire.difundirs.index')->name('difundir_x_01_01.index');
     Route::view('/difundir/x-01-02', 'livewire.difundirs.index')->name('difundir_x_01_02.index');
     Route::view('/difundir/x-02-01', 'livewire.difundirs.index')->name('difundir_x_02_01.index');
@@ -147,6 +140,8 @@ Route::group(['middleware' => ['auth']], function() {
     /*|--------------------------------------------------------------------------
     |Preventiva (Actividades)
     |--------------------------------------------------------------------------*/
+    Route::view('/preventiva/i-01-01', 'livewire.Preventivas.index')->name('preventiva_i_01_01.index');
+
     Route::view('/preventiva/x-01-01', 'livewire.Preventivas.index')->name('preventiva_x_01_01.index');
     Route::view('/preventiva/x-01-02', 'livewire.Preventivas.index')->name('preventiva_x_01_02.index');
     Route::view('/preventiva/x-02-01', 'livewire.Preventivas.index')->name('preventiva_x_02_01.index');
@@ -156,6 +151,30 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::view('/preventiva/vi-01-01', 'livewire.Preventivas.index')->name('preventiva_vi_01_01.index');
     Route::view('/preventiva/vi-01-03', 'livewire.Preventivas.index')->name('preventiva_vi_01_03.index');
+
+    /*|--------------------------------------------------------------------------
+    |Evaluacion (I-01-01)
+    |--------------------------------------------------------------------------*/
+    Route::get('imprimir/sasisopa-i-01-01', [App\Http\Controllers\iElementoController::class, 'pdf_sasisopa'])->name('pdf_sasisopa.print');
+
+    /*|--------------------------------------------------------------------------
+    |Evaluacion (II-02-01)
+    |--------------------------------------------------------------------------*/
+    Route::get('/consulta/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index'])->name('index.consulta');
+
+    Route::get('/abandono/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_abandono'])->name('index_abandono.abandono');
+    Route::get('/abandono/actividad/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'actividad_abandono'])->name('actividad_abandono.abandono');
+
+    Route::get('/construccion/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_construccion'])->name('index_construccion.construccion');
+    Route::get('/operacion/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_operacion'])->name('index_operacion.operacion');
+    Route::get('/preparacion/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_preparacion'])->name('index_preparacion.preparacion');
+    Route::get('/situaciones/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_situaciones'])->name('index_situaciones.situaciones');
+
+    /*|--------------------------------------------------------------------------
+    |Elemento (V-01-01)
+    |--------------------------------------------------------------------------*/
+    Route::get('/actualizar', [App\Http\Controllers\VElementoController::class, 'index'])->name('index.actualizar');
+
 
     /*|--------------------------------------------------------------------------
     |Evaluacion (VI-01-01)
@@ -176,5 +195,15 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::get('/edit/evaluacion/mantenimiento/{id}', [App\Http\Controllers\ViElementoController::class, 'edit_mantenimiento'])->name('edit_mantenimiento.evaluacion');
     Route::patch('/evaluacion/mantenimiento/update/{id}', [App\Http\Controllers\ViElementoController::class, 'update_mantenimiento'])->name('update_mantenimiento.evaluacion');
+
+    /*|--------------------------------------------------------------------------
+    |X Elemento
+    |--------------------------------------------------------------------------*/
+    Route::post('/xlemento', [App\Http\Controllers\xElementoController::class, 'store'])->name('xelemento.store');
+    Route::get('/xlemento/x-01-02', [App\Http\Controllers\xElementoController::class, 'create_preguntas'])->name('xelemento.create_preguntas');
+    Route::post('/xlemento/x-01-02', [App\Http\Controllers\xElementoController::class, 'store_preguntas'])->name('xelemento.store_preguntas');
+
+    Route::get('/xlemento/x-02-01', [App\Http\Controllers\xElementoController::class, 'create_x_02_01'])->name('x_02_01.create_preguntas');
+
 
 });
