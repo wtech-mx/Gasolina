@@ -1,8 +1,35 @@
-.collapse_principal{
-    background: #FFC300!important;
-    color: #ffffff!important;
-}
+    .collapse_principal:not(.collapsed){
+        background: #FFC300!important;
+        color: #001d3d!important;
+        border-radius: 20px;
 
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+        text-align: left;
+        border: 0;
+        overflow-anchor: none;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+    }
+
+    .collapse_principal{
+        background: #fff!important;
+        color: #001d3d!important;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
+        text-align: left;
+        border: 0;
+        overflow-anchor: none;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+    }
     .text_congi_festacion{
         color: #E0E0E0!important;
     }

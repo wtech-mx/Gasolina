@@ -2,9 +2,8 @@
    $fecha = date("Y-m-d");
 @endphp
 
-                <div class="collapse" id="collapseExample">
+                <div id="elemento_v" class="accordion-collapse collapse show" aria-labelledby="elemento_v" data-bs-parent="#accordionactividades">
                     <div class="card card-body d-inline-block" style="background: none;">
-
                         <div class="card card-menu">
                             <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento1">
                                 <div class="card-body">
@@ -29,8 +28,7 @@
                                 </div>
                             </a>
                         </div>
-
-                            <div class="card card-menu">
+                        <div class="card card-menu">
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento4">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/4.png') }}">
@@ -38,7 +36,7 @@
                                 </div>
                                 </a>
                             </div>
-                            <div class="card card-menu">
+                        <div class="card card-menu">
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento5">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/5.png') }}">
@@ -46,7 +44,7 @@
                                 </div>
                                 </a>
                             </div>
-                            <div class="card card-menu">
+                        <div class="card card-menu">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento6">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/6.png') }}">
@@ -54,7 +52,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento7">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/7.png') }}">
@@ -62,8 +60,7 @@
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento8">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/8.png') }}">
@@ -71,8 +68,7 @@
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento9">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/9.png') }}">
@@ -80,7 +76,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento10">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/10.png') }}">
@@ -88,8 +84,7 @@
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento11">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/11.png') }}">
@@ -97,8 +92,7 @@
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento12">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/12.png') }}">
@@ -106,7 +100,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento13">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/13.png') }}">
@@ -114,8 +108,7 @@
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento14">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/14.png') }}">
@@ -123,8 +116,7 @@
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento15">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/15.png') }}">
@@ -132,9 +124,7 @@
                                     </a>
                                 </div>
                             </div>
-
-
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento16">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/16.png') }}">
@@ -142,8 +132,7 @@
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento17">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/17.png') }}">
@@ -151,8 +140,7 @@
                                     </a>
                                 </div>
                             </div>
-
-                            <div class="card card-menu mt-3">
+                        <div class="card card-menu mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento18">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/18.png') }}">
@@ -160,10 +148,8 @@
                                     </a>
                                 </div>
                             </div>
-
                     </div>
                 </div>
-
 @include('modal-elementos.elemento1')
 @include('modal-elementos.elemento2')
 @include('modal-elementos.elemento3')
