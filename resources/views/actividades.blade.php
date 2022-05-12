@@ -7,20 +7,20 @@
 
     <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="pills-pendientes-tab" data-bs-toggle="pill" data-bs-target="#pills-pendientes" type="button" role="tab" aria-controls="pills-pendientes" aria-selected="true">
+        <button class="nav-link text-white active" id="pills-pendientes-tab" data-bs-toggle="pill" data-bs-target="#pills-pendientes" type="button" role="tab" aria-controls="pills-pendientes" aria-selected="true">
             <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista-de-deseos.png') }}" style="width: 30px;">Pendientes
         </button>
       </li>
 
       <li class="nav-item" role="presentation">
 
-        <button class="nav-link" id="pills-terminadas-tab" data-bs-toggle="pill" data-bs-target="#pills-terminadas" type="button" role="tab" aria-controls="pills-terminadas" aria-selected="false">
+        <button class="nav-link text-white" id="pills-terminadas-tab" data-bs-toggle="pill" data-bs-target="#pills-terminadas" type="button" role="tab" aria-controls="pills-terminadas" aria-selected="false">
             <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista.png') }}" style="width: 30px;">Terminadas
         </button>
       </li>
 
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="pills-vencer-tab" data-bs-toggle="pill" data-bs-target="#pills-vencer" type="button" role="tab" aria-controls="pills-vencer" aria-selected="false">
+        <button class="nav-link text-white" id="pills-vencer-tab" data-bs-toggle="pill" data-bs-target="#pills-vencer" type="button" role="tab" aria-controls="pills-vencer" aria-selected="false">
             <img class="img-card-menu" src=" {{ asset('assets/img/icons/timetable.png') }}" style="width: 30px;">Por Vencer
         </button>
       </li>

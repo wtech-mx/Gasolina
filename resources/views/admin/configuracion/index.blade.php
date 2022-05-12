@@ -58,8 +58,11 @@
             </div>
 
             <div class="tab-pane fade p-3" id="pills-firmas" role="tabpanel" aria-labelledby="firmas">
-                <h1 class="text-white">Firmas</h1>
-                @include('admin.configuracion.firmas')
+                <div class="container-fluid">
+                    <h1 class="text-white">Firmas</h1>
+                     @include('admin.configuracion.firmas')
+                </div>
+
 
             </div>
 
