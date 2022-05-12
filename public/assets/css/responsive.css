@@ -1,3 +1,12 @@
+.collapse_principal{
+    background: #FFC300!important;
+    color: #ffffff!important;
+}
+
+    .text_congi_festacion{
+        color: #E0E0E0!important;
+    }
+
 @media (min-width: 576px){
 
     .card-menu {
@@ -21,4 +30,15 @@
         right: 90% !important;
     }
 
+}
+
+@media only screen and (max-width: 600px) {
+    .text_congi_festacion{
+        font-size: 13px;
+    }
+
+    .tittle_congi_festacion{
+        font-size: 22px;
+        margin-bottom: 2rem;
+    }
 }

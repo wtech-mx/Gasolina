@@ -1,4 +1,4 @@
-<div class="collapse" id="collapseExampleCursos">
+<div id="cursos_v" class="accordion-collapse collapse show" aria-labelledby="cursos_v" data-bs-parent="#accordionactividades">
     <div class="card card-body d-inline-block" style="background: none;">
         <h2 class="text-left title-cardso mt-3 mb-3" style="color: #FFC300!important">Cursos</h2>
 

@@ -38,45 +38,42 @@
                     <a href=""> <span class="badge badge-pill"
                             style="background-color: {{$config->color_no_realizada}}">No realizada</span> </a>
                 </div>
-
-
-
             </div>
 
             <div class="col-xs-12 col-sm-12 col-lg-6 p-4 ">
 
-                @include('estacion')
-
                 <div class="row">
-                    <div class="col-4 mt-3">
-                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                            <h2 class="text-left title-cardso" style="color: #FFC300!important">Elementos V</h2>
-                        </a>
-                    </div>
 
-                    <div class="col-4 mt-3">
-                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseExampleGraficas" role="button" aria-expanded="false" aria-controls="collapseExampleGraficas">
-                            <h2 class="text-left title-cardso" style="color: #FFC300!important">Graficas V</h2>
-                        </a>
-                    </div>
+                    @include('estacion')
 
-                    <div class="col-4 mt-3">
-                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseExampleCursos" role="button" aria-expanded="false" aria-controls="collapseExampleCursos">
-                            <h2 class="text-left title-cardso" style="color: #FFC300!important">Cursos V</h2>
-                        </a>
-                    </div>
+                    <div class="accordion accordion-flush mb-3" id="accordionactividades" style="display: contents;">
 
+                        <div class="col-4 p-2 mt-2">
+                            <button class="accordion-button collapse_principal btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#elemento_v" aria-expanded="true" aria-controls="elemento_v">
+                                <h2 class="text-left title-cardso" >Elementos V</h2>
+                            </button>
+                        </div>
+
+                        <div class="col-4 p-2 mt-2">
+                            <button class="accordion-button collapse_principal btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#grafica_v" aria-expanded="true" aria-controls="grafica_v">
+                                <h2 class="text-left title-cardso" >Graficas V</h2>
+                            </button>
+                        </div>
+
+                        <div class="col-4 p-2 mt-2">
+                           <button class="accordion-button collapse_principal btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#cursos_v" aria-expanded="true" aria-controls="cursos_v">
+                                <h2 class="text-left title-cardso" >Cursos V</h2>
+                            </button>
+                        </div>
+                         @include('elemetnos')
+                         @include('graficas')
+                         @include('cursos')
+                         @include('actividades')
+                    </div>
 
                 </div>
-                @include('elemetnos')
-
-                @include('graficas')
-
-                 @include('cursos')
-
-                 @include('actividades')
-
             </div>
+        </div>
 
 
 @endsection
