@@ -110,20 +110,20 @@ Route::group(['middleware' => ['auth']], function() {
     /*|--------------------------------------------------------------------------
     |Difundir (Actividades)
     |--------------------------------------------------------------------------*/
-    Route::view('difundir', 'livewire.difundirs.index')->name('difundir.index')->middleware('auth');
-    Route::view('/difundir/i-01-01', 'livewire.difundirs.index')->name('difundir_i_01_01.index');
+    Route::post('difundir/store', [App\Http\Controllers\DifundirController::class, 'store'])->name('difundir.store')->middleware('auth');
+    Route::get('/difundir/i-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_i_01_01.index');
 
-    Route::view('/difundir/x-01-01', 'livewire.difundirs.index')->name('difundir_x_01_01.index');
-    Route::view('/difundir/x-01-02', 'livewire.difundirs.index')->name('difundir_x_01_02.index');
-    Route::view('/difundir/x-02-01', 'livewire.difundirs.index')->name('difundir_x_02_01.index');
+    Route::view('/difundir/x-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_01.index');
+    Route::view('/difundir/x-01-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_02.index');
+    Route::view('/difundir/x-02-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_02_01.index');
 
-    Route::view('/difundir/iii-01-01', 'livewire.difundirs.index')->name('difundir_iii_01_01.index');
-    Route::view('/difundir/iv-01-01', 'livewire.difundirs.index')->name('difundir_iv_01_01.index');
+    Route::view('/difundir/iii-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_iii_01_01.index');
+    Route::view('/difundir/iv-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_iv_01_01.index');
 
-    Route::view('/difundir/vi-01-01', 'livewire.difundirs.index')->name('difundir_vi_01_01.index');
-    Route::view('/difundir/vi-01-03', 'livewire.difundirs.index')->name('difundir_vi_01_03.index');
+    Route::view('/difundir/vi-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_01.index');
+    Route::view('/difundir/vi-01-03', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_03.index');
 
-    Route::get('imprimir/difundir/{id}', [App\Http\Livewire\Difundirs::class, 'pdf_difundir'])->name('print.difundir');
+    // Route::get('imprimir/difundir/{id}', [App\Http\Controllers\DifundirController::class, 'pdf_difundir'])->name('print.difundir');
 
     Route::get('/graficas', [App\Http\Controllers\ElementosController::class, 'graficas'])->name('graficas');
 
@@ -162,13 +162,11 @@ Route::group(['middleware' => ['auth']], function() {
     |--------------------------------------------------------------------------*/
     Route::get('/consulta/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index'])->name('index.consulta');
 
-    Route::get('/abandono/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_abandono'])->name('index_abandono.abandono');
     Route::get('/abandono/actividad/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'actividad_abandono'])->name('actividad_abandono.abandono');
-
-    Route::get('/construccion/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_construccion'])->name('index_construccion.construccion');
-    Route::get('/operacion/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_operacion'])->name('index_operacion.operacion');
-    Route::get('/preparacion/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_preparacion'])->name('index_preparacion.preparacion');
-    Route::get('/situaciones/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'index_situaciones'])->name('index_situaciones.situaciones');
+    Route::get('/construccion/actividad/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'actividad_construccion'])->name('actividad_construccion.construccion');
+    Route::get('/operacion/actividad/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'actividad_operacion'])->name('actividad_operacion.operacion');
+    Route::get('/preparacion/actividad/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'actividad_preparacion'])->name('actividad_preparacion.preparacion');
+    Route::get('/situaciones/actividad/ii-02-01', [App\Http\Controllers\iiElementoController::class, 'actividad_situaciones'])->name('actividad_situaciones.situaciones');
 
     /*|--------------------------------------------------------------------------
     |Elemento (V-01-01)

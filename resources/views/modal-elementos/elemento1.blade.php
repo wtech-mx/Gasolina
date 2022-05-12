@@ -25,7 +25,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" >
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
-                            Consultar
+                                Documentos de consulta
                             </button>
                         </h2>
                         <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_one" data-bs-parent="#accordionExample7">
@@ -39,14 +39,10 @@
                                 </form>
 
                                 <div id="002-SASISOPA" style="display: none;">
-                                    <a class="btn" href="{{route('pdf_sasisopa.print')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                       Descargar 002-SASISOPA PDF
-                                    </a>
+                                    <iframe src="{{route('pdf_sasisopa.print')}}" style="width:100%; height:700px;" frameborder="0" ></iframe>
                                 </div>
                                 <div id="003-SGM" style="display: none;">
-                                    <a class="btn" href="{{route('index.evaluacion')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                        Descargar 003-SGM PDF
-                                    </a>
+                                    <iframe src="{{route('pdf_sasisopa.print')}}" style="width:100%; height:700px;" frameborder="0" ></iframe>
                                 </div>
                             </div>
                         </div>
@@ -57,15 +53,11 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="element1">
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_tree" aria-expanded="true" aria-controls="element7_tree">
-                                Actividades
+                                Formatos del elemento
                             </button>
                         </h2>
                         <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
-                                <a class="btn text-dark" href="#" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important">
-                                    Generar
-                                </a>
-
                                 <a class="btn" href="{{route('difundir_i_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
                                     Difundir
                                 </a>

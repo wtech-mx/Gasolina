@@ -37,7 +37,7 @@
                         <tr>
                             <td>
                               <a href="#"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
-                              <a href="{{route('index_abandono.abandono')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                              <a href="{{route('actividad_abandono.abandono')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
                             </td>
                             <td>SAC XIB CHAAC, S.A. DE C.V.</td>
                             <td>Abandono y rehabilitación del sitio.</td>
@@ -48,7 +48,7 @@
                         <tr>
                             <td>
                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                <a href="{{route('index_construccion.construccion')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                                <a href="{{route('actividad_construccion.construccion')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
                             </td>
                             <td>SAC XIB CHAAC, S.A. DE C.V.</td>
                             <td>Construcción</td>
@@ -59,7 +59,7 @@
                         <tr>
                             <td>
                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                <a href="{{route('index_operacion.operacion')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                                <a href="{{route('actividad_operacion.operacion')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
                             </td>
                             <td>SAC XIB CHAAC, S.A. DE C.V.</td>
                             <td>Operación.</td>
@@ -70,7 +70,7 @@
                         <tr>
                             <td>
                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                <a href="{{route('index_preparacion.preparacion')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                                <a href="{{route('actividad_preparacion.preparacion')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
                             </td>
                             <td>SAC XIB CHAAC, S.A. DE C.V.</td>
                             <td>Preparación del Sitio</td>
@@ -81,7 +81,7 @@
                         <tr>
                             <td>
                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                <a href="{{route('index_situaciones.situaciones')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
+                                <a href="{{route('actividad_situaciones.situaciones')}}"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
                             </td>
                             <td>SAC XIB CHAAC, S.A. DE C.V.</td>
                             <td>Situaciones de emergencia dentro de la fase de operación.</td>

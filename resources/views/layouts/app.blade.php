@@ -101,7 +101,7 @@
             var comunicacion=$('#comunicacion').val();
             var descripcion=$('#descripcion').val();
             var fila='<tr>'+
-            '<td><select wire:model.defer="comunicacion[]" class="form-control" id="comunicacion[]">'+
+            '<td><select name="comunicacion[]" class="form-control" id="comunicacion[]">'+
                 '<option value="">Seleccionar medio</option>'+
                 '<option value="Buzon de observaciones quejas y/o sugerencias.">Buzon de observaciones quejas y/o sugerencias.</option>'+
                 '<option value="Cartel o manta">Cartel o manta</option>'+
@@ -114,10 +114,10 @@
                 '<option value="Tablero de anuncios (vitrinas)">Tablero de anuncios (vitrinas)</option>'+
                 '<option value="Video">Video</option>'+
                 '</select></td>'+
-            '<td><input type="text" class="form-control" placeholder="Especificar" id="descripcion[]" name="descripcion[]"></td>'+
+            '<td><input type="text" class="form-control" placeholder="Especificar" id="descripcion2[]" name="descripcion2[]"></td>'+
             '</tr>';
 
-            $('#tabla_id').append(fila);
+            $('#tabla_script').append(fila);
         }
     </script>
 

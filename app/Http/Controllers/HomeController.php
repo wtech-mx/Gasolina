@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Calendario;
 use Illuminate\Http\Request;
 use DB;
 use App\Models\User;
@@ -31,21 +32,64 @@ class HomeController extends Controller
     {
         $config = DB::table('configuracion')->first();
 
-        $tareas = Tareas::
+        $tareas_pendientes = Tareas::
         where('id_user', '=', auth()->user()->id)
+        ->where('check', '=', 0)
         ->get();
 
-        $xElemento = xElemento::
+        $calendario_pendientes = Calendario::
         where('id_user', '=', auth()->user()->id)
+        ->where('check', '=', 0)
+        ->get();
+
+        $tareas_terminadas = Tareas::
+        where('id_user', '=', auth()->user()->id)
+        ->where('check', '=', 1)
+        ->get();
+
+        $preventivas_terminadas = DB::table('preventivas')
+        ->where('id_user', '=', auth()->user()->id)
+        ->where('estado', '=', 1)
+        ->get();
+
+        $calendario_terminadas = Calendario::
+        where('id_user', '=', auth()->user()->id)
+        ->where('check', '=', 1)
+        ->get();
+
+        $xElemento_terminadas = xElemento::
+        where('id_user', '=', auth()->user()->id)
+        ->where('estado', '=', 1)
+        ->get();
+
+        $hoy = Carbon::today();
+        $fecha = date("Y-m-d",strtotime($hoy."+ 5 days"));
+
+        $tareas_vencer = Tareas::
+        where('id_user', '=', auth()->user()->id)
+        ->where('check', '=', 0)
+        ->where('end', '<=', $fecha)
+        ->get();
+
+        $calendario_vencer = Calendario::
+        where('id_user', '=', auth()->user()->id)
+        ->where('check', '=', 0)
+        ->where('end', '<=', $fecha)
         ->get();
 
         $vi_elemento = ViElemento::get();
 
         $difundir = DB::table('difundirs')->get();
 
-        return view('home', compact('tareas', 'xElemento', 'vi_elemento', 'difundir', 'config'));
+        $xElemento = xElemento::
+        where('id_user', '=', auth()->user()->id)
+        ->get();
+
+
+
+        return view('home', compact('tareas_pendientes', 'tareas_terminadas', 'tareas_vencer', 'xElemento' , 'xElemento_terminadas', 'vi_elemento', 'difundir', 'config', 'calendario_pendientes', 'calendario_terminadas', 'calendario_vencer'));
     }
-    
+
     public function graficas()
     {
         return view('admin.graficas.index');

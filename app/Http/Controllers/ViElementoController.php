@@ -6,6 +6,8 @@ use App\Models\User;
 use App\Models\ViElemento;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Models\Difundir;
+use App\Models\MedioDifundir;
 
 class ViElementoController extends Controller
 {

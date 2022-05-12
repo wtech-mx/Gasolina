@@ -21,50 +21,24 @@
 
                 <div class="accordion accordion-flush" id="accordionExample7">
 
-                    {{-------Descarga---------}}
+                    {{-------Documentos de consulta---------}}
                     <div class="accordion-item">
                         <h2 class="accordion-header" >
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
-                            Consultar
+                            Documentos de consulta
                             </button>
                         </h2>
-                        <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
-                            <div class="accordion-body">
-
-                                <table class="table" id="table_id" >
-                                    <thead class="text-white">
-                                    <tr>
-                                        <th scope="col">P. y/o actividad</th>
-                                        <th scope="col">Actividad</th>
-                                        <th scope="col">Programado</th>
-                                        <th scope="col">Ejecucion</th>
-                                        <th scope="col">Ejecutado</th>
-                                        <th scope="col">P. ejecutar</th>
-                                        <th scope="col">No ejecutado</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody class="text-white">
-                                        <tr>
-                                            <td>I-01-01 Política documentada.</td>
-                                            <td>Consultar.</td>
-                                            <td>1</td>
-                                            <td>0</td>
-                                            <td>1</td>
-                                            <td>0</td>
-                                            <td>0</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                        <div id="element7_one" class="accordion-collapse collapse show mt-3" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
+                            @include('modal-elementos.formularios iv.select')
                         </div>
                     </div>
 
 
-                    {{-------Formulario---------}}
+                    {{-------Formatos del elemento---------}}
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="element1">
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_tree" aria-expanded="true" aria-controls="element7_tree">
-                                Actividades
+                                Formatos del elemento
                             </button>
                         </h2>
                         <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
@@ -85,7 +59,7 @@
 
             </div>
         </div>
-
+        @include('modal-elementos.formularios iv.script')
       </div>
 
 {{--      <div class="modal-footer">--}}

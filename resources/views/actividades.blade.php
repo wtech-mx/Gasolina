@@ -3,58 +3,38 @@
 @endphp
 <h2 class="text-left title-cardso mt-3 mb-3" style="color: #ffffff!important">Mis actividades</h2>
 
-@if ($userId == 1)
-<div class="card card-menu" style="background-color: #ffffff!important">
-    <div class="card-body">
-        <a style="text-decoration: none;color: #000000" href="{{ route('elementos.pendientes_admin') }}">
-            <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista-de-deseos.png') }}">
-            <h4 class="card-title card-menu-title">Pendientes</h4>
-        </a>
-    </div>
+<div class="d-flex justify-content-center">
+
+    <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-pendientes-tab" data-bs-toggle="pill" data-bs-target="#pills-pendientes" type="button" role="tab" aria-controls="pills-pendientes" aria-selected="true">
+            <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista-de-deseos.png') }}" style="width: 30px;">Pendientes
+        </button>
+      </li>
+
+      <li class="nav-item" role="presentation">
+
+        <button class="nav-link" id="pills-terminadas-tab" data-bs-toggle="pill" data-bs-target="#pills-terminadas" type="button" role="tab" aria-controls="pills-terminadas" aria-selected="false">
+            <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista.png') }}" style="width: 30px;">Terminadas
+        </button>
+      </li>
+
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-vencer-tab" data-bs-toggle="pill" data-bs-target="#pills-vencer" type="button" role="tab" aria-controls="pills-vencer" aria-selected="false">
+            <img class="img-card-menu" src=" {{ asset('assets/img/icons/timetable.png') }}" style="width: 30px;">Por Vencer
+        </button>
+      </li>
+    </ul>
 </div>
 
-<div class="card card-menu" style="background-color: #ffffff!important">
-    <div class="card-body">
-        <a style="text-decoration: none;color: #000000" href="{{ route('elementos.terminadas_admin') }}">
-            <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista.png') }}">
-            <h4 class="card-title card-menu-title">Terminadas</h4>
-        </a>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-pendientes" role="tabpanel" aria-labelledby="pills-pendientes-tab">
+        @include('actividades.pendientes')
+    </div>
+    <div class="tab-pane fade" id="pills-terminadas" role="tabpanel" aria-labelledby="pills-terminadas-tab">
+        @include('actividades.terminadas')
+    </div>
+    <div class="tab-pane fade" id="pills-vencer" role="tabpanel" aria-labelledby="pills-vencer-tab">
+        @include('actividades.vencer')
     </div>
 </div>
-
-<div class="card card-menu" style="background-color: #ffffff!important">
-    <div class="card-body">
-        <a style="text-decoration: none;color: #000000" href="{{ route('elementos.por_vencer_admin') }}">
-            <img class="img-card-menu" src=" {{ asset('assets/img/icons/timetable.png') }}">
-            <h4 class="card-title card-menu-title">Por Vencer</h4>
-        </a>
-    </div>
-</div>
-@else
-<div class="card card-menu" style="background-color: #ffffff!important">
-    <div class="card-body">
-        <a style="text-decoration: none;color: #000000" href="{{ route('elementos.pendientes') }}">
-            <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista-de-deseos.png') }}">
-            <h4 class="card-title card-menu-title">Pendientes</h4>
-        </a>
-    </div>
-</div>
-
-<div class="card card-menu" style="background-color: #ffffff!important">
-    <div class="card-body">
-        <a style="text-decoration: none;color: #000000" href="{{ route('elementos.terminadas') }}">
-            <img class="img-card-menu" src=" {{ asset('assets/img/icons/lista.png') }}">
-            <h4 class="card-title card-menu-title">Terminadas</h4>
-        </a>
-    </div>
-</div>
-
-<div class="card card-menu" style="background-color: #ffffff!important">
-    <div class="card-body">
-        <a style="text-decoration: none;color: #000000" href="{{ route('elementos.por_vencer') }}">
-            <img class="img-card-menu" src=" {{ asset('assets/img/icons/timetable.png') }}">
-            <h4 class="card-title card-menu-title">Por Vencer</h4>
-        </a>
-    </div>
-</div>
-@endif

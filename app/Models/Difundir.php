@@ -9,18 +9,25 @@ class Difundir extends Model
 {
 	use HasFactory;
 
-    public $timestamps = true;
+    protected $table = "difundirs";
+    protected $primarykey = "id";
 
-    protected $table = 'difundirs';
-
-    protected $fillable = ['id_user','id_elemento','fecha','descripcion','tipo','inicial','final'];
+    protected $fillable = [
+        'id_user',
+        'id_elemento',
+        'fecha',
+        'descripcion',
+        'tipo',
+        'inicial',
+        'final',
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function mediosDifundirs()
     {
-        return $this->hasMany('App\Models\MediosDifundir', 'id_difundir', 'id');
+        return $this->hasMany('App\Models\MedioDifundir', 'id_difundir', 'id');
     }
 
     /**

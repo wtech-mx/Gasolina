@@ -58,7 +58,7 @@
                                                 <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
                                                 <td>
                                                     <div class="btn-group">
-                                                        <a href="{{route('difundir.index')}}"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+                                                        {{-- <a href="{{route('difundir.index')}}"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a> --}}
                                                     </div>
                                                 </td>
                                             </tr>

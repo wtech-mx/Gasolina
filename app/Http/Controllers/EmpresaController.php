@@ -22,14 +22,14 @@ class EmpresaController extends Controller
          $this->middleware('permission:empresa-delete', ['only' => ['destroy']]);
     }
 
-function index()
-{
-        $empresa = User::
-        where('empresa', '=', 1)
-        ->get();
+// function index()
+// {
+//         $empresa = User::
+//         where('empresa', '=', 1)
+//         ->get();
 
-        return view('admin.empresas.index', compact('empresa'));
-}
+//         return view('admin.empresas.index', compact('empresa'));
+// }
 
 public function create()
 {

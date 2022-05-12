@@ -16,41 +16,35 @@ class iiElementoController extends Controller
         return view('modal-elementos.formularios ii.consulta.index', compact('config', 'users'));
     }
 
-    public function index_abandono()
-    {
-        $users = User::get();
-
-        return view('modal-elementos.formularios ii.consulta.abandono', compact( 'users'));
-    }
     public function actividad_abandono()
     {
         $users = User::get();
 
         return view('modal-elementos.formularios ii.consulta.actividad_abandono', compact( 'users'));
     }
-
-    public function index_construccion()
+    public function actividad_construccion()
     {
         $users = User::get();
 
-        return view('modal-elementos.formularios ii.consulta.construccion', compact( 'users'));
+        return view('modal-elementos.formularios ii.consulta.actividad_construccion', compact( 'users'));
     }
-    public function index_operacion()
+    public function actividad_operacion()
     {
         $users = User::get();
 
-        return view('modal-elementos.formularios ii.consulta.operacion', compact( 'users'));
+        return view('modal-elementos.formularios ii.consulta.actividad_operacion', compact( 'users'));
     }
-    public function index_preparacion()
+    public function actividad_preparacion()
     {
         $users = User::get();
 
-        return view('modal-elementos.formularios ii.consulta.preparacion', compact( 'users'));
+        return view('modal-elementos.formularios ii.consulta.actividad_preparacion', compact( 'users'));
     }
-    public function index_situaciones()
+    public function actividad_situaciones()
     {
         $users = User::get();
 
-        return view('modal-elementos.formularios ii.consulta.situaciones', compact( 'users'));
+        return view('modal-elementos.formularios ii.consulta.actividad_situaciones', compact( 'users'));
     }
+
 }

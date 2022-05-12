@@ -24,6 +24,8 @@
 
                 </div>
 
+                <div id='calendar'></div>
+
                 <div class=" d-flex justify-content-between bg-white p-2 rounded-pill">
                     <a href=""> <span class="badge badge-pill"
                             style="background-color: {{$config->color_diaria}}">Diaria</span> </a>
@@ -37,19 +39,42 @@
                             style="background-color: {{$config->color_no_realizada}}">No realizada</span> </a>
                 </div>
 
-                <div id='calendar'></div>
+
 
             </div>
 
             <div class="col-xs-12 col-sm-12 col-lg-6 p-4 ">
 
-                @include('elemetnos')
+                @include('estacion')
 
-                @include('actividades')
+                <div class="row">
+                    <div class="col-4 mt-3">
+                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <h2 class="text-left title-cardso" style="color: #FFC300!important">Elementos V</h2>
+                        </a>
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseExampleGraficas" role="button" aria-expanded="false" aria-controls="collapseExampleGraficas">
+                            <h2 class="text-left title-cardso" style="color: #FFC300!important">Graficas V</h2>
+                        </a>
+                    </div>
+
+                    <div class="col-4 mt-3">
+                        <a class="btn text-white" data-bs-toggle="collapse" href="#collapseExampleCursos" role="button" aria-expanded="false" aria-controls="collapseExampleCursos">
+                            <h2 class="text-left title-cardso" style="color: #FFC300!important">Cursos V</h2>
+                        </a>
+                    </div>
+
+
+                </div>
+                @include('elemetnos')
 
                 @include('graficas')
 
                  @include('cursos')
+
+                 @include('actividades')
 
             </div>
 

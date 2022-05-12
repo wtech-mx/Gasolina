@@ -26,16 +26,7 @@ class ElementosController extends Controller
 
     }
 
-    public function pendientes()
-    {
-        $tareas = Tareas::
-        where('id_user', '=', auth()->user()->id)
-        ->where('check', '=', 0)
-        ->get();
 
-        return view('actividades.pendientes', compact('tareas'));
-
-    }
 
     public function terminadas_admin()
     {
@@ -55,26 +46,7 @@ class ElementosController extends Controller
 
     }
 
-    public function terminadas()
-    {
-        $tareas = Tareas::
-        where('id_user', '=', auth()->user()->id)
-        ->where('check', '=', 1)
-        ->get();
 
-        $xElemento = xElemento::
-        where('id_user', '=', auth()->user()->id)
-        ->where('estado', '=', 1)
-        ->get();
-
-        $preventivas = DB::table('preventivas')
-        ->where('id_user', '=', auth()->user()->id)
-        ->where('estado', '=', 1)
-        ->get();
-
-        return view('actividades.terminadas', compact('tareas', 'xElemento', 'preventivas'));
-
-    }
 
     public function por_vencer_admin()
     {
@@ -90,20 +62,7 @@ class ElementosController extends Controller
 
     }
 
-    public function por_vencer()
-    {
-        $hoy = Carbon::today();
-        $fecha = date("Y-m-d",strtotime($hoy."+ 5 days"));
 
-        $tareas = Tareas::
-        where('id_user', '=', auth()->user()->id)
-        ->where('check', '=', 0)
-        ->where('end', '<=', $fecha)
-        ->get();
-
-        return view('actividades.vencer', compact('tareas'));
-
-    }
 
 
     public function graficas_admin()
