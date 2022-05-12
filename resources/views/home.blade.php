@@ -14,7 +14,7 @@
                         <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                     </a >
 
-                    <h1 class="text-white">Inicio Prueba de git</h1>
+                    <h1 class="text-white">Inicio</h1>
 
                 {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
 
