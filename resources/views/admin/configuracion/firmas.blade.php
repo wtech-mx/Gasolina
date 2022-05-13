@@ -36,7 +36,7 @@
         </div>
 
             <div class="col-12 col-xs-12 col-sm-12 col-md-12 text-center">
-                  <button class="mt-5 btn-sinestilo" type="submit">
+                  <button class="mt-5 mb-5 btn-sinestilo" type="submit">
                       <div class="button">
                           <div class="icon">
                               <i class="fa fa-floppy-o"></i>
@@ -44,7 +44,5 @@
                       </div>
                   </button>
             </div>
-
-
     </form>
 

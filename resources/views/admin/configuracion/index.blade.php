@@ -53,8 +53,10 @@
         <div class="tab-content" id="pills-tabContent">
 
             <div class="tab-pane fade show active p-3" id="pills-servicio" role="tabpanel" aria-labelledby="pills-servicio">
-                <h1 class="text-white">Estacion</h1>
+                <div class="container-fluid">
+                    <h1 class="text-white">Estacion</h1>
                     @include('admin.configuracion.estacion')
+                </div>
             </div>
 
             <div class="tab-pane fade p-3" id="pills-firmas" role="tabpanel" aria-labelledby="firmas">
@@ -62,18 +64,17 @@
                     <h1 class="text-white">Firmas</h1>
                      @include('admin.configuracion.firmas')
                 </div>
-
-
             </div>
 
             <div class="tab-pane fade p-3" id="pills-otros" role="tabpanel" aria-labelledby="otros-ajustes">
-                <h1 class="text-white">Notificaciones Calendario</h1>
-                @include('admin.configuracion.ajustes')
+                <div class="container-fluid">
+                    <h1 class="text-white">Notificaciones Calendario</h1>
+                    @include('admin.configuracion.ajustes')
+                </div>
             </div>
 
             <div class="tab-pane fade p-3" id="pills-permisos" role="tabpanel" aria-labelledby="roles-permisos">
                 <h1>Roles y permisos</h1>
-
             </div>
 
         </div>

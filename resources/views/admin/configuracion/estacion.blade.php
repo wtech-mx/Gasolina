@@ -3,8 +3,11 @@
         @csrf
         <input type="hidden" name="_method" value="PATCH">
         <div class="row">
+
             <div class="form-group col-4 mt-4">
-                <h3 class="cuadrado-2" for="">Tanque 1</h3><br><br>
+                <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" style="width: 100px"> <br>
+                <h3 class="" for="">Tanque 1</h3><br>
+                <label class="mb-3">Tipo de gasolina</label>
                 <select class="form-select" name="tanque1" id="tanque1">
                     <option value="{{$config->tanque1}}">{{$config->tanque1}}</option>
                     <option value="magna">Magna</option>
@@ -14,7 +17,9 @@
             </div>
 
             <div class="form-group col-4 mt-4">
-                <h3 class="cuadrado-2" for="">Tanque 2</h3><br><br>
+                <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" style="width: 100px"> <br>
+                <h3 class="" for="">Tanque 2</h3><br>
+                <label class="mb-3">Tipo de gasolina</label>
                 <select class="form-select" name="tanque2" id="tanque2">
                     <option value="{{$config->tanque2}}">{{$config->tanque2}}</option>
                     <option value="magna">Magna</option>
@@ -24,7 +29,9 @@
             </div>
 
             <div class="form-group col-4 mt-4">
-                <h3 class="cuadrado-2" for="">Tanque 3</h3><br><br>
+                <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" style="width: 100px"> <br>
+                <h3 class="" for="">Tanque 3</h3><br>
+                <label class="mb-3">Tipo de gasolina</label>
                 <select class="form-select" name="tanque3" id="tanque3">
                     <option value="{{$config->tanque3}}">{{$config->tanque3}}</option>
                     <option value="magna">Magna</option>
@@ -81,7 +88,7 @@
 
         <div class="row">
             <div class="col-12 text-center">
-                  <button class="mt-5 btn-sinestilo" type="submit">
+                  <button class="mt-5 mb-5 btn-sinestilo" type="submit">
                       <div class="button">
                           <div class="icon">
                               <i class="fa fa-floppy-o"></i>
