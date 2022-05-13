@@ -48,19 +48,19 @@
 
                     <div class="accordion accordion-flush mb-3" id="accordionactividades" style="display: contents;">
                         <div class="col-4 p-2 mt-2">
-                            <button class="collapse_principal " type="button" data-bs-toggle="collapse" data-bs-target="#elemento_v" aria-expanded="true" aria-controls="elemento_v">
+                            <button class="collapse_principal collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#elemento_v" aria-expanded="false" aria-controls="elemento_v">
                                 <h2 class="text-left title-cardso" >Elementos V</h2>
                             </button>
                         </div>
 
                         <div class="col-4 p-2 mt-2">
-                            <button class="collapse_principal " type="button" data-bs-toggle="collapse" data-bs-target="#grafica_v" aria-expanded="true" aria-controls="grafica_v">
+                            <button class="collapse_principal collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#grafica_v" aria-expanded="false" aria-controls="grafica_v">
                                 <h2 class="text-left title-cardso" >Graficas V</h2>
                             </button>
                         </div>
 
                         <div class="col-4 p-2 mt-2">
-                           <button class="collapse_principal " type="button" data-bs-toggle="collapse" data-bs-target="#cursos_v" aria-expanded="true" aria-controls="cursos_v">
+                           <button class="collapse_principal collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cursos_v" aria-expanded="false" aria-controls="cursos_v">
                                 <h2 class="text-left title-cardso" >Cursos V</h2>
                             </button>
                         </div>

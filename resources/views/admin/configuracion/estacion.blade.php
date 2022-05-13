@@ -5,8 +5,8 @@
         <div class="row">
 
             <div class="form-group col-4 mt-4">
-                <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" style="width: 100px"> <br>
-                <h3 class="" for="">Tanque 1</h3><br>
+                <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" class="img_tanque_bomba"> <br>
+                <h3 class="tittle-firm" for="">Tanque 1</h3><br>
                 <label class="mb-3">Tipo de gasolina</label>
                 <select class="form-select" name="tanque1" id="tanque1">
                     <option value="{{$config->tanque1}}">{{$config->tanque1}}</option>
@@ -17,8 +17,8 @@
             </div>
 
             <div class="form-group col-4 mt-4">
-                <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" style="width: 100px"> <br>
-                <h3 class="" for="">Tanque 2</h3><br>
+                <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" class="img_tanque_bomba"> <br>
+                <h3 class="tittle-firm" for="">Tanque 2</h3><br>
                 <label class="mb-3">Tipo de gasolina</label>
                 <select class="form-select" name="tanque2" id="tanque2">
                     <option value="{{$config->tanque2}}">{{$config->tanque2}}</option>
@@ -29,8 +29,8 @@
             </div>
 
             <div class="form-group col-4 mt-4">
-                <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" style="width: 100px"> <br>
-                <h3 class="" for="">Tanque 3</h3><br>
+                <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" class="img_tanque_bomba"> <br>
+                <h3 class="tittle-firm" for="">Tanque 3</h3><br>
                 <label class="mb-3">Tipo de gasolina</label>
                 <select class="form-select" name="tanque3" id="tanque3">
                     <option value="{{$config->tanque3}}">{{$config->tanque3}}</option>
@@ -62,6 +62,7 @@
                         <option value="premium">Premium</option>
                         <option value="disel">Disel</option>
                     </select>
+
                     <label for="">Pistola 2</label>
                     <select class="form-select" name="pistola2" id="pistola2">
                         <option value="{{$item->pistola2}}">{{$item->pistola2}}</option>
@@ -69,6 +70,7 @@
                         <option value="premium">Premium</option>
                         <option value="disel">Disel</option>
                     </select>
+
                     <label for="">Pistola 3</label>
                     <select class="form-select" name="pistola3" id="pistola3">
                         <option value="{{$item->pistola3}}">{{$item->pistola3}}</option>
@@ -81,10 +83,10 @@
         </div>
 
         <div class="form-group mt-5">
-            <input type="button" class="proveedor3" id="proveedor3" value="Agregar Dispensario" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+            <input type="button" class="proveedor3 add_dispenciario" id="proveedor3" value="Agregar Dispensario" >
         </div>
-        <div class="row" id="nuevo-form3"></div>
 
+        <div class="row" id="nuevo-form3"></div>
 
         <div class="row">
             <div class="col-12 text-center">
@@ -97,5 +99,6 @@
                   </button>
             </div>
         </div>
+
     </form>
 </div>

@@ -42,13 +42,13 @@
             </a>
           </li>
 
-          {{-- <li class="nav-item p-2" role="presentation">
-            <a class="nav-link a-perso" id="roles-permisos" data-bs-toggle="pill" data-bs-target="#pills-permisos" type="button" role="tab" aria-controls="pills-permisos" aria-selected="false">
-                <i class="fa fa-users" aria-hidden="true"></i> Roles y permisos
-            </a>
-          </li> --}}
-
         </ul>
+
+        <style>
+            .nav-pills .nav-link{
+                color: #fff;
+            }
+        </style>
 
         <div class="tab-content" id="pills-tabContent">
 

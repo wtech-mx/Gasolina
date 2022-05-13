@@ -30,6 +30,9 @@
                         </h2>
                         <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_one" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
+
+
+
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar1(this.value);">
                                         <option value="">Servicio*</option>
@@ -41,6 +44,7 @@
                                 <div id="002-SASISOPA" style="display: none;">
                                     <iframe src="{{route('pdf_sasisopa.print')}}" style="width:100%; height:700px;" frameborder="0" ></iframe>
                                 </div>
+
                                 <div id="003-SGM" style="display: none;">
                                     <iframe src="{{route('pdf_sasisopa.print')}}" style="width:100%; height:700px;" frameborder="0" ></iframe>
                                 </div>

@@ -49,6 +49,35 @@
     margin-bottom: 5rem;
 }
 
+.img_tanque_bomba{
+    width: 100px;
+}
+
+.add_dispenciario{
+    background-color:#ffd60a;
+    color:  #000!important;
+    border-radius: 15px;
+    border: solid transparent;
+    padding: 10px;
+}
+
+.icon_action_correcttive{
+    color: #ffffff!important;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.donwload:hover{
+    color: #000000;
+}
+
+.edit:hover{
+    color: #FFC300;
+}
+
+.delete:hover{
+    color: red;
+}
 
 
 @media (min-width: 576px){
@@ -89,4 +118,14 @@
     .tittle-firm{
         font-size: 16px;
     }
+
+    .img_tanque_bomba{
+        width: 60px;
+    }
+
+    .container-fluid {
+         padding-right: 1%!important;
+         padding-left: 1%!important;
+    }
+
 }
