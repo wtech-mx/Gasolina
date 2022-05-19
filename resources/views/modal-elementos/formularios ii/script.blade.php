@@ -1,13 +1,13 @@
 <script type="text/javascript">
     function mostrar2(id) {
-        if (id == "II-01-01") {
-            $("#II-01-01").show();
-            $("#II-02-01").hide();
+        if (id == "ii-SASISOPA") {
+            $("#ii-SASISOPA").show();
+            $("#ii-SGM").hide();
         }
 
-        if (id == "II-02-01") {
-            $("#II-01-01").hide();
-            $("#II-02-01").show();
+        if (id == "ii-SGM") {
+            $("#ii-SASISOPA").hide();
+            $("#ii-SGM").show();
         }
     }
 </script>

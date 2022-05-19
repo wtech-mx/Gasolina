@@ -17,7 +17,7 @@
                 <h5 class="modal-title" id="exampleModalLabel">Editar Difución</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="POST" action="{{ route('difundir.store') }}" enctype="multipart/form-data" role="form">
+            <form method="POST" action="{{ route('difundir.update', $row->id) }}" enctype="multipart/form-data" role="form">
                 @csrf
                 <div class="modal-body">
                         <div class="form-group">
@@ -27,11 +27,11 @@
 
                         <div class="form-group mt-4">
                             <label for="descripcion">Descripción</label>
-                            <textarea name="descripcion" class="form-control" id="descripcion" cols="20" rows="5" placeholder="Descripcion">{{$row->descripcion}}</textarea>
+                            <textarea name="descripcion" class="form-control" id="descripcion" cols="20" rows="5" placeholder="Descripcion" disabled>{{$row->descripcion}}</textarea>
                         </div>
                         <div class="form-group mt-4">
                             <label for="tipo">Tipo</label>
-                            <select name="tipo" class="form-control" id="tipo">
+                            <select name="tipo" class="form-control" id="tipo" disabled>
                                 <option value="{{$row->tipo}}">{{$row->tipo}}</option>
                                 <option value="externa">Externa</option>
                                 <option value="interna">Interna</option>
@@ -39,37 +39,29 @@
                         </div>
                         <div class="form-group mt-4">
                             <label for="inicial">Fecha inicial</label>
-                            <input name="inicial" type="date" class="form-control" id="inicial" value="{{$row->inicial}}">
+                            <input name="inicial" type="date" class="form-control" id="inicial" value="{{$row->inicial}}" disabled>
                         </div>
                         <div class="form-group mt-4">
                             <label for="final">Fecha final</label>
-                            <input name="final" type="date" class="form-control" id="final" value="{{$row->final}}">
+                            <input name="final" type="date" class="form-control" id="final" value="{{$row->final}}" disabled>
                         </div>
-                        <table class="table table-bordered" id="tabla_script">
-                            <thead class="table-dark">
-                                <tr class="text-center">
-                                    <th>Medio de c.</th>
-                                    <th>Especificar</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($row->mediosDifundirs as $item)
-                                    @if ($item->id_difundir == $row->id)
-                                        <tr class="text-white">
-                                            <td>
-                                                <p>{{$item->comunicacion}}</p>
-                                            </td>
-                                            <td><p>{{$item->descripcion}}</p></td>
-                                        </tr>
-                                    @endif
-                                @endforeach
-                            </tbody>
-                        </table>
+
+                        <div class="row mt-4">
+                            <div class="col-8" style="background-color: #212529; color: #fff; height: 30px">Medio de c.</div>
+                            <div class="col-4" style="background-color: #212529; color: #fff;">Especificar</div>
+
+                            @foreach ($row->mediosDifundirs as $item)
+                                @if ($item->id_difundir == $row->id)
+                                    <div class="col-8"><input name="inicial" type="text" class="form-control" id="inicial" value="{{$item->comunicacion}}" disabled></div>
+                                    <div class="col-4"><input name="inicial" type="text" class="form-control" id="inicial" value="{{$item->descripcion}}" disabled></div>
+                                @endif
+                            @endforeach
+                        </div>
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                    {{-- <button type="submit" class="btn btn-primary">Actualizar</button> --}}
                 </div>
             </form>
         </div>

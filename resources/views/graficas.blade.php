@@ -2,7 +2,7 @@
     $userId = auth()->user()->admin;
 @endphp
 
-<div id="grafica_v" class="accordion-collapse collapse show" aria-labelledby="grafica_v" data-bs-parent="#accordionactividades">
+<div id="grafica_v" class="accordion-collapse collapse" aria-labelledby="grafica_v" data-bs-parent="#accordionactividades">
     <div class="card card-body d-inline-block" style="background: none;">
 
         <h2 class="text-left title-cardso mt-3 mb-3" style="color: #ffffff!important">Graficas</h2>

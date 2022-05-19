@@ -9,7 +9,7 @@
 
       <div class="modal-header">
         <h5 class="modal-title text-center" id="elemento1" style="font-size: 16px;">
-            Comunicacion , participacion y consulta
+            I-01-01 Política documentada.
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -21,7 +21,7 @@
 
                 <div class="accordion accordion-flush" id="accordionExample7">
 
-                    {{-------Descarga---------}}
+                    {{-------Documentos de consulta---------}}
                     <div class="accordion-item">
                         <h2 class="accordion-header" >
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
@@ -30,8 +30,6 @@
                         </h2>
                         <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_one" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
-
-
 
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar1(this.value);">
@@ -42,18 +40,20 @@
                                 </form>
 
                                 <div id="002-SASISOPA" style="display: none;">
-                                    <iframe src="{{route('pdf_sasisopa.print')}}" style="width:100%; height:700px;" frameborder="0" ></iframe>
+                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
                                 </div>
 
                                 <div id="003-SGM" style="display: none;">
-                                    <iframe src="{{route('pdf_sasisopa.print')}}" style="width:100%; height:700px;" frameborder="0" ></iframe>
+                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
 
-                    {{-------Formulario---------}}
+                    {{-------Formatos del elemento---------}}
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="element1">
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_tree" aria-expanded="true" aria-controls="element7_tree">

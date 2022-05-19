@@ -46,5 +46,12 @@ class iiElementoController extends Controller
 
         return view('modal-elementos.formularios ii.consulta.actividad_situaciones', compact( 'users'));
     }
+    public function pdf_sasisopa()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios ii.pdf_ii', compact('config'));
+        return $pdf->stream('SASISOPA II-01-01.pdf');
+    }
 
 }

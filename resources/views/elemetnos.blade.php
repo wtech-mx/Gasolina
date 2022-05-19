@@ -2,13 +2,13 @@
    $fecha = date("Y-m-d");
 @endphp
 
-                <div id="elemento_v" class="accordion-collapse collapse show" aria-labelledby="elemento_v" data-bs-parent="#accordionactividades">
+                <div id="elemento_v" class="accordion-collapse collapse" aria-labelledby="elemento_v" data-bs-parent="#accordionactividades">
                     <div class="card card-body d-inline-block" style="background: none;">
                         <div class="card card-menu">
                             <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento1">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/1.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Funciones Responsabilidades <br> y autoridades</h4>
+                                    <h4 class="card-title card-menu-title-element">Política</h4>
                                 </div>
                             </a>
                         </div>
@@ -16,7 +16,7 @@
                            <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento2">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Control de documentos y registros  <br>-  </h4>
+                                    <h4 class="card-title card-menu-title-element">Identificacion de peligros y aspectos ambientales</h4>
                                 </div>
                             </a>
                         </div>

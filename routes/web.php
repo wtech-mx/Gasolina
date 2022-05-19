@@ -111,17 +111,19 @@ Route::group(['middleware' => ['auth']], function() {
     |Difundir (Actividades)
     |--------------------------------------------------------------------------*/
     Route::post('difundir/store', [App\Http\Controllers\DifundirController::class, 'store'])->name('difundir.store')->middleware('auth');
+    Route::post('difundir/update/{id}', [App\Http\Controllers\DifundirController::class, 'update'])->name('difundir.update');
+
     Route::get('/difundir/i-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_i_01_01.index');
 
-    Route::view('/difundir/x-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_01.index');
-    Route::view('/difundir/x-01-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_02.index');
-    Route::view('/difundir/x-02-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_02_01.index');
+    Route::get('/difundir/x-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_01.index');
+    Route::get('/difundir/x-01-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_02.index');
+    Route::get('/difundir/x-02-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_02_01.index');
 
-    Route::view('/difundir/iii-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_iii_01_01.index');
-    Route::view('/difundir/iv-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_iv_01_01.index');
+    Route::get('/difundir/iii-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_iii_01_01.index');
+    Route::get('/difundir/iv-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_iv_01_01.index');
 
-    Route::view('/difundir/vi-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_01.index');
-    Route::view('/difundir/vi-01-03', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_03.index');
+    Route::get('/difundir/vi-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_01.index');
+    Route::get('/difundir/vi-01-03', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_03.index');
 
     // Route::get('imprimir/difundir/{id}', [App\Http\Controllers\DifundirController::class, 'pdf_difundir'])->name('print.difundir');
 
@@ -140,22 +142,36 @@ Route::group(['middleware' => ['auth']], function() {
     /*|--------------------------------------------------------------------------
     |Preventiva (Actividades)
     |--------------------------------------------------------------------------*/
-    Route::view('/preventiva/i-01-01', 'livewire.Preventivas.index')->name('preventiva_i_01_01.index');
+    Route::view('/preventiva/i-01-01', 'livewire.preventivas.index')->name('preventiva_i_01_01.index');
 
-    Route::view('/preventiva/x-01-01', 'livewire.Preventivas.index')->name('preventiva_x_01_01.index');
-    Route::view('/preventiva/x-01-02', 'livewire.Preventivas.index')->name('preventiva_x_01_02.index');
-    Route::view('/preventiva/x-02-01', 'livewire.Preventivas.index')->name('preventiva_x_02_01.index');
+    Route::view('/preventiva/x-01-01', 'livewire.preventivas.index')->name('preventiva_x_01_01.index');
+    Route::view('/preventiva/x-01-02', 'livewire.preventivas.index')->name('preventiva_x_01_02.index');
+    Route::view('/preventiva/x-02-01', 'livewire.preventivas.index')->name('preventiva_x_02_01.index');
 
-    Route::view('/preventiva/iii-01-01', 'livewire.Preventivas.index')->name('preventiva_iii_01_01.index');
-    Route::view('/preventiva/iv-01-01', 'livewire.Preventivas.index')->name('preventiva_iv_01_01.index');
+    Route::view('/preventiva/iii-01-01', 'livewire.preventivas.index')->name('preventiva_iii_01_01.index');
+    Route::view('/preventiva/iv-01-01', 'livewire.preventivas.index')->name('preventiva_iv_01_01.index');
 
-    Route::view('/preventiva/vi-01-01', 'livewire.Preventivas.index')->name('preventiva_vi_01_01.index');
-    Route::view('/preventiva/vi-01-03', 'livewire.Preventivas.index')->name('preventiva_vi_01_03.index');
+    Route::view('/preventiva/vi-01-01', 'livewire.preventivas.index')->name('preventiva_vi_01_01.index');
+    Route::view('/preventiva/vi-01-03', 'livewire.preventivas.index')->name('preventiva_vi_01_03.index');
 
     /*|--------------------------------------------------------------------------
     |Evaluacion (I-01-01)
     |--------------------------------------------------------------------------*/
-    Route::get('imprimir/sasisopa-i-01-01', [App\Http\Controllers\iElementoController::class, 'pdf_sasisopa'])->name('pdf_sasisopa.print');
+    Route::get('ver/sasisopa-i-01-01', [App\Http\Controllers\iElementoController::class, 'pdf_sasisopa'])->name('pdf_sasisopa.view');
+    Route::get('imprimir/sasisopa-i-01-01', [App\Http\Controllers\iElementoController::class, 'pdf_sasisopa_download'])->name('pdf_sasisopa.print');
+
+    Route::get('ver/ii-01-01', [App\Http\Controllers\iiElementoController::class, 'pdf_sasisopa'])->name('pdf_ii.view');
+
+    /*|--------------------------------------------------------------------------
+    |Ejecutar (III-01-01)
+    |--------------------------------------------------------------------------*/
+    Route::get('/ejecutar/iii-01-01', [App\Http\Controllers\iiiElementoController::class, 'index'])->name('ejecutar_iii_01_01.index');
+    Route::post('/store/ejecutar/iii-01-01', [App\Http\Controllers\iiiElementoController::class, 'store'])->name('store.ejecutar_iii-01-01');
+    Route::patch('/update/ejecutar/iii-01-01/{id}', [App\Http\Controllers\iiiElementoController::class, 'update'])->name('update.ejecutar_iii-01-01');
+    Route::delete('iii-01-01/eliminar/{id}', [App\Http\Controllers\iiiElementoController::class, 'destroy'])->name('destroy.ejecutar_iii-01-01');
+
+    Route::get('ver/sasisopa-iii-01-01', [App\Http\Controllers\iiiElementoController::class, 'pdf_sasisopa'])->name('pdf_iii.view');
+    Route::get('imprimir/sasisopa-iii-01-01', [App\Http\Controllers\iiiElementoController::class, 'pdf_sasisopa_download'])->name('pdf_iii.print');
 
     /*|--------------------------------------------------------------------------
     |Evaluacion (II-02-01)

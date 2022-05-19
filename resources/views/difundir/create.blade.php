@@ -22,35 +22,32 @@
 
 
                         <div class="form-group">
-                            <label for="tipo"></label>
-                            <select name="id_elemento" class="form-control" id="id_elemento">
-                                <option value="">Seleccionar elemento</option>
-                                <option value="{{$rest}}">{{$rest}}</option>
-                            </select>@error('tipo') <span class="error text-danger">{{ $message }}</span> @enderror
+                            <input type="hidden" class="form-control" id="id_elemento" name="id_elemento" value="{{$rest}}">
                         </div>
 
-                        <div class="form-group">
-                            <label for="descripcion"></label>
+                        <div class="form-group mt-3">
+                            <label for="descripcion">Descripción</label>
                             <textarea name="descripcion" class="form-control" id="descripcion" cols="20" rows="5" placeholder="Descripcion"></textarea>@error('descripcion') <span class="error text-danger">{{ $message }}</span> @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="tipo"></label>
+                        <div class="form-group mt-3">
+                            <label for="tipo">Señalar el tipo de Publicación</label>
                             <select name="tipo" class="form-control" id="tipo">
                                 <option value="">Señalar el tipo de Publicación</option>
                                 <option value="externa">Externa</option>
                                 <option value="interna">Interna</option>
                             </select>@error('tipo') <span class="error text-danger">{{ $message }}</span> @enderror
                         </div>
-                        <div class="form-group">
-                            <label for="inicial"></label>
+
+                        <div class="form-group mt-3">
+                            <label for="inicial">Fecha inicial</label>
                             <input name="inicial" type="date" class="form-control" id="inicial" placeholder="Inicial">@error('inicial') <span class="error text-danger">{{ $message }}</span> @enderror
                         </div>
-                        <div class="form-group mb-5">
-                            <label for="final"></label>
+                        <div class="form-group mt-3 mb-3">
+                            <label for="final">Fecha final</label>
                             <input name="final" type="date" class="form-control" id="final" placeholder="Final">@error('final') <span class="error text-danger">{{ $message }}</span> @enderror
                         </div>
 
-                        <table class="table table-bordered" id="tabla_id">
+                        <table class="table table-bordered" id="tabla_script">
                             <thead class="table-dark">
                                 <tr class="text-center">
                                     <th>Medio de c.</th>

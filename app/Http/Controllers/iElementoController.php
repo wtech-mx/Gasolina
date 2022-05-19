@@ -15,4 +15,12 @@ class iElementoController extends Controller
         $pdf = \PDF::loadView('modal-elementos.formularios i.pdf_sasisopa', compact('config'));
         return $pdf->stream('SASISOPA I-01-01.pdf');
     }
+
+    public function pdf_sasisopa_download()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios i.pdf_sasisopa', compact('config'));
+        return $pdf->download('SASISOPA I-01-01.pdf');
+    }
 }
