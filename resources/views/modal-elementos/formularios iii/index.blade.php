@@ -12,7 +12,7 @@
                         <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                     </a >
 
-                    <h5 class="text-white">VI-01-01 identificación de competencia y formación interna y externa.</h5>
+                    <h5 class="text-white">III MATRIZ DE REQUISITOS LEGALES</h5>
 
                     <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <i class="fa fa-plus btn-icon-back"></i>
