@@ -15,7 +15,7 @@
 
                         {{--<a class="btn btn-back" href="{{ route('create.empresa') }}">--}}
 
-                        <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalDifundir">
                             <i class="fa fa-plus btn-icon-back"></i>
                         </a>
 

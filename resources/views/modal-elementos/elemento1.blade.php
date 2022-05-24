@@ -33,18 +33,12 @@
 
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar1(this.value);">
-                                        <option value="">Servicio*</option>
-                                        <option value="002-SASISOPA">002-SASISOPA</option>
-                                        <option value="003-SGM">003-SGM</option>
+                                        <option value="">Documento*</option>
+                                        <option value="002-SASISOPA">I-01 Procedimiento de elaboración y comunicación de la política.-9495</option>
                                     </select>
                                 </form>
 
                                 <div id="002-SASISOPA" class="text-center" style="display: none;">
-                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
-                                </div>
-
-                                <div id="003-SGM" class="text-center" style="display: none;">
                                     <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
                                     <a href="{{route('pdf_sasisopa.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>

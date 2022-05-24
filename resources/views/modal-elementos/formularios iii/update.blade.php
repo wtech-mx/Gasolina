@@ -31,8 +31,8 @@
                     <div class="row">
                         <div class="col-sm-6 col-6">
                             <div class="form-group mb-3 position-relative">
-                                <label class="form-label label-custom-yellow">Descripción del marco normativo</label>
-                                <textarea name="descripcion" id="descripcion" cols="30" rows="5">{{$row->descripcion }}</textarea>
+                                <label class="form-label label-custom-yellow">Mec. de cumplimiento SA</label>
+                                <input type="text" class="form-control input-style" id="mecanismo_cumplimiento" name="mecanismo_cumplimiento" placeholder="mecanismo_cumplimiento" value="{{$row->mecanismo_cumplimiento }}">
                             </div>
                         </div>
 
@@ -49,16 +49,15 @@
                         <div class="col-sm-6 col-6">
                             <div class="form-group mb-3 position-relative">
 
-                                <label class="form-label label-custom-yellow">Mecanismo de cumplimiento SA</label>
-                                <input type="text" class="form-control input-style" id="mecanismo_cumplimiento" name="mecanismo_cumplimiento" placeholder="mecanismo_cumplimiento" value="{{$row->mecanismo_cumplimiento }}">
+                                <label class="form-label label-custom-yellow">Mecanismo específico</label>
+                                <input type="text" class="form-control input-style" id="mecanismo_especifico" name="mecanismo_especifico" placeholder="mecanismo_especifico" value="{{$row->mecanismo_especifico }}">
                             </div>
                         </div>
 
                         <div class="col-sm-6 col-6">
                             <div class="form-group mb-3 position-relative">
-
-                                <label class="form-label label-custom-yellow">Mecanismo específico</label>
-                                <input type="text" class="form-control input-style" id="mecanismo_especifico" name="mecanismo_especifico" placeholder="mecanismo_especifico" value="{{$row->mecanismo_especifico }}">
+                                <label class="form-label label-custom-yellow">Desc. del marco normativo</label>
+                                <textarea name="descripcion" id="descripcion" cols="20" rows="2">{{$row->descripcion }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -75,18 +74,33 @@
                         <div class="col-sm-4 col-4">
                             <div class="form-group mb-3 position-relative">
 
-                                <label class="form-label label-custom-yellow">Obligatorio</label>
-                                <input class="form-check-input" type="checkbox" id="periodicidad" name="periodicidad" value="1" id="flexCheckDefault">
+                                <label class="form-label label-custom-yellow">Aplica</label>
+                                <input type="text" class="form-control input-style" id="aplica" name="aplica" placeholder="aplica" value="{{$row->aplica }}">
                             </div>
                         </div>
 
                         <div class="col-sm-4 col-4">
                             <div class="form-group mb-3 position-relative">
 
-                                <label class="form-label label-custom-yellow">Aplica</label>
-                                <input type="text" class="form-control input-style" id="aplica" name="aplica" placeholder="aplica" value="{{$row->aplica }}">
+                                <label class="form-label label-custom-yellow">Obligatorio</label>
+                                <input class="form-check-input" type="checkbox" id="periodicidad" name="periodicidad" value="1" id="flexCheckDefault">
                             </div>
                         </div>
+
+                        <div class="col-sm-12 col-12">
+                            <div class="form-group mb-3 position-relative">
+                                <label class="form-label label-custom-yellow">PDF</label>
+                                <input type="file" class="custom-file-input input-group-text" id="pdf" name="pdf">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-4">
+                            <div class="form-group mb-3 position-relative">
+                                <label class="form-label label-custom-yellow">PDF</label>
+                                <iframe width="400" height="400" src="{{asset('iii_elemento/' . $row->pdf)}}" frameborder="0"></iframe>
+                            </div>
+                        </div>
+
                     </div>
             </div>
             <div class="modal-footer">

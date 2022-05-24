@@ -40,7 +40,7 @@
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento5">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/5.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Rquisitos legales <br>-</h4>
+                                    <h4 class="card-title card-menu-title-element">Funciones, responsabilidades <br>y autoridad</h4>
                                 </div>
                                 </a>
                             </div>

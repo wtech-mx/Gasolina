@@ -18,4 +18,10 @@
             $("#VI-02-04").show();
         }
     }
+
+    function mostrar61(id) {
+        if (id == "vi-SASISOPA") {
+            $("#vi-SASISOPA").show();
+        }
+    }
 </script>

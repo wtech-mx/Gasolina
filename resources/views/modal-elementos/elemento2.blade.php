@@ -32,19 +32,13 @@
                             <div class="accordion-body">
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar2(this.value);">
-                                        <option value="">Servicio*</option>
-                                        <option value="ii-SASISOPA">002-SASISOPA</option>
-                                        <option value="ii-SGM">003-SGM</option>
+                                        <option value="">Documento*</option>
+                                        <option value="ii-SASISOPA">II-01 Procedimiento para la identificación de peligros y evaluación de riesgos.-9816</option>
                                     </select>
                                 </form>
 
                                 <div id="ii-SASISOPA" style="display: none;">
                                     <a href="{{route('pdf_ii.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
-                                </div>
-
-                                <div id="ii-SGM" style="display: none;">
-                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                     <a href="{{route('pdf_sasisopa.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
                                 </div>
                             </div>

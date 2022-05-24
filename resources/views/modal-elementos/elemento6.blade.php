@@ -24,36 +24,24 @@
                     {{-------Descarga---------}}
                     <div class="accordion-item">
                         <h2 class="accordion-header" >
-                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
-                            Consulta VI-01-01
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element6_one" aria-expanded="true" aria-controls="element6_one">
+                                Documentos de consulta
                             </button>
                         </h2>
-                        <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
+                        <div id="element6_one" class="accordion-collapse collapse show" aria-labelledby="element6_one" data-bs-parent="#accordionExample6">
                             <div class="accordion-body">
 
-                                <table class="table" id="table_id3" >
-                                    <thead class="text-white">
-                                    <tr>
-                                        <th scope="col">Fecha alta</th>
-                                        <th scope="col">Vigencia</th>
-                                        <th scope="col">¿Finalizada?</th>
-                                        <th scope="col">Acciones</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody class="text-white">
-                                        <tr>
-                                            <td>01/01/2022</td>
-                                            <td>31/12/2022</td>
+                                <form action="index.php" method="post">
+                                    <select id="status" name="status" class="form-select" onChange="mostrar61(this.value);">
+                                        <option value="">Documento*</option>
+                                        <option value="vi-SASISOPA">VI-01 Procedimiento de competencia, capacitación y entrenamiento interna y externa.-4601</option>
+                                    </select>
+                                </form>
 
-                                            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <a href="{{route('index.evaluacion')}}"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div id="vi-SASISOPA" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -101,7 +89,7 @@
 
                                         <div id="VI-01-01" style="display: none;">
                                             <a class="btn" href="{{route('index.evaluacion')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                                Evaluar
+                                                Ejecutar
                                             </a>
 
                                             <a class="btn text-dark" href="{{route('difundir_vi_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
@@ -116,7 +104,7 @@
                                         <div id="VI-01-03" style="display: none;">
 
                                             <a class="btn" href="#" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                                Seguimiento
+                                                Ejecutar
                                             </a>
 
                                             <a class="btn text-dark" href="{{route('difundir_vi_01_03.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">

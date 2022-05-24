@@ -163,9 +163,18 @@
 
 	@livewireScripts
 
-    <script type="text/javascript">
-        window.livewire.on('closeModal', () => {
-            $('#createDataModal').modal('hide');
+    <script>
+        $(document).ready(function () {
+            window.livewire.emit('show');
+        });
+
+        window.livewire.on('show', () => {
+            $('#createDataModal').modal('show');
+        });
+    </script>
+    <script>
+        $( document ).ready(function() {
+            $('#exampleModalDifundir').modal('show')
         });
     </script>
 

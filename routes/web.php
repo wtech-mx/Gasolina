@@ -188,6 +188,7 @@ Route::group(['middleware' => ['auth']], function() {
     |Elemento (V-01-01)
     |--------------------------------------------------------------------------*/
     Route::get('/actualizar', [App\Http\Controllers\VElementoController::class, 'index'])->name('index.actualizar');
+    Route::get('/consultar', [App\Http\Controllers\VElementoController::class, 'consultar'])->name('consultar.elemento5');
 
 
     /*|--------------------------------------------------------------------------

@@ -32,18 +32,12 @@
                             <div class="accordion-body">
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar3(this.value);">
-                                        <option value="">Servicio*</option>
-                                        <option value="iii-SASISOPA">002-SASISOPA</option>
-                                        <option value="iii-SGM">003-SGM</option>
+                                        <option value="">Documento*</option>
+                                        <option value="iii-SASISOPA">III-01 Procedimiento de identificación y evaluación de requisitos legales.-285</option>
                                     </select>
                                 </form>
 
                                 <div id="iii-SASISOPA" style="display: none;">
-                                    <a href="{{route('pdf_iii.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_iii.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
-                                </div>
-
-                                <div id="iii-SGM" style="display: none;">
                                     <a href="{{route('pdf_iii.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                     <a href="{{route('pdf_iii.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
                                 </div>

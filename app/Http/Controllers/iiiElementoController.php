@@ -50,6 +50,16 @@ class iiiElementoController extends Controller
             $iiiElemento->obligatorio = $request->get('obligatorio');
             $iiiElemento->aplica = $request->get('aplica');
 
+            if($request->hasFile("pdf")){
+                $file = $request->file('pdf');
+                $path = public_path() . '/iii_elemento';
+                $fileName = uniqid() . $file->getClientOriginalName();
+
+                $file->move($path, $fileName);
+
+                $iiiElemento->pdf = $fileName;
+            }
+
             $iiiElemento->save();
 
             // Redireccion  de suuces or fail dependiedno el caso
@@ -74,6 +84,17 @@ class iiiElementoController extends Controller
         $iiiElemento->periodicidad = $request->get('periodicidad');
         $iiiElemento->obligatorio = $request->get('obligatorio');
         $iiiElemento->aplica = $request->get('aplica');
+
+        if($request->hasFile("pdf")){
+            $file = $request->file('pdf');
+            $path = public_path() . '/iii_elemento';
+            $fileName = uniqid() . $file->getClientOriginalName();
+
+            $file->move($path, $fileName);
+
+            $iiiElemento->pdf = $fileName;
+        }
+
         $iiiElemento->update();
 
 
