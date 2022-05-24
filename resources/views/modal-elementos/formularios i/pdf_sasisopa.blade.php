@@ -160,7 +160,7 @@
               <h5 class="p-5">SECCIÓN DE FIRMAS DE AUTORIZACIÓN</h5>
 		</div>
 
-        <table class="table bg-yellow">
+        <table class="table bg-yellow" style="margin-bottom: 9rem">
           <thead>
             <tr>
               <th class="text-center" scope="col">ELABORÓ</th>
