@@ -78,6 +78,14 @@
 .delete:hover{
     color: red;
 }
+.icon_config{
+    color: #003566!important;
+    font-size: 30px!important;
+}
+
+.icon_config:hover{
+    color: #ffffff!important;
+}
 
 
 @media (min-width: 576px){

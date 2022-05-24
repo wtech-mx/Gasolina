@@ -39,14 +39,14 @@
                                     </select>
                                 </form>
 
-                                <div id="002-SASISOPA" style="display: none;">
-                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                <div id="002-SASISOPA" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
 
-                                <div id="003-SGM" style="display: none;">
-                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                <div id="003-SGM" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
