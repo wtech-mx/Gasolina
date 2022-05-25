@@ -5,3 +5,8 @@
 .img-card-menu{
     width: 150px;
 }
+
+.bg-yellow{
+    background-color: #FFC300;
+    border: #FFC300 2px solid!important;
+}

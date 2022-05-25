@@ -10,12 +10,6 @@
   </head>
 
   <body style="background-color:#ffffff!important">
-    <style>
-        .bg-yellow{
-            background-color: #FFC300;
-            border: #FFC300 2px solid!important;
-        }
-    </style>
 
     <div class="con_header">
         <table class="table">
