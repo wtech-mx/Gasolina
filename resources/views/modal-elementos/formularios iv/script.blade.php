@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    function mostrar4(id) {
+    function mostraryy4(id) {
         if (id == "I") {
             $("#I").show();
             $("#II").hide();
@@ -376,6 +376,21 @@
             $("#XVI").hide();
             $("#XVII").hide();
             $("#XVIII").show();
+        }
+    }
+    function mostrar4(id) {
+        if (id == "IV") {
+            $("#IV").show();
+            $("#IV-01").hide();
+        }
+        if (id == "IV-01") {
+            $("#IV").hide();
+            $("#IV-01").show();
+        }
+    }
+    function mostrars4(id) {
+        if (id == "elementoiv") {
+            $("#elementoiv").show();
         }
     }
 </script>

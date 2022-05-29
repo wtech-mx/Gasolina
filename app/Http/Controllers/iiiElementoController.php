@@ -65,7 +65,7 @@ class iiiElementoController extends Controller
             // Redireccion  de suuces or fail dependiedno el caso
 
             return redirect()->route('ejecutar_iii_01_01.index')
-                ->with('success', 'Usuario Creada Exitosamente!');
+                ->with('success', 'Requisito Legal Creado Exitosamente!');
         } catch (\Exception $e) {
             return redirect()->back()
                 ->with('error', 'Error en el registro!!');
@@ -107,9 +107,25 @@ class iiiElementoController extends Controller
         $iiiElemento = iiiElemento::findOrFail($id);
         $iiiElemento->delete();
 
-        Session::flash('destroy', 'Se Elimino su registro con exito');
-        return redirect()->back();
+        return redirect()->route('ejecutar_iii_01_01.index')
+        ->with('destroy', 'Requisito Legal Eliminado Exitosamente!');
 
+    }
+
+    public function pdf_sasisopa_iii_01()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios iii.pdf_iii_01', compact('config'));
+        return $pdf->stream('III - Requisitos Legales.pdf');
+    }
+
+    public function pdf_sasisopa_iii_01_download()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios iii.pdf_iii_01', compact('config'));
+        return $pdf->download('III - Requisitos Legales.pdf');
     }
 
     public function pdf_sasisopa()
@@ -117,7 +133,7 @@ class iiiElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios iii.pdf_iii', compact('config'));
-        return $pdf->stream('SASISOPA III-01-01.pdf');
+        return $pdf->stream('III-01 Procedimiento de identificación y evaluación de requisitos legales.pdf');
     }
 
     public function pdf_sasisopa_download()
@@ -125,6 +141,6 @@ class iiiElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios iii.pdf_iii', compact('config'));
-        return $pdf->download('SASISOPA III-01-01.pdf');
+        return $pdf->download('III-01 Procedimiento de identificación y evaluación de requisitos legales.pdf');
     }
 }

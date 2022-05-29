@@ -34,14 +34,22 @@
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar1(this.value);">
                                         <option value="">Documento*</option>
-                                        <option value="002-SASISOPA">I-01 Procedimiento de elaboración y comunicación de la política.-9495</option>
+                                        <option value="I-01">I - Política</option>
+                                        <option value="I">I-01 Procedimiento de elaboración y comunicación de la política.-9495</option>
                                     </select>
                                 </form>
 
-                                <div id="002-SASISOPA" class="text-center" style="display: none;">
+                                <div id="I-01" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_i_01.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_i_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                </div>
+
+                                <div id="I" class="text-center" style="display: none;">
                                     <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
                                     <a href="{{route('pdf_sasisopa.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -54,15 +62,25 @@
                                 Formatos del elemento
                             </button>
                         </h2>
+
                         <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
-                                <a class="btn" href="{{route('difundir_i_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
-                                    Difundir
-                                </a>
+                                <form action="index.php" method="post">
+                                    <select id="status" name="status" class="form-select" onChange="mostrars1(this.value);">
+                                        <option value="">Servicio*</option>
+                                        <option value="elementoi">I-01-01 Política documentada.</option>
+                                    </select>
+                                </form>
 
-                                <a class="btn text-dark" href="{{route('preventiva_i_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
-                                    Accion Correctiva
-                                </a>
+                                <div id="elementoi" class="text-center" style="display: none;">
+                                    <a class="btn" href="{{route('difundir_i_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
+                                        Difundir
+                                    </a>
+
+                                    <a class="btn text-dark" href="{{route('preventiva_i_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                        Accion Correctiva
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

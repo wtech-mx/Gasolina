@@ -28,8 +28,22 @@
                             Documentos de consulta
                             </button>
                         </h2>
-                        <div id="element7_one" class="accordion-collapse collapse show mt-3" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
-                            @include('modal-elementos.formularios iv.select')
+                        <form action="index.php" method="post">
+                            <select id="status" name="status" class="form-select" onChange="mostrar4(this.value);">
+                                <option value="">Documento*</option>
+                                <option value="IV">IV - Objetivos, metas e indicadores</option>
+                                <option value="IV-01">IV-01 Procedimiento para el establecimiento de objetivos, metas e indicadores</option>
+                            </select>
+                        </form>
+
+                        <div id="IV" class="text-center" style="display: none;">
+                            <a href="{{route('pdf_iv.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                            <a href="{{route('pdf_iv.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                        </div>
+
+                        <div id="IV-01" class="text-center" style="display: none;">
+                            <a href="{{route('pdf_iv_01.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                            <a href="{{route('pdf_iv_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                         </div>
                     </div>
 
@@ -43,6 +57,18 @@
                         </h2>
                         <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
+                                <form action="index.php" method="post">
+                                    <select id="status" name="status" class="form-select" onChange="mostrars4(this.value);">
+                                        <option value="">Servicio*</option>
+                                        <option value="elementoiv">IV-01-01 Matriz de objetivos metas e indicadores.</option>
+                                    </select>
+                                </form>
+
+                                <div id="elementoiv" class="text-center" style="display: none;">
+                                    <a class="btn" href="{{route('graficas')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                                        Ejecutar
+                                    </a>
+
                                     <a class="btn text-dark" href="{{route('difundir_iv_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
                                         Difundir
                                     </a>
@@ -50,7 +76,7 @@
                                     <a class="btn  " href="{{route('preventiva_iv_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
                                         Accion Correctiva
                                     </a>
-
+                                </div>
                             </div>
                         </div>
                     </div>

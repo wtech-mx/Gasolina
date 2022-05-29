@@ -33,14 +33,22 @@
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar2(this.value);">
                                         <option value="">Documento*</option>
-                                        <option value="ii-SASISOPA">II-01 Procedimiento para la identificación de peligros y evaluación de riesgos.-9816</option>
+                                        <option value="ii">II - Gestión de peligros, riesgos e impactos ambientales</option>
+                                        <option value="ii-01">II-01 Procedimiento para la identificación de peligros y evaluación de riesgos.-9816</option>
                                     </select>
                                 </form>
 
-                                <div id="ii-SASISOPA" style="display: none;">
-                                    <a href="{{route('pdf_ii.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                <div id="ii" style="display: none;">
+                                    <a href="{{route('pdf_ii_01.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_ii_01.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
                                 </div>
+
+                                <div id="ii-01" style="display: none;">
+                                    <a href="{{route('pdf_ii.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_sasisopa_ii_download.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>

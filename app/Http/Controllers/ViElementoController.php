@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Difundir;
 use App\Models\MedioDifundir;
+use Illuminate\Support\Facades\DB;
 
 class ViElementoController extends Controller
 {
@@ -21,6 +22,38 @@ class ViElementoController extends Controller
         $user = User::get();
 
         return view('modal-elementos.formularios vi.index', compact('user'));
+    }
+
+    public function pdf_sasisopa_vi()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios vi.pdf_vi', compact('config'));
+        return $pdf->stream('VI - Compentecia del personal, capacitación y entrenamiento.pdf');
+    }
+
+    public function pdf_sasisopa_vi_download()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios vi.pdf_vi', compact('config'));
+        return $pdf->download('VI - Compentecia del personal, capacitación y entrenamiento.pdf');
+    }
+
+    public function pdf_sasisopa_vi_01()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios vi.pdf_vi_01', compact('config'));
+        return $pdf->stream('VI-01 Procedimiento de competencia, capacitación y entrenamiento interna y externa.pdf');
+    }
+
+    public function pdf_sasisopa_vi_01_download()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios vi.pdf_vi_01', compact('config'));
+        return $pdf->download('VI-01 Procedimiento de competencia, capacitación y entrenamiento interna y externa.pdf');
     }
 
     public function puesto()

@@ -32,15 +32,21 @@
                             <div class="accordion-body">
 
                                 <form action="index.php" method="post">
-                                    <select id="status" name="status" class="form-select" onChange="mostrar61(this.value);">
+                                    <select id="status" name="status" class="form-select" onChange="mostrar6(this.value);">
                                         <option value="">Documento*</option>
-                                        <option value="vi-SASISOPA">VI-01 Procedimiento de competencia, capacitación y entrenamiento interna y externa.-4601</option>
+                                        <option value="vi">VI - Compentecia del personal, capacitación y entrenamiento</option>
+                                        <option value="vi-01">VI-01 Procedimiento de competencia, capacitación y entrenamiento interna y externa</option>
                                     </select>
                                 </form>
 
-                                <div id="vi-SASISOPA" class="text-center" style="display: none;">
-                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                <div id="vi" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_vi.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_vi.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                </div>
+
+                                <div id="vi-01" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_vi_01.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_vi_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +64,7 @@
                             <div class="accordion-body">
 
                                 {{--nav tittle ejecutar/calendario--}}
-                                <div class="d-flex justify-content-center">
+                                {{-- <div class="d-flex justify-content-center">
                                     <ul class="nav nav-pills mb-3 d-flex " id="tab" role="tablist">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="ejecutar-tab" data-bs-toggle="pill" data-bs-target="#ejecutar" type="button" role="tab" aria-controls="ejecutar" aria-selected="true">
@@ -72,14 +78,14 @@
                                             </button>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
                                 {{--nav tittle ejecutar/calendario--}}
 
                                 {{--nav content ejecutar/calendario --}}
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="ejecutar" role="tabpanel" aria-labelledby="ejecutar-tab">
                                         <form action="index.php" method="post">
-                                            <select id="status" name="status" class="form-select" onChange="mostrar6(this.value);">
+                                            <select id="status" name="status" class="form-select" onChange="mostrars6(this.value);">
                                                 <option value="">Seleccione Elemento</option>
                                                 <option value="VI-01-01">VI-01-01</option>
                                                 <option value="VI-01-03">VI-01-03</option>

@@ -33,11 +33,17 @@
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar3(this.value);">
                                         <option value="">Documento*</option>
-                                        <option value="iii-SASISOPA">III-01 Procedimiento de identificación y evaluación de requisitos legales.-285</option>
+                                        <option value="iii-01">III - Requisitos Legales</option>
+                                        <option value="iii">III-01 Procedimiento de identificación y evaluación de requisitos legales.-285</option>
                                     </select>
                                 </form>
 
-                                <div id="iii-SASISOPA" style="display: none;">
+                                <div id="iii-01" style="display: none;">
+                                    <a href="{{route('pdf_iii_01.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_iii_01.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                </div>
+
+                                <div id="iii" style="display: none;">
                                     <a href="{{route('pdf_iii.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
                                     <a href="{{route('pdf_iii.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
                                 </div>
@@ -55,17 +61,26 @@
                         </h2>
                         <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
-                                <a class="btn text-dark" href="{{route('ejecutar_iii_01_01.index')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important">
-                                    Ejecutar
-                                </a>
+                                <form action="index.php" method="post">
+                                    <select id="status" name="status" class="form-select" onChange="mostrars3(this.value);">
+                                        <option value="">Servicio*</option>
+                                        <option value="elementoiii">III-01-01 Matriz de requisitos legales.</option>
+                                    </select>
+                                </form>
 
-                                <a class="btn text-dark" href="{{route('difundir_iii_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
-                                    Difundir
-                                </a>
+                                <div id="elementoiii" class="text-center" style="display: none;">
+                                    <a class="btn text-dark" href="{{route('ejecutar_iii_01_01.index')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important">
+                                        Ejecutar
+                                    </a>
 
-                                <a class="btn  " href="{{route('preventiva_iii_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
-                                    Accion Correctiva
-                                </a>
+                                    <a class="btn text-dark" href="{{route('difundir_iii_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                                        Difundir
+                                    </a>
+
+                                    <a class="btn  " href="{{route('preventiva_iii_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                        Accion Correctiva
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

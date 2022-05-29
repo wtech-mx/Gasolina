@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Documento Pdf III</title>
+    <title>Documento Pdf IV</title>
     <link rel="stylesheet" href="{{ public_path('assets/bootstrap/css/bootstrapv3.3.6.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ public_path('css/pdfs.css') }}" type="text/css">
   </head>

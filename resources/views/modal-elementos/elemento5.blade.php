@@ -30,17 +30,22 @@
                         </h2>
                         <div id="element5_one" class="accordion-collapse collapse show" aria-labelledby="element5_one" data-bs-parent="#accordionExample5">
                             <div class="accordion-body">
-
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar5(this.value);">
                                         <option value="">Documento*</option>
-                                        <option value="v-SASISOPA">V-01 Procedimiento de funciones y responsabilidades.-8139</option>
+                                        <option value="V">V - Funciones, responsabilidaes y autoridad</option>
+                                        <option value="V-01">V-01 Procedimiento de funciones y responsabilidades</option>
                                     </select>
                                 </form>
 
-                                <div id="v-SASISOPA" class="text-center" style="display: none;">
-                                    <a href="{{route('pdf_sasisopa.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_sasisopa.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                <div id="V" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_v.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_v.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                </div>
+
+                                <div id="V-01" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_v_01.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_v_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -56,11 +61,16 @@
                         </h2>
                         <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
-                                    <a class="btn text-dark" href="{{route('consultar.elemento5')}}" style="background-color:#001d3d;color:  #852ecc!important; border: 2px solid #852ecc!important">
-                                        Consultar
-                                    </a>
+                                <form action="index.php" method="post">
+                                    <select id="status" name="status" class="form-select" onChange="mostrars5(this.value);">
+                                        <option value="">Servicio*</option>
+                                        <option value="elementov">V-01-01 Matriz de responsabilidades.</option>
+                                    </select>
+                                </form>
 
-                                    <a class="btn text-dark" href="#" style="background-color:#001d3d;color:  #852ecc!important; border: 2px solid #852ecc!important">
+                                <div id="elementov" class="text-center" style="display: none;">
+
+                                    <a class="btn text-dark" href="{{route('pdf_generar_v.view')}}" style="background-color:#001d3d;color:  #852ecc!important; border: 2px solid #852ecc!important" target="_blank">
                                         Generar
                                     </a>
 
@@ -75,6 +85,7 @@
                                     <a class="btn text-dark" href="{{route('preventiva_i_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
                                         Accion Correctiva
                                     </a>
+                                </div>
                             </div>
                         </div>
                     </div>

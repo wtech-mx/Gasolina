@@ -46,12 +46,36 @@ class iiElementoController extends Controller
 
         return view('modal-elementos.formularios ii.consulta.actividad_situaciones', compact( 'users'));
     }
-    public function pdf_sasisopa()
+    
+    public function pdf_sasisopa_ii_01()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios ii.pdf_sasisopa_ii_01', compact('config'));
+        return $pdf->stream('II - Procedimieno para la identificación de peligros y evlaución de riesgos.pdf');
+    }
+
+    public function pdf_sasisopa_ii_01_download()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios ii.pdf_sasisopa_ii_01', compact('config'));
+        return $pdf->download('II - Procedimieno para la identificación de peligros y evlaución de riesgos.pdf');
+    }
+
+    public function pdf_sasisopa_ii()
     {
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios ii.pdf_ii', compact('config'));
-        return $pdf->stream('SASISOPA II-01-01.pdf');
+        return $pdf->stream('II - Gestión de peligros, riesgos e impactos ambientales.pdf');
     }
 
+    public function pdf_sasisopa_ii_download()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios ii.pdf_ii', compact('config'));
+        return $pdf->download('II - Gestión de peligros, riesgos e impactos ambientales.pdf');
+    }
 }
