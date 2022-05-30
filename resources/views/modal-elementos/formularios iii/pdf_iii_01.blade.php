@@ -253,18 +253,18 @@
                 1.1.- Establecer la metodología para identificar y evaluar el cumplimiento de los requisitos legales,
                 normatividad y otros requisitos en materia de Seguridad Industrial, Seguridad Operativa y Protección al
                 Medio Ambiente y para la Gestión de las Mediciones, aplicables a los procesos, servicios y actividades
-                que se desarrollan dentro de la Estación de Servicio.<br>
+                que se desarrollan dentro de la Estación de Servicio.<br><br>
                 <strong>2.- ALCANCE</strong><br><br>
                 2.1.- Determinar todos los requisitos legales involucrados en todas las áreas de trabajo, instalación y
-                actividades que se desarrollan dentro de la Estación de Servicio.<br>
-                <strong>3.- DEFINICIONES</strong><br><br>
+                actividades que se desarrollan dentro de la Estación de Servicio.<br><br>
+                <strong>3.- RESPONSABILIDADES Y DESARROLLO</strong><br><br>
                 <strong>3.1.- Identificación de requisitos legales aplicables.</strong><br>
                 La identificación y evaluación de los requisitos legales se realizará mediante la matriz de evaluación y
                 cumplimiento de aspectos legales y la base de la matriz serán las actividades, servicios, procesos y
                 procedimientos, que se desarrollan en la Estación de Servicio; otra fuente de información importante
                 para este punto del Sistema de Administración (SASISOPA) y del Sistema de Gestión de las
                 Mediciones (SGM) es la identificación y evaluación de aspectos e impactos ambientales y la
-                evaluación de los peligros y riesgos.<br>
+                evaluación de los peligros y riesgos.<br><br>
                 Los requisitos legales que se involucran en este procedimiento son:<br><br>
                 - Leyes.<br>
                 - Reglamentos.<br>
@@ -273,8 +273,10 @@
                 - Especificaciones y estándares requeridos por la ASEA.<br>
                 - Requisitos estatales en materia de Medio Ambiente y Seguridad.<br>
                 - Autorizaciones, licencias y permisos que se originen en la entidad donde la Estación de Servicio<br>
-                presta sus servicios.<br>
-                - Disposiciones Administrativas de Carácter General<br><br><br><br>
+                  presta sus servicios.<br>
+                - Disposiciones Administrativas de Carácter General<br><br>
+                    Los requisitos legales ambientales y de seguridad para la Estación de Servicio provienen de los
+                    siguientes organismos:
                 </p>
             </div>
 
@@ -338,15 +340,12 @@
     </div>
 
             <div class="col-12 ">
-                <p class="p-5">
-                Los requisitos legales ambientales y de seguridad para la Estación de Servicio, provienen de los
-                siguientes organismos:<br><br>
                 <strong>- SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales).</strong><br>
                 <strong>- ASEA (Agencia de Seguridad, Energía y Ambiente).</strong><br>
                 <strong>- CONAGUA (Comisión Nacional del Agua).</strong><br>
                 <strong>- CRE (Comisión Reguladora de Energía).</strong><br>
                 <strong>- SENER (Secretaria de Energía).</strong><br><br>
-                3.1.1.- En caso de STPS, se consideran ciertas normas aplicadas como mejores prácticas y parte de
+                3.1.1.- En caso de <strong>STPS</strong>, se consideran ciertas normas aplicadas como mejores prácticas y parte de
                 prevención de riesgos en la materia de:<br><br>
                 <strong>1.</strong> Instalaciones seguras. <br>
                 <strong>2.</strong> Iluminación. <br>
@@ -365,6 +364,7 @@
                 <strong>15.</strong> Mantenimiento eléctrico. <br>
                 <strong>16.</strong> Servicios preventivos. <br>
                 <strong>17.</strong> Seguridad en construcción. <br> <br>
+                <strong>17.</strong> Medición. <br> <br>
                 3.1.2.- Para esta identificación, la Estación de Servicio podrá utilizar diferentes fuentes aplicables para
                 el Sector de Hidrocarburos provenientes de:<br> <br>
                 - Diario Oficial de la Federación-DOF (papel o electrónico). <br><br>
@@ -554,8 +554,91 @@
                 - La identificación de nuevos peligros y su evaluación de riesgo. <br>
                 - La identificación de nuevos aspectos ambientales y su impacto. Para la actualización de la matriz,
                 se podrá disponer de las fuentes de información mencionadas en el punto 6.1 de este documento. <br><br>
-                <strong>4.- REGISTROS</strong> <br><br>
-                4.1.- Matriz de Requisitos Legales Aplicables.
+                </p>
+            </div>
+
+            <div class="con_header">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td class="text-center">
+                  <img class="img-card-menu mt-5" src="assets\img\pdf\2.png">
+              </td>
+              <td class="text-center title-header">
+                        SISTEMA DE ADMINISTRACIÓN DE
+                        SEGURIDAD INDUSTRIAL, SEGURIDAD
+                        OPERATIVA Y PROTECCIÓN AL MEDIO
+                        AMBIENTE (SASISOPA) y SISTEMA DE
+                        GESTIÓN DE LAS MEDICIONES (SGM)
+              </td>
+               <td class="text-center title-header">
+                  SAC XIB CHAAC, S.A. DE C.V.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+
+		<div class="col-12 text-center">
+            <p class="font-weight-bold">
+             N° CRE: PL/20543/EXP/ES/2017<br>
+             PROCEDIMIENTO PARA LA IDENTIFICACIÓN, DETERMINACIÓN Y EVALUACIÓN DEL CUMPLIMIENTO LEGAL
+            </p>
+		</div>
+
+        <table class="table bg-yellow">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td class="text-center">
+                  CÓDIGO: III-01
+              </td>
+              <td class="text-center title-header">N° REV.:00</td>
+
+               <td class="text-center title-header">
+                FECHA DE APROBACIÓN: 03/07/2019
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+              <div class="col-12 ">
+                <p class="p-5">
+                <strong>3.5.- Difusión.</strong> <br><br>
+                La comunicación de los requisitos o de los aspectos legales aplicables a las actividades del personal
+                de la Estación de Servicio, los cambios y las actualizaciones referentes a este procedimiento, deberán
+                de ser comunicados a la brevedad a la alta dirección mediante el formato de difusión que se encuentra
+                en el calendario de ejecución de la actividad correspondiente el cual se tendrá que poner una
+                descripción de lo que se desea difundir, señalar el tipo de difusión interna o externa, el periodo de
+                publicación así como el medio por el cual se requiera llevar a cabo la difusión<br><br>
+                El formato de difusión, se atenderá de acuerdo a lo establecido dentro del procedimiento de
+                comunicación interna y externa y se dará seguimiento y cierre dentro de la matriz de registro y
+                seguimiento de comunicación interna y externa.
+                <strong>3.6.- Solicitud de acción correctiva y preventiva.</strong> <br><br>
+                Toda solicitud de acción preventiva y correctiva referente a este procedimiento, se llevará a cabo por
+                medio del formato de acción correctiva que se encuentra en el calendario de ejecución de la actividad
+                correspondiente el cual se tendrá que poner una descripción del hallazgo u oportunidad de mejora que
+                se detecte.<br><br>
+                El formato de solicitud de acción preventiva y correctiva, se atenderá de acuerdo a lo establecido
+                dentro del procedimiento para el manejo de no conformidades, acciones preventivas y correctivas del
+                Sistema de Administración y se dará seguimiento y cierre dentro de la matriz de alta y seguimiento de
+                acción preventiva o correctiva.<br><br>
+                <strong>4.- REGISTROS</strong><br><br>
+                <strong>4.1.-</strong> Matriz de Requisitos Legales Aplicables
                 </p>
             </div>
 

@@ -257,8 +257,8 @@
                     2.1.- Este procedimiento, es de alcance para todo el personal de la Estación de Servicio, tanto interno
                     como externo ya que es la base para el cumplimiento del Sistema de Administración (SASISOPA) y
                     Sistema de Gestión de las Mediciones (SGM). <br><br><br>
-                    <strong>3.- RESPONSABILIDADES</strong> <br>
-                    3.1.- Establecimiento de la política.
+                    <strong>3.- RESPONSABILIDADES</strong> <br><br>
+                    <strong>3.1.- Establecimiento de la política.</strong><br><br>
                     La política de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambiente (SASISOPA)
                     y del Sistema de Gestión de las Mediciones (SGM), se instituye para proporcionar un marco de
                     referencia para establecer y revisar el compromiso para la identificación de peligros, la jerarquización y
@@ -409,8 +409,8 @@
                     difusión.<br><br>
 
                     El formato de difusión, se atenderá de acuerdo a lo establecido dentro del procedimiento de
-                    comunicación interna y externa.
-                    3.3.- Revisión, seguimiento y mejora.
+                    comunicación interna y externa.<br><br>
+                    <strong>3.3.- Revisión, seguimiento y mejora.</strong><br><br>
                     La Alta Dirección con el apoyo del RT y demás personal que esta considere pertinente, podrá revisar la
                     política del SA y SGM para asegurar que se mantiene adecuada a las características del proyecto del
                     Regulado.<br><br>

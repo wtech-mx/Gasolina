@@ -6,6 +6,10 @@
     width: 150px;
 }
 
+.img-card-sis{
+    width:250px;
+}
+
 .bg-yellow{
     background-color: #FFC300;
     border: #FFC300 2px solid!important;
