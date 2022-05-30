@@ -257,7 +257,7 @@
                 <strong>2.- ALCANCE</strong> <br><br>
                 2.1.- Aplica a todo el personal que se encuentra laborando dentro de la Estación de Servicio, así como
                 las actividades deslindadas de la implementación y operación del Sistema de Administración
-                (SASISOPA) y del Sistema de Gestión de las Mediciones (SGM).
+                (SASISOPA) y del Sistema de Gestión de las Mediciones (SGM).<br><br>
                 <strong>3.- RESPONSABILIDADES Y DESARROLLO</strong><br><br>
                 <strong>3.1 Designar recursos humanos y financieros</strong><br><br>
                 El Empresario Gasolinero asegurara la disponibilidad de recursos esenciales para establecer,

@@ -629,7 +629,7 @@
                     El formato de solicitud de acción preventiva y correctiva, se atenderá de acuerdo a lo establecido
                     dentro del procedimiento para el manejo de no conformidades, acciones preventivas y correctivas del
                     Sistema de Administración (SASISOPA) y del Sistema de Gestión de las Mediciones (SGM), donde se
-                    le dará seguimiento y cierre con la matriz de alta y seguimiento de acción preventiva o correctiva.
+                    le dará seguimiento y cierre con la matriz de alta y seguimiento de acción preventiva o correctiva.<br><br>
                     <strong>4.- REGISTROS</strong><br><br>
                     <strong>4.1.- </strong>Matriz de objetivos, metas e indicadores
 

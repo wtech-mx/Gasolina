@@ -58,7 +58,7 @@
           <tbody>
             <tr>
                <td class="text-center">
-                  CÓDIGO: III-01
+                  CÓDIGO: VI
               </td>
               <td class="text-center title-header">N° REV.:00</td>
 
@@ -69,7 +69,6 @@
           </tbody>
         </table>
     </div>
-
 
 		<div class="col-12 text-center">
             <h5 class="p-3">CONTROL DE CAMBIOS</h5>
@@ -188,7 +187,7 @@
 
         <!-- segunda hoja -->
         {{-- si se descomenta es parte del codigo no se porque se tarda mucho en cargar --}}
-    <div class="con_header">
+<div class="con_header">
         <table class="table">
           <thead>
             <tr>
@@ -235,7 +234,7 @@
           <tbody>
             <tr>
                <td class="text-center">
-                  CÓDIGO: III-01
+                  CÓDIGO: VI
               </td>
               <td class="text-center title-header">N° REV.:00</td>
 
@@ -249,36 +248,35 @@
 
             <div class="col-12 ">
                 <p class="p-5">
-               <strong> 1.- OBJETIVO</strong><br><br>
-                1.1.- Establecer la metodología para identificar y evaluar el cumplimiento de los requisitos legales,
-                normatividad y otros requisitos en materia de Seguridad Industrial, Seguridad Operativa y Protección al
-                Medio Ambiente y para la Gestión de las Mediciones, aplicables a los procesos, servicios y actividades
-                que se desarrollan dentro de la Estación de Servicio.<br>
+                <strong>1.- OBJETIVO</strong> <br><br>
+                1.1.- Establecer el procedimiento para llevar a cabo la detección de necesidades de capacitación y
+                entrenamiento, así como los métodos de seguimiento y evaluación de todo el personal de la Estación
+                de Servicio.<br><br>
                 <strong>2.- ALCANCE</strong><br><br>
-                2.1.- Determinar todos los requisitos legales involucrados en todas las áreas de trabajo, instalación y
-                actividades que se desarrollan dentro de la Estación de Servicio.<br>
-                <strong>3.- DEFINICIONES</strong><br><br>
-                <strong>3.1.- Identificación de requisitos legales aplicables.</strong><br>
-                La identificación y evaluación de los requisitos legales se realizará mediante la matriz de evaluación y
-                cumplimiento de aspectos legales y la base de la matriz serán las actividades, servicios, procesos y
-                procedimientos, que se desarrollan en la Estación de Servicio; otra fuente de información importante
-                para este punto del Sistema de Administración (SASISOPA) y del Sistema de Gestión de las
-                Mediciones (SGM) es la identificación y evaluación de aspectos e impactos ambientales y la
-                evaluación de los peligros y riesgos.<br>
-                Los requisitos legales que se involucran en este procedimiento son:<br><br>
-                - Leyes.<br>
-                - Reglamentos.<br>
-                - Decretos y acuerdos publicados en el DOF.<br>
-                - Normas.<br>
-                - Especificaciones y estándares requeridos por la ASEA.<br>
-                - Requisitos estatales en materia de Medio Ambiente y Seguridad.<br>
-                - Autorizaciones, licencias y permisos que se originen en la entidad donde la Estación de Servicio<br>
-                presta sus servicios.<br>
-                - Disposiciones Administrativas de Carácter General<br><br><br><br>
+                2.1.- Este procedimiento, es aplicable para todo el personal interno de la Estación de Servicio y la
+                capacitación interna de contratistas, subcontratistas, prestadores de servicio y proveedores que se
+                establece dentro del procedimiento de disposiciones para la seguridad del contratista.
+               <strong> 3.- RESPONSABILIDADES y DESARROLLO</strong><br><br>
+                <strong>3.1.- Identificación de necesidades de capacitación.</strong><br><br>
+                Las necesidades de capacitación se detectan de acuerdo con el formato matriz de competencia y
+                formación, a fin de asegurar la competencia del personal con base al perfil de puesto, actividades y sus
+                necesidades de conocimiento, capacitación y experiencia necesaria y los requisitos resultantes de la
+                evaluación de la competencia serán anuales.<br><br>
+                <strong>3.1.1.- La evaluación de la competencia debe realizarse cuando:</strong><br><br>
+                - Ingrese nuevo personal; una vez contratado, se le proporciona una inducción al puesto, que
+                incluye aspectos administrativos y una inducción al Sistema de Administración (Seguridad
+                Industrial, Seguridad Operativa y Protección al Medio Ambiente) y del Sistema de Gestión de las
+                Mediciones (SGM), que incluye la difusión de la política y los objetivos el cual, tendrá disponible
+                en la consola central de operación para poder capacitarse y presentar la evaluación
+                correspondiente con lo que acreditará el conocimiento adquirido. <br>
+                - Exista una promoción de puesto del personal o cambio de área o funciónbr <br>
+                - Una vez cada año o antes, si se requiere.<br><br>
+                Dentro de la evaluación de la competencia, el responsable determinará si la necesidad de capacitación
+                detectada, será enviada a un programa general de capacitación interno o externo
                 </p>
             </div>
 
-    <div class="con_header">
+<div class="con_header">
         <table class="table">
           <thead>
             <tr>
@@ -325,7 +323,7 @@
           <tbody>
             <tr>
                <td class="text-center">
-                  CÓDIGO: III-01
+                  CÓDIGO: VI
               </td>
               <td class="text-center title-header">N° REV.:00</td>
 
@@ -339,40 +337,39 @@
 
             <div class="col-12 ">
                 <p class="p-5">
-                Los requisitos legales ambientales y de seguridad para la Estación de Servicio, provienen de los
-                siguientes organismos:<br><br>
-                <strong>- SEMARNAT (Secretaría de Medio Ambiente y Recursos Naturales).</strong><br>
-                <strong>- ASEA (Agencia de Seguridad, Energía y Ambiente).</strong><br>
-                <strong>- CONAGUA (Comisión Nacional del Agua).</strong><br>
-                <strong>- CRE (Comisión Reguladora de Energía).</strong><br>
-                <strong>- SENER (Secretaria de Energía).</strong><br><br>
-                3.1.1.- En caso de STPS, se consideran ciertas normas aplicadas como mejores prácticas y parte de
-                prevención de riesgos en la materia de:<br><br>
-                <strong>1.</strong> Instalaciones seguras. <br>
-                <strong>2.</strong> Iluminación. <br>
-                <strong>3.</strong> Materiales peligrosos. <br>
-                <strong>4.</strong> Equipo de protección personal. <br>
-                <strong>5.</strong> Tierras físicas y pararrayos. <br>
-                <strong>6.</strong> Tanques sujetos a presión. <br>
-                <strong>7.</strong> Respuesta a emergencias. <br>
-                <strong>8.</strong> Maquinaria y equipo. <br>
-                <strong>9.</strong> Trabajos en alturas. <br>
-                <strong>10.</strong> Espacios confinados. <br>
-                <strong>11.</strong> Comisión de Seguridad. <br>
-                <strong>12.</strong> Reporte de accidentes. <br>
-                <strong>13.</strong> Colores y señales. <br>
-                <strong>14.</strong> Actividades de soldadura. <br>
-                <strong>15.</strong> Mantenimiento eléctrico. <br>
-                <strong>16.</strong> Servicios preventivos. <br>
-                <strong>17.</strong> Seguridad en construcción. <br> <br>
-                3.1.2.- Para esta identificación, la Estación de Servicio podrá utilizar diferentes fuentes aplicables para
-                el Sector de Hidrocarburos provenientes de:<br> <br>
-                - Diario Oficial de la Federación-DOF (papel o electrónico). <br><br>
-                - Gaceta del Estado (fuentes estatales).
+                <strong>3.2.- Plan general de capacitación interno.</strong><br><br>
+                El plan general de capacitación interno contiene los siguientes campos: <br><br>
+                - Fecha de alta. <br>
+                - Responsable del plan general de capacitación interno.<br>
+                - Curso.<br>
+                - Conocimiento.<br>
+                - Alcance.<br>
+                - Los integrantes detectados por curso.<br><br>
+                Con base en lo determinado en el plan general de capacitación interno, el personal de la Estación de
+                Servicio podrá tomar los cursos y presentar su evaluación a través de la Herramienta Digital Gasafe.
+                <strong>3.3 Cursos.</strong> <br><br>
+                En la consola central de operación, en el botón de evaluación interna, el usuario podrá consultar todos
+                los cursos que hayan sido detectados en su evaluación de la competencia donde podrá tomar el curso
+                y presentar el examen correspondiente. Una vez presentada la evaluación, el sistema le dará una
+                calificación aprobatoria o no aprobatoria; en caso de ser no aprobatoria, el sistema le configurará de
+                nuevo el curso y volverá a presentar la evaluación correspondiente, de esta manera, el usuario podrá
+                adquirir el conocimiento necesario para poder dar cumplimiento al plan general de capacitación interno.<br><br>
+                <strong>3.4.- Plan general de capacitación externo.</strong><br><br>
+                <strong>El plan general br de capacitación externo contiene los siguientes campos:</strong><br><br>
+                - Fecha de alta. <br>
+                - Nombre del curso. <br>
+                - Objetivo. <br>
+                - Alcance <br>
+                - Duración.<br>
+                - Instructor.<br>
+                - Fecha programada.<br>
+                - Fecha de realización.<br>
+                - Evidencia del curso.<br>
+
                 </p>
             </div>
 
-    <div class="con_header">
+<div class="con_header">
         <table class="table">
           <thead>
             <tr>
@@ -419,7 +416,7 @@
           <tbody>
             <tr>
                <td class="text-center">
-                  CÓDIGO: III-01
+                  CÓDIGO: VI
               </td>
               <td class="text-center title-header">N° REV.:00</td>
 
@@ -431,131 +428,44 @@
         </table>
     </div>
 
-              <div class="col-12 ">
+            <div class="col-12 ">
                 <p class="p-5">
-                - Internet.<br>
-                - Periódicos y revistas especializadas.<br>
-                - Partes interesadas.<br>
-                - Matriz de Identificación de Peligros y Evaluación de Riesgos.<br>
-                - Matriz de Identificación y Evaluación de Aspectos Ambientales.<br>
-                - Organizaciones gubernamentales.<br><br>
-               <strong> 3.1.3.-</strong> Todos los requisitos legales que se hayan identificado, serán inscritos en el formato “Matriz de
-                Requisitos Legales Aplicables”.<br><br>
-                Este formato, se llenará en electrónico a través de la Herramienta Tecnológica Gasafe.<br><br>
-                El llenado de la “Matriz de Requisitos Legales, inicia indicando los siguientes puntos:<br><br>
-                - Ley, Reglamento, Norma o Fundamento Legal aplicable.<br>
-                - Marco normativo y la descripción (capítulos, artículos o fracciones).<br>
-                - Área de impacto (Medio Ambiente o Seguridad).<br>
-                - Mecanismo de cumplimiento dentro del Sistema de Administración.<br>
-                - Periodo de cumplimiento del aspecto legal.<br>
-                - La regla del Sistema de Administración en la que el aspecto legal impacta.<br>
-                - Se identificará cuál requisito legal es aplicable.<br>
-                - El sistema evaluará de forma inicial el cumplimiento en base a la lista de control de permisos y
-                autorizaciones.<br><br>
-                <strong>3.2.- Cumplimiento de requisitos legales aplicables.</strong><br><br>
-                Una vez identificados los requisitos legales aplicables, serán analizados por el responsable de esta
-                actividad dentro del Sistema de Administración (SASISOPA) y del Sistema de Gestión de las
-                Mediciones (SGM); esto, con la finalidad de establecer los puntos que aplican a la Estación de Servicio
-                o sitio de trabajo en función de lo mencionado en el primer párrafo de este punto. El responsable,
-                deberá de revisar el contenido del o de los requisitos aplicables, así como las implicaciones que estos
-                conllevan. Posterior a esta actividad, establecerá las acciones y medios con los que se dará
-                cumplimiento a dichos requisitos. Todos aquellos requisitos aplicables identificados cuyos documentos
-                oficiales o formales, requieran ser adquiridos por la organización, como leyes, reglamentos y/o normas,
-                son considerados como documentos externos y deberán ser controlados de acuerdo a lo establecid
-                en el procedimiento “Control de Documentos y Registros” en el listado de documentación externa del
-                sistema en su versión más actual.
-
-                </p>
-            </div>
-
-    <div class="con_header">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-               <td class="text-center">
-                  <img class="img-card-menu mt-5" src="assets\img\pdf\2.png">
-              </td>
-              <td class="text-center title-header">
-                        SISTEMA DE ADMINISTRACIÓN DE
-                        SEGURIDAD INDUSTRIAL, SEGURIDAD
-                        OPERATIVA Y PROTECCIÓN AL MEDIO
-                        AMBIENTE (SASISOPA) y SISTEMA DE
-                        GESTIÓN DE LAS MEDICIONES (SGM)
-              </td>
-               <td class="text-center title-header">
-                  SAC XIB CHAAC, S.A. DE C.V.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-
-		<div class="col-12 text-center">
-            <p class="font-weight-bold">
-             N° CRE: PL/20543/EXP/ES/2017<br>
-             PROCEDIMIENTO PARA LA IDENTIFICACIÓN, DETERMINACIÓN Y EVALUACIÓN DEL CUMPLIMIENTO LEGAL
-            </p>
-		</div>
-
-        <table class="table bg-yellow">
-          <thead>
-            <tr>
-              <th scope="col"></th>
-              <th scope="col"></th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-               <td class="text-center">
-                  CÓDIGO: III-01
-              </td>
-              <td class="text-center title-header">N° REV.:00</td>
-
-               <td class="text-center title-header">
-                FECHA DE APROBACIÓN: 03/07/2019
-              </td>
-            </tr>
-          </tbody>
-        </table>
-    </div>
-
-              <div class="col-12 ">
-                <p class="p-5">
-                <strong>3.3.- Evaluación del cumplimiento de los requisitos legales aplicables.</strong> <br><br>
-                Una vez que los requisitos legales aplicables han sido analizados y se han establecido los mecanismos
-                y medios para su cumplimiento, de manera semestral, se deberá de evaluar el grado y nivel de
-                cumplimiento de los mismos. Lo anterior, a través de auditorías (internas o externas) utilizando la
-                matriz de requisitos legales. Si en esta evaluación se detecta el incumplimiento de alguno (s) de los
-                requisitos legales aplicables identificados en la matriz, se considerará como una No Conformidad y se
-                deberá de atender como tal en base a lo establecido en el procedimiento de No Conformidades,
-                Acciones Preventivas y Correctivas. De igual manera, la evaluación del cumplimiento legal será una
-                entrada a revisión de resultados del Sistema de Administración (SASISOPA) y del Sistema de Gestión
-                de las mediciones (SGM).<br><br>
-                Se deberá de mantener el registro correspondiente de la evaluación del cumplimiento de los requisitos
-                legales aplicables cada 6 meses dentro del formato.<br><br>
-                <strong>3.4.- Actualización de la Matriz de Requisitos Legales Aplicables.</strong><br><br>
-                La Matriz de Requisitos Legales Aplicables se tiene que mantener actualizada en base a los cambios
-                en la legislación, normatividad o ante nuevos requisitos legales aplicables o de otra índole a los que la
-                organización se suscriba de manera voluntaria o por obligación. La revisión de los cambios en la
-                normatividad se realizará de manera trimestral por el responsable de este procedimiento. Esta matriz,
-                también podrá ser modificada en caso de que existan cambios o modificaciones en su alcance,
-                entendiéndose como cambios:<br><br>
-                - La incorporación de nuevas actividades, servicios, procesos o procedimientos de la Estación de
-                Servicio. <br>
-                - La ampliación o modificación de las instalaciones o sitios de trabajo. <br>
-                - La identificación de nuevos peligros y su evaluación de riesgo. <br>
-                - La identificación de nuevos aspectos ambientales y su impacto. Para la actualización de la matriz,
-                se podrá disponer de las fuentes de información mencionadas en el punto 6.1 de este documento. <br><br>
-                <strong>4.- REGISTROS</strong> <br><br>
-                4.1.- Matriz de Requisitos Legales Aplicables.
+                - Integrantes detectados por curso.<br>
+                Campos 1, 2, 10, son campos que el sistema registra automáticamente.<br>
+                Campos 3, 4, 5, 6, 7, son campos que tendrá que cargar el responsable y los se tendrá que obtener del
+                agente capacitador externo..<br>
+                Campos 8, 9, son campos que el responsable tendrá que cargar al plan general de capacitación
+                externa.<br><br>
+                En caso de que la capacitación sea impartida externamente o en alguna institución, el personal que
+                asista, debe solicitar constancia, diploma o certificado según corresponda y debe entregar una copia
+                de dicha constancia al responsable para su registro en el campo 8 del plan general de capacitación
+                externa.
+                En caso de realizar la capacitación para administrar riesgos regulados por la STPS y respuesta a
+                atención a emergencias, se debe de contar con la evidencia de que fue capacitado por un agente
+                capacitador registrado ante la STPS o Protección Civil. <br><br>
+                <strong>3.5.- Difusión.</strong><br>
+                Toda solicitud de difusión interna y externa referente a este procedimiento, se llevará a cabo por medio
+                del formato de difusión que se encuentra en el calendario de ejecución de la actividad correspondiente
+                al que se le tendrá que poner una descripción de lo que se desea difundir, señalar el tipo de difusión
+                interna o externa, el periodo de publicación, así como el medio por el cual se requiera llevar a cabo la
+                difusión.<br>
+                El formato de difusión, se atenderá de acuerdo a lo establecido dentro del procedimiento de
+                comunicación interna y externa y se dará seguimiento y cierre dentro de matriz de registro y
+                seguimiento de comunicación interna y externa. <br>
+                <strong>3.6- Solicitud de acción correctiva y preventiva.</strong> <br>
+                Toda solicitud de acción preventiva y correctiva referente a este procedimiento, se llevará a cabo por
+                medio del formato de acción correctiva que se encuentra en el calendario de ejecución de la actividad
+                correspondiente al que se le tendrá que poner una descripción del hallazgo u oportunidad de mejora
+                que se detecte. <br><br>
+                El formato de solicitud de acción preventiva y correctiva, se atenderá de acuerdo a lo establecido
+                dentro del procedimiento para el manejo de no conformidades, acciones preventivas y correctivas del
+                Sistema de Administración (SASISOPA) y del Sistema de Gestión de las Mediciones (SGM) donde se
+                le dará seguimiento y cierre con la matriz de alta y seguimiento de acción preventiva o correctiva.<br><br>
+                <strong>4.- REGISTROS</strong><br>
+                4.1.- Evaluación de competencia.<br>
+                4.2.- Plan general de capacitación interno.<br>
+                4.3.- Evaluación interna.<br>
+                4.4.- Plan general de capacitación interno.  <br>
                 </p>
             </div>
 
