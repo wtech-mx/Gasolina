@@ -103,9 +103,6 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/exportar/consulta/diseño', [App\Http\Controllers\ConsultaController::class, 'exportdiseño'])->name('consulta.exportdiseño');
     Route::get('/exportar/consulta/nom', [App\Http\Controllers\ConsultaController::class, 'exportnom'])->name('consulta.exportnom');
 
-
-
-
     /*|--------------------------------------------------------------------------
     |Difundir (Actividades)
     |--------------------------------------------------------------------------*/
@@ -141,17 +138,21 @@ Route::group(['middleware' => ['auth']], function() {
     /*|--------------------------------------------------------------------------
     |Preventiva (Actividades)
     |--------------------------------------------------------------------------*/
-    Route::view('/preventiva/i-01-01', 'livewire.preventivas.index')->name('preventiva_i_01_01.index');
+    Route::post('preventiva/store', [App\Http\Controllers\PreventivaController::class, 'store'])->name('preventiva.store')->middleware('auth');
+    Route::post('preventiva/update/{id}', [App\Http\Controllers\PreventivaController::class, 'update'])->name('preventiva.update');
 
-    Route::view('/preventiva/x-01-01', 'livewire.preventivas.index')->name('preventiva_x_01_01.index');
-    Route::view('/preventiva/x-01-02', 'livewire.preventivas.index')->name('preventiva_x_01_02.index');
-    Route::view('/preventiva/x-02-01', 'livewire.preventivas.index')->name('preventiva_x_02_01.index');
+    Route::get('/preventiva/i-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_i_01_01.index');
+    Route::get('/preventiva/ii-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_ii_01_01.index');
+    Route::get('/preventiva/iii-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_iii_01_01.index');
+    Route::get('/preventiva/iv-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_iv_01_01.index');
+    Route::get('/preventiva/v-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_v_01_01.index');
 
-    Route::view('/preventiva/iii-01-01', 'livewire.preventivas.index')->name('preventiva_iii_01_01.index');
-    Route::view('/preventiva/iv-01-01', 'livewire.preventivas.index')->name('preventiva_iv_01_01.index');
+    Route::get('/preventiva/vi-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vi_01_01.index');
+    Route::get('/preventiva/vi-01-03', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vi_01_03.index');
 
-    Route::view('/preventiva/vi-01-01', 'livewire.preventivas.index')->name('preventiva_vi_01_01.index');
-    Route::view('/preventiva/vi-01-03', 'livewire.preventivas.index')->name('preventiva_vi_01_03.index');
+    Route::get('/preventiva/x-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_x_01_01.index');
+    Route::get('/preventiva/x-01-02', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_x_01_02.index');
+    Route::get('/preventiva/x-02-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_x_02_01.index');
 
     /*|--------------------------------------------------------------------------
     |Evaluacion (I-01-01)

@@ -71,21 +71,61 @@ class UserController extends Controller
 
             //3/3- Si la validacion es correcta se crea el registro
 
-            $empresa = new User;
-            $empresa->name = $request->get('name');
-            $empresa->apellido = $request->get('apellido');
-            $empresa->telefono = $request->get('telefono');
-            $empresa->puesto = $request->get('puesto');
-            $empresa->id_empresa = $request->get('id_empresa');
-            $empresa->id_sucursal = $request->get('id_sucursal');
-            $empresa->email = $request->get('email');
-            $empresa->password = Hash::make($request->password);
+            $user = new User;
+            $user->name = $request->get('name');
+            $user->apellido = $request->get('apellido');
+            $user->telefono = $request->get('telefono');
+            $user->puesto = $request->get('puesto');
+            $user->id_empresa = $request->get('id_empresa');
+            $user->id_sucursal = $request->get('id_sucursal');
+            $user->email = $request->get('email');
+            $user->calle = $request->get('calle');
+            $user->password = Hash::make($request->password);
+            if ($request->hasFile("firma")) {
 
-            $empresa->save();
+                $imagen = $request->file("firma");
+                $nombreimagen = time() . "." . $imagen->guessExtension();
+                $ruta = public_path("firma/");
+
+                $imagen->move($ruta,$nombreimagen);
+                // copy($imagen->getRealPath(), $ruta . $nombreimagen);
+
+                $user->firma = $nombreimagen;
+            }
+
+            if ($request->hasFile("foto")) {
+
+                $imagen = $request->file("foto");
+                $nombreimagen = time() . "." . $imagen->guessExtension();
+                $ruta = public_path("foto/");
+
+                $imagen->move($ruta,$nombreimagen);
+               // copy($imagen->getRealPath(), $ruta . $nombreimagen);
+
+                $user->foto = $nombreimagen;
+            }
+
+            $user->alta = $request->get('alta');
+            $user->baja = $request->get('baja');
+            $user->enfermedad = $request->get('enfermedad');
+            $user->alergias = $request->get('alergias');
+            $user->seguro_social = $request->get('seguro_social');
+            $user->estado_civil = $request->get('estado_civil');
+            $user->estudios = $request->get('estudios');
+            $user->contratacion = $request->get('contratacion');
+            $user->personal = $request->get('personal');
+            $user->jornada = $request->get('jornada');
+            $user->rotacion_turnos = $request->get('rotacion_turnos');
+            $user->tiempo_puesto = $request->get('tiempo_puesto');
+            $user->experiencia = $request->get('experiencia');
+            $user->departamento = $request->get('departamento');
+            $user->nombre_emergencia = $request->get('nombre_emergencia');
+            $user->telefono_emergencia = $request->get('telefono_emergencia');
+            $user->save();
 
             // Redireccion  de suuces or fail dependiedno el caso
 
-            return redirect()->route('index.usuario')
+            return redirect()->back()
                 ->with('success', 'Usuario Creada Exitosamente!');
         } catch (\Exception $e) {
             return redirect()->back()
@@ -113,14 +153,15 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
-        $empresa = User::findOrFail($id);
-        $empresa->name = $request->get('name');
-        $empresa->apellido = $request->get('apellido');
-        $empresa->telefono = $request->get('telefono');
-        $empresa->puesto = $request->get('puesto');
-        $empresa->id_empresa = $request->get('id_empresa');
-        $empresa->id_sucursal = $request->get('id_sucursal');
-        $empresa->email = $request->get('email');
+        $user = User::findOrFail($id);
+        $user->name = $request->get('name');
+        $user->apellido = $request->get('apellido');
+        $user->telefono = $request->get('telefono');
+        $user->puesto = $request->get('puesto');
+        $user->id_empresa = $request->get('id_empresa');
+        $user->id_sucursal = $request->get('id_sucursal');
+        $user->calle = $request->get('calle');
+        $user->email = $request->get('email');
 
         if ($request->hasFile("firma")) {
 
@@ -131,14 +172,43 @@ class UserController extends Controller
             //$imagen->move($ruta,$nombreimagen);
             copy($imagen->getRealPath(), $ruta . $nombreimagen);
 
-            $empresa->firma = $nombreimagen;
+            $user->firma = $nombreimagen;
         }
 
-        $empresa->update();
+        if ($request->hasFile("foto")) {
+
+            $imagen = $request->file("foto");
+            $nombreimagen = time() . "." . $imagen->guessExtension();
+            $ruta = public_path("foto/");
+
+            //$imagen->move($ruta,$nombreimagen);
+            copy($imagen->getRealPath(), $ruta . $nombreimagen);
+
+            $user->firma = $nombreimagen;
+        }
+
+        $user->alta = $request->get('alta');
+        $user->baja = $request->get('baja');
+        $user->enfermedad = $request->get('enfermedad');
+        $user->alergias = $request->get('alergias');
+        $user->seguro_social = $request->get('seguro_social');
+        $user->estado_civil = $request->get('estado_civil');
+        $user->estudios = $request->get('estudios');
+        $user->contratacion = $request->get('contratacion');
+        $user->personal = $request->get('personal');
+        $user->jornada = $request->get('jornada');
+        $user->rotacion_turnos = $request->get('rotacion_turnos');
+        $user->tiempo_puesto = $request->get('tiempo_puesto');
+        $user->experiencia = $request->get('experiencia');
+        $user->departamento = $request->get('departamento');
+        $user->nombre_emergencia = $request->get('nombre_emergencia');
+        $user->telefono_emergencia = $request->get('telefono_emergencia');
+
+        $user->update();
 
         DB::table('model_has_roles')->where('model_id',$id)->delete();
 
-        $empresa->assignRole($request->input('roles'));
+        $user->assignRole($request->input('roles'));
 
         Session::flash('success', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.usuario');

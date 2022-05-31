@@ -27,6 +27,18 @@
                 <label for="">Color no realizada</label>
                 <input type="color" class="form-control" value="{{$config->color_no_realizada}}" name="color_no_realizada" id="color_no_realizada"><br>
             </div>
+
+            <div class="form-group col-6 col-xs-6 col-sm-6 col-md-6 mt-4">
+                <label for="">Logo</label>
+                <input type="file" id="logo" class="form-control" name="logo">
+                <img src="{{asset('logo/'.$config->logo)}}" class="img-firma">
+            </div>
+
+            <div class="form-group col-6 col-xs-6 col-sm-6 col-md-6 mt-4">
+                <label for="">SAC</label>
+                <input type="text" class="form-control" value="{{$config->sac}}" name="sac" id="sac"><br>
+            </div>
+
         </div>
         <div class="row">
             <div class="col-12 text-center">

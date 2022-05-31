@@ -5,19 +5,24 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Role;
 
 class vElementoController extends Controller
 {
-    public function consultar(){
-        $users = User::get();
-
-        return view('modal-elementos.formularios v.index_consultar', compact( 'users'));
-    }
-
     public function index(){
         $users = User::get();
 
-        return view('modal-elementos.formularios v.index_actualizar', compact( 'users'));
+        $empresa = DB::table('users')
+            ->where('empresa', '=', 1)
+            ->get();
+
+        $sucursal = DB::table('users')
+            ->where('empresa', '=', 2)
+            ->get();
+
+        $roles = Role::pluck('name','name')->all();
+
+        return view('modal-elementos.formularios v.index_actualizar', compact( 'users', 'empresa', 'sucursal', 'roles'));
     }
 
     public function pdf_generar_v()

@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @include('fullcalendar.calendar')
+@section('css-custom')
+<link rel="stylesheet" href="{{ asset('assets/css/custom_table.css') }}">
+@endsection
 
 @section('content')
 

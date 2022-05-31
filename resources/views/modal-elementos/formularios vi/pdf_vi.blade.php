@@ -22,20 +22,20 @@
           </thead>
           <tbody>
             <tr>
-               <td class="text-center">
-                  <img class="img-card-menu mt-5" src="assets\img\pdf\2.png">
-              </td>
-              <td class="text-center title-header">
-                        SISTEMA DE ADMINISTRACIÓN DE
-                        SEGURIDAD INDUSTRIAL, SEGURIDAD
-                        OPERATIVA Y PROTECCIÓN AL MEDIO
-                        AMBIENTE (SASISOPA) y SISTEMA DE
-                        GESTIÓN DE LAS MEDICIONES (SGM)
-              </td>
+                <td class="text-center">
+                   <img class="img-card-menu mt-5" src="{{asset('logo/'.$config->logo)}}">
+               </td>
                <td class="text-center title-header">
-                  SAC XIB CHAAC, S.A. DE C.V.
-              </td>
-            </tr>
+                         SISTEMA DE ADMINISTRACIÓN DE
+                         SEGURIDAD INDUSTRIAL, SEGURIDAD
+                         OPERATIVA Y PROTECCIÓN AL MEDIO
+                         AMBIENTE (SASISOPA) y SISTEMA DE
+                         GESTIÓN DE LAS MEDICIONES (SGM)
+               </td>
+                <td class="text-center title-header">
+                     {{$config->sac}}
+               </td>
+             </tr>
           </tbody>
         </table>
 
@@ -198,20 +198,20 @@
           </thead>
           <tbody>
             <tr>
-               <td class="text-center">
-                  <img class="img-card-menu mt-5" src="assets\img\pdf\2.png">
-              </td>
-              <td class="text-center title-header">
-                        SISTEMA DE ADMINISTRACIÓN DE
-                        SEGURIDAD INDUSTRIAL, SEGURIDAD
-                        OPERATIVA Y PROTECCIÓN AL MEDIO
-                        AMBIENTE (SASISOPA) y SISTEMA DE
-                        GESTIÓN DE LAS MEDICIONES (SGM)
-              </td>
+                <td class="text-center">
+                   <img class="img-card-menu mt-5" src="{{asset('logo/'.$config->logo)}}">
+               </td>
                <td class="text-center title-header">
-                  SAC XIB CHAAC, S.A. DE C.V.
-              </td>
-            </tr>
+                         SISTEMA DE ADMINISTRACIÓN DE
+                         SEGURIDAD INDUSTRIAL, SEGURIDAD
+                         OPERATIVA Y PROTECCIÓN AL MEDIO
+                         AMBIENTE (SASISOPA) y SISTEMA DE
+                         GESTIÓN DE LAS MEDICIONES (SGM)
+               </td>
+                <td class="text-center title-header">
+                     {{$config->sac}}
+               </td>
+             </tr>
           </tbody>
         </table>
 
@@ -287,20 +287,20 @@
           </thead>
           <tbody>
             <tr>
-               <td class="text-center">
-                  <img class="img-card-menu mt-5" src="assets\img\pdf\2.png">
-              </td>
-              <td class="text-center title-header">
-                        SISTEMA DE ADMINISTRACIÓN DE
-                        SEGURIDAD INDUSTRIAL, SEGURIDAD
-                        OPERATIVA Y PROTECCIÓN AL MEDIO
-                        AMBIENTE (SASISOPA) y SISTEMA DE
-                        GESTIÓN DE LAS MEDICIONES (SGM)
-              </td>
+                <td class="text-center">
+                   <img class="img-card-menu mt-5" src="{{asset('logo/'.$config->logo)}}">
+               </td>
                <td class="text-center title-header">
-                  SAC XIB CHAAC, S.A. DE C.V.
-              </td>
-            </tr>
+                         SISTEMA DE ADMINISTRACIÓN DE
+                         SEGURIDAD INDUSTRIAL, SEGURIDAD
+                         OPERATIVA Y PROTECCIÓN AL MEDIO
+                         AMBIENTE (SASISOPA) y SISTEMA DE
+                         GESTIÓN DE LAS MEDICIONES (SGM)
+               </td>
+                <td class="text-center title-header">
+                     {{$config->sac}}
+               </td>
+             </tr>
           </tbody>
         </table>
 
@@ -380,20 +380,20 @@
           </thead>
           <tbody>
             <tr>
-               <td class="text-center">
-                  <img class="img-card-menu mt-5" src="assets\img\pdf\2.png">
-              </td>
-              <td class="text-center title-header">
-                        SISTEMA DE ADMINISTRACIÓN DE
-                        SEGURIDAD INDUSTRIAL, SEGURIDAD
-                        OPERATIVA Y PROTECCIÓN AL MEDIO
-                        AMBIENTE (SASISOPA) y SISTEMA DE
-                        GESTIÓN DE LAS MEDICIONES (SGM)
-              </td>
+                <td class="text-center">
+                   <img class="img-card-menu mt-5" src="{{asset('logo/'.$config->logo)}}">
+               </td>
                <td class="text-center title-header">
-                  SAC XIB CHAAC, S.A. DE C.V.
-              </td>
-            </tr>
+                         SISTEMA DE ADMINISTRACIÓN DE
+                         SEGURIDAD INDUSTRIAL, SEGURIDAD
+                         OPERATIVA Y PROTECCIÓN AL MEDIO
+                         AMBIENTE (SASISOPA) y SISTEMA DE
+                         GESTIÓN DE LAS MEDICIONES (SGM)
+               </td>
+                <td class="text-center title-header">
+                     {{$config->sac}}
+               </td>
+             </tr>
           </tbody>
         </table>
 

@@ -31,6 +31,24 @@ class User extends Authenticatable
         'firma',
         'id_sucursal',
         'id_empresa',
+
+        'alta',
+        'baja',
+        'enfermedad',
+        'alergias',
+        'seguro_social',
+        'estado_civil',
+        'estudios',
+        'contratacion',
+        'personal',
+        'jornada',
+        'rotacion_turnos',
+        'tiempo_puesto',
+        'experiencia',
+        'departamento',
+        'nombre_emergencia',
+        'telefono_emergencia',
+        'foto',
     ];
 
     /**

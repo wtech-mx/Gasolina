@@ -15,4 +15,9 @@ class Preventiva extends Model
 
     protected $fillable = ['id_user','elemento','descripcion','estatus','fecha'];
 
+    public function Users()
+    {
+       return $this->belongsTo('App\Models\User','id_user');
+    }
+
 }

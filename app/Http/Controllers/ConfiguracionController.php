@@ -115,8 +115,19 @@ class ConfiguracionController extends Controller
         $tanque->color_diaria = $request->get('color_diaria');
         $tanque->color_mensual = $request->get('color_mensual');
         $tanque->color_semestral = $request->get('color_semestral');
-        $tanque->color_semestral = $request->get('color_año');
+        $tanque->color_año = $request->get('color_año');
         $tanque->color_no_realizada = $request->get('color_no_realizada');
+        if ($request->hasFile("logo")) {
+
+            $file = $request->file('logo');
+            $path = public_path() . '/logo';
+            $fileName = uniqid() . $file->getClientOriginalName();
+
+            $file->move($path, $fileName);
+
+            $tanque->logo = $fileName;
+        }
+        $tanque->sac = $request->get('sac');
         $tanque->save();
 
         Session::flash('success', 'Se ha actualizado sus datos con exito');

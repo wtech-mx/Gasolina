@@ -1,0 +1,11 @@
+button.dt-button:first-child, div.dt-button:first-child, a.dt-button:first-child, input.dt-button:first-child{
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+button.dt-button, div.dt-button, a.dt-button, input.dt-button{
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}

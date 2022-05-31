@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('css-custom')
+<link rel="stylesheet" href="{{ asset('assets/css/custom_table.css') }}">
+@endsection
 @section('content')
     <div class="container-fluid">
         <div class="row justify-content-center">
