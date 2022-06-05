@@ -210,6 +210,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/consultar', [App\Http\Controllers\VElementoController::class, 'consultar'])->name('consultar.elemento5');
 
     Route::get('ver/generar-v', [App\Http\Controllers\vElementoController::class, 'pdf_generar_v'])->name('pdf_generar_v.view');
+    Route::get('ver/otorgamiento-v', [App\Http\Controllers\vElementoController::class, 'pdf_otorgamiento_v'])->name('pdf_otorgamiento_v.view');
 
     Route::get('ver/sasisopa-v', [App\Http\Controllers\vElementoController::class, 'pdf_sasisopa_v'])->name('pdf_v.view');
     Route::get('imprimir/sasisopa-v', [App\Http\Controllers\ivElementoController::class, 'pdf_sasisopa_v_download'])->name('pdf_v.print');

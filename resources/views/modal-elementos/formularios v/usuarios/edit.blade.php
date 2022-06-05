@@ -1,9 +1,9 @@
 <!-- Modal -->
-<div class="modal fade" id="editModal{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade " id="editModal{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Editar Usuario {{$item->id}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -15,21 +15,21 @@
                     <div class="d-flex justify-content-center">
                         <ul class="nav nav-tabs" id="pills-tab" role="tablist">
                             <li class="nav-item">
-                            <a type="button" class="nav-link active" id="pills-info-tabs" data-bs-toggle="pill" data-bs-target="#pills-infos" role="tab" aria-controls="pills-infos" aria-selected="true">Info General</a>
+                            <a type="button" class="nav-link active" id="pills-info-tab{{$item->id}}" data-bs-toggle="pill" data-bs-target="#pills-info{{$item->id}}" role="tab" aria-controls="pills-info{{$item->id}}" aria-selected="true">Info General</a>
                             </li>
 
                             <li class="nav-item">
-                            <a type="button" class="nav-link" id="pills-trabajador-tabs" data-bs-toggle="pill" href="#pills-trabajadors" role="tab" aria-controls="pills-trabajadors" aria-selected="false">D. Trabajador</a>
+                            <a type="button" class="nav-link" id="pills-trabajador-tab{{$item->id}}" data-bs-toggle="pill" href="#pills-trabajador{{$item->id}}" role="tab" aria-controls="pills-trabajador{{$item->id}}" aria-selected="false">D. Trabajador</a>
                             </li>
 
                             <li class="nav-item">
-                                <a type="button" class="nav-link" id="nom-tab2" data-bs-toggle="pill" href="#nom2" role="tab" aria-controls="nom2" aria-selected="false">Nom 035</a>
+                                <a type="button" class="nav-link" id="nom-tab{{$item->id}}" data-bs-toggle="pill" href="#nom{{$item->id}}" role="tab" aria-controls="nom{{$item->id}}" aria-selected="false">Nom 035</a>
                             </li>
                         </ul>
                     </div>
                     {{-- tab datos de infos --}}
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="pills-infos" role="tabpanel" aria-labelledby="pills-info-tabs">
+                        <div class="tab-pane fade show active" id="pills-info{{$item->id}}" role="tabpanel" aria-labelledby="pills-info-tab{{$item->id}}">
                             <label for="">Información General</label>
                                 <div class="row">
                                     <div class="col-sm-6 col-6">
@@ -69,10 +69,12 @@
 
                                 <div class="row">
                                     <div class="col-sm-6 col-6">
-                                        <div class="form-group mb-3 position-relative" style="position: relative">
-                                            <i class="fa fa-street-view icon-style-2"></i>
-                                            <label class="form-label label-custom-yellow">Puesto</label>
-                                            <input type="text" class="form-control input-style" id="puesto" name="puesto" placeholder="Puesto" value="{{$item->puesto}}">
+                                        <div class="form-group position-relative mt-3 ">
+                                            <i class="fa fa-user-times icon-style-2"></i>
+                                            <label class="form-check-label" for="flexSwitchCheckDefault">Dar de baja a {{$item->name}}</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="baja" name="baja">
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +139,7 @@
                         {{-- tab datos de info --}}
 
                         {{-- tab datos de trabajadors --}}
-                        <div class="tab-pane fade" id="pills-trabajadors" role="tabpanel" aria-labelledby="pills-trabajador-tabs">
+                        <div class="tab-pane fade" id="pills-trabajador{{$item->id}}" role="tabpanel" aria-labelledby="pills-trabajador-tab{{$item->id}}">
                             <label for="">Datos del Trabajador</label>
                             <div class="row">
                                 <div class="col-sm-6 col-6">
@@ -177,7 +179,7 @@
                         {{-- tab datos de trabajador --}}
 
                         {{-- tab datos de nom --}}
-                        <div class="tab-pane fade" id="nom2" role="tabpanel" aria-labelledby="nom-tab2">
+                        <div class="tab-pane fade" id="nom{{$item->id}}" role="tabpanel" aria-labelledby="nom-tab{{$item->id}}">
                             <div class="row">
                                 <div class="col-sm-6 col-6">
                                     <div class="form-group mb-3 position-relative" >

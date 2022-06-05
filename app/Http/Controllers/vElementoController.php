@@ -30,7 +30,15 @@ class vElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios v.generar', compact('config'));
-        return $pdf->stream('Generar V.pdf');
+        return $pdf->stream('V-01-03 Documento de asignación de Responsable tecnico.pdf');
+    }
+
+    public function pdf_otorgamiento_v()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios v.otorgamiento_autoridad', compact('config'));
+        return $pdf->stream('Otorgamiento Autoridad.pdf');
     }
 
     public function pdf_sasisopa_v()

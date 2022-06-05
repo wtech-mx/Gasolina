@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Arr;
+use Carbon\Carbon;
 
 class UserController extends Controller
 {
@@ -188,7 +189,11 @@ class UserController extends Controller
         }
 
         $user->alta = $request->get('alta');
-        $user->baja = $request->get('baja');
+
+        $current = Carbon::now()->toDateString();
+        if ($request->get("baja")) {
+            $user->baja = $current;
+        }
         $user->enfermedad = $request->get('enfermedad');
         $user->alergias = $request->get('alergias');
         $user->seguro_social = $request->get('seguro_social');
@@ -203,7 +208,6 @@ class UserController extends Controller
         $user->departamento = $request->get('departamento');
         $user->nombre_emergencia = $request->get('nombre_emergencia');
         $user->telefono_emergencia = $request->get('telefono_emergencia');
-
         $user->update();
 
         DB::table('model_has_roles')->where('model_id',$id)->delete();
@@ -211,7 +215,7 @@ class UserController extends Controller
         $user->assignRole($request->input('roles'));
 
         Session::flash('success', 'Se ha actualizado sus datos con exito');
-        return redirect()->route('index.usuario');
+        return redirect()->route('index.actualizar');
     }
 
     public function update_usuario_password(Request $request, $id)

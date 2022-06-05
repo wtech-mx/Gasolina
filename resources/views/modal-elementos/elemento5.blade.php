@@ -70,6 +70,10 @@
 
                                 <div id="elementov" class="text-center" style="display: none;">
 
+                                    <a class="btn text-dark" href="{{route('pdf_otorgamiento_v.view')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important" target="_blank">
+                                        Otorgamiento
+                                    </a>
+
                                     <a class="btn text-dark" href="{{route('pdf_generar_v.view')}}" style="background-color:#001d3d;color:  #852ecc!important; border: 2px solid #852ecc!important" target="_blank">
                                         Generar
                                     </a>

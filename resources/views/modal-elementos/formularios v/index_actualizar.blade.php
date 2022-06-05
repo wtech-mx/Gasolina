@@ -69,7 +69,7 @@
                                             <th scope="col">Puesto</th>
                                             <th scope="col">Alta</th>
                                             <th scope="col">baja</th>
-                                            <th scope="col">Estatus</th>
+                                            <th scope="col">Acciones</th>
                                         </tr>
                                         </thead>
                                         <tbody class="text-white">
@@ -85,11 +85,12 @@
                                                 @if ($item->baja == null)
                                                     <td>-</td>
                                                 @else
-                                                    <td>{{$item->alta}}</td>
+                                                    <td>{{$item->baja}}</td>
                                                 @endif
-                                                <td>0</td>
                                                 <td>
-                                                    <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#editModal{{$item->id}}"></i></a>
+                                                    <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#editModal{{$item->id}}">
+                                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                    </a>
                                                 </td>
                                             </tr>
                                             @include('modal-elementos.formularios v.usuarios.edit')
