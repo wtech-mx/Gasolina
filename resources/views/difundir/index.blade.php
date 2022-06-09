@@ -55,10 +55,7 @@
                                             <th>Elemento</th>
                                             <th>Fecha</th>
                                             <th>Descripcion</th>
-                                            <th>Tipo</th>
-                                            <th>Inicial</th>
-                                            <th>Final</th>
-                                            <th></th>
+                                            <th>Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody class="text-white">
@@ -69,13 +66,14 @@
                                             <td>{{ $row->id_elemento }}</td>
                                             <td>{{ $row->fecha }}</td>
                                             <td>{{ $row->descripcion }}</td>
-                                            <td>{{ $row->tipo }}</td>
-                                            <td>{{ $row->inicial }}</td>
-                                            <td>{{ $row->final }}</td>
 
                                                 <td >
                                                     <a  data-bs-toggle="modal" data-bs-target="#updateModal{{$row->id}}" style="color: #ffffff;font-size: 16px;padding: 5px;">
-                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                    </a>
+
+                                                    <a class="btn" target="_blank" href="{{route('formato_difusion.view', $row->id)}}">
+                                                        <i class="fa fa-file-pdf-o" aria-hidden="true" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
                                                     </a>
 
                                                     <a onclick="confirm('Confirm Delete Difusion id {{$row->id}}? \nDeleted Difusions cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})" style="color: #ffffff;font-size: 16px;padding: 5px;">

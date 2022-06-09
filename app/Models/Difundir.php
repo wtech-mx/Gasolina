@@ -20,6 +20,7 @@ class Difundir extends Model
         'tipo',
         'inicial',
         'final',
+        'pdf',
     ];
 
     /**

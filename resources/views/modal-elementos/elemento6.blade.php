@@ -57,7 +57,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="element1">
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_tree" aria-expanded="true" aria-controls="element7_tree">
-                                Formulario
+                                Formatos del elemento
                             </button>
                         </h2>
                         <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">

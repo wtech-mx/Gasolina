@@ -54,6 +54,15 @@ class DifundirController extends Controller
         $difundir->tipo = $request->get('tipo');
         $difundir->inicial = $request->get('inicial');
         $difundir->final = $request->get('final');
+
+        if ($request->hasFile("pdf")) {
+            $file = $request->file('pdf');
+            $path = public_path() . '/pdf_difundir';
+            $fileName = uniqid() . $file->getClientOriginalName();
+
+            $file->move($path, $fileName);
+            $difundir->pdf = $fileName;
+        }
         $difundir->save();
 
         $comunicacion = $request->get('comunicacion');

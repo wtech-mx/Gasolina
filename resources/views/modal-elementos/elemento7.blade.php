@@ -25,46 +25,35 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" >
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
-                            Consulta VII-01-01
+                                Documentos de consulta
                             </button>
                         </h2>
                         <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
 
-                                <table class="table" id="table_id3" >
-                                    <thead class="text-white">
-                                    <tr>
-                                        <th scope="col">F. solicitud</th>
-                                        <th scope="col">Solicita D.</th>
-                                        <th scope="col">Reglas</th>
-                                        <th scope="col">Tipo de P.</th>
-                                        <th scope="col">¿Registro term.?</th>
-                                        <th scope="col">Acciones</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody class="text-white">
-                                        @foreach ($difundir as $item)
-                                            <tr>
-                                                <td>{{$item->fecha}}</td>
-                                                <td>Declan Horne</td>
-                                                <td>{{$item->id_elemento}}</td>
-                                                <td>
-                                                    @if($item->tipo == 'interna')
-                                                     Interna<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked disabled>
-                                                     @else
-                                                     Externa<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked disabled>
-                                                    @endif
-                                                </td>
-                                                <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
-                                                <td>
-                                                    <div class="btn-group">
-                                                        {{-- <a href="{{route('difundir.index')}}"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a> --}}
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
+                                <form action="index.php" method="post">
+                                    <select id="status" name="status" class="form-select" onChange="mostrar7(this.value);">
+                                        <option value="">Documento*</option>
+                                        <option value="vii">VII - Comunicación participación y consulta</option>
+                                        <option value="vii-01">VII-01 Procedimiento de comunicación interna y externa</option>
+                                        <option value="vii-03">VII-03 Procedimiento de solicitud de información, quejas o sugerencias.</option>
+                                    </select>
+                                </form>
+
+                                <div id="vii" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_vii.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_vii.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                </div>
+
+                                <div id="vii-01" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_vii_01.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_vii_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                </div>
+
+                                <div id="vii-03" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_vii_03.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_vii_03.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -74,14 +63,14 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="element1">
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_tree" aria-expanded="true" aria-controls="element7_tree">
-                                Formulario
+                                Formatos del elemento
                             </button>
                         </h2>
                         <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
 
                                 {{--nav tittle ejecutar/calendario--}}
-                                <div class="d-flex justify-content-center">
+                                {{-- <div class="d-flex justify-content-center">
                                     <ul class="nav nav-pills mb-3 d-flex " id="tab" role="tablist">
                                         <li class="nav-item" role="presentation">
                                             <button class="nav-link active" id="ejecutar-tab" data-bs-toggle="pill" data-bs-target="#ejecutar" type="button" role="tab" aria-controls="ejecutar" aria-selected="true">
@@ -95,39 +84,36 @@
                                             </button>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
                                 {{--nav tittle ejecutar/calendario--}}
 
                                 {{--nav content ejecutar/calendario --}}
                                 <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="ejecutar" role="tabpanel" aria-labelledby="ejecutar-tab">
                                         <form action="index.php" method="post">
-                                            <select id="status" name="status" class="form-select" onChange="mostrar6(this.value);">
+                                            <select id="status" name="status" class="form-select" onChange="mostrars7(this.value);">
                                                 <option value="">Seleccione Elemento</option>
-                                                <option value="VI-01-01">VI-01-01</option>
-                                                <option value="VI-01-03">VI-01-03</option>
-                                                <option value="VI-02-04">VI-02-04</option>
+                                                <option value="VII-01-01">VII-01-01</option>
+                                                <option value="VII-02-02">VII-02-02</option>
+                                                <option value="VII-03-02">VII-03-02</option>
                                              </select>
                                         </form>
 
-                                        <div id="VI-01-01" style="display: none;">
-                                            <a class="btn" href="{{route('index.evaluacion')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                                Evaluar
-                                            </a>
+                                        <div id="VII-01-01" style="display: none;">
 
-                                            <a class="btn text-dark" href="{{route('difundir_vi_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                                            <a class="btn text-dark" href="{{route('difundir_vii_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
                                                 Difundir
                                             </a>
 
-                                            <a class="btn  " href="{{route('preventiva_vi_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                            <a class="btn  " href="{{route('preventiva_vii_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
                                                 Accion Correctiva
                                             </a>
                                         </div>
 
-                                        <div id="VI-01-03" style="display: none;">
+                                        <div id="VII-02-02" style="display: none;">
 
-                                            <a class="btn" href="#" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                                Seguimiento
+                                            <a class="btn" href="{{route('index.vii_02_02')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                                                Ejecutar
                                             </a>
 
                                             <a class="btn text-dark" href="{{route('difundir_vi_01_03.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
@@ -139,16 +125,24 @@
                                             </a>
 
                                         </div>
-                                        <div id="VI-02-04" style="display: none;">
-                                            <a class="btn" href="{{route('consulta.puesto')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                                Consultar
+                                        <div id="VII-03-02" style="display: none;">
+                                            <a class="btn" href="{{route('index.vii_03_02')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                                                Ejecutar
+                                            </a>
+
+                                            <a class="btn text-dark" href="{{route('difundir_vi_01_03.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                                                Difundir
+                                            </a>
+
+                                            <a class="btn  " href="{{route('preventiva_vi_01_03.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                                Accion Correctiva
                                             </a>
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane fade" id="calendario" role="tabpanel" aria-labelledby="calendario-tab">
+                                    {{-- <div class="tab-pane fade" id="calendario" role="tabpanel" aria-labelledby="calendario-tab">
                                         <h5 class="text-center" style="font-size: 15px">Matriz de aspectos e impactos ambientales.</h5>
-                                        {{--nav tittle arrow--}}
+
                                         <div class="d-flex justify-content-center">
                                             <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
                                             <li class="nav-item" role="presentation">
@@ -168,13 +162,13 @@
                                             </li>
                                             </ul>
                                         </div>
-                                        {{--nav tittle arrow--}}
-                                        {{--nav content --}}
+
+
                                         <div class="tab-content" id="pills-tabContent">
                                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                                 <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                                     @csrf
-                                                    {{-- Tareas elementos --}}
+
                                                     <input type="hidden" name="elementos" id="elementos" value="1">
                                                     <input type="hidden" name="consultar" id="consultar" value="0">
                                                     <input type="hidden" name="generar" id="generar" value="0">
@@ -182,7 +176,6 @@
                                                     <input type="hidden" name="difundir" id="difundir" value="0">
                                                     <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                                    {{-- Calendario --}}
                                                     <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
                                                     <input type="hidden" name="title" id="title" value="V-01-01">
                                                     <input type="hidden" name="color" id="color" value="#2367D9">
@@ -195,7 +188,6 @@
                                                 <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
                                                     @csrf
 
-                                                    {{-- Tareas elementos --}}
                                                     <input type="hidden" name="elementos" id="elementos" value="1">
                                                     <input type="hidden" name="consultar" id="consultar" value="0">
                                                     <input type="hidden" name="generar" id="generar" value="0">
@@ -203,7 +195,7 @@
                                                     <input type="hidden" name="difundir" id="difundir" value="0">
                                                     <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                                    {{-- Calendario --}}
+
                                                     <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
                                                     <input type="hidden" name="title" id="title" value="V-01-01">
                                                     <input type="hidden" name="url" id="url" value="#exampleModal">
@@ -215,7 +207,6 @@
                                                 <form method="POST" action="{{ route('tareas.formulario_3') }}" enctype="multipart/form-data" role="form">
                                                     @csrf
 
-                                                    {{-- Tareas elementos --}}
                                                     <input type="hidden" name="elementos" id="elementos" value="1">
                                                     <input type="hidden" name="consultar" id="consultar" value="0">
                                                     <input type="hidden" name="generar" id="generar" value="0">
@@ -223,7 +214,7 @@
                                                     <input type="hidden" name="difundir" id="difundir" value="0">
                                                     <input type="hidden" name="correctiva" id="correctiva" value="0">
 
-                                                    {{-- Calendario --}}
+
                                                     <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
                                                     <input type="hidden" name="title" id="title" value="V-01-01">
                                                     <input type="hidden" name="url" id="url" value="#exampleModal">
@@ -232,8 +223,8 @@
                                                 </form>
                                             </div>
                                         </div>
-                                        {{--nav content --}}
-                                    </div>
+
+                                    </div> --}}
                                 </div>
                                 {{--nav content ejecutar/calendario --}}
 
@@ -252,7 +243,7 @@
 {{--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>--}}
 {{--        <button type="button" class="btn btn-primary">Understood</button>--}}
 {{--      </div>--}}
-
+@include('modal-elementos.formularios vii.script')
     </div>
   </div>
 </div>

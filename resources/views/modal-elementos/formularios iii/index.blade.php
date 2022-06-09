@@ -67,11 +67,11 @@
                                         <td>
                                             @if ($row->pdf == NULL)
                                             <a data-bs-toggle="modal" data-bs-target="#updateModal{{$row->id}}" style="color: #ffffff4d;font-size: 16px;padding: 5px;">
-                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                             </a>
                                             @else
                                             <a data-bs-toggle="modal" data-bs-target="#updateModal{{$row->id}}" style="color: #ffffff;font-size: 16px;padding: 5px;">
-                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                             </a>
                                             @endif
 

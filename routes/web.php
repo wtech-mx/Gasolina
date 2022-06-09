@@ -121,6 +121,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/difundir/vi-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_01.index');
     Route::get('/difundir/vi-01-03', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_03.index');
 
+    Route::get('/difundir/vii-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vii_01_01.index');
+
     // Route::get('imprimir/difundir/{id}', [App\Http\Controllers\DifundirController::class, 'pdf_difundir'])->name('print.difundir');
 
     Route::get('/graficas', [App\Http\Controllers\ElementosController::class, 'graficas'])->name('graficas');
@@ -149,6 +151,8 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::get('/preventiva/vi-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vi_01_01.index');
     Route::get('/preventiva/vi-01-03', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vi_01_03.index');
+
+    Route::get('/preventiva/vii-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vii_01_01.index');
 
     Route::get('/preventiva/x-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_x_01_01.index');
     Route::get('/preventiva/x-01-02', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_x_01_02.index');
@@ -241,10 +245,33 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/puesto/formato/vi-02-04', [App\Http\Controllers\ViElementoController::class, 'puesto_formato'])->name('consulta.puesto_formato');
 
     Route::get('ver/sasisopa-vi', [App\Http\Controllers\ViElementoController::class, 'pdf_sasisopa_vi'])->name('pdf_vi.view');
-    Route::get('imprimir/sasisopa-vi', [App\Http\Controllers\iViElementoController::class, 'pdf_sasisopa_vi_download'])->name('pdf_vi.print');
+    Route::get('imprimir/sasisopa-vi', [App\Http\Controllers\ViElementoController::class, 'pdf_sasisopa_vi_download'])->name('pdf_vi.print');
 
     Route::get('ver/sasisopa-vi-01', [App\Http\Controllers\ViElementoController::class, 'pdf_sasisopa_vi_01'])->name('pdf_vi_01.view');
     Route::get('imprimir/sasisopa-vi-01', [App\Http\Controllers\ViElementoController::class, 'pdf_sasisopa_vi_01_download'])->name('pdf_vi_01.print');
+
+     /*|--------------------------------------------------------------------------
+    |Evaluacion (VII-01-01)
+    |--------------------------------------------------------------------------*/
+    Route::get('/index/vii-02-02', [App\Http\Controllers\viiElementoController::class, 'index'])->name('index.vii_02_02');
+    Route::post('/store/vii-02-02', [App\Http\Controllers\viiElementoController::class, 'store'])->name('store.vii_02_02');
+    Route::patch('/update/vii-02-02/{id}', [App\Http\Controllers\viiElementoController::class, 'update'])->name('update.vii_02_02');
+
+    Route::get('/index/vii-03-02', [App\Http\Controllers\viiElementoController::class, 'index_03'])->name('index.vii_03_02');
+    Route::post('/store/vii-03-02', [App\Http\Controllers\viiElementoController::class, 'store_03'])->name('store.vii_03_02');
+    Route::patch('/update/vii-03-02/{id}', [App\Http\Controllers\viiElementoController::class, 'update_03'])->name('update.vii_03_02');
+
+    Route::get('ver/sasisopa-vii', [App\Http\Controllers\viiElementoController::class, 'pdf_sasisopa_vii'])->name('pdf_vii.view');
+    Route::get('imprimir/sasisopa-vii', [App\Http\Controllers\viiElementoController::class, 'pdf_sasisopa_vii_download'])->name('pdf_vii.print');
+
+    Route::get('ver/sasisopa-vii-01', [App\Http\Controllers\viiElementoController::class, 'pdf_sasisopa_vii_01'])->name('pdf_vii_01.view');
+    Route::get('imprimir/sasisopa-vii-01', [App\Http\Controllers\viiElementoController::class, 'pdf_sasisopa_vii_01_download'])->name('pdf_vii_01.print');
+
+    Route::get('ver/sasisopa-vii-03', [App\Http\Controllers\viiElementoController::class, 'pdf_sasisopa_vii_03'])->name('pdf_vii_03.view');
+    Route::get('imprimir/sasisopa-vii-03', [App\Http\Controllers\viiElementoController::class, 'pdf_sasisopa_vii_03_download'])->name('pdf_vii_03.print');
+
+    Route::get('ver/formato-difusion/{id}', [App\Http\Controllers\viiElementoController::class, 'formato_difusion'])->name('formato_difusion.view');
+
 
     /*|--------------------------------------------------------------------------
     |X Elemento
