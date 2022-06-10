@@ -272,6 +272,18 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::get('ver/formato-difusion/{id}', [App\Http\Controllers\viiElementoController::class, 'formato_difusion'])->name('formato_difusion.view');
 
+     /*|--------------------------------------------------------------------------
+    |Evaluacion (VIII-01-01)
+    |--------------------------------------------------------------------------*/
+    Route::get('/index/viii-01-01', [App\Http\Controllers\viiiElementoController::class, 'index'])->name('index.viii_01_01');
+    Route::post('/store/viii-01-01', [App\Http\Controllers\viiiElementoController::class, 'store'])->name('store.viii_01_01');
+    Route::patch('/update/viii-01-01/{id}', [App\Http\Controllers\viiiElementoController::class, 'update'])->name('update.viii_01_01');
+
+    Route::get('ver/sasisopa-viii', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii'])->name('pdf_viii.view');
+    Route::get('imprimir/sasisopa-viii', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii_download'])->name('pdf_viii.print');
+
+    Route::get('ver/sasisopa-viii_01', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii_01'])->name('pdf_viii_01.view');
+    Route::get('imprimir/sasisopa-viii_01', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii_01_download'])->name('pdf_viii_01.print');
 
     /*|--------------------------------------------------------------------------
     |X Elemento

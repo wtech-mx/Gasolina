@@ -87,9 +87,9 @@
                                         <form action="index.php" method="post">
                                             <select id="status" name="status" class="form-select" onChange="mostrars6(this.value);">
                                                 <option value="">Seleccione Elemento</option>
-                                                <option value="VI-01-01">VI-01-01</option>
-                                                <option value="VI-01-03">VI-01-03</option>
-                                                <option value="VI-02-04">VI-02-04</option>
+                                                <option value="VI-01-01">VI-01-01 Matriz de identificación de competencia y formación interna y externa.</option>
+                                                <option value="VI-01-03">VI-01-03 Plan general de capacitación externo.</option>
+                                                <option value="VI-02-04">VI-02-04 Perfil de puesto.</option>
                                              </select>
                                         </form>
 
