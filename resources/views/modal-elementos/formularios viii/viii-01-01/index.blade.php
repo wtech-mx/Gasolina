@@ -29,8 +29,7 @@
                                 <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                             </a>
 
-                            <h5 class="text-white">VII-02-02 Matriz de registro y seguimiento de actos o condiciones
-                                inseguras.</h5>
+                            <h5 class="text-white">VIII-01-01 Listado de documentación interna.</h5>
 
                                 <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalViii01">
                                     <i class="fa fa-plus btn-icon-back"></i>
@@ -62,25 +61,23 @@
                                     <td>{{$item->notificacion}}</td>
                                     <td>
                                         @if ($item->pdf == NULL)
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalViii{{$item->id}}"
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalViii01{{$item->id}}"
                                             style="color: #ffffff4d;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @else
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalViii{{$item->id}}"
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalViii01{{$item->id}}"
                                             style="color: #ffffff;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @endif
-                                        <td>
-                                            <a href="#" target="_blank">
+                                            {{-- <a href="#" target="_blank">
                                                 <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                            </a>
-                                        </td>
+                                            </a> --}}
                                     </td>
                                 </tr>
                                 @include('modal-elementos.formularios viii.viii-01-01.update')
-                                @include('modal-elementos.formularios viii.viii-01-01.if_pdf')
+                                {{-- @include('modal-elementos.formularios viii.viii-01-01.if_pdf') --}}
                                 @endforeach
                             </tbody>
                         </table>

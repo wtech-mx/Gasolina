@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="updateModalViii01{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="updateModalViii{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -13,29 +13,14 @@
 
                             <div class="row">
                                 <div class="form-group col-6 mt-3">
-                                    <label>tipo</label>
-                                    <input name="tipo" type="text" class="form-control" id="tipo"
-                                        value="{{$item->tipo}}">
+                                    <label>Nombre</label>
+                                    <input name="nombre" type="text" class="form-control" id="nombre"
+                                        value="{{$item->nombre}}">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>reglas</label>
-                                    <input name="reglas" type="text" class="form-control" id="reglas" value="{{$item->reglas}}">
-                                </div>
-
-                                <div class="form-group col-6 mt-3">
-                                    <label>fecha</label>
-                                    <input name="fecha" type="date" class="form-control" id="fecha" value="{{$item->fecha}}">
-                                </div>
-
-                                <div class="form-group col-6 mt-3">
-                                    <label>aprobacion</label>
-                                    <input name="aprobacion" type="date" class="form-control" id="aprobacion" value="{{$item->aprobacion}}">
-                                </div>
-
-                                <div class="form-group col-6 mt-3">
-                                    <label>notificacion</label>
-                                    <input name="notificacion" type="date" class="form-control" id="notificacion" value="{{$item->notificacion}}">
+                                    <label>Estatus</label>
+                                    <input name="estatus" type="date" class="form-control" id="estatus" value="{{$item->estatus}}">
                                 </div>
 
                                 {{-- <div class="form-group col-6 col-xs-6 col-sm-6 col-md-6 mt-4">

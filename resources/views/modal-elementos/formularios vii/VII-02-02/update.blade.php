@@ -85,7 +85,7 @@
                         <div class="col-sm-12 col-12">
                             <div class="form-group mb-3 position-relative">
                                 <label class="form-label label-custom-yellow">PDF</label>
-                                <iframe width="400" height="400" src="{{asset('/vii_elemento'.$item->pdf)}}" frameborder="0"></iframe>
+                                <iframe width="400" height="400" src="{{asset('public/vii_elemento/', $item->pdf)}}" frameborder="0"></iframe>
                                 <input type="file" class="custom-file-input input-group-text" id="pdf" name="pdf" value="{{$item->pdf }}">
                             </div>
                         </div>

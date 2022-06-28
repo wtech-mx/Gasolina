@@ -1,12 +1,12 @@
 <!-- Modal -->
-<div class="modal fade" id="exampleModalViii01" tabindex="-1" aria-labelledby="exampleModalViii01" aria-hidden="true">
+<div class="modal fade" id="exampleModalViii05" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalViii01">Crear VIII-01-01</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Crear VIII-01-05</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="POST" action="{{ route('store.viii_01_01') }}" enctype="multipart/form-data" role="form">
+            <form method="POST" action="{{ route('store.viii_01_05') }}" enctype="multipart/form-data" role="form">
                 @csrf
                 <div class="modal-body">
                             <div class="row">
@@ -17,27 +17,28 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
+                                    <label for="nombre">Responsable</label>
+                                    <select name="id_responsable" class="form-control" id="id_responsable">
+                                            <option value="">Nombre usuario</option>
+                                            @foreach ($users as $item)
+                                                <option value="{{$item->id}}">{{$item->name}}{{ $item->apellido}}</option>
+                                            @endforeach
+                                        </select>
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>fecha_notificacion</label>
+                                    <input name="fecha_notificacion" type="date" class="form-control" id="fecha_notificacion">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>fecha_aprovacion</label>
+                                    <input name="fecha_aprovacion" type="date" class="form-control" id="fecha_aprovacion">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
                                     <label>reglas</label>
-                                    <input name="reglas" type="text" class="form-control" id="reglas"
-                                        placeholder="reglas">
-                                </div>
-
-                                <div class="form-group col-6 mt-3">
-                                    <label>fecha</label>
-                                    <input name="fecha" type="date" class="form-control" id="fecha"
-                                        placeholder="fecha">
-                                </div>
-
-                                <div class="form-group col-6 mt-3">
-                                    <label>aprobacion</label>
-                                    <input name="aprobacion" type="date" class="form-control" id="aprobacion"
-                                        placeholder="aprobacion">
-                                </div>
-
-                                <div class="form-group col-6 mt-3">
-                                    <label>notificacion</label>
-                                    <input name="notificacion" type="date" class="form-control" id="notificacion"
-                                        placeholder="notificacion">
+                                    <input name="reglas" type="text" class="form-control" id="reglas" placeholder="reglas">
                                 </div>
 
                                 <div class="col-sm-12 col-12">

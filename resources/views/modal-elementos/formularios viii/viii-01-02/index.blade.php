@@ -29,53 +29,44 @@
                                 <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                             </a>
 
-                            <h5 class="text-white">VII-02-02 Matriz de registro y seguimiento de actos o condiciones
-                                inseguras.</h5>
+                            <h5 class="text-white">VIII-01-02 Listado de formatos, registros y bitácoras.</h5>
 
-                                <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalVii02">
+                                <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalViii02">
                                     <i class="fa fa-plus btn-icon-back"></i>
                                 </a>
 
                         </div>
                     </div>
-                    @include('modal-elementos.formularios vii.VII-02-02.create')
+                    @include('modal-elementos.formularios viii.viii-01-02.create')
                     <div class="col-12 p-4">
                         <table class="table" id="table_id">
                             <thead class="text-white">
                                 <tr>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Lugar</th>
-                                    <th scope="col">Situación observada</th>
-                                    <th scope="col">Tipo</th>
-                                    <th scope="col">Descripción</th>
-                                    <th scope="col">Empleado</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Estatus</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody class="text-white">
-                                @foreach ($vii_elemento as $item)
+                                @foreach ($viii_elemento_02 as $item)
                                 <tr>
-                                    <td>{{$item->fecha}}</td>
-                                    <td>{{$item->lugar}}</td>
-                                    <td>{{$item->observada}}</td>
-                                    <td>{{$item->tipo}}</td>
-                                    <td>{{$item->descripcion}}</td>
-                                    <td>{{$item->empleado}}</td>
+                                    <td>{{$item->nombre}}</td>
+                                    <td>{{$item->estatus}}</td>
                                     <td>
                                         @if ($item->pdf == NULL)
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalVii{{$item->id}}"
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalViii{{$item->id}}"
                                             style="color: #ffffff4d;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @else
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalVii{{$item->id}}"
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalViii{{$item->id}}"
                                             style="color: #ffffff;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @endif
                                     </td>
                                 </tr>
-                                @include('modal-elementos.formularios vii.VII-02-02.update')
+                                @include('modal-elementos.formularios viii.viii-01-02.update')
                                 @endforeach
                             </tbody>
                         </table>

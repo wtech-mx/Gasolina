@@ -8,8 +8,8 @@
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title text-center" style="font-size: 16px;">
-            Comunicacion , participacion y consulta
+        <h5 class="modal-title text-center"  style="font-size: 16px;">
+           Seguridad de contratistas
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -19,79 +19,98 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="element_12">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="element1">
-                      <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element_12collapse" aria-expanded="true" aria-controls="element_12collapse">
-                        IX-01-01
-                      </button>
-                    </h2>
-                    <div id="element_12collapse" class="accordion-collapse collapse show" aria-labelledby="element1" data-bs-parent="#element_12">
-                      <div class="accordion-body">
-                            <h5 class="text-center" style="font-size: 15px">Matriz de mejores prácticas.</h5>
-                            {{--nav tittle arrow--}}
-                            <div class="d-flex justify-content-center">
+                <div class="accordion accordion-flush" id="accordionExample12">
 
-                                <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home23" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                                        Opcion 1
-                                    </button>
-                                  </li>
+                    {{-------Descarga---------}}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#element12_one" aria-expanded="true"
+                                aria-controls="element12_one">
+                                Documentos de consulta
+                            </button>
+                        </h2>
+                        <div id="element12_one" class="accordion-collapse collapse show"
+                            aria-labelledby="element12_1" data-bs-parent="#accordionExample12">
+                            <div class="accordion-body">
 
-                                  <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile23" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                        Opcion 2
-                                    </button>
-                                  </li>
-                                </ul>
-                            </div>
-                            {{--nav tittle arrow--}}
-                            {{--nav content --}}
-                            <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="pills-home23" role="tabpanel" aria-labelledby="pills-home-tab">
-                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
-                                      @csrf
-                                      {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="12">
-                                      <input type="hidden" name="consultar" id="consultar" value="0">
-                                      <input type="hidden" name="actualizar" id="actualizar" value="0">
-                                      <input type="hidden" name="difundir" id="difundir" value="0">
-                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
+                                <form action="index.php" method="post">
+                                    <select id="status" name="status" class="form-select"
+                                        onChange="mostrar12(this.value);">
+                                        <option value="">Documento*</option>
+                                        <option value="xii">XII - Seguridad a contratistas</option>
+                                        <option value="xii-01">XII-01 Procedimiento de seguridad de contratistas</option>
+                                    </select>
+                                </form>
 
-                                      {{-- Calendario --}}
-                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                      <input type="hidden" name="title" id="title" value="IX-01-01">
-                                      <input type="hidden" name="color" id="color" value="#2367D9">
-                                      <input type="hidden" name="url" id="url" value="#exampleModal">
-
-                                      @include('modal-elementos.formulario1')
-                                    </form>
+                                <div id="xii" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_xii.view')}}" target="_blank"><i
+                                            class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_xii.print')}}"><i class="icon_config fa fa-download"
+                                            aria-hidden="true"></i></a>
                                 </div>
-                                <div class="tab-pane fade" id="pills-profile23" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                   <form method="POST" action="{{ route('tareas.store') }}" enctype="multipart/form-data" role="form">
-                                      @csrf
 
-                                      {{-- Tareas elementos --}}
-                                      <input type="hidden" name="elementos" id="elementos" value="12">
-                                      <input type="hidden" name="consultar" id="consultar" value="0">
-                                      <input type="hidden" name="actualizar" id="actualizar" value="0">
-                                      <input type="hidden" name="difundir" id="difundir" value="0">
-                                      <input type="hidden" name="correctiva" id="correctiva" value="0">
-
-                                      {{-- Calendario --}}
-                                      <input type="hidden" name="image" id="image" value="{{ asset('assets/img/icons/checked.png') }}">
-                                      <input type="hidden" name="title" id="title" value="IX-01-01">
-                                      <input type="hidden" name="url" id="url" value="#exampleModal">
-
-                                      @include('modal-elementos.formulario2')
-                                   </form>
+                                <div id="xii-01" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_xii_01.view')}}" target="_blank"><i
+                                            class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_xii_01.print')}}"><i class="icon_config fa fa-download"
+                                            aria-hidden="true"></i></a>
                                 </div>
                             </div>
-                            {{--nav content --}}
-                      </div>
+                        </div>
                     </div>
-                  </div>
+
+
+                    {{-------Formulario---------}}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="element1">
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#element12_tree" aria-expanded="true"
+                                aria-controls="element12_tree">
+                                Formatos del elemento
+                            </button>
+                        </h2>
+                        <div id="element12_tree" class="accordion-collapse collapse "
+                            aria-labelledby="element12_2" data-bs-parent="#accordionExample12">
+                            <div class="accordion-body">
+
+                                {{--nav content ejecutar/calendario --}}
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="ejecutar" role="tabpanel"
+                                        aria-labelledby="ejecutar-tab">
+                                        <form action="index.php" method="post">
+                                            <select id="status" name="status" class="form-select"
+                                                onChange="mostrars12(this.value);">
+                                                <option value="">Seleccione Elemento</option>
+                                                <option value="xii-01-01">XII-01-01 Listado de proveedor o contratista.</option>
+                                            </select>
+                                        </form>
+
+                                        <div id="xii-01-01" style="display: none;">
+                                            <a class="btn" href="{{route('index.xii_01_01')}}"
+                                                style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                                                Ejecutar
+                                            </a>
+
+                                            <a class="btn text-dark"
+                                                href="{{route('difundir_vii_01_01.index')}}"
+                                                style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                                                Difundir
+                                            </a>
+
+                                            <a class="btn  " href="{{route('preventiva_vii_01_01.index')}}"
+                                                style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                                Accion Correctiva
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{--nav content ejecutar/calendario --}}
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -99,11 +118,8 @@
 
       </div>
 
-{{--      <div class="modal-footer">--}}
-{{--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>--}}
-{{--        <button type="button" class="btn btn-primary">Understood</button>--}}
-{{--      </div>--}}
-
+    @include('modal-elementos.formularios xii.script')
     </div>
   </div>
 </div>
+

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
     <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
 
 
@@ -67,7 +67,7 @@
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.colVis.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 
     <script type="text/javascript">
@@ -182,6 +182,18 @@
         //     $(this).parents("._form").remove();
         // });
     </script>
+
+<script>
+    $(document).ready(function() {
+        // Select2 Multiple
+        $('.select2-multiple').select2({
+            placeholder: "Select",
+            allowClear: true
+        });
+
+    });
+
+</script>
 
 	@livewireScripts
 

@@ -110,7 +110,7 @@
 
                                         <div id="VIII-01-02" style="display: none;">
 
-                                            <a class="btn" href="{{route('index.vii_02_02')}}"
+                                            <a class="btn" href="{{route('index.viii_01_02')}}"
                                                 style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
                                                 Ejecutar
                                             </a>
@@ -127,7 +127,8 @@
 
                                         </div>
                                         <div id="VIII-01-03" style="display: none;">
-                                            <a class="btn" href="{{route('index.vii_03_02')}}"
+
+                                            <a class="btn" href="{{route('index.viii_01_03')}}"
                                                 style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
                                                 Ejecutar
                                             </a>
@@ -143,7 +144,7 @@
                                             </a>
                                         </div>
                                         <div id="VIII-01-04" style="display: none;">
-                                            <a class="btn" href="{{route('index.vii_03_02')}}"
+                                            <a class="btn" href="{{route('index.viii_01_04')}}"
                                                 style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
                                                 Ejecutar
                                             </a>
@@ -159,7 +160,7 @@
                                             </a>
                                         </div>
                                         <div id="VIII-01-05" style="display: none;">
-                                            <a class="btn" href="{{route('index.vii_03_02')}}"
+                                            <a class="btn" href="{{route('index.viii_01_05')}}"
                                                 style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
                                                 Ejecutar
                                             </a>

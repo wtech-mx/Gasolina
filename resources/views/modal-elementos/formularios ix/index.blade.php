@@ -29,53 +29,61 @@
                                 <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                             </a>
 
-                            <h5 class="text-white">VII-02-02 Matriz de registro y seguimiento de actos o condiciones
-                                inseguras.</h5>
+                            <h5 class="text-white">IX-01-01 Matriz de mejores prácticas.</h5>
 
-                                <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalVii02">
+                                <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalIX">
                                     <i class="fa fa-plus btn-icon-back"></i>
                                 </a>
 
                         </div>
                     </div>
-                    @include('modal-elementos.formularios vii.VII-02-02.create')
+                    @include('modal-elementos.formularios ix.create')
                     <div class="col-12 p-4">
                         <table class="table" id="table_id">
                             <thead class="text-white">
                                 <tr>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Lugar</th>
-                                    <th scope="col">Situación observada</th>
+                                    <th scope="col">Mejores practicas</th>
+                                    <th scope="col">Marco normativo</th>
+                                    <th scope="col">Dependencia</th>
+                                    <th scope="col">Fecha de emesión</th>
                                     <th scope="col">Tipo</th>
-                                    <th scope="col">Descripción</th>
-                                    <th scope="col">Empleado</th>
+                                    <th scope="col">Reglas y procedimientos</th>
+                                    <th scope="col">Mecanismo especifico</th>
+                                    <th scope="col">¿Pre configuración?</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody class="text-white">
-                                @foreach ($vii_elemento as $item)
+                                @foreach ($ix_elemento as $item)
+
                                 <tr>
+                                    <td>{{$item->mejores_practicas}}</td>
+                                    <td>{{$item->marco_normativo}}</td>
+                                    <td>{{$item->dependencia}}</td>
                                     <td>{{$item->fecha}}</td>
-                                    <td>{{$item->lugar}}</td>
-                                    <td>{{$item->observada}}</td>
                                     <td>{{$item->tipo}}</td>
-                                    <td>{{$item->descripcion}}</td>
-                                    <td>{{$item->empleado}}</td>
+                                    <td>{{$item->reglas}}</td>
+                                    <td>{{$item->mecanismos}}</td>
+                                    <td> @if ($item->configuracion == '1')
+                                        <input class="form-check-input" type="radio" name="configuracion" id="configuracion" checked>
+                                    @else
+                                        <input class="form-check-input" type="radio" name="configuracion" id="configuracion">
+                                    @endif</td>
                                     <td>
                                         @if ($item->pdf == NULL)
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalVii{{$item->id}}"
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalIX{{$item->id}}"
                                             style="color: #ffffff4d;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @else
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalVii{{$item->id}}"
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalIX{{$item->id}}"
                                             style="color: #ffffff;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @endif
                                     </td>
                                 </tr>
-                                @include('modal-elementos.formularios vii.VII-02-02.update')
+                                @include('modal-elementos.formularios ix.update')
                                 @endforeach
                             </tbody>
                         </table>

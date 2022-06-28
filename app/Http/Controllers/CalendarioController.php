@@ -88,7 +88,7 @@ class CalendarioController extends Controller
             $tarea->estatus = 0;
             $tarea->check = 0;
             $tarea->start = $request->get('start');
-            $tarea->color = $config->temporalidad;
+            $tarea->color = $config->color_temporalidad;
 
             $dia = $tarea->start;
 

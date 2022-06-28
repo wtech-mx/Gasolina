@@ -17,11 +17,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        DB::table('users')->insert([
-            'name' => 'SuperAdmin',
-            'email' => 'superadmin@gmail.com',
-            'password' => Hash::make('123456789'),
-        ]);
+        // DB::table('users')->insert([
+        //     'name' => 'SuperAdmin',
+        //     'email' => 'superadmin@gmail.com',
+        //     'password' => Hash::make('123456789'),
+        // ]);
+
+        $this->call(viiiElemento03Seeder::class);
 
     }
 }

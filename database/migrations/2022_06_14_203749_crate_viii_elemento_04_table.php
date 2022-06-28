@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ViiiElemento02 extends Migration
+class CrateViiiElemento04Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,16 @@ class ViiiElemento02 extends Migration
      */
     public function up()
     {
-        Schema::create('viii_elemento_02', function (Blueprint $table) {
+        Schema::create('viii_elemento_04', function (Blueprint $table) {
             $table->id();
             $table->string('nombre')->nullable();
-            $table->string('estatus')->nullable();
+            $table->string('area', 100)->nullable();
+            $table->string('descripcion', 500)->nullable();
+            $table->string('revision', 20)->nullable();
+            $table->date('fecha')->nullable();
+
             $table->string('pdf', 900)->nullable();
+
             $table->timestamps();
         });
     }

@@ -29,53 +29,55 @@
                                 <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                             </a>
 
-                            <h5 class="text-white">VII-02-02 Matriz de registro y seguimiento de actos o condiciones
-                                inseguras.</h5>
+                            <h5 class="text-white">XI-01-01 Lista y catálogo de equipos críticos.</h5>
 
-                                <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalVii02">
+                                <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalXI">
                                     <i class="fa fa-plus btn-icon-back"></i>
                                 </a>
 
                         </div>
                     </div>
-                    @include('modal-elementos.formularios vii.VII-02-02.create')
+                    @include('modal-elementos.formularios xi.create')
                     <div class="col-12 p-4">
                         <table class="table" id="table_id">
                             <thead class="text-white">
                                 <tr>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Lugar</th>
-                                    <th scope="col">Situación observada</th>
-                                    <th scope="col">Tipo</th>
-                                    <th scope="col">Descripción</th>
-                                    <th scope="col">Empleado</th>
+                                    <th scope="col">Componente</th>
+                                    <th scope="col">ID DET</th>
+                                    <th scope="col">Subcomponente</th>
+                                    <th scope="col">Etiqueta</th>
+                                    <th scope="col">Marca</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody class="text-white">
-                                @foreach ($vii_elemento as $item)
+                                @foreach ($xi_elemento as $item)
+
                                 <tr>
-                                    <td>{{$item->fecha}}</td>
-                                    <td>{{$item->lugar}}</td>
-                                    <td>{{$item->observada}}</td>
-                                    <td>{{$item->tipo}}</td>
-                                    <td>{{$item->descripcion}}</td>
-                                    <td>{{$item->empleado}}</td>
+                                    <td>{{$item->componente}}</td>
+                                    <td>{{$item->id_det}}</td>
+                                    <td>{{$item->subcomponente}}</td>
+                                    <td>{{$item->etiqueta}}</td>
+                                    <td>{{$item->marca}}</td>
                                     <td>
                                         @if ($item->pdf == NULL)
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalVii{{$item->id}}"
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalXI{{$item->id}}"
                                             style="color: #ffffff4d;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @else
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalVii{{$item->id}}"
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalXI{{$item->id}}"
                                             style="color: #ffffff;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @endif
+                                            {{-- <a href="#" target="_blank">
+                                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                                            </a> --}}
                                     </td>
                                 </tr>
-                                @include('modal-elementos.formularios vii.VII-02-02.update')
+                                @include('modal-elementos.formularios xi.update')
+                                {{-- @include('modal-elementos.formularios viii.viii-01-01.if_pdf') --}}
                                 @endforeach
                             </tbody>
                         </table>

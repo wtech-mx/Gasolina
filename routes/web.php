@@ -279,11 +279,37 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('/store/viii-01-01', [App\Http\Controllers\viiiElementoController::class, 'store'])->name('store.viii_01_01');
     Route::patch('/update/viii-01-01/{id}', [App\Http\Controllers\viiiElementoController::class, 'update'])->name('update.viii_01_01');
 
+    Route::get('/index/viii-01-02', [App\Http\Controllers\viiiElementoController::class, 'index_02'])->name('index.viii_01_02');
+    Route::post('/store/viii-01-02', [App\Http\Controllers\viiiElementoController::class, 'store_02'])->name('store.viii_01_02');
+    Route::patch('/update/viii-01-02/{id}', [App\Http\Controllers\viiiElementoController::class, 'update_02'])->name('update.viii_01_02');
+
+    Route::get('/index/viii-01-03', [App\Http\Controllers\viiiElementoController::class, 'index_03'])->name('index.viii_01_03');
+    Route::post('/store/viii-01-03', [App\Http\Controllers\viiiElementoController::class, 'store_03'])->name('store.viii_01_03');
+    Route::patch('/update/viii-01-03/{id}', [App\Http\Controllers\viiiElementoController::class, 'update_03'])->name('update.viii_01_03');
+
+    Route::get('/index/viii-01-04', [App\Http\Controllers\viiiElementoController::class, 'index_04'])->name('index.viii_01_04');
+    Route::post('/store/viii-01-04', [App\Http\Controllers\viiiElementoController::class, 'store_04'])->name('store.viii_01_04');
+    Route::patch('/update/viii-01-04/{id}', [App\Http\Controllers\viiiElementoController::class, 'update_04'])->name('update.viii_01_04');
+
+    Route::get('/index/viii-01-05', [App\Http\Controllers\viiiElementoController::class, 'index_05'])->name('index.viii_01_05');
+    Route::post('/store/viii-01-05', [App\Http\Controllers\viiiElementoController::class, 'store_05'])->name('store.viii_01_05');
+    Route::patch('/update/viii-01-05/{id}', [App\Http\Controllers\viiiElementoController::class, 'update_05'])->name('update.viii_01_05');
+
     Route::get('ver/sasisopa-viii', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii'])->name('pdf_viii.view');
     Route::get('imprimir/sasisopa-viii', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii_download'])->name('pdf_viii.print');
 
     Route::get('ver/sasisopa-viii_01', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii_01'])->name('pdf_viii_01.view');
     Route::get('imprimir/sasisopa-viii_01', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii_01_download'])->name('pdf_viii_01.print');
+
+    /*|--------------------------------------------------------------------------
+    |IX Elemento
+    |--------------------------------------------------------------------------*/
+    Route::get('/index/ix-01-01', [App\Http\Controllers\ixElementoController::class, 'index'])->name('index.ix_01_01');
+    Route::post('/store/ix-01-01', [App\Http\Controllers\ixElementoController::class, 'store'])->name('store.ix_01_01');
+    Route::patch('/update/ix-01-01/{id}', [App\Http\Controllers\ixElementoController::class, 'update'])->name('update.ix_01_01');
+
+    Route::get('ver/sasisopa-ix', [App\Http\Controllers\ixElementoController::class, 'pdf_sasisopa_ix'])->name('pdf_ix.view');
+    Route::get('imprimir/sasisopa-ix', [App\Http\Controllers\ixElementoController::class, 'pdf_sasisopa_ix_download'])->name('pdf_ix.print');
 
     /*|--------------------------------------------------------------------------
     |X Elemento
@@ -294,5 +320,27 @@ Route::group(['middleware' => ['auth']], function() {
 
     Route::get('/xlemento/x-02-01', [App\Http\Controllers\xElementoController::class, 'create_x_02_01'])->name('x_02_01.create_preguntas');
 
+    /*|--------------------------------------------------------------------------
+    |XI Elemento
+    |--------------------------------------------------------------------------*/
+    Route::get('/index/xi-01-01', [App\Http\Controllers\xiElementoController::class, 'index'])->name('index.xi_01_01');
+    Route::post('/store/xi-01-01', [App\Http\Controllers\xiElementoController::class, 'store'])->name('store.xi_01_01');
+    Route::patch('/update/xi-01-01/{id}', [App\Http\Controllers\xiElementoController::class, 'update'])->name('update.xi_01_01');
+
+    Route::get('ver/sasisopa-xi', [App\Http\Controllers\xiElementoController::class, 'pdf_sasisopa_xi'])->name('pdf_xi.view');
+    Route::get('imprimir/sasisopa-xi', [App\Http\Controllers\xiElementoController::class, 'pdf_sasisopa_xi_download'])->name('pdf_xi.print');
+
+    /*|--------------------------------------------------------------------------
+    |XII Elemento
+    |--------------------------------------------------------------------------*/
+    Route::get('/index/xii-01-01', [App\Http\Controllers\xiiElementoController::class, 'index'])->name('index.xii_01_01');
+    Route::post('/store/xii-01-01', [App\Http\Controllers\xiiElementoController::class, 'store'])->name('store.xii_01_01');
+    Route::patch('/update/xii-01-01/{id}', [App\Http\Controllers\xiiElementoController::class, 'update'])->name('update.xii_01_01');
+
+    Route::get('ver/sasisopa-xii', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii'])->name('pdf_xii.view');
+    Route::get('imprimir/sasisopa-xii', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_download'])->name('pdf_xii.print');
+
+    Route::get('ver/sasisopa-xii-01', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_01'])->name('pdf_xii_01.view');
+    Route::get('imprimir/sasisopa-xii-01', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_01_download'])->name('pdf_xii_01.print');
 
 });
