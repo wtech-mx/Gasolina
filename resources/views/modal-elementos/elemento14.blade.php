@@ -153,42 +153,6 @@
                                             </a>
                                         </div>
 
-                                        <div id="xiv-01-04" style="display: none;">
-                                            <a class="btn" href="{{route('index.xiv_01_04')}}"
-                                                style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                                Ejecutar
-                                            </a>
-
-                                            <a class="btn text-dark"
-                                                href="{{route('difundir_vii_01_01.index')}}"
-                                                style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
-                                                Difundir
-                                            </a>
-
-                                            <a class="btn  " href="{{route('preventiva_vii_01_01.index')}}"
-                                                style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
-                                                Accion Correctiva
-                                            </a>
-                                        </div>
-
-                                        <div id="xiv-01-05" style="display: none;">
-                                            <a class="btn" href="{{route('index.xiv_01_05')}}"
-                                                style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                                                Ejecutar
-                                            </a>
-
-                                            <a class="btn text-dark"
-                                                href="{{route('difundir_vii_01_01.index')}}"
-                                                style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
-                                                Difundir
-                                            </a>
-
-                                            <a class="btn  " href="{{route('preventiva_vii_01_01.index')}}"
-                                                style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
-                                                Accion Correctiva
-                                            </a>
-                                        </div>
-
                                         <div id="xiv-01-06" style="display: none;">
                                             <a class="btn" href="{{route('index.xiv_01_06')}}"
                                                 style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
