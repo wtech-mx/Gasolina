@@ -16,7 +16,7 @@ class CreateXivElemento06Table extends Migration
         Schema::create('xiv_elemento_06', function (Blueprint $table) {
             $table->id();
             $table->string('nombre')->nullable();
-            $table->datatime('fecha')->nullable();
+            $table->date('fecha')->nullable();
             $table->string('incidencia')->nullable();
             $table->string('dependencia')->nullable();
             $table->string('observaciones')->nullable();
