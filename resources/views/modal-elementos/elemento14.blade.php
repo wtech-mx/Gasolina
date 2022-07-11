@@ -92,9 +92,9 @@
                                                 <option value="">Seleccione Elemento</option>
                                                 <option value="xiv-01-01">XIV-01-01 Matriz de calibración y monitoreo de dispensarios.</option>
                                                 <option value="xiv-01-02">XIV-01-02 Matriz de calibración y monitoreo de Tanque.</option>
-                                                <option value="xiv-01-03">XIV-01-03 Matriz de calibración y monitoreo de Jarra de Monitoreo.</option>
+                                                {{-- <option value="xiv-01-03">XIV-01-03 Matriz de calibración y monitoreo de Jarra de Monitoreo.</option>
                                                 <option value="xiv-01-04">XIV-01-04 Matriz de calibración y monitoreo de Regleta de Medicion.</option>
-                                                <option value="xiv-01-05">XIV-02-01 Matriz de alta y seguimiento de acción preventiva o correctiva.</option>
+                                                <option value="xiv-01-05">XIV-02-01 Matriz de alta y seguimiento de acción preventiva o correctiva.</option> --}}
                                                 <option value="xiv-01-06">XIV-03-01 Incidencias en operaciones</option>
                                             </select>
                                         </form>
