@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\ixElemento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class ixElementoController extends Controller
 {

@@ -42,6 +42,9 @@
                                 <label class="form-label label-custom-yellow">PDF</label>
                                 <input type="file" class="custom-file-input input-group-text" id="pdf"
                                     name="pdf">
+                                <a href="{{asset('xiv_elemento_06/'.$item->pdf)}}" target="_blank">
+                                   <embed src="{{asset('xiv_elemento_06/'.$item->pdf)}}" class="img-firma">
+                                </a>
                             </div>
                         </div>
                     </div>

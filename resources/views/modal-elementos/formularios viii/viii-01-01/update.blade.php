@@ -3,10 +3,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar VIII-01-02</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Editar VIII-01-01</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="POST" action="{{ route('update.viii_01_02', $item->id) }}" enctype="multipart/form-data" role="form">
+            <form method="POST" action="{{ route('update.viii_01_01', $item->id) }}" enctype="multipart/form-data" role="form">
                 @csrf
                 <input type="hidden" name="_method" value="PATCH">
                 <div class="modal-body">
@@ -38,11 +38,13 @@
                                     <input name="notificacion" type="date" class="form-control" id="notificacion" value="{{$item->notificacion}}">
                                 </div>
 
-                                {{-- <div class="form-group col-6 col-xs-6 col-sm-6 col-md-6 mt-4">
+                                <div class="form-group col-12 col-xs-12 col-sm-12 col-md-12 mt-4">
                                     <label for="">pdf</label>
                                     <input type="file" id="pdf" class="form-control" name="pdf">
-                                    <iframe src="{{asset('viii_elemento/'.$item->pdf)}}" class="img-firma">
-                                </div> --}}
+                                    <a href="{{asset('viii_elemento/'.$item->pdf)}}" target="_blank">
+                                        <embed src="{{asset('viii_elemento/'.$item->pdf)}}" class="img-firma">
+                                    </a>
+                                </div>
                             </div>
 
                 </div>

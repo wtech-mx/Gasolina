@@ -61,12 +61,13 @@
                                     <label>marco_normativo</label>
                                     <textarea name="marco_normativo" id="marco_normativo" cols="20" rows="3">{{$item->marco_normativo}}</textarea>
                                 </div>
-                                {{-- <div class="form-group col-12 mt-3">
+
+                                <div class="form-group col-12 mt-3">
                                         <label class="form-label label-custom-yellow">PDF</label>
                                         <input type="file" class="custom-file-input input-group-text" id="pdf"
                                             name="pdf"  value="{{$item->pdf}}">
-                                        <iframe src="{{asset('viii_elemento/'.$item->pdf)}}" class="img-firma">
-                                </div> --}}
+                                        <embed src="{{asset('ix_elemento/'.$item->pdf)}}" class="img-firma">
+                                </div>
 
                             </div>
 

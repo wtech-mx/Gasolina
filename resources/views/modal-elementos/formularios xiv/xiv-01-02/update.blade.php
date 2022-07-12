@@ -1,12 +1,12 @@
 <!-- Modal -->
-<div class="modal fade" id="exampleModalXIV" tabindex="-1" aria-labelledby="exampleModalXIV" aria-hidden="true">
+<div class="modal fade" id="updateModalXIV{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalXIV" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalXIV">Crear XI-01-02</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="POST" action="{{ route('store.xiv_01_02') }}" enctype="multipart/form-data" role="form">
+            <form method="POST" action="{{ route('update.xiv_01_02', $item->id) }}" enctype="multipart/form-data" role="form">
                 @csrf
                 <input type="hidden" name="_method" value="PATCH">
                 <div class="modal-body">
@@ -55,6 +55,9 @@
                                 <label class="form-label label-custom-yellow">PDF</label>
                                 <input type="file" class="custom-file-input input-group-text" id="pdf"
                                     name="pdf">
+                                <a href="{{asset('xiv_elemento/'.$item->pdf)}}" target="_blank">
+                                <embed src="{{asset('xiv_elemento/'.$item->pdf)}}" class="img-firma">
+                                </a>
                             </div>
                         </div>
                     </div>

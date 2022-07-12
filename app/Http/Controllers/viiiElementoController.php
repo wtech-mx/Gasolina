@@ -11,7 +11,8 @@ use App\Models\viiiElemento04;
 use App\Models\viiiElemento05;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Session;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class viiiElementoController extends Controller
 {
@@ -298,6 +299,7 @@ class viiiElementoController extends Controller
             $file->move($path, $fileName);
             $viii_elemento->pdf = $fileName;
         }
+        $viii_elemento->update();
 
         $viii_elemento->tiempo = $request->get('tiempo');
         $viii_elemento->start = $request->get('start');

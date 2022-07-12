@@ -6,6 +6,8 @@ use App\Models\xivElemento02;
 use App\Models\xivElemento06;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 class xivElementoController extends Controller
 {

@@ -106,14 +106,16 @@
                                     value="{{$item->periodicidad}}">
                                 </div>
 
-                                {{-- <div class="col-sm-12 col-12">
+                                <div class="col-sm-12 col-12">
                                     <div class="form-group mb-3 position-relative">
                                         <label class="form-label label-custom-yellow">PDF</label>
                                         <input type="file" class="custom-file-input input-group-text" id="pdf"
                                             name="pdf"  value="{{$item->pdf}}">
-                                        <iframe src="{{asset('viii_elemento/'.$item->pdf)}}" class="img-firma">
+                                        <a href="{{asset('viii_elemento_03/'.$item->pdf)}}" target="_blank">
+                                            <embed src="{{asset('viii_elemento_03/'.$item->pdf)}}" class="img-firma">
+                                        </a>
                                     </div>
-                                </div> --}}
+                                </div>
                             </div>
                         </div>
 

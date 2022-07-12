@@ -97,7 +97,9 @@
                         <div class="col-sm-4 col-4">
                             <div class="form-group mb-3 position-relative">
                                 <label class="form-label label-custom-yellow">PDF</label>
-                                <iframe width="400" height="400" src="{{asset('iii_elemento/' . $row->pdf)}}" frameborder="0"></iframe>
+                                <a href="{{asset('iii_elemento/'.$row->pdf)}}" target="_blank">
+                                    <embed src="{{asset('iii_elemento/'.$row->pdf)}}" class="img-firma">
+                                </a>
                             </div>
                         </div>
 

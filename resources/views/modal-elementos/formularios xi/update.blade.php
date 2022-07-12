@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="exampleModalXI" tabindex="-1" aria-labelledby="exampleModalXI" aria-hidden="true">
+<div class="modal fade" id="updateModalXI{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalXI" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -50,6 +50,9 @@
                                         <label class="form-label label-custom-yellow">PDF</label>
                                         <input type="file" class="custom-file-input input-group-text" id="pdf"
                                             name="pdf">
+                                        <a href="{{asset('xi_elemento/'.$item->pdf)}}" target="_blank">
+                                            <embed src="{{asset('xi_elemento/'.$item->pdf)}}" class="img-firma">
+                                        </a>
                                     </div>
                                 </div>
                             </div>

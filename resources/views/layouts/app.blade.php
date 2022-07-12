@@ -77,16 +77,9 @@
                 buttons: [
                     {
                         extend: 'print',
-                        exportOptions: {
-                            columns: ':visible'
-                        }
                     },
                     'colvis'
                 ],
-                columnDefs: [ {
-                    targets: -1,
-                    visible: false
-                } ],
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'
                 }
