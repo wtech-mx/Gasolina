@@ -64,7 +64,6 @@ class viiiElementoController extends Controller
         }
         $viii_elemento->update();
 
-
         Session::flash('success', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.viii_01_01');
     }

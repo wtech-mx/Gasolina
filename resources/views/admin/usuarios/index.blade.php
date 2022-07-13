@@ -28,8 +28,10 @@
                     <thead class="text-white">
                       <tr>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Empresa</th>
-                        <th scope="col">Sucursal</th>
+                        <th scope="col">telefono</th>
+                        <th scope="col">puesto</th>
+                        <th scope="col">alta</th>
+                        <th scope="col">email</th>
                       </tr>
                     </thead>
                     <tbody class="text-white">
@@ -38,8 +40,10 @@
                             <td><a style="text-decoration: none;"
                                 href="{{ route('edit.usuario', $item->id) }}">{{$item->name}}</a>
                             </td>
-                            <td>{{$item->UserEmpresa->name}}</td>
-                            <td>{{$item->UserSucursal->name}}</td>
+                            <td>{{$item->telefono}}</td>
+                            <td>{{$item->puesto}}</td>
+                            <td>{{$item->alta}}</td>
+                            <td>{{$item->email}}</td>
                           </tr>
                         @endforeach
                     </tbody>

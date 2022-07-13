@@ -23,8 +23,8 @@ class UserController extends Controller
     function index()
     {
         $users = User::where('empresa', '=', NULL)
-            ->where('id_empresa', '!=', NULL)
-            ->where('id_sucursal', '!=', NULL)
+            // ->where('id_empresa', '!=', NULL)
+            // ->where('id_sucursal', '!=', NULL)
             ->get();
 
         return view('admin.usuarios.index', compact('users'));
@@ -77,8 +77,8 @@ class UserController extends Controller
             $user->apellido = $request->get('apellido');
             $user->telefono = $request->get('telefono');
             $user->puesto = $request->get('puesto');
-            $user->id_empresa = $request->get('id_empresa');
-            $user->id_sucursal = $request->get('id_sucursal');
+            // $user->id_empresa = $request->get('id_empresa');
+            // $user->id_sucursal = $request->get('id_sucursal');
             $user->email = $request->get('email');
             $user->calle = $request->get('calle');
             $user->password = Hash::make($request->password);
@@ -126,7 +126,7 @@ class UserController extends Controller
 
             // Redireccion  de suuces or fail dependiedno el caso
 
-            return redirect()->back()
+            return redirect()->route('index.usuario')
                 ->with('success', 'Usuario Creada Exitosamente!');
         } catch (\Exception $e) {
             return redirect()->back()
@@ -159,8 +159,8 @@ class UserController extends Controller
         $user->apellido = $request->get('apellido');
         $user->telefono = $request->get('telefono');
         $user->puesto = $request->get('puesto');
-        $user->id_empresa = $request->get('id_empresa');
-        $user->id_sucursal = $request->get('id_sucursal');
+        // $user->id_empresa = $request->get('id_empresa');
+        // $user->id_sucursal = $request->get('id_sucursal');
         $user->calle = $request->get('calle');
         $user->email = $request->get('email');
 

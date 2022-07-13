@@ -111,7 +111,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6 col-6">
+                        {{-- <div class="col-sm-6 col-6">
                             <div class="form-group mb-3 position-relative">
                                 <i class="fa fa-cube icon-style-2"></i>
                                 <label class="form-label label-custom-yellow">Empresa</label>
@@ -137,7 +137,7 @@
                                     @endforeach
                                 </select>
                             </div>
-                        </div>
+                        </div> --}}
 
                         <div class="col-sm-12 col-12">
                             <div class="form-group mb-3 position-relative">
