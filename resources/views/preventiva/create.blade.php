@@ -1,18 +1,58 @@
 @php
     $url = $_SERVER['REQUEST_URI'];
-    if ($url == '/preventiva/i-01-01') {
-        $rest = substr($url, -7);
-    }elseif ($url == '/preventiva/ii-01-01') {
-        $rest = substr($url, -9);
-    }elseif ($url == '/preventiva/iii-01-01') {
-        $rest = substr($url, -9);
-    }elseif ($url == '/preventiva/iv-01-01') {
-        $rest = substr($url, -9);
-    }elseif ($url == '/preventiva/v-01-01') {
-        $rest = substr($url, -9);
-    }else {
-        $rest = substr($url, -7);
-    }
+if ($url == '/preventiva/i-01-01') {
+$rest = substr($url, -7);
+$elemento = 'I-01-01 Política documentada.';
+}elseif ($url == '/preventiva/iii-01-01') {
+$rest = substr($url, -9);
+$elemento = 'III-01-01 Matriz de requisitos legales.';
+}elseif ($url == '/preventiva/iv-01-01') {
+$rest = substr($url, -8);
+$elemento = 'IV-01-01 Matriz de objetivos metas e indicadores.';
+}elseif ($url == '/preventiva/v-01-01') {
+$rest = substr($url, -7);
+$elemento = 'V-01-01 Matriz de responsabilidades.';
+}elseif ($url == '/preventiva/vi-01-01') {
+$rest = substr($url, -8);
+$elemento = 'VI-01-01 Matriz de identificación de competencia y formación interna y externa.';
+}elseif ($url == '/preventiva/vi-01-03') {
+$rest = substr($url, -8);
+$elemento = 'VI-01-03 Plan general de capacitación externo.';
+}elseif ($url == '/preventiva/vii-01-01') {
+$rest = substr($url, -9);
+$elemento = 'VII-01-01 Matriz de registro y seguimiento de comunicación interna y externa.';
+}elseif ($url == '/preventiva/vii-02-02') {
+$rest = substr($url, -9);
+$elemento = 'VII-02-02 Matriz de registro y seguimiento de actos o condiciones inseguras.';
+}elseif ($url == '/preventiva/vii-03-02') {
+$rest = substr($url, -9);
+$elemento = 'VII-03-02 Matriz de control, seguimiento y cierre de quejas y sugerencias.';
+}elseif ($url == '/preventiva/viii-01-01') {
+$rest = substr($url, -10);
+$elemento = 'VIII-01-01 Listado de documentación interna.';
+}elseif ($url == '/preventiva/viii-01-02') {
+$rest = substr($url, -10);
+$elemento = 'VIII-01-02 Listado de formatos, registros y bitácoras.';
+}elseif ($url == '/preventiva/viii-01-03') {
+$rest = substr($url, -10);
+$elemento = 'VIII-01-03 Lista de control de autorizaciones y permisos.';
+}elseif ($url == '/preventiva/viii-01-04') {
+$rest = substr($url, -10);
+$elemento = 'VIII-01-04 Listado de documentación externa.';
+}elseif ($url == '/preventiva/viii-01-05') {
+$rest = substr($url, -10);
+$elemento = 'VIII-01-05 Listado de distribución de documentación.';
+}elseif ($url == '/preventiva/ix-01-01') {
+$rest = substr($url, -8);
+$elemento = 'IX-01-01 Matriz de mejores prácticas.';
+}elseif ($url == '/preventiva/xi-01-01') {
+$rest = substr($url, -8);
+$elemento = 'XI-01-01 Lista y catálogo de equipos críticos.';
+}elseif ($url == '/preventiva/xii-01-01') {
+$rest = substr($url, -9);
+$elemento = 'XII-01-01 Listado de proveedor o contratista.';
+}
+
 @endphp
 <!-- Modal -->
 <div class="modal fade" id="exampleModalDifundir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -46,7 +86,7 @@
                 </div>
                 <div class="form-group text-white">
                     <label for="tipo">Especifique</label>
-                    <p>X-01-01 Cédula para identificar el producto que será descargado.</p>
+                    <p>{{$elemento}}</p>
                 </div>
 
                 <div class="form-group text-white">

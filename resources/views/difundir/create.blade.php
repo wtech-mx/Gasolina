@@ -1,11 +1,39 @@
 @php
 $url = $_SERVER['REQUEST_URI'];
-if ($url == '/difundir/iv-01-01') {
-$rest = substr($url, -8);
+if ($url == '/difundir/i-01-01') {
+$rest = substr($url, -7);
 }elseif ($url == '/difundir/iii-01-01') {
 $rest = substr($url, -9);
-}else {
+}elseif ($url == '/difundir/iv-01-01') {
+$rest = substr($url, -8);
+}elseif ($url == '/difundir/v-01-01') {
 $rest = substr($url, -7);
+}elseif ($url == '/difundir/vi-01-01') {
+$rest = substr($url, -8);
+}elseif ($url == '/difundir/vi-01-03') {
+$rest = substr($url, -8);
+}elseif ($url == '/difundir/vii-01-01') {
+$rest = substr($url, -9);
+}elseif ($url == '/difundir/vii-02-02') {
+$rest = substr($url, -9);
+}elseif ($url == '/difundir/vii-03-02') {
+$rest = substr($url, -9);
+}elseif ($url == '/difundir/viii-01-01') {
+$rest = substr($url, -10);
+}elseif ($url == '/difundir/viii-01-02') {
+$rest = substr($url, -10);
+}elseif ($url == '/difundir/viii-01-03') {
+$rest = substr($url, -10);
+}elseif ($url == '/difundir/viii-01-04') {
+$rest = substr($url, -10);
+}elseif ($url == '/difundir/viii-01-05') {
+$rest = substr($url, -10);
+}elseif ($url == '/difundir/ix-01-01') {
+$rest = substr($url, -8);
+}elseif ($url == '/difundir/xi-01-01') {
+$rest = substr($url, -8);
+}elseif ($url == '/difundir/xii-01-01') {
+$rest = substr($url, -9);
 }
 @endphp
 <!-- Modal -->

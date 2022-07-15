@@ -1,23 +1,38 @@
 @php
-$url = $_SERVER['REQUEST_URI'];
-if ($url == '/preventiva/i-01-01') {
-$rest = substr($url, -7);
-$especifique = 'I-01-01 Política documentada.';
-}elseif ($url == '/preventiva/ii-01-01') {
-$rest = substr($url, -8);
-$especifique = 'I-01-01 Política documentada.';
-}elseif ($url == '/preventiva/iii-01-01') {
-$rest = substr($url, -9);
-$especifique = 'III-01-01 Matriz de requisitos legales.';
-}elseif ($url == '/preventiva/iv-01-01') {
-$rest = substr($url, -8);
-$especifique = 'I-01-01 Política documentada.';
-}elseif ($url == '/preventiva/v-01-01') {
-$rest = substr($url, -7);
-$especifique = 'I-01-01 Política documentada.';
-}else {
-$rest = substr($url, -7);
-$especifique = 'I-01-01 Política documentada.';
+if ($row->elemento == 'i-01-01') {
+$elemento = 'I-01-01 Política documentada.';
+}elseif ($row->elemento == 'iii-01-01') {
+$elemento = 'III-01-01 Matriz de requisitos legales.';
+}elseif ($row->elemento == 'iv-01-01') {
+$elemento = 'IV-01-01 Matriz de objetivos metas e indicadores.';
+}elseif ($row->elemento == 'v-01-01') {
+$elemento = 'V-01-01 Matriz de responsabilidades.';
+}elseif ($row->elemento == 'vi-01-01') {
+$elemento = 'VI-01-01 Matriz de identificación de competencia y formación interna y externa.';
+}elseif ($row->elemento == 'vi-01-03') {
+$elemento = 'VI-01-03 Plan general de capacitación externo.';
+}elseif ($row->elemento == 'vii-01-01') {
+$elemento = 'VII-01-01 Matriz de registro y seguimiento de comunicación interna y externa.';
+}elseif ($row->elemento == 'vii-02-02') {
+$elemento = 'VII-02-02 Matriz de registro y seguimiento de actos o condiciones inseguras.';
+}elseif ($row->elemento == 'vii-03-02') {
+$elemento = 'VII-03-02 Matriz de control, seguimiento y cierre de quejas y sugerencias.';
+}elseif ($row->elemento == 'viii-01-01') {
+$elemento = 'VIII-01-01 Listado de documentación interna.';
+}elseif ($row->elemento == 'viii-01-02') {
+$elemento = 'VIII-01-02 Listado de formatos, registros y bitácoras.';
+}elseif ($row->elemento == 'viii-01-03') {
+$elemento = 'VIII-01-03 Lista de control de autorizaciones y permisos.';
+}elseif ($row->elemento == 'viii-01-04') {
+$elemento = 'VIII-01-04 Listado de documentación externa.';
+}elseif ($row->elemento == 'viii-01-05') {
+$elemento = 'VIII-01-05 Listado de distribución de documentación.';
+}elseif ($row->elemento == 'ix-01-01') {
+$elemento = 'IX-01-01 Matriz de mejores prácticas.';
+}elseif ($row->elemento == 'xi-01-01') {
+$elemento = 'XI-01-01 Lista y catálogo de equipos críticos.';
+}elseif ($row->elemento == 'xii-01-01') {
+$elemento = 'XII-01-01 Listado de proveedor o contratista.';
 }
 @endphp
 <!-- Modal -->
@@ -30,7 +45,7 @@ $especifique = 'I-01-01 Política documentada.';
                 style="border-radius: 30px!important;border: 2px solid #FFC300;background-color: #001d3d;">
 
                 <div class="d-flex justify-content-between">
-                    <h5 class="modal-title mb-5 text-white">Accion Correctiva</h5>
+                    <h5 class="modal-title mb-5 text-white">Accion Correctiva {{$row->elemento}}</h5>
                     <button type="button" class="btn-close text-white" data-bs-dismiss="modal" aria-label="Close"
                         style="background: transparent url({{asset('assets/img/icons/cancel.png') }}) center/1.5em auto no-repeat;">
                     </button>
@@ -54,7 +69,7 @@ $especifique = 'I-01-01 Política documentada.';
                     </div>
                     <div class="form-group text-white">
                         <label for="tipo">Especifique</label>
-                        <p>{{$especifique}}</p>
+                        <p>{{$elemento}}</p>
                     </div>
 
                     <div class="form-group text-white">
@@ -84,7 +99,7 @@ $especifique = 'I-01-01 Política documentada.';
                     <div class="d-flex justify-content-around mt-5">
                         <button class="btn" wire:click.prevent="store()"
                             style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
-                            <i class="fa fa-plus-circle" aria-hidden="true"></i> Guardar
+                            <i class="fa fa-plus-circle" aria-hidden="true"></i> Actualizar
                         </button>
 
                         <button class="btn" data-bs-dismiss="modal"

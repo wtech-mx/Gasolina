@@ -107,22 +107,38 @@ Route::group(['middleware' => ['auth']], function() {
     |Difundir (Actividades)
     |--------------------------------------------------------------------------*/
     Route::post('difundir/store', [App\Http\Controllers\DifundirController::class, 'store'])->name('difundir.store')->middleware('auth');
-    Route::post('difundir/update/{id}', [App\Http\Controllers\DifundirController::class, 'update'])->name('difundir.update');
+    Route::patch('difundir/update/{id}', [App\Http\Controllers\DifundirController::class, 'update'])->name('difundir.update');
 
     Route::get('/difundir/i-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_i_01_01.index');
 
-    Route::get('/difundir/x-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_01.index');
-    Route::get('/difundir/x-01-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_02.index');
-    Route::get('/difundir/x-02-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_02_01.index');
-
     Route::get('/difundir/iii-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_iii_01_01.index');
+
     Route::get('/difundir/iv-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_iv_01_01.index');
+
+    Route::get('/difundir/v-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_v_01_01.index');
 
     Route::get('/difundir/vi-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_01.index');
     Route::get('/difundir/vi-01-03', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vi_01_03.index');
 
     Route::get('/difundir/vii-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vii_01_01.index');
+    Route::get('/difundir/vii-02-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vii_02_02.index');
+    Route::get('/difundir/vii-03-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_vii_03_02.index');
 
+    Route::get('/difundir/viii-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_viii_01_01.index');
+    Route::get('/difundir/viii-01-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_viii_01_02.index');
+    Route::get('/difundir/viii-01-03', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_viii_01_03.index');
+    Route::get('/difundir/viii-01-04', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_viii_01_04.index');
+    Route::get('/difundir/viii-01-05', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_viii_01_05.index');
+
+    Route::get('/difundir/ix-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_ix_01_01.index');
+
+    Route::get('/difundir/x-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_01.index');
+    Route::get('/difundir/x-01-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_01_02.index');
+    Route::get('/difundir/x-02-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_x_02_01.index');
+
+    Route::get('/difundir/xi-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xi_01_01.index');
+
+    Route::get('/difundir/xii-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xii_01_01.index');
     // Route::get('imprimir/difundir/{id}', [App\Http\Controllers\DifundirController::class, 'pdf_difundir'])->name('print.difundir');
 
     Route::get('/graficas', [App\Http\Controllers\ElementosController::class, 'graficas'])->name('graficas');
@@ -141,22 +157,40 @@ Route::group(['middleware' => ['auth']], function() {
     |Preventiva (Actividades)
     |--------------------------------------------------------------------------*/
     Route::post('preventiva/store', [App\Http\Controllers\PreventivaController::class, 'store'])->name('preventiva.store')->middleware('auth');
-    Route::post('preventiva/update/{id}', [App\Http\Controllers\PreventivaController::class, 'update'])->name('preventiva.update');
+    Route::patch('preventiva/update/{id}', [App\Http\Controllers\PreventivaController::class, 'update'])->name('preventiva.update');
 
     Route::get('/preventiva/i-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_i_01_01.index');
+
     Route::get('/preventiva/ii-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_ii_01_01.index');
+
     Route::get('/preventiva/iii-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_iii_01_01.index');
+
     Route::get('/preventiva/iv-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_iv_01_01.index');
+
     Route::get('/preventiva/v-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_v_01_01.index');
 
     Route::get('/preventiva/vi-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vi_01_01.index');
     Route::get('/preventiva/vi-01-03', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vi_01_03.index');
 
     Route::get('/preventiva/vii-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vii_01_01.index');
+    Route::get('/preventiva/vii-02-02', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vii_02_02.index');
+    Route::get('/preventiva/vii-03-02', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_vii_03_02.index');
+
+    Route::get('/preventiva/viii-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_viii_01_01.index');
+    Route::get('/preventiva/viii-01-02', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_viii_01_02.index');
+    Route::get('/preventiva/viii-01-03', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_viii_01_03.index');
+    Route::get('/preventiva/viii-01-04', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_viii_01_04.index');
+    Route::get('/preventiva/viii-01-05', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_viii_01_05.index');
+
+    Route::get('/preventiva/ix-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_ix_01_01.index');
 
     Route::get('/preventiva/x-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_x_01_01.index');
     Route::get('/preventiva/x-01-02', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_x_01_02.index');
     Route::get('/preventiva/x-02-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_x_02_01.index');
+
+    Route::get('/preventiva/xi-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xi_01_01.index');
+
+    Route::get('/preventiva/xii-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xii_01_01.index');
 
     /*|--------------------------------------------------------------------------
     |Evaluacion (I-01-01)

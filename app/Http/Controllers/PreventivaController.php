@@ -7,6 +7,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use DB;
+use Session;
 use Illuminate\Support\Facades\Validator;
 
 class PreventivaController extends Controller
@@ -30,9 +31,8 @@ class PreventivaController extends Controller
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
         if ($validator->fails()) {
-            return redirect()->back()
-                ->with('errorForm', $validator->errors()->getMessages())
-                ->withInput();
+            Session::flash('error', 'opps error al crear usuario');
+            return redirect()->back();
         }
         try {
 
@@ -47,12 +47,10 @@ class PreventivaController extends Controller
         $Preventiva->save();
 
         // Redireccion  de suuces or fail dependiedno el caso
-
-            return redirect()->route('preventiva_i_01_01.index')
-                ->with('success', 'Preventiva Creada Exitosamente!');
+        Session::flash('success', 'Se ha guardado sus datos con exito');
+        return redirect()->back();
         } catch (\Exception $e) {
-            return redirect()->back()
-                ->with('error', 'Error en el registro!!');
+            return redirect()->back();
         }
 
     }
@@ -63,21 +61,17 @@ class PreventivaController extends Controller
         //1/3 - error de validacion en la sweetalert *OBLIGATORIO*
         $validator = Validator::make($request->all(), [
             'descripcion' => 'required',
-            'tipo' => 'required',
-            'inicial' => 'required',
-            'final' => 'required',
         ]);
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
         if ($validator->fails()) {
-            return redirect()->back()
-                ->with('errorForm', $validator->errors()->getMessages())
-                ->withInput();
+            Session::flash('error', 'opps error al crear usuario');
+            return redirect()->back();
         }
         try {
 
         //3/3- Si la validacion es correcta se crea el registro
-        $Preventiva = new Preventiva;
+        $Preventiva = Preventiva::findOrFail($id);
         $Preventiva->id_user = $request->get('id_user');
         $Preventiva->descripcion = $request->get('descripcion');
         $Preventiva->estatus = $request->get('estatus');
@@ -86,12 +80,10 @@ class PreventivaController extends Controller
         $current = Carbon::now()->toDateString();
 
         // Redireccion  de suuces or fail dependiedno el caso
-
-            return redirect()->route('preventiva_i_01_01.index')
-                ->with('success', 'Preventiva Creada Exitosamente!');
+        Session::flash('edit', 'Se ha guardado sus datos con exito');
+            return redirect()->back();
         } catch (\Exception $e) {
-            return redirect()->back()
-                ->with('error', 'Error en el registro!!');
+            return redirect()->back();
         }
 
     }

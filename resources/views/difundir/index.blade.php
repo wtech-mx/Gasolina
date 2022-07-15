@@ -23,7 +23,7 @@
                         <div class="col-12 mt-3">
                             <div class="d-flex justify-content-between p-3">
 
-                                <a href="javascript:history.back()" class="btn btn-back">
+                                <a href="{{ route('home') }}" class="btn btn-back">
                                     <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                                 </a >
 
@@ -50,7 +50,7 @@
                                     <table class="table display" id="table_id" >
                                         <thead class="text-white">
                                             <tr>
-                                                <td>#</td>
+                                            <td>#</td>
                                             <th>Solicita</th>
                                             <th>Elemento</th>
                                             <th>Fecha</th>
@@ -69,16 +69,16 @@
 
                                                 <td >
                                                     <a  data-bs-toggle="modal" data-bs-target="#updateModal{{$row->id}}" style="color: #ffffff;font-size: 16px;padding: 5px;">
-                                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
                                                     </a>
 
                                                     <a class="btn" target="_blank" href="{{route('formato_difusion.view', $row->id)}}">
                                                         <i class="fa fa-file-pdf-o" aria-hidden="true" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
                                                     </a>
 
-                                                    <a onclick="confirm('Confirm Delete Difusion id {{$row->id}}? \nDeleted Difusions cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                                    {{-- <a onclick="confirm('Confirm Delete Difusion id {{$row->id}}? \nDeleted Difusions cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})" style="color: #ffffff;font-size: 16px;padding: 5px;">
                                                         <i class="fa fa-trash"></i>
-                                                    </a>
+                                                    </a> --}}
                                                 </td>
                                             </tr>
                                             @include('difundir.update')

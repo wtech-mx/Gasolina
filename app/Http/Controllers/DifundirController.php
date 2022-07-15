@@ -8,6 +8,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use DB;
+use Session;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 
@@ -24,6 +25,14 @@ class DifundirController extends Controller
             return view('difundir.index', compact('empresa', 'difundirs'));
     }
 
+    public function create()
+    {
+        $user = DB::table('users')
+            ->get();
+
+        return view('difundir.create', compact('user'));
+    }
+
     public function store(Request $request)
     {
 
@@ -38,9 +47,8 @@ class DifundirController extends Controller
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
         if ($validator->fails()) {
-            return redirect()->back()
-                ->with('errorForm', $validator->errors()->getMessages())
-                ->withInput();
+            Session::flash('error', 'opps error al crear usuario');
+            return redirect()->back();
         }
         try {
 
@@ -80,12 +88,11 @@ class DifundirController extends Controller
         MedioDifundir::insert($insert_data);
 
         // Redireccion  de suuces or fail dependiedno el caso
-
-            return redirect()->route('difundir_i_01_01.index')
-                ->with('success', 'Difucion Creada Exitosamente!');
+            Session::flash('success', 'Se ha guardado sus datos con exito');
+            return redirect()->back();
         } catch (\Exception $e) {
-            return redirect()->back()
-                ->with('error', 'Error en el registro!!');
+            Session::flash('error', 'opps error al crear usuario');
+            return redirect()->back();
         }
 
     }
@@ -138,20 +145,13 @@ class DifundirController extends Controller
 
         // Redireccion  de suuces or fail dependiedno el caso
 
-            return redirect()->route('difundir_i_01_01.index')
-                ->with('success', 'Difucion Creada Exitosamente!');
-        } catch (\Exception $e) {
-            return redirect()->back()
-                ->with('error', 'Error en el registro!!');
-        }
+        Session::flash('edit', 'Se ha guardado sus datos con exito');
+        return redirect()->back();
+    } catch (\Exception $e) {
+        Session::flash('error', 'opps error al crear usuario');
+        return redirect()->back();
+    }
 
     }
 
-    public function create()
-    {
-        $user = DB::table('users')
-            ->get();
-
-        return view('difundir.create', compact('user'));
-    }
 }

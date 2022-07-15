@@ -82,11 +82,11 @@
                                         Actializar
                                     </a>
 
-                                    <a class="btn" href="{{route('difundir_i_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
+                                    <a class="btn" href="{{route('difundir_v_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
                                         Difundir
                                     </a>
 
-                                    <a class="btn text-dark" href="{{route('preventiva_i_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                    <a class="btn text-dark" href="{{route('preventiva_v_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
                                         Accion Correctiva
                                     </a>
                                 </div>
