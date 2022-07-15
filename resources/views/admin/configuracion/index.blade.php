@@ -7,7 +7,7 @@
         <div class="col-12 mt-3">
             <div class="d-flex justify-content-between p-3">
 
-                <a href="javascript:history.back()" class="btn btn-back">
+                <a href="{{ route('home') }}" class="btn btn-back">
                     <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                 </a >
 

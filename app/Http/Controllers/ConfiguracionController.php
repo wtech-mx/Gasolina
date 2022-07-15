@@ -69,44 +69,64 @@ class ConfiguracionController extends Controller
 
     public function update_estacion(Request $request){
 
-        $tanque = Configuracion::first();
-        $tanque->tanque1 = $request->get('tanque1');
-        $tanque->tanque2 = $request->get('tanque2');
-        $tanque->tanque3 = $request->get('tanque3');
-        $tanque->save();
+        //1/3 - error de validacion en la sweetalert *OBLIGATORIO*
+        $validator = Validator::make($request->all(), [
+            'tanque1' => 'required',
+        ]);
 
-        $rules = array(
-            'estatus.*',
-            'pistola1.*',
-            'pistola2.*',
-            'pistola3.*',
-        );
-        $error = Validator::make($request->all(), $rules);
-
-        if ($error->fails()) {
-            return response()->json([
-                'error' => $error->errors()->all()
-            ]);
+        //2/3- Envia Mensaje de validacion en la Sweetalert
+        if ($validator->fails()) {
+            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
+            return redirect()->back()
+                ->with('errorForm', $validator->errors()->getMessages())
+                ->withInput();
         }
+        try {
+            $tanque = Configuracion::first();
+            $tanque->tanque1 = $request->get('tanque1');
+            $tanque->tanque2 = $request->get('tanque2');
+            $tanque->tanque3 = $request->get('tanque3');
+            $tanque->save();
 
-        $estatus = $request->estatus;
-        $pistola1 = $request->pistola1;
-        $pistola2 = $request->pistola2;
-        $pistola3 = $request->pistola3;
-        for ($count = 0; $count < count($estatus); $count++) {
-            $data = array(
-                'estatus' => $estatus[$count],
-                'pistola1' => $pistola1[$count],
-                'pistola2' => $pistola2[$count],
-                'pistola3' => $pistola3[$count],
+        if($request->pistola1){
+
+            $rules = array(
+                'estatus.*',
+                'pistola1.*',
+                'pistola2.*',
+                'pistola3.*',
             );
-            $insert_data[] = $data;
+            $error = Validator::make($request->all(), $rules);
+
+            if ($error->fails()) {
+                return response()->json([
+                    'error' => $error->errors()->all()
+                ]);
+            }
+
+            $estatus = $request->estatus;
+            $pistola1 = $request->pistola1;
+            $pistola2 = $request->pistola2;
+            $pistola3 = $request->pistola3;
+            for ($count = 0; $count < count($estatus); $count++) {
+                $data = array(
+                    'estatus' => $estatus[$count],
+                    'pistola1' => $pistola1[$count],
+                    'pistola2' => $pistola2[$count],
+                    'pistola3' => $pistola3[$count],
+                );
+                $insert_data[] = $data;
+            }
+
+            TanqueConfiguracion::insert($insert_data);
         }
-
-        TanqueConfiguracion::insert($insert_data);
-
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
-        return redirect()->route('index.configuracion');
+            // Redireccion  de suuces or fail dependiedno el caso
+            Session::flash('edit', 'Se ha guardado sus datos con exito');
+            return redirect()->back();
+        } catch (\Exception $e) {
+            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
+            return redirect()->back();
+        }
     }
 
     public function update_ajustes(Request $request){
