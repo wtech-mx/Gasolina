@@ -35,6 +35,9 @@
     <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
 {{--    <link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
 
+    <!-- sweetalert2 JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 	 @livewireStyles
 
      @yield('css-custom')
@@ -54,6 +57,7 @@
              @yield('content')
             </div>
     </div>
+    @include('layouts.alertas')
 </body>
 
     <!-- Boostrap -->
@@ -176,17 +180,17 @@
         // });
     </script>
 
-<script>
-    $(document).ready(function() {
-        // Select2 Multiple
-        $('.select2-multiple').select2({
-            placeholder: "Select",
-            allowClear: true
+    <script>
+        $(document).ready(function() {
+            // Select2 Multiple
+            $('.select2-multiple').select2({
+                placeholder: "Select",
+                allowClear: true
+            });
+
         });
 
-    });
-
-</script>
+    </script>
 
 	@livewireScripts
 

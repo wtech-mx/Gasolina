@@ -38,12 +38,12 @@
         </a>
       </li>
 
-      {{-- <li class="">
+      <li class="">
         <a href="{{ route('roles.index') }}" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src="{{ asset('assets/img/roles.png') }}">
           Roles
         </a>
-      </li> --}}
+      </li>
 
       <li class="">
         <a href="{{ route('index.usuario') }}" class="nav-link nav-menuiem {{ Request::is('usuario') ? 'active' : '' }} text-white">
@@ -52,7 +52,7 @@
         </a>
       </li>
 
-     {{-- <li class="">
+     <li class="">
         <a href="{{ route('index.sucursal') }}" class="nav-link nav-menuiem {{ Request::is('sucursales') ? 'active' : '' }} text-white">
           <img class="img-card-menu2" src="{{ asset('assets/img/gasolinera.png') }}">
           Sucursales
@@ -64,7 +64,7 @@
           <img class="img-card-menu2" src="{{ asset('assets/img/empresa.png') }}">
           Empresa
         </a>
-      </li> --}}
+      </li>
 
       <li class="">
         <a href="{{ route('index.configuracion') }}" class="nav-link nav-menuiem text-white">

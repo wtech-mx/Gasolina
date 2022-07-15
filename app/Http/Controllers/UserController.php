@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Validator;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Arr;
 use Carbon\Carbon;
+Use Alert;
+
 
 class UserController extends Controller
 {
@@ -60,10 +62,14 @@ class UserController extends Controller
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191|unique:users',
             'puesto' => 'required|string|max:191',
+            'password' => 'required|confirmed|min:9',
+            'telefono' => 'numeric|min:10|max:11',
+            'role' => 'required',
         ]);
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
         if ($validator->fails()) {
+            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
             return redirect()->back()
                 ->with('errorForm', $validator->errors()->getMessages())
                 ->withInput();
@@ -77,21 +83,19 @@ class UserController extends Controller
             $user->apellido = $request->get('apellido');
             $user->telefono = $request->get('telefono');
             $user->puesto = $request->get('puesto');
-            // $user->id_empresa = $request->get('id_empresa');
-            // $user->id_sucursal = $request->get('id_sucursal');
+            $user->id_empresa = $request->get('id_empresa');
+            $user->id_sucursal = $request->get('id_sucursal');
             $user->email = $request->get('email');
             $user->calle = $request->get('calle');
             $user->password = Hash::make($request->password);
+
             if ($request->hasFile("firma")) {
+                $file = $request->file('firma');
+                $path = public_path() . '/firma';
+                $fileName = uniqid() . $file->getClientOriginalName();
 
-                $imagen = $request->file("firma");
-                $nombreimagen = time() . "." . $imagen->guessExtension();
-                $ruta = public_path("firma/");
-
-                $imagen->move($ruta,$nombreimagen);
-                // copy($imagen->getRealPath(), $ruta . $nombreimagen);
-
-                $user->firma = $nombreimagen;
+                $file->move($path, $fileName);
+                $user->firma = $fileName;
             }
 
             if ($request->hasFile("foto")) {
@@ -125,12 +129,11 @@ class UserController extends Controller
             $user->save();
 
             // Redireccion  de suuces or fail dependiedno el caso
-
-            return redirect()->route('index.usuario')
-                ->with('success', 'Usuario Creada Exitosamente!');
+            Session::flash('success', 'Se ha guardado sus datos con exito');
+            return redirect()->route('index.usuario');
         } catch (\Exception $e) {
-            return redirect()->back()
-                ->with('error', 'Error en el registro!!');
+            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
+            return redirect()->back();
         }
     }
     public function edit($id)
@@ -159,21 +162,18 @@ class UserController extends Controller
         $user->apellido = $request->get('apellido');
         $user->telefono = $request->get('telefono');
         $user->puesto = $request->get('puesto');
-        // $user->id_empresa = $request->get('id_empresa');
-        // $user->id_sucursal = $request->get('id_sucursal');
+        $user->id_empresa = $request->get('id_empresa');
+        $user->id_sucursal = $request->get('id_sucursal');
         $user->calle = $request->get('calle');
         $user->email = $request->get('email');
 
         if ($request->hasFile("firma")) {
+            $file = $request->file('firma');
+            $path = public_path() . '/firma';
+            $fileName = uniqid() . $file->getClientOriginalName();
 
-            $imagen = $request->file("firma");
-            $nombreimagen = time() . "." . $imagen->guessExtension();
-            $ruta = public_path("firma/");
-
-            //$imagen->move($ruta,$nombreimagen);
-            copy($imagen->getRealPath(), $ruta . $nombreimagen);
-
-            $user->firma = $nombreimagen;
+            $file->move($path, $fileName);
+            $user->firma = $fileName;
         }
 
         if ($request->hasFile("foto")) {
@@ -185,11 +185,10 @@ class UserController extends Controller
             //$imagen->move($ruta,$nombreimagen);
             copy($imagen->getRealPath(), $ruta . $nombreimagen);
 
-            $user->firma = $nombreimagen;
+            $user->foto = $nombreimagen;
         }
 
         $user->alta = $request->get('alta');
-
         $current = Carbon::now()->toDateString();
         if ($request->get("baja")) {
             $user->baja = $current;
@@ -214,8 +213,10 @@ class UserController extends Controller
 
         $user->assignRole($request->input('roles'));
 
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
-        return redirect()->route('index.actualizar');
+        // Redireccion  de suuces or fail dependiedno el caso
+        Session::flash('edit', 'Se ha guardado sus datos con exito');
+        return redirect()->route('index.usuario');
+
     }
 
     public function update_usuario_password(Request $request, $id)
