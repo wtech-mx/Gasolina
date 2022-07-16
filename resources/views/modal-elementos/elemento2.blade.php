@@ -38,9 +38,9 @@
                                     </select>
                                 </form>
 
-                                <div id="ii" style="display: none;">
-                                    <a href="{{route('pdf_ii_01.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_ii_01.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                <div id="ii" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_ii_01.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_ii_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
 
                                 <div id="ii-01" style="display: none;">
@@ -64,35 +64,35 @@
                         <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
                                 <form action="index.php" method="post">
-                                    <select id="status" name="status" class="form-select" onChange="mostrar2(this.value);">
+                                    <select id="status" name="status" class="form-select" onChange="mostrars2(this.value);">
                                         <option value="">Servicio*</option>
                                         <option value="II-01-01">II-01-01 Matriz para la identificación de peligros y análisis de riesgos.</option>
                                         <option value="II-02-01">II-02-01 Matriz de aspectos e impactos ambientales.</option>
                                     </select>
                                 </form>
                                 <div id="II-01-01" style="display: none;">
-                                    <a class="btn text-dark" href="#" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important">
+                                    {{-- <a class="btn text-dark" href="#" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important">
                                         Ejecutar
-                                    </a>
+                                    </a> --}}
 
-                                    <a class="btn" href="{{route('difundir_i_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
+                                    <a class="btn" href="{{route('difundir_ii_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
                                         Difundir
                                     </a>
 
-                                    <a class="btn text-dark" href="{{route('preventiva_i_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                    <a class="btn text-dark" href="{{route('preventiva_ii_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
                                         Accion Correctiva
                                     </a>
                                 </div>
                                 <div id="II-02-01" style="display: none;">
-                                    <a class="btn text-dark" href="{{route('index.consulta')}}" style="background-color:#001d3d;color:  #852ecc!important; border: 2px solid #852ecc!important">
+                                    {{-- <a class="btn text-dark" href="{{route('index.consulta')}}" style="background-color:#001d3d;color:  #852ecc!important; border: 2px solid #852ecc!important">
                                         Ejecutar
-                                    </a>
+                                    </a> --}}
 
-                                    <a class="btn" href="{{route('difundir_i_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
+                                    <a class="btn" href="{{route('difundir_ii_02_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
                                         Difundir
                                     </a>
 
-                                    <a class="btn text-dark" href="{{route('preventiva_i_01_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                    <a class="btn text-dark" href="{{route('preventiva_ii_02_01.index')}}" style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
                                         Accion Correctiva
                                     </a>
                                 </div>

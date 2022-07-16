@@ -9,7 +9,7 @@
 
       <div class="modal-header">
         <h5 class="modal-title text-center" id="elemento1" style="font-size: 16px;">
-            I-01-01 Política documentada.
+            Política
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -34,7 +34,7 @@
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar1(this.value);">
                                         <option value="">Documento*</option>
-                                        <option value="I-01">I - Política</option>
+                                        <option value="I-01">I - Política Documentada</option>
                                         <option value="I">I-01 Procedimiento de elaboración y comunicación de la política.-9495</option>
                                     </select>
                                 </form>

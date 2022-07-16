@@ -2,6 +2,10 @@
 $url = $_SERVER['REQUEST_URI'];
 if ($url == '/difundir/i-01-01') {
 $rest = substr($url, -7);
+}elseif ($url == '/difundir/ii-01-01') {
+$rest = substr($url, -8);
+}elseif ($url == '/difundir/ii-02-01') {
+$rest = substr($url, -8);
 }elseif ($url == '/difundir/iii-01-01') {
 $rest = substr($url, -9);
 }elseif ($url == '/difundir/iv-01-01') {

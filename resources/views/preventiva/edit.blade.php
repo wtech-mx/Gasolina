@@ -1,6 +1,10 @@
 @php
 if ($row->elemento == 'i-01-01') {
 $elemento = 'I-01-01 Política documentada.';
+}elseif ($row->elemento == 'ii-01-01') {
+$elemento = 'II-01-01 Matriz para la identificación de peligros y análisis de riesgos.';
+}elseif ($row->elemento == 'ii-02-01') {
+$elemento = 'II-02-01 Matriz de aspectos e impactos ambientales.';
 }elseif ($row->elemento == 'iii-01-01') {
 $elemento = 'III-01-01 Matriz de requisitos legales.';
 }elseif ($row->elemento == 'iv-01-01') {

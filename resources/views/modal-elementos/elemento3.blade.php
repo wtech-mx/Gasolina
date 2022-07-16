@@ -9,7 +9,7 @@
 
       <div class="modal-header">
         <h5 class="modal-title text-center" id="elemento3" style="font-size: 16px;">
-            III-01-01 Matriz de requisitos legales.
+            Requisitos legales
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>

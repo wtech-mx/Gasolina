@@ -23,7 +23,7 @@
                         <div class="col-12 mt-3">
                             <div class="d-flex justify-content-between p-3">
 
-                                <a href="javascript:history.back()" class="btn btn-back">
+                                <a href="{{ route('home') }}" class="btn btn-back">
                                     <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                                 </a >
 
@@ -42,9 +42,6 @@
                                 <tr>
                                     <th scope="col">Leyes, reglamentos o normas</th>
                                     <th scope="col">Marco normativo</th>
-                                    <th scope="col">Descripción del marco normativo</th>
-                                    <th scope="col">Ámbito de la aplicación</th>
-                                    <th scope="col">Mecanismo de cumplimiento SA</th>
                                     <th scope="col">Mecanismo específico</th>
                                     <th scope="col">Periocidad</th>
                                     <th scope="col">Obligatorio</th>
@@ -57,12 +54,14 @@
                                     <tr>
                                         <td>{{$row->leyes}}</td>
                                         <td>{{$row->marco}}</td>
-                                        <td>{{$row->descripcion}}</td>
-                                        <td>{{$row->ambito}}</td>
-                                        <td>{{$row->mecanismo_cumplimiento}}</td>
                                         <td>{{$row->mecanismo_especifico}}</td>
                                         <td>{{$row->periodicidad}}</td>
-                                        <td>{{$row->obligatorio}}</td>
+                                        @if ($row->obligatorio == null)
+                                            <td>No</td>
+                                        @else
+                                            <td>{{$row->obligatorio}}</td>
+                                        @endif
+
                                         <td>{{$row->aplica}}</td>
                                         <td>
                                             @if ($row->pdf == NULL)

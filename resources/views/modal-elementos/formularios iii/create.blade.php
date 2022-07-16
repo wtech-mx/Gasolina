@@ -75,7 +75,7 @@
                         <div class="col-sm-4 col-4">
                             <div class="form-group mb-3 position-relative">
                                 <label class="form-label label-custom-yellow">Obligatorio</label>
-                                <input class="form-check-input" type="checkbox" id="periodicidad" name="periodicidad" value="1" id="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" id="obligatorio" name="obligatorio" value="Si">
                             </div>
                         </div>
 

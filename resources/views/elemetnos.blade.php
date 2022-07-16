@@ -4,15 +4,15 @@
 
                 <div id="elemento_v" class="accordion-collapse collapse" aria-labelledby="elemento_v" data-bs-parent="#accordionactividades">
                     <div class="card card-body d-inline-block" style="background: none;">
-                        <div class="card card-menu">
+                        <div class="card card-menu  mt-3 ">
                             <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento1">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/1.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Política</h4>
+                                    <h4 class="card-title card-menu-title-element">Política <br>-</h4>
                                 </div>
                             </a>
                         </div>
-                        <div class="card card-menu">
+                        <div class="card card-menu  mt-3">
                            <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento2">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
@@ -20,7 +20,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="card card-menu">
+                        <div class="card card-menu  mt-3">
                             <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento3">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/3.png') }}">
@@ -28,7 +28,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="card card-menu">
+                        <div class="card card-menu  mt-3">
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento4">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/4.png') }}">
@@ -36,7 +36,7 @@
                                 </div>
                                 </a>
                             </div>
-                        <div class="card card-menu">
+                        <div class="card card-menu  mt-3">
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento5">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/5.png') }}">
@@ -44,7 +44,7 @@
                                 </div>
                                 </a>
                             </div>
-                        <div class="card card-menu">
+                        <div class="card card-menu  mt-3">
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento6">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/6.png') }}">
@@ -64,7 +64,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento8">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/8.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Comunicacion , participacion y consulta<br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Control de documentos y registros</h4>
                                     </a>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                                 <div class="card-body">
                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento9">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/9.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Seguridad de contratistas  <br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Mejores prácticas y estándares  <br>-<br></h4>
                                     </a>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento10">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/10.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Preparacion y respues a emergencias</h4>
+                                        <h4 class="card-title card-menu-title-element">Control de actividades y procesos</h4>
                                     </a>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento11">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/11.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Monitoreo, verificacion y evaluacion</h4>
+                                        <h4 class="card-title card-menu-title-element">Integridad mecánica y aseguramiento  de la calidad</h4>
                                     </a>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento12">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/12.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Mejores practicas y estandares </h4>
+                                        <h4 class="card-title card-menu-title-element">Seguridad de contratistas<br>-</h4>
                                     </a>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento13">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/13.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Competencia del personal <br>-<br>-</h4>
+                                        <h4 class="card-title card-menu-title-element">Preparación y respuesta a emergencias</h4>
                                     </a>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento14">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/14.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Integridad mecanica y aseguramiento de la calidad <br>-</h4>
+                                        <h4 class="card-title card-menu-title-element">Monitoreo, verificación y evaluación</h4>
                                     </a>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento15">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/15.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Investigacion de inscidentes y accidentes <br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Auditorías<br>-<br></h4>
                                     </a>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento16">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/16.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Auditorias <br></h4>
+                                        <h4 class="card-title card-menu-title-element">Investigación de incidentes y accidentes <br></h4>
                                     </a>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento17">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/17.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Revision de resultados</h4>
+                                        <h4 class="card-title card-menu-title-element">Revision de resultados<br>-<br></h4>
                                     </a>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento18">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/18.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Informes de Desempeños</h4>
+                                        <h4 class="card-title card-menu-title-element">Informes de Desempeños<br>-<br></h4>
                                     </a>
                                 </div>
                             </div>

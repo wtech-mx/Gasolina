@@ -5,7 +5,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Editar Difución</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Editar Difución {{$row->id_elemento}}</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form method="POST" action="{{ route('difundir.update', $row->id) }}" enctype="multipart/form-data"
@@ -14,8 +14,8 @@
                 <input type="hidden" name="_method" value="PATCH">
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="tipo">Elemento de difución</label>
-                        <input type="text" class="form-control" name="id_elemento" id="id_elemento" value="{{$row->id_elemento}}" >
+                        {{-- <label for="tipo">Elemento de difución</label> --}}
+                        <input type="hidden" class="form-control" name="id_elemento" id="id_elemento" value="{{$row->id_elemento}}" >
                     </div>
 
                     <div class="form-group mt-4">

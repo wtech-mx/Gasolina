@@ -83,7 +83,12 @@
                             <div class="form-group mb-3 position-relative">
 
                                 <label class="form-label label-custom-yellow">Obligatorio</label>
-                                <input class="form-check-input" type="checkbox" id="periodicidad" name="periodicidad" value="1" id="flexCheckDefault">
+                                @if ($row->obligatorio != null)
+                                <input class="form-check-input" type="checkbox" id="obligatorio" name="obligatorio" value="Si" checked>
+                                @else
+                                <input class="form-check-input" type="checkbox" id="obligatorio" name="obligatorio" value="Si">
+                                @endif
+
                             </div>
                         </div>
 

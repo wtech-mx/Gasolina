@@ -3,6 +3,12 @@
 if ($url == '/preventiva/i-01-01') {
 $rest = substr($url, -7);
 $elemento = 'I-01-01 Política documentada.';
+}elseif ($url == '/preventiva/ii-01-01') {
+$rest = substr($url, -8);
+$elemento = 'II-01-01 Matriz para la identificación de peligros y análisis de riesgos.';
+}elseif ($url == '/preventiva/ii-02-01') {
+$rest = substr($url, -8);
+$elemento = 'II-02-01 Matriz de aspectos e impactos ambientales.';
 }elseif ($url == '/preventiva/iii-01-01') {
 $rest = substr($url, -9);
 $elemento = 'III-01-01 Matriz de requisitos legales.';

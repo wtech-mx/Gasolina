@@ -9,7 +9,7 @@
 
       <div class="modal-header">
         <h5 class="modal-title text-center"  style="font-size: 16px;">
-           Seguridad de contratistas
+            Monitoreo, verificación y evaluación
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>

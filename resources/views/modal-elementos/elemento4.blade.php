@@ -9,7 +9,7 @@
 
       <div class="modal-header">
         <h5 class="modal-title text-center"  style="font-size: 16px;">
-            IV-01-01 Matriz de objetivos metas e indicadores.
+            Objetivos,Metas e indicadores
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -28,22 +28,26 @@
                             Documentos de consulta
                             </button>
                         </h2>
-                        <form action="index.php" method="post">
-                            <select id="status" name="status" class="form-select" onChange="mostrar4(this.value);">
-                                <option value="">Documento*</option>
-                                <option value="IV">IV - Objetivos, metas e indicadores</option>
-                                <option value="IV-01">IV-01 Procedimiento para el establecimiento de objetivos, metas e indicadores</option>
-                            </select>
-                        </form>
+                        <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_one" data-bs-parent="#accordionExample7">
+                            <div class="accordion-body">
+                                <form action="index.php" method="post">
+                                    <select id="status" name="status" class="form-select" onChange="mostrar4(this.value);">
+                                        <option value="">Documento*</option>
+                                        <option value="IV">IV - Objetivos, metas e indicadores</option>
+                                        <option value="IV-01">IV-01 Procedimiento para el establecimiento de objetivos, metas e indicadores</option>
+                                    </select>
+                                </form>
 
-                        <div id="IV" class="text-center" style="display: none;">
-                            <a href="{{route('pdf_iv.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
-                            <a href="{{route('pdf_iv.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
-                        </div>
+                                <div id="IV" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_iv.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_iv.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                </div>
 
-                        <div id="IV-01" class="text-center" style="display: none;">
-                            <a href="{{route('pdf_iv_01.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
-                            <a href="{{route('pdf_iv_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                <div id="IV-01" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_iv_01.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_iv_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
