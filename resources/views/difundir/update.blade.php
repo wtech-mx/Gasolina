@@ -1,13 +1,3 @@
-@php
-$url = $_SERVER['REQUEST_URI'];
-if ($url == '/difundir/iv-01-01') {
-$rest = substr($url, -8);
-}elseif ($url == '/difundir/iii-01-01') {
-$rest = substr($url, -9);
-}else {
-$rest = substr($url, -7);
-}
-@endphp
 
 <!-- Modal -->
 <div class="modal fade" id="updateModal{{$row->id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -21,20 +11,21 @@ $rest = substr($url, -7);
             <form method="POST" action="{{ route('difundir.update', $row->id) }}" enctype="multipart/form-data"
                 role="form">
                 @csrf
+                <input type="hidden" name="_method" value="PATCH">
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="tipo">Elemento de difución</label>
-                        <input type="text" class="form-control" value="{{$row->id_elemento}}" disabled>
+                        <input type="text" class="form-control" name="id_elemento" id="id_elemento" value="{{$row->id_elemento}}" >
                     </div>
 
                     <div class="form-group mt-4">
                         <label for="descripcion">Descripción</label>
                         <textarea name="descripcion" class="form-control" id="descripcion" cols="20" rows="5"
-                            placeholder="Descripcion" disabled>{{$row->descripcion}}</textarea>
+                            placeholder="Descripcion" >{{$row->descripcion}}</textarea>
                     </div>
                     <div class="form-group mt-4">
                         <label for="tipo">Tipo</label>
-                        <select name="tipo" class="form-control" id="tipo" disabled>
+                        <select name="tipo" class="form-control" id="tipo" >
                             <option value="{{$row->tipo}}">{{$row->tipo}}</option>
                             <option value="externa">Externa</option>
                             <option value="interna">Interna</option>
@@ -44,20 +35,20 @@ $rest = substr($url, -7);
                         <div class="form-group col-6 mt-4">
                             <label for="inicial">Fecha inicial</label>
                             <input name="inicial" type="date" class="form-control" id="inicial"
-                                value="{{$row->inicial}}" disabled>
+                                value="{{$row->inicial}}" >
                         </div>
                         <div class="form-group col-6 mt-4">
                             <label for="final">Fecha final</label>
                             <input name="final" type="date" class="form-control" id="final" value="{{$row->final}}"
-                                disabled>
+                                >
                         </div>
                     </div>
 
                     <div class="form-group col-12 col-xs-6 col-sm-6 col-md-6">
                         <label for="">Evidencia</label>
                         <input type="file" id="pdf" class="form-control" name="pdf">
-                        <a href="{{asset('pdf_difundir/'.$row->pdf)}}" data-lightbox="photos">
-                            <img src="{{asset('pdf_difundir/'.$row->pdf)}}" class="img-firma">
+                        <a href="{{asset('pdf_difundir/'.$row->pdf)}}">
+                            <embed src="{{asset('pdf_difundir/'.$row->pdf)}}" class="img-firma">
                         </a>
                     </div>
 
@@ -69,9 +60,9 @@ $rest = substr($url, -7);
 
                         @foreach ($row->mediosDifundirs as $item)
                         @if ($item->id_difundir == $row->id)
-                        <div class="col-8"><input name="inicial" type="text" class="form-control" id="inicial"
+                        <div class="col-8"><input name="comunicacion[]" type="text" class="form-control" id="comunicacion[]"
                                 value="{{$item->comunicacion}}" disabled></div>
-                        <div class="col-4"><input name="inicial" type="text" class="form-control" id="inicial"
+                        <div class="col-4"><input name="descripcion2[]" type="text" class="form-control" id="descripcion2[]"
                                 value="{{$item->descripcion}}" disabled></div>
                         @endif
                         @endforeach
@@ -80,7 +71,7 @@ $rest = substr($url, -7);
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    {{-- <button type="submit" class="btn btn-primary">Actualizar</button> --}}
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
                 </div>
             </form>
         </div>

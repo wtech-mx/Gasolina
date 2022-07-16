@@ -103,9 +103,6 @@ class DifundirController extends Controller
         //1/3 - error de validacion en la sweetalert *OBLIGATORIO*
         $validator = Validator::make($request->all(), [
             'descripcion' => 'required',
-            'tipo' => 'required',
-            'inicial' => 'required',
-            'final' => 'required',
         ]);
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
@@ -116,39 +113,41 @@ class DifundirController extends Controller
         }
         try {
 
-        //3/3- Si la validacion es correcta se crea el registro
-        $current = Carbon::now()->toDateString();
-
         $difundir = Difundir::findOrFail($id);
-        $difundir->id_user = auth()->user()->id;
-        $difundir->id_elemento = $request->get('id_elemento');
-        $difundir->fecha = $current;
         $difundir->descripcion = $request->get('descripcion');
+        $difundir->id_elemento = $request->get('id_elemento');
         $difundir->tipo = $request->get('tipo');
         $difundir->inicial = $request->get('inicial');
         $difundir->final = $request->get('final');
+        if ($request->hasFile("pdf")) {
+            $file = $request->file('pdf');
+            $path = public_path() . '/pdf_difundir';
+            $fileName = uniqid() . $file->getClientOriginalName();
+
+            $file->move($path, $fileName);
+            $difundir->pdf = $fileName;
+        }
         $difundir->update();
 
-        $comunicacion = $request->get('comunicacion');
-        $descripcion2 = $request->get('descripcion2');
+        // $comunicacion = $request->get('comunicacion');
+        // $descripcion2 = $request->get('descripcion2');
 
-        for ($count = 0; $count < count($comunicacion); $count++) {
-            $data = array(
-                'comunicacion' => $comunicacion[$count],
-                'descripcion' => $descripcion2[$count],
-                'id_difundir' => $difundir->id,
-            );
-            $insert_data[] = $data;
-        }
+        // for ($count = 0; $count < count($comunicacion); $count++) {
+        //     $data = array(
+        //         'comunicacion' => $comunicacion[$count],
+        //         'descripcion' => $descripcion2[$count],
+        //     );
+        //     $insert_data[] = $data;
+        // }
 
-        MedioDifundir::update($insert_data);
+        // MedioDifundir::update($insert_data);
 
         // Redireccion  de suuces or fail dependiedno el caso
 
         Session::flash('edit', 'Se ha guardado sus datos con exito');
         return redirect()->back();
     } catch (\Exception $e) {
-        Session::flash('error', 'opps error al crear usuario');
+        Session::flash('error', 'opps error al actualizar');
         return redirect()->back();
     }
 

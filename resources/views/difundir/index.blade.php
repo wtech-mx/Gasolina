@@ -76,9 +76,6 @@
                                                         <i class="fa fa-file-pdf-o" aria-hidden="true" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
                                                     </a>
 
-                                                    {{-- <a onclick="confirm('Confirm Delete Difusion id {{$row->id}}? \nDeleted Difusions cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})" style="color: #ffffff;font-size: 16px;padding: 5px;">
-                                                        <i class="fa fa-trash"></i>
-                                                    </a> --}}
                                                 </td>
                                             </tr>
                                             @include('difundir.update')
