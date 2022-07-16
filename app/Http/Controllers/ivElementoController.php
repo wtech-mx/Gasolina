@@ -12,7 +12,7 @@ class ivElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios iv.pdf_iv', compact('config'));
-        return $pdf->stream('SASISOPA IV.pdf');
+        return $pdf->stream('IV - Objetivos, metas e indicadores.pdf');
     }
 
     public function pdf_sasisopa_iv_download()
@@ -20,7 +20,7 @@ class ivElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios iv.pdf_iv', compact('config'));
-        return $pdf->download('SASISOPA IV.pdf');
+        return $pdf->download('IV - Objetivos, metas e indicadores.pdf');
     }
 
     public function pdf_sasisopa_iv_01()
@@ -28,7 +28,7 @@ class ivElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios iv.pdf_iv_01', compact('config'));
-        return $pdf->stream('SASISOPA IV-01.pdf');
+        return $pdf->stream('IV-01 Procedimiento para el establecimiento de objetivos, metas e indicadores.pdf');
     }
 
     public function pdf_sasisopa_iv_01_download()
@@ -36,6 +36,6 @@ class ivElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios iv.pdf_iv_01', compact('config'));
-        return $pdf->download('SASISOPA IV-01.pdf');
+        return $pdf->download('IV-01 Procedimiento para el establecimiento de objetivos, metas e indicadores.pdf');
     }
 }

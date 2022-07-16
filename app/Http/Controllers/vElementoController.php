@@ -46,7 +46,7 @@ class vElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios v.pdf_v', compact('config'));
-        return $pdf->stream('SASISOPA V.pdf');
+        return $pdf->stream('V - Funciones, responsabilidaes y autoridad.pdf');
     }
 
     public function pdf_sasisopa_v_download()
@@ -54,7 +54,7 @@ class vElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios v.pdf_v', compact('config'));
-        return $pdf->download('SASISOPA V.pdf');
+        return $pdf->download('V - Funciones, responsabilidaes y autoridad.pdf');
     }
 
     public function pdf_sasisopa_v_01()
@@ -62,7 +62,7 @@ class vElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios v.pdf_v_01', compact('config'));
-        return $pdf->stream('SASISOPA V-01.pdf');
+        return $pdf->stream('V-01 Procedimiento de funciones y responsabilidades.pdf');
     }
 
     public function pdf_sasisopa_v_01_download()
@@ -70,6 +70,6 @@ class vElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios v.pdf_v_01', compact('config'));
-        return $pdf->download('SASISOPA V-01.pdf');
+        return $pdf->download('V-01 Procedimiento de funciones y responsabilidades.pdf');
     }
 }

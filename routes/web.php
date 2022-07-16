@@ -255,7 +255,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('ver/otorgamiento-v', [App\Http\Controllers\vElementoController::class, 'pdf_otorgamiento_v'])->name('pdf_otorgamiento_v.view');
 
     Route::get('ver/sasisopa-v', [App\Http\Controllers\vElementoController::class, 'pdf_sasisopa_v'])->name('pdf_v.view');
-    Route::get('imprimir/sasisopa-v', [App\Http\Controllers\ivElementoController::class, 'pdf_sasisopa_v_download'])->name('pdf_v.print');
+    Route::get('imprimir/sasisopa-v', [App\Http\Controllers\vElementoController::class, 'pdf_sasisopa_v_download'])->name('pdf_v.print');
 
     Route::get('ver/sasisopa-v-01', [App\Http\Controllers\vElementoController::class, 'pdf_sasisopa_v_01'])->name('pdf_v_01.view');
     Route::get('imprimir/sasisopa-v-01', [App\Http\Controllers\vElementoController::class, 'pdf_sasisopa_v_01_download'])->name('pdf_v_01.print');

@@ -72,32 +72,32 @@ class viiiElementoController extends Controller
     {
         $config = DB::table('configuracion')->first();
 
-        $pdf = \PDF::loadView('modal-elementos.formularios vii.pdf_vii', compact('config'));
-        return $pdf->stream('VII - Comunicacion participacion y consulta.pdf');
+        $pdf = \PDF::loadView('modal-elementos.formularios viii.pdf_viii', compact('config'));
+        return $pdf->stream('VIII - Control de documentos y registros.pdf');
     }
 
     public function pdf_sasisopa_viii_download()
     {
         $config = DB::table('configuracion')->first();
 
-        $pdf = \PDF::loadView('modal-elementos.formularios vii.pdf_vii', compact('config'));
-        return $pdf->download('VII - Comunicacion participacion y consulta.pdf');
+        $pdf = \PDF::loadView('modal-elementos.formularios viii.pdf_viii', compact('config'));
+        return $pdf->download('VIII - Control de documentos y registros.pdf');
     }
 
     public function pdf_sasisopa_viii_01()
     {
         $config = DB::table('configuracion')->first();
 
-        $pdf = \PDF::loadView('modal-elementos.formularios vii.pdf_vii', compact('config'));
-        return $pdf->stream('VII - Comunicacion participacion y consulta.pdf');
+        $pdf = \PDF::loadView('modal-elementos.formularios viii.pdf_viii_01', compact('config'));
+        return $pdf->stream('VIII-01 Procedimiento de control de documentos.pdf');
     }
 
     public function pdf_sasisopa_viii_01_download()
     {
         $config = DB::table('configuracion')->first();
 
-        $pdf = \PDF::loadView('modal-elementos.formularios vii.pdf_vii', compact('config'));
-        return $pdf->download('VII - Comunicacion participacion y consulta.pdf');
+        $pdf = \PDF::loadView('modal-elementos.formularios viii.pdf_viii_01', compact('config'));
+        return $pdf->download('VIII-01 Procedimiento de control de documentos.pdf');
     }
 
     // ==========Elemento viii 02===============Elemento viii 02===========Elemento viii 02============Elemento viii 02================Elemento viii 02=========Elemento viii 02
