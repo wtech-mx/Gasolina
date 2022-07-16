@@ -32,6 +32,7 @@ class viiiElementoController extends Controller
             $viii_elemento->fecha = $request->get('fecha');
             $viii_elemento->aprobacion = $request->get('aprobacion');
             $viii_elemento->notificacion = $request->get('notificacion');
+            $viii_elemento->revision = $request->get('revision');
             if ($request->hasFile("pdf")) {
                 $file = $request->file('pdf');
                 $path = public_path() . '/viii_elemento';
@@ -54,6 +55,7 @@ class viiiElementoController extends Controller
         $viii_elemento->fecha = $request->get('fecha');
         $viii_elemento->aprobacion = $request->get('aprobacion');
         $viii_elemento->notificacion = $request->get('notificacion');
+        $viii_elemento->revision = $request->get('revision');
         if ($request->hasFile("pdf")) {
             $file = $request->file('pdf');
             $path = public_path() . '/viii_elemento';
@@ -115,6 +117,8 @@ class viiiElementoController extends Controller
                 $viii_elemento = new viiiElemento02;
                 $viii_elemento->nombre = $request->get('nombre');
                 $viii_elemento->estatus = $request->get('estatus');
+                $viii_elemento->fecha = $request->get('fecha');
+                $viii_elemento->modificacion = $request->get('modificacion');
                 if ($request->hasFile("pdf")) {
                     $file = $request->file('pdf');
                     $path = public_path() . '/viii_elemento_02';
@@ -126,8 +130,8 @@ class viiiElementoController extends Controller
 
                 $viii_elemento->save();
 
-                return redirect()->route('index.viii_01_02')
-                    ->with('success', 'Viii-01-02 Creada Exitosamente!');
+                Session::flash('success', 'Se ha actualizado sus datos con exito');
+                return redirect()->route('index.viii_01_02');
         }
 
         public function update_02(Request $request, $id)
@@ -135,6 +139,8 @@ class viiiElementoController extends Controller
             $viii_elemento = viiiElemento02::findOrFail($id);
             $viii_elemento->nombre = $request->get('nombre');
             $viii_elemento->estatus = $request->get('estatus');
+            $viii_elemento->fecha = $request->get('fecha');
+            $viii_elemento->modificacion = $request->get('modificacion');
             if ($request->hasFile("pdf")) {
                 $file = $request->file('pdf');
                 $path = public_path() . '/viii_elemento_02';
@@ -147,7 +153,7 @@ class viiiElementoController extends Controller
             $viii_elemento->update();
 
 
-            Session::flash('success', 'Se ha actualizado sus datos con exito');
+            Session::flash('edit', 'Se ha actualizado sus datos con exito');
             return redirect()->route('index.viii_01_02');
         }
 
@@ -471,6 +477,7 @@ class viiiElementoController extends Controller
             $viii_elemento->fecha_notificacion = $request->get('fecha_notificacion');
             $viii_elemento->fecha_aprovacion = $request->get('fecha_aprovacion');
             $viii_elemento->reglas = $request->get('reglas');
+            $viii_elemento->personal_objetivo = $request->get('personal_objetivo');
             if ($request->hasFile("pdf")) {
                 $file = $request->file('pdf');
                 $path = public_path() . '/viii_elemento_05';
@@ -494,6 +501,7 @@ class viiiElementoController extends Controller
         $viii_elemento->fecha_notificacion = $request->get('fecha_notificacion');
         $viii_elemento->fecha_aprovacion = $request->get('fecha_aprovacion');
         $viii_elemento->reglas = $request->get('reglas');
+        $viii_elemento->personal_objetivo = $request->get('personal_objetivo');
         if ($request->hasFile("pdf")) {
             $file = $request->file('pdf');
             $path = public_path() . '/viii_elemento_05';

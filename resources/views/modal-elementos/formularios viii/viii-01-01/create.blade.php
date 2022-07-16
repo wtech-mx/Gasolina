@@ -11,33 +11,39 @@
                 <div class="modal-body">
                             <div class="row">
                                 <div class="form-group col-6 mt-3">
-                                    <label>tipo</label>
+                                    <label>Tipo</label>
                                     <input name="tipo" type="text" class="form-control" id="tipo"
                                         placeholder="tipo">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>reglas</label>
+                                    <label>Reglas</label>
                                     <input name="reglas" type="text" class="form-control" id="reglas"
                                         placeholder="reglas">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>fecha</label>
+                                    <label>Fecha</label>
                                     <input name="fecha" type="date" class="form-control" id="fecha"
                                         placeholder="fecha">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>aprobacion</label>
+                                    <label>Aprobación</label>
                                     <input name="aprobacion" type="date" class="form-control" id="aprobacion"
                                         placeholder="aprobacion">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>notificacion</label>
+                                    <label>Modificación</label>
                                     <input name="notificacion" type="date" class="form-control" id="notificacion"
                                         placeholder="notificacion">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Revision</label>
+                                    <input name="revision" type="number" class="form-control" id="revision"
+                                        placeholder="revision">
                                 </div>
 
                                 <div class="col-sm-12 col-12">

@@ -25,7 +25,7 @@
                     <div class="col-12 mt-3">
                         <div class="d-flex justify-content-between p-3">
 
-                            <a href="javascript:history.back()" class="btn btn-back">
+                            <a href="{{ route('home') }}" class="btn btn-back">
                                 <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                             </a>
 
@@ -44,8 +44,10 @@
                                 <tr>
                                     <th scope="col">Tipo</th>
                                     <th scope="col">Reglas y procedimientos</th>
+                                    <th scope="col">Responsable</th>
                                     <th scope="col">Fecha</th>
-                                    <th scope="col">Fecha de aprovacion</th>
+                                    <th scope="col">Personal objetivo</th>
+                                    <th scope="col">Fecha de notificación</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
@@ -55,8 +57,10 @@
                                 <tr>
                                     <td>{{$item->tipo}}</td>
                                     <td>{{$item->reglas}}</td>
-                                    <td>{{$item->fecha_notificacion}}</td>
+                                    <td>{{$item->User->name}} {{ $item->User->apellido}}</td>
                                     <td>{{$item->fecha_aprovacion}}</td>
+                                    <td>{{$item->personal_objetivo}}</td>
+                                    <td>{{$item->fecha_notificacion}}</td>
                                     <td>
                                         @if ($item->pdf == NULL)
                                         <a data-bs-toggle="modal" data-bs-target="#updateModalViii05{{$item->id}}"

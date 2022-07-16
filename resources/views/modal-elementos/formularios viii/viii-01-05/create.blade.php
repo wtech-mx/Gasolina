@@ -17,6 +17,11 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
+                                    <label>Reglas</label>
+                                    <input name="reglas" type="text" class="form-control" id="reglas" placeholder="reglas">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
                                     <label for="nombre">Responsable</label>
                                     <select name="id_responsable" class="form-control" id="id_responsable">
                                             <option value="">Nombre usuario</option>
@@ -27,18 +32,18 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>fecha_notificacion</label>
-                                    <input name="fecha_notificacion" type="date" class="form-control" id="fecha_notificacion">
-                                </div>
-
-                                <div class="form-group col-6 mt-3">
-                                    <label>fecha_aprovacion</label>
+                                    <label>Fecha aprovacion</label>
                                     <input name="fecha_aprovacion" type="date" class="form-control" id="fecha_aprovacion">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>reglas</label>
-                                    <input name="reglas" type="text" class="form-control" id="reglas" placeholder="reglas">
+                                    <label>Personal Objetivo</label>
+                                    <input name="personal_objetivo" type="text" class="form-control" id="personal_objetivo" placeholder="personal objetivo">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Fecha notificacion</label>
+                                    <input name="fecha_notificacion" type="date" class="form-control" id="fecha_notificacion">
                                 </div>
 
                                 <div class="col-sm-12 col-12">

@@ -18,5 +18,6 @@ class viiiElemento01 extends Model
         'aprobacion',
         'notificacion',
         'pdf',
+        'revision',
     ];
 }

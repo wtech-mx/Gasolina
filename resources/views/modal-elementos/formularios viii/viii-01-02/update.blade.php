@@ -19,15 +19,32 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>Estatus</label>
-                                    <input name="estatus" type="date" class="form-control" id="estatus" value="{{$item->estatus}}">
+                                    <label>Fecha</label>
+                                    <input name="fecha" type="date" class="form-control" id="fecha" value="{{$item->fecha}}">
                                 </div>
 
-                                {{-- <div class="form-group col-6 col-xs-6 col-sm-6 col-md-6 mt-4">
-                                    <label for="">pdf</label>
+                                <div class="form-group col-6 mt-3">
+                                    <label>Modificación</label>
+                                    <input name="modificacion" type="text" class="form-control" id="modificacion"
+                                    value="{{$item->modificacion}}">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Estatus</label>
+                                    <select name="estatus" id="estatus" class="form-control">
+                                        <option value="{{$item->estatus}}">{{$item->estatus}}</option>
+                                        <option value="Alta">Alta</option>
+                                        <option value="Baja">Baja</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group col-12 col-xs-12 col-sm-12 col-md-12 mt-4">
+                                    <label for="">PDF</label>
                                     <input type="file" id="pdf" class="form-control" name="pdf">
-                                    <iframe src="{{asset('viii_elemento/'.$item->pdf)}}" class="img-firma">
-                                </div> --}}
+                                    <a href="{{asset('viii_elemento_02/'.$item->pdf)}}" target="_blank">
+                                        <embed src="{{asset('viii_elemento_02/'.$item->pdf)}}" class="img-firma">
+                                    </a>
+                                </div>
                             </div>
 
                 </div>

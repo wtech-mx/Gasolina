@@ -15,5 +15,7 @@ class viiiElemento02 extends Model
         'nombre',
         'estatus',
         'pdf',
+        'fecha',
+        'modificacion',
     ];
 }

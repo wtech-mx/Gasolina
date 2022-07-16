@@ -25,7 +25,7 @@
                     <div class="col-12 mt-3">
                         <div class="d-flex justify-content-between p-3">
 
-                            <a href="javascript:history.back()" class="btn btn-back">
+                            <a href="{{ route('home') }}" class="btn btn-back">
                                 <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                             </a>
 
@@ -47,6 +47,8 @@
                                     <th scope="col">Etapa</th>
                                     <th scope="col">Autoridad</th>
                                     <th scope="col">Periodicidad</th>
+                                    <th scope="col">Cumplimiento</th>
+                                    <th scope="col">Renovacion</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
@@ -59,6 +61,8 @@
                                     <td>{{$item->etapa}}</td>
                                     <td>{{$item->autoridad}}</td>
                                     <td>{{$item->periodicidad}}</td>
+                                    <td>{{$item->cumplimiento}}</td>
+                                    <td>{{$item->renovacion}}</td>
                                     <td>
                                         @if ($item->pdf == NULL)
                                         <a data-bs-toggle="modal" data-bs-target="#updateModalViii03{{$item->id}}"

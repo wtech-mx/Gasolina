@@ -18,21 +18,34 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>Fecha_notificacion</label>
-                                    <input name="fecha_notificacion" type="date" class="form-control" id="fecha_notificacion"
-                                        value="{{$item->fecha_notificacion}}">
-                                </div>
-
-                                <div class="form-group col-6 mt-3">
-                                    <label>Fecha_aprovacion</label>
-                                    <input name="fecha_aprovacion" type="date" class="form-control" id="fecha_aprovacion"
-                                        value="{{$item->fecha_aprovacion}}">
-                                </div>
-
-                                <div class="form-group col-6 mt-3">
                                     <label>Reglas</label>
                                     <input name="reglas" type="text" class="form-control" id="reglas"
                                         value="{{$item->reglas}}">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label for="nombre">Responsable</label>
+                                    <select name="id_responsable" class="form-control" id="id_responsable">
+                                            <option value="{{$item->id_responsable}}">{{$item->User->name}} {{ $item->User->apellido}}</option>
+                                            @foreach ($users as $item)
+                                                <option value="{{$item->id}}">{{$item->name}} {{ $item->apellido}}</option>
+                                            @endforeach
+                                        </select>
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Fecha aprovacion</label>
+                                    <input name="fecha_aprovacion" type="date" class="form-control" id="fecha_aprovacion" value="{{$item->fecha_aprovacion}}">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Personal Objetivo</label>
+                                    <input name="personal_objetivo" type="text" class="form-control" id="personal_objetivo" value="{{$item->personal_objetivo}}">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Fecha notificacion</label>
+                                    <input name="fecha_notificacion" type="date" class="form-control" id="fecha_notificacion" value="{{$item->fecha_notificacion}}">
                                 </div>
 
                                 <div class="form-group col-12 mt-3">

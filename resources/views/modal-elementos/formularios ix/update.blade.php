@@ -48,7 +48,7 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>configuracion</label>
+                                    <label>Válido para la estación</label>
                                     @if ($item->configuracion == '1')
                                         <input class="form-check-input" type="radio" name="configuracion" id="configuracion" checked>
                                     @else

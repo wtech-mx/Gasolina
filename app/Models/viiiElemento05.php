@@ -17,6 +17,7 @@ class viiiElemento05 extends Model
         'fecha_notificacion',
         'fecha_aprovacion',
         'reglas',
+        'personal_objetivo',
         'pdf',
     ];
 

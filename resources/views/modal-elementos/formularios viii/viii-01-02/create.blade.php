@@ -17,9 +17,22 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
+                                    <label>Fecha</label>
+                                    <input name="fecha" type="date" class="form-control" id="fecha">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Modificación</label>
+                                    <input name="modificacion" type="text" class="form-control" id="modificacion"
+                                        placeholder="modificacion">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
                                     <label>Estatus</label>
-                                    <input name="estatus" type="text" class="form-control" id="estatus"
-                                        placeholder="estatus">
+                                    <select name="estatus" id="estatus" class="form-control">
+                                        <option value="Alta">Alta</option>
+                                        <option value="Baja">Baja</option>
+                                    </select>
                                 </div>
 
                                 <div class="col-sm-12 col-12">
