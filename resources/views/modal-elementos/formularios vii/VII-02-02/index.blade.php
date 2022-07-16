@@ -25,7 +25,7 @@
                     <div class="col-12 mt-3">
                         <div class="d-flex justify-content-between p-3">
 
-                            <a href="javascript:history.back()" class="btn btn-back">
+                            <a href="{{ route('home') }}" class="btn btn-back">
                                 <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                             </a>
 
@@ -43,24 +43,25 @@
                         <table class="table" id="table_id">
                             <thead class="text-white">
                                 <tr>
+                                    <th scope="col">Empleado</th>
                                     <th scope="col">Fecha</th>
                                     <th scope="col">Lugar</th>
                                     <th scope="col">Situación observada</th>
                                     <th scope="col">Tipo</th>
                                     <th scope="col">Descripción</th>
-                                    <th scope="col">Empleado</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody class="text-white">
                                 @foreach ($vii_elemento as $item)
                                 <tr>
+                                    <td>{{$item->User->name}} {{$item->User->apellido}}</td>
                                     <td>{{$item->fecha}}</td>
                                     <td>{{$item->lugar}}</td>
                                     <td>{{$item->observada}}</td>
                                     <td>{{$item->tipo}}</td>
                                     <td>{{$item->descripcion}}</td>
-                                    <td>{{$item->empleado}}</td>
+
                                     <td>
                                         @if ($item->pdf == NULL)
                                         <a data-bs-toggle="modal" data-bs-target="#updateModalVii{{$item->id}}"

@@ -65,12 +65,11 @@ class viiElementoController extends Controller
             $vii_elemento->save();
 
             // Redireccion  de suuces or fail dependiedno el caso
-
-            return redirect()->route('index.vii_02_02')
-                ->with('success', 'Vii-02-02 Creada Exitosamente!');
+            Session::flash('success', 'Se ha guardado sus datos con exito');
+            return redirect()->route('index.vii_02_02');
         } catch (\Exception $e) {
-            return redirect()->back()
-                ->with('error', 'Error en el registro!!');
+            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
+            return redirect()->back();
         }
     }
 
@@ -101,7 +100,7 @@ class viiElementoController extends Controller
         $vii_elemento->update();
 
 
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
+        Session::flash('edit', 'Se ha guardado sus datos con exito');
         return redirect()->route('index.vii_02_02');
     }
 
@@ -150,13 +149,40 @@ class viiElementoController extends Controller
             $vii_elemento->save();
 
             // Redireccion  de suuces or fail dependiedno el caso
-
-            return redirect()->route('index.vii_03_02')
-                ->with('success', 'Vii-02-02 Creada Exitosamente!');
+            Session::flash('success', 'Se ha guardado sus datos con exito');
+            return redirect()->route('index.vii_03_02');
         } catch (\Exception $e) {
-            return redirect()->back()
-                ->with('error', 'Error en el registro!!');
+            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
+            return redirect()->back();
         }
+    }
+
+    public function update_03(Request $request, $id)
+    {
+
+            //3/3- Si la validacion es correcta se crea el registro
+            $vii_elemento = viiElemento03::findOrFail($id);;
+            $vii_elemento->fecha = $request->get('fecha');
+            $vii_elemento->servicio = $request->get('servicio');
+            $vii_elemento->tipo = $request->get('tipo');
+            $vii_elemento->descripcion = $request->get('descripcion');
+            $vii_elemento->solicitante = $request->get('solicitante');
+            $vii_elemento->id_reportado = $request->get('id_reportado');
+            $vii_elemento->solicitud = $request->get('solicitud');
+            if ($request->hasFile("pdf")) {
+                $file = $request->file('pdf');
+                $path = public_path() . '/vii_elemento_03';
+                $fileName = uniqid() . $file->getClientOriginalName();
+
+                $file->move($path, $fileName);
+                $vii_elemento->pdf = $fileName;
+            }
+            $vii_elemento->update();
+
+            // Redireccion  de suuces or fail dependiedno el caso
+            Session::flash('edit', 'Se ha guardado sus datos con exito');
+            return redirect()->route('index.vii_03_02');
+
     }
 
 // PDF==========PDF===========PDF===============PDF===========PDF===========PDF================PDF

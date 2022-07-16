@@ -42,12 +42,12 @@
                         <table class="table" id="table_id">
                             <thead class="text-white">
                                 <tr>
+                                    <th scope="col">Reportado por</th>
                                     <th scope="col">Fecha de solicitud</th>
                                     <th scope="col">Servicio</th>
                                     <th scope="col">Tipo de solicitud</th>
                                     <th scope="col">Descripcion de solicitud</th>
                                     <th scope="col">Solicitante</th>
-                                    <th scope="col">Reportado por</th>
                                     <th scope="col">¿Solicitud viable?</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
@@ -55,12 +55,12 @@
                             <tbody class="text-white">
                                 @foreach ($vii_elemento as $item)
                                 <tr>
+                                    <td>{{$item->User->name}}</td>
                                     <td>{{$item->fecha}}</td>
                                     <td>{{$item->servicio}}</td>
                                     <td>{{$item->tipo}}</td>
                                     <td>{{$item->descripcion}}</td>
                                     <td>{{$item->solicitante}}</td>
-                                    <td>{{$item->User->name}}</td>
                                     <td>{{$item->solicitud}}</td>
                                     <td>
                                         @if ($item->pdf == NULL)

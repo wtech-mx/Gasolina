@@ -40,9 +40,9 @@
                         <div class="form-group col-6 mt-3">
                             <label for="nombre">Empleado</label>
                             <select name="id_empleado" class="form-control" id="id_empleado">
-                                    <option value="{{$item->id_empleado }}">{{$item->User->name }} {{ $item->apellido}}</option>
-                                    @foreach ($users as $item)
-                                        <option value="{{$item->id_empleado}}">{{$item->name}} {{ $item->apellido}}</option>
+                                    <option value="{{$item->id_empleado }}">{{$item->User->name }} {{ $item->User->apellido}}</option>
+                                    @foreach ($users as $item2)
+                                        <option value="{{$item2->id_empleado}}">{{$item2->name}} {{ $item2->apellido}}</option>
                                     @endforeach
                                 </select>
                         </div>

@@ -13,7 +13,7 @@ use Spatie\Permission\Models\Role;
 use Illuminate\Support\Arr;
 use Carbon\Carbon;
 Use Alert;
-
+use App\Models\ViElemento;
 
 class UserController extends Controller
 {
@@ -128,6 +128,10 @@ class UserController extends Controller
             $user->telefono_emergencia = $request->get('telefono_emergencia');
             $user->save();
 
+            $vi_elemento = new ViElemento;
+            $vi_elemento->id_user = $user->id;
+            $vi_elemento->save();
+
             // Redireccion  de suuces or fail dependiedno el caso
             Session::flash('success', 'Se ha guardado sus datos con exito');
             return redirect()->route('index.usuario');
@@ -215,7 +219,7 @@ class UserController extends Controller
 
         // Redireccion  de suuces or fail dependiedno el caso
         Session::flash('edit', 'Se ha guardado sus datos con exito');
-        return redirect()->route('index.usuario');
+        return redirect()->back();
 
     }
 

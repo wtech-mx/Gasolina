@@ -34,7 +34,7 @@
 
                         <div class="form-group col-6 mt-3">
                             <label>Solicitante</label>
-                            <input name="solicitante" type="text" class="form-control" id="solicitante" value="{{$item->tipo }}">
+                            <input name="solicitante" type="text" class="form-control" id="solicitante" value="{{$item->solicitante }}">
                         </div>
 
                         <div class="form-group col-6 mt-3">
@@ -55,8 +55,10 @@
                         <div class="col-sm-12 col-12">
                             <div class="form-group mb-3 position-relative">
                                 <label class="form-label label-custom-yellow">Evidencia</label>
-                                <img src="{{asset('vii_elemento_03/'.$item->pdf)}}" class="img-firma">
                                 <input type="file" class="custom-file-input input-group-text" id="pdf" name="pdf" value="{{$item->pdf }}">
+                                <a href="{{asset('vii_elemento_03/'.$item->pdf)}}" target="_blank">
+                                    <embed src="{{asset('vii_elemento_03/'.$item->pdf)}}" class="img-firma">
+                                </a>
                             </div>
                         </div>
                     </div>

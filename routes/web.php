@@ -248,8 +248,8 @@ Route::group(['middleware' => ['auth']], function() {
     /*|--------------------------------------------------------------------------
     |Elemento (V-01-01)
     |--------------------------------------------------------------------------*/
-    Route::get('/actualizar', [App\Http\Controllers\VElementoController::class, 'index'])->name('index.actualizar');
-    Route::get('/consultar', [App\Http\Controllers\VElementoController::class, 'consultar'])->name('consultar.elemento5');
+    Route::get('/actualizar', [App\Http\Controllers\vElementoController::class, 'index'])->name('index.actualizar');
+    Route::get('/consultar', [App\Http\Controllers\vElementoController::class, 'consultar'])->name('consultar.elemento5');
 
     Route::get('ver/generar-v', [App\Http\Controllers\vElementoController::class, 'pdf_generar_v'])->name('pdf_generar_v.view');
     Route::get('ver/otorgamiento-v', [App\Http\Controllers\vElementoController::class, 'pdf_otorgamiento_v'])->name('pdf_otorgamiento_v.view');
