@@ -1,3 +1,22 @@
+<style>
+    button.dt-button:first-child, div.dt-button:first-child, a.dt-button:first-child, input.dt-button:first-child{
+         background-color: #fff;
+    }
+
+    button.dt-button.buttons-print:hover{
+        background-color: #ffd60a!important;
+    }
+
+    button.dt-button, div.dt-button, a.dt-button, input.dt-button{
+         background-color: #fff;
+    }
+
+    button.dt-button.buttons-collection.buttons-colvis:hover{
+        background-color: #ffd60a!important;
+    }
+
+</style>
+
 
 <div class="col-12 p-4">
     <table class="table" id="table_id" >
