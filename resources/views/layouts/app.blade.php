@@ -86,6 +86,9 @@
                 ],
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'
+                },
+                language: {
+                    searchPlaceholder: "Buscar"
                 }
             });
         });
@@ -94,6 +97,9 @@
             $('#table_id2').DataTable({
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'
+                },
+                language: {
+                    searchPlaceholder: "Buscar"
                 }
             });
         });
@@ -105,6 +111,9 @@
                 "iDisplayLength": 4,
                 language: {
                     url: 'https://cdn.datatables.net/plug-ins/1.11.5/i18n/es-ES.json'
+                },
+                language: {
+                    searchPlaceholder: "Buscar"
                 }
             });
         });

@@ -26,6 +26,10 @@
 
                 <div id='calendar'></div>
 
+                <div class=" d-flex justify-content-center ">
+                    <h5 class="text-white text-center">Colores de alertas del calendario</h5>
+                </div>
+
                 <div class=" d-flex justify-content-between bg-white p-2 rounded-pill">
                     <a > <span class="badge badge-pill"
                             style="background-color: {{$config->color_diaria}}">Diaria</span> </a>
