@@ -4,7 +4,7 @@
         <input type="hidden" name="_method" value="PATCH">
         <div class="row">
 
-            <div class="form-group col-4 mt-4">
+            <div class="form-group col-xs-12 col-sm-6 col-lg-4 mt-4">
                 <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" class="img_tanque_bomba"> <br>
                 <h3 class="tittle-firm" for="">Tanque 1</h3><br>
                 <label class="mb-3">Tipo de gasolina</label>
@@ -16,7 +16,7 @@
                 </select>
             </div>
 
-            <div class="form-group col-4 mt-4">
+            <div class="form-group col-xs-12 col-sm-6 col-lg-4 mt-4">
                 <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" class="img_tanque_bomba"> <br>
                 <h3 class="tittle-firm" for="">Tanque 2</h3><br>
                 <label class="mb-3">Tipo de gasolina</label>
@@ -28,7 +28,7 @@
                 </select>
             </div>
 
-            <div class="form-group col-4 mt-4">
+            <div class="form-group col-xs-12 col-sm-6 col-lg-4 mt-4">
                 <img src="{{asset('assets/img/icons/bomba-de-gas.png')}}" class="img_tanque_bomba"> <br>
                 <h3 class="tittle-firm" for="">Tanque 3</h3><br>
                 <label class="mb-3">Tipo de gasolina</label>
