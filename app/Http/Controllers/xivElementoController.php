@@ -175,7 +175,7 @@ class xivElementoController extends Controller
     {
         $config = DB::table('configuracion')->first();
 
-        $pdf = \PDF::loadView('modal-elementos.formularios xiv.pdf_xiv_03', compact('config'));
+        $pdf = \PDF::loadView('modal-elementos.formularios xiv.pdf_xiv_01', compact('config'));
         return $pdf->stream('XIV-02 Procedimiento para el manejo de no conformidades, acciones preventivas y correctivas del Sistema de Administración.pdf');
     }
 
@@ -183,7 +183,7 @@ class xivElementoController extends Controller
     {
         $config = DB::table('configuracion')->first();
 
-        $pdf = \PDF::loadView('modal-elementos.formularios xiv.pdf_xiv_03', compact('config'));
+        $pdf = \PDF::loadView('modal-elementos.formularios xiv.pdf_xiv_01', compact('config'));
         return $pdf->download('XIV-02 Procedimiento para el manejo de no conformidades, acciones preventivas y correctivas del Sistema de Administración.pdf');
     }
 }
