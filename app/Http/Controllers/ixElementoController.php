@@ -74,7 +74,7 @@ class ixElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios ix.pdf_ix', compact('config'));
-        return $pdf->stream('IX - Procedimiento de Mejores prácticas y estándares.pdf');
+        return $pdf->stream('IX - Mejores prácticas y estándares.pdf');
     }
 
     public function pdf_sasisopa_ix_download()
@@ -82,6 +82,22 @@ class ixElementoController extends Controller
         $config = DB::table('configuracion')->first();
 
         $pdf = \PDF::loadView('modal-elementos.formularios ix.pdf_ix', compact('config'));
+        return $pdf->download('IX - Mejores prácticas y estándares.pdf');
+    }
+
+    public function pdf_sasisopa_ix_01()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios ix.pdf_ix_01', compact('config'));
+        return $pdf->stream('IX - Procedimiento de Mejores prácticas y estándares.pdf');
+    }
+
+    public function pdf_sasisopa_ix_01_download()
+    {
+        $config = DB::table('configuracion')->first();
+
+        $pdf = \PDF::loadView('modal-elementos.formularios ix.pdf_ix_01', compact('config'));
         return $pdf->download('IX - Procedimiento de Mejores prácticas y estándares.pdf');
     }
 }

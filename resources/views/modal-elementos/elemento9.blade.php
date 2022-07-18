@@ -37,7 +37,8 @@
                                     <select id="status" name="status" class="form-select"
                                         onChange="mostrar9(this.value);">
                                         <option value="">Documento*</option>
-                                        <option value="ix">IX - Procedimiento de Mejores prácticas y estándares</option>
+                                        <option value="ix">IX - Mejores prácticas y estándares</option>
+                                        <option value="ix-01">IX - Procedimiento de Mejores prácticas y estándares</option>
                                     </select>
                                 </form>
 

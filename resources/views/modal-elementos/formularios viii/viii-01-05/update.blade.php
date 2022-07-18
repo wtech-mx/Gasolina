@@ -27,10 +27,10 @@
                                     <label for="nombre">Responsable</label>
                                     <select name="id_responsable" class="form-control" id="id_responsable">
                                             <option value="{{$item->id_responsable}}">{{$item->User->name}} {{ $item->User->apellido}}</option>
-                                            @foreach ($users as $item)
-                                                <option value="{{$item->id}}">{{$item->name}} {{ $item->apellido}}</option>
+                                            @foreach ($users as $value)
+                                            <option value="{{$value->id}}"> {{$value->name}} {{ $value->apellido}} </option>
                                             @endforeach
-                                        </select>
+                                    </select>
                                 </div>
 
                                 <div class="form-group col-6 mt-3">

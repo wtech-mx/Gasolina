@@ -349,6 +349,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('ver/sasisopa-ix', [App\Http\Controllers\ixElementoController::class, 'pdf_sasisopa_ix'])->name('pdf_ix.view');
     Route::get('imprimir/sasisopa-ix', [App\Http\Controllers\ixElementoController::class, 'pdf_sasisopa_ix_download'])->name('pdf_ix.print');
 
+    Route::get('ver/sasisopa-ix-01', [App\Http\Controllers\ixElementoController::class, 'pdf_sasisopa_ix_01'])->name('pdf_ix_01.view');
+    Route::get('imprimir/sasisopa-ix-01', [App\Http\Controllers\ixElementoController::class, 'pdf_sasisopa_ix_01_download'])->name('pdf_ix_01.print');
+
     /*|--------------------------------------------------------------------------
     |X Elemento
     |--------------------------------------------------------------------------*/
