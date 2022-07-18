@@ -104,6 +104,15 @@ class viiElementoController extends Controller
         return redirect()->route('index.vii_02_02');
     }
 
+    public function destroy(Request $request, $id){
+
+        $vii_elemento = viiElemento::findOrFail($id);
+        $vii_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
+    }
+
     public function index_03()
     {
         $vii_elemento = viiElemento03::get();
@@ -183,6 +192,15 @@ class viiElementoController extends Controller
             Session::flash('edit', 'Se ha guardado sus datos con exito');
             return redirect()->route('index.vii_03_02');
 
+    }
+
+    public function destroy_03(Request $request, $id){
+
+        $vii_elemento = viiElemento03::findOrFail($id);
+        $vii_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
     }
 
 // PDF==========PDF===========PDF===============PDF===========PDF===========PDF================PDF

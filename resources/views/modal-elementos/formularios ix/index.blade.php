@@ -25,7 +25,7 @@
                     <div class="col-12 mt-3">
                         <div class="d-flex justify-content-between p-3">
 
-                            <a href="javascript:history.back()" class="btn btn-back">
+                            <a href="{{ route('home') }}" class="btn btn-back">
                                 <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                             </a>
 
@@ -81,9 +81,13 @@
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @endif
+                                        <a type="button" class="text-white" data-bs-toggle="modal" data-bs-target="#modaleliminar{{ $item->id }}">
+                                            <i class="fa fa-trash" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
+                                        </a>
                                     </td>
                                 </tr>
                                 @include('modal-elementos.formularios ix.update')
+                                @include('modal-elementos.formularios ix.eliminar')
                                 @endforeach
                             </tbody>
                         </table>

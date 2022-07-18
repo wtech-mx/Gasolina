@@ -66,6 +66,15 @@ class xiElementoController extends Controller
         return redirect()->route('index.xi_01_01');
     }
 
+    public function destroy(Request $request, $id){
+
+        $vii_elemento = xiElemento::findOrFail($id);
+        $vii_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
+    }
+
     public function pdf_sasisopa_xi()
     {
         $config = DB::table('configuracion')->first();

@@ -108,6 +108,7 @@ Route::group(['middleware' => ['auth']], function() {
     |--------------------------------------------------------------------------*/
     Route::post('difundir/store', [App\Http\Controllers\DifundirController::class, 'store'])->name('difundir.store')->middleware('auth');
     Route::patch('difundir/update/{id}', [App\Http\Controllers\DifundirController::class, 'update'])->name('difundir.update');
+    Route::delete('/difundir/{id}', [App\Http\Controllers\DifundirController::class, 'destroy'])->name('difundir.destroy');
 
     Route::get('/difundir/i-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_i_01_01.index');
 
@@ -161,6 +162,7 @@ Route::group(['middleware' => ['auth']], function() {
     |--------------------------------------------------------------------------*/
     Route::post('preventiva/store', [App\Http\Controllers\PreventivaController::class, 'store'])->name('preventiva.store')->middleware('auth');
     Route::patch('preventiva/update/{id}', [App\Http\Controllers\PreventivaController::class, 'update'])->name('preventiva.update');
+    Route::delete('/preventiva/{id}', [App\Http\Controllers\PreventivaController::class, 'destroy'])->name('preventiva.destroy');
 
     Route::get('/preventiva/i-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_i_01_01.index');
 
@@ -294,10 +296,12 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/index/vii-02-02', [App\Http\Controllers\viiElementoController::class, 'index'])->name('index.vii_02_02');
     Route::post('/store/vii-02-02', [App\Http\Controllers\viiElementoController::class, 'store'])->name('store.vii_02_02');
     Route::patch('/update/vii-02-02/{id}', [App\Http\Controllers\viiElementoController::class, 'update'])->name('update.vii_02_02');
+    Route::delete('/delete/vii-02-02/{id}', [App\Http\Controllers\viiElementoController::class, 'destroy'])->name('destroy.vii_02_02');
 
     Route::get('/index/vii-03-02', [App\Http\Controllers\viiElementoController::class, 'index_03'])->name('index.vii_03_02');
     Route::post('/store/vii-03-02', [App\Http\Controllers\viiElementoController::class, 'store_03'])->name('store.vii_03_02');
     Route::patch('/update/vii-03-02/{id}', [App\Http\Controllers\viiElementoController::class, 'update_03'])->name('update.vii_03_02');
+    Route::delete('/delete/vii-03-02/{id}', [App\Http\Controllers\viiElementoController::class, 'destroy_03'])->name('destroy.vii_03_02');
 
     Route::get('ver/sasisopa-vii', [App\Http\Controllers\viiElementoController::class, 'pdf_sasisopa_vii'])->name('pdf_vii.view');
     Route::get('imprimir/sasisopa-vii', [App\Http\Controllers\viiElementoController::class, 'pdf_sasisopa_vii_download'])->name('pdf_vii.print');
@@ -316,22 +320,27 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/index/viii-01-01', [App\Http\Controllers\viiiElementoController::class, 'index'])->name('index.viii_01_01');
     Route::post('/store/viii-01-01', [App\Http\Controllers\viiiElementoController::class, 'store'])->name('store.viii_01_01');
     Route::patch('/update/viii-01-01/{id}', [App\Http\Controllers\viiiElementoController::class, 'update'])->name('update.viii_01_01');
+    Route::delete('/delete/viii-01-01/{id}', [App\Http\Controllers\viiiElementoController::class, 'destroy'])->name('destroy.viii_01_01');
 
     Route::get('/index/viii-01-02', [App\Http\Controllers\viiiElementoController::class, 'index_02'])->name('index.viii_01_02');
     Route::post('/store/viii-01-02', [App\Http\Controllers\viiiElementoController::class, 'store_02'])->name('store.viii_01_02');
     Route::patch('/update/viii-01-02/{id}', [App\Http\Controllers\viiiElementoController::class, 'update_02'])->name('update.viii_01_02');
+    Route::delete('/delete/viii-01-02/{id}', [App\Http\Controllers\viiiElementoController::class, 'destroy_02'])->name('destroy.viii_01_02');
 
     Route::get('/index/viii-01-03', [App\Http\Controllers\viiiElementoController::class, 'index_03'])->name('index.viii_01_03');
     Route::post('/store/viii-01-03', [App\Http\Controllers\viiiElementoController::class, 'store_03'])->name('store.viii_01_03');
     Route::patch('/update/viii-01-03/{id}', [App\Http\Controllers\viiiElementoController::class, 'update_03'])->name('update.viii_01_03');
+    Route::delete('/delete/viii-01-03/{id}', [App\Http\Controllers\viiiElementoController::class, 'destroy_03'])->name('destroy.viii_01_03');
 
     Route::get('/index/viii-01-04', [App\Http\Controllers\viiiElementoController::class, 'index_04'])->name('index.viii_01_04');
     Route::post('/store/viii-01-04', [App\Http\Controllers\viiiElementoController::class, 'store_04'])->name('store.viii_01_04');
     Route::patch('/update/viii-01-04/{id}', [App\Http\Controllers\viiiElementoController::class, 'update_04'])->name('update.viii_01_04');
+    Route::delete('/delete/viii-01-04/{id}', [App\Http\Controllers\viiiElementoController::class, 'destroy_04'])->name('destroy.viii_01_04');
 
     Route::get('/index/viii-01-05', [App\Http\Controllers\viiiElementoController::class, 'index_05'])->name('index.viii_01_05');
     Route::post('/store/viii-01-05', [App\Http\Controllers\viiiElementoController::class, 'store_05'])->name('store.viii_01_05');
     Route::patch('/update/viii-01-05/{id}', [App\Http\Controllers\viiiElementoController::class, 'update_05'])->name('update.viii_01_05');
+    Route::delete('/delete/viii-01-05/{id}', [App\Http\Controllers\viiiElementoController::class, 'destroy_05'])->name('destroy.viii_01_05');
 
     Route::get('ver/sasisopa-viii', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii'])->name('pdf_viii.view');
     Route::get('imprimir/sasisopa-viii', [App\Http\Controllers\viiiElementoController::class, 'pdf_sasisopa_viii_download'])->name('pdf_viii.print');
@@ -345,6 +354,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/index/ix-01-01', [App\Http\Controllers\ixElementoController::class, 'index'])->name('index.ix_01_01');
     Route::post('/store/ix-01-01', [App\Http\Controllers\ixElementoController::class, 'store'])->name('store.ix_01_01');
     Route::patch('/update/ix-01-01/{id}', [App\Http\Controllers\ixElementoController::class, 'update'])->name('update.ix_01_01');
+    Route::delete('/delete/ix-01-01/{id}', [App\Http\Controllers\ixElementoController::class, 'destroy'])->name('destroy.ix_01_01');
 
     Route::get('ver/sasisopa-ix', [App\Http\Controllers\ixElementoController::class, 'pdf_sasisopa_ix'])->name('pdf_ix.view');
     Route::get('imprimir/sasisopa-ix', [App\Http\Controllers\ixElementoController::class, 'pdf_sasisopa_ix_download'])->name('pdf_ix.print');
@@ -367,6 +377,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/index/xi-01-01', [App\Http\Controllers\xiElementoController::class, 'index'])->name('index.xi_01_01');
     Route::post('/store/xi-01-01', [App\Http\Controllers\xiElementoController::class, 'store'])->name('store.xi_01_01');
     Route::patch('/update/xi-01-01/{id}', [App\Http\Controllers\xiElementoController::class, 'update'])->name('update.xi_01_01');
+    Route::delete('/delete/xi-01-01/{id}', [App\Http\Controllers\xiElementoController::class, 'destroy'])->name('destroy.xi_01_01');
 
     Route::get('ver/sasisopa-xi', [App\Http\Controllers\xiElementoController::class, 'pdf_sasisopa_xi'])->name('pdf_xi.view');
     Route::get('imprimir/sasisopa-xi', [App\Http\Controllers\xiElementoController::class, 'pdf_sasisopa_xi_download'])->name('pdf_xi.print');
@@ -377,6 +388,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/index/xii-01-01', [App\Http\Controllers\xiiElementoController::class, 'index'])->name('index.xii_01_01');
     Route::post('/store/xii-01-01', [App\Http\Controllers\xiiElementoController::class, 'store'])->name('store.xii_01_01');
     Route::patch('/update/xii-01-01/{id}', [App\Http\Controllers\xiiElementoController::class, 'update'])->name('update.xii_01_01');
+    Route::delete('/delete/xii-01-01/{id}', [App\Http\Controllers\xiiElementoController::class, 'destroy'])->name('destroy.xii_01_01');
 
     Route::get('ver/sasisopa-xii', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii'])->name('pdf_xii.view');
     Route::get('imprimir/sasisopa-xii', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_download'])->name('pdf_xii.print');
@@ -390,22 +402,27 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/index/xiv-01-02', [App\Http\Controllers\xivElementoController::class, 'index'])->name('index.xiv_01_02');
     Route::post('/store/xiv-01-02', [App\Http\Controllers\xivElementoController::class, 'store'])->name('store.xiv_01_02');
     Route::patch('/update/xiv-01-02/{id}', [App\Http\Controllers\xivElementoController::class, 'update'])->name('update.xiv_01_02');
+    Route::delete('/delete/xiv-01-02/{id}', [App\Http\Controllers\xivElementoController::class, 'destroy'])->name('destroy.xiv_01_02');
 
     Route::get('/index/xiv-01-03', [App\Http\Controllers\xivElementoController::class, 'index_xiv_01_03'])->name('index.xiv_01_03');
     Route::post('/store/xiv-01-03', [App\Http\Controllers\xivElementoController::class, 'store_xiv_01_03'])->name('store.xiv_01_03');
     Route::patch('/update/xiv-01-03/{id}', [App\Http\Controllers\xivElementoController::class, 'update_xiv_01_03'])->name('update.xiv_01_03');
+    Route::delete('/delete/xiv-01-03/{id}', [App\Http\Controllers\xivElementoController::class, 'destroy_xiv_01_03'])->name('destroy.xiv_01_03');
 
     Route::get('/index/xiv-01-04', [App\Http\Controllers\xivElementoController::class, 'index_xiv_01_04'])->name('index.xiv_01_04');
     Route::post('/store/xiv-01-04', [App\Http\Controllers\xivElementoController::class, 'store_xiv_01_04'])->name('store.xiv_01_04');
     Route::patch('/update/xiv-01-04/{id}', [App\Http\Controllers\xivElementoController::class, 'update_xiv_01_04'])->name('update.xiv_01_04');
+    Route::delete('/delete/xiv-01-04/{id}', [App\Http\Controllers\xivElementoController::class, 'destroy_xiv_01_04'])->name('destroy.xiv_01_04');
 
     Route::get('/index/xiv-01-05', [App\Http\Controllers\xivElementoController::class, 'index_xiv_01_05'])->name('index.xiv_01_05');
     Route::post('/store/xiv-01-05', [App\Http\Controllers\xivElementoController::class, 'store_xiv_01_05'])->name('store.xiv_01_05');
     Route::patch('/update/xiv-01-05/{id}', [App\Http\Controllers\xivElementoController::class, 'update_xiv_01_05'])->name('update.xiv_01_05');
+    Route::delete('/delete/xiv-01-05/{id}', [App\Http\Controllers\xivElementoController::class, 'destroy_xiv_01_05'])->name('destroy.xiv_01_05');
 
     Route::get('/index/xiv-01-06', [App\Http\Controllers\xivElementoController::class, 'index_xiv_01_06'])->name('index.xiv_01_06');
     Route::post('/store/xiv-01-06', [App\Http\Controllers\xivElementoController::class, 'store_xiv_01_06'])->name('store.xiv_01_06');
     Route::patch('/update/xiv-01-06/{id}', [App\Http\Controllers\xivElementoController::class, 'update_xiv_01_06'])->name('update.xiv_01_06');
+    Route::delete('/delete/xiv-01-06/{id}', [App\Http\Controllers\xivElementoController::class, 'destroy_xiv_01_06'])->name('destroy.xiv_01_06');
 
     Route::get('ver/sasisopa-xiv', [App\Http\Controllers\xivElementoController::class, 'pdf_sasisopa_xiv'])->name('pdf_xiv.view');
     Route::get('imprimir/sasisopa-xiv', [App\Http\Controllers\xivElementoController::class, 'pdf_sasisopa_xiv_download'])->name('pdf_xiv.print');

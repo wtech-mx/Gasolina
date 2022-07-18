@@ -73,9 +73,13 @@
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @endif
+                                        <a type="button" class="text-white" data-bs-toggle="modal" data-bs-target="#modaleliminar{{ $item->id }}">
+                                            <i class="fa fa-trash" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
+                                        </a>
                                     </td>
                                 </tr>
                                 @include('modal-elementos.formularios viii.viii-01-05.update')
+                                @include('modal-elementos.formularios viii.viii-01-05.eliminar')
                                 @endforeach
                             </tbody>
                         </table>

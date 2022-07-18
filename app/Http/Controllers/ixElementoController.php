@@ -69,6 +69,15 @@ class ixElementoController extends Controller
         return redirect()->route('index.ix_01_01');
     }
 
+    public function destroy(Request $request, $id){
+
+        $ix_elemento = ixElemento::findOrFail($id);
+        $ix_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
+    }
+
     public function pdf_sasisopa_ix()
     {
         $config = DB::table('configuracion')->first();

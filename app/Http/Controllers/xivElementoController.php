@@ -85,6 +85,15 @@ class xivElementoController extends Controller
         return redirect()->route('index.xiv_01_02');
     }
 
+    public function destroy(Request $request, $id){
+
+        $xiv_elemento = xivElemento02::findOrFail($id);
+        $xiv_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
+    }
+
     public function index_xiv_01_06()
     {
         $xiv_elemento_03_01 = xivElemento06::get();
@@ -137,6 +146,15 @@ class xivElementoController extends Controller
 
             return redirect()->route('index.xiv_01_06')
                 ->with('success', 'xiv-01-02 Creada Exitosamente!');
+    }
+
+    public function destroy_xiv_01_06(Request $request, $id){
+
+        $xiv_elemento = xivElemento06::findOrFail($id);
+        $xiv_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
     }
 
     public function pdf_sasisopa_xiv()

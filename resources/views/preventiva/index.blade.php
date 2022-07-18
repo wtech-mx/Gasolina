@@ -77,12 +77,13 @@
                                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                             </a>
 
-                                            {{-- <a onclick="confirm('Confirm Delete Difusion id {{$row->id}}? \nDeleted Difusions cannot be recovered!')||event.stopImmediatePropagation()" wire:click="destroy({{$row->id}})" style="color: #ffffff;font-size: 16px;padding: 5px;">
-                                                <i class="fa fa-trash"></i>
-                                            </a> --}}
+                                            <a type="button" class="text-white" data-bs-toggle="modal" data-bs-target="#modaleliminar{{ $row->id }}">
+                                                <i class="fa fa-trash" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                     @include('preventiva.edit')
+                                    @include('preventiva.eliminar')
                                     @endforeach
                                 </tbody>
                             </table>

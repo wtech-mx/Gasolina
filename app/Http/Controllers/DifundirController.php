@@ -146,11 +146,24 @@ class DifundirController extends Controller
 
         Session::flash('edit', 'Se ha guardado sus datos con exito');
         return redirect()->back();
-    } catch (\Exception $e) {
-        Session::flash('error', 'opps error al actualizar');
+        } catch (\Exception $e) {
+            Session::flash('error', 'opps error al actualizar');
+            return redirect()->back();
+        }
+
+    }
+
+    public function destroy(Request $request, $id){
+
+        $medios_difundir = MedioDifundir::where('id_difundir', '=', $id);
+        $medios_difundir->delete();
+
+        $difundir = Difundir::findOrFail($id);
+        $difundir->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
         return redirect()->back();
     }
 
-    }
 
 }

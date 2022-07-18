@@ -85,6 +85,18 @@ class xiiElementoController extends Controller
         return redirect()->route('index.xii_01_01');
     }
 
+    public function destroy(Request $request, $id){
+
+        $xii_elemento_usuarios = xiiElementoUsuarios::where('id_xii', '=', $id);
+        $xii_elemento_usuarios->delete();
+
+        $xii_elemento = xiiElemento::findOrFail($id);
+        $xii_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
+    }
+
     public function pdf_sasisopa_xii()
     {
         $config = DB::table('configuracion')->first();

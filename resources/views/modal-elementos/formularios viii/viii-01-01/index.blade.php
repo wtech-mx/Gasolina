@@ -73,13 +73,13 @@
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @endif
-                                            {{-- <a href="#" target="_blank">
-                                                <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                                            </a> --}}
+                                        <a type="button" class="text-white" data-bs-toggle="modal" data-bs-target="#modaleliminar{{ $item->id }}">
+                                            <i class="fa fa-trash" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
+                                        </a>
                                     </td>
                                 </tr>
                                 @include('modal-elementos.formularios viii.viii-01-01.update')
-                                {{-- @include('modal-elementos.formularios viii.viii-01-01.if_pdf') --}}
+                                @include('modal-elementos.formularios viii.viii-01-01.eliminar')
                                 @endforeach
                             </tbody>
                         </table>

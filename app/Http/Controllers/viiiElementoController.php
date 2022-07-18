@@ -70,6 +70,15 @@ class viiiElementoController extends Controller
         return redirect()->route('index.viii_01_01');
     }
 
+    public function destroy(Request $request, $id){
+
+        $viii_elemento = viiiElemento01::findOrFail($id);
+        $viii_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
+    }
+
     public function pdf_sasisopa_viii()
     {
         $config = DB::table('configuracion')->first();
@@ -155,6 +164,15 @@ class viiiElementoController extends Controller
 
             Session::flash('edit', 'Se ha actualizado sus datos con exito');
             return redirect()->route('index.viii_01_02');
+        }
+
+        public function destroy_02(Request $request, $id){
+
+            $viii_elemento = viiiElemento02::findOrFail($id);
+            $viii_elemento->delete();
+
+            Session::flash('delete', 'Se Elimino su registro con exito');
+            return redirect()->back();
         }
 
     // ==========Elemento viii 03===============Elemento viii 03===========Elemento viii 03============Elemento viii 03================Elemento viii 03=========Elemento viii 03
@@ -402,6 +420,15 @@ class viiiElementoController extends Controller
         return redirect()->route('index.viii_01_03');
     }
 
+    public function destroy_03(Request $request, $id){
+
+        $viii_elemento = viiiElemento03::findOrFail($id);
+        $viii_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
+    }
+
     // ==========Elemento viii 04===============Elemento viii 04===========Elemento viii 04============Elemento viii 04================Elemento viii 04=========Elemento viii 04
 
     public function index_04()
@@ -456,6 +483,15 @@ class viiiElementoController extends Controller
 
         Session::flash('success', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.viii_01_04');
+    }
+
+    public function destroy_04(Request $request, $id){
+
+        $viii_elemento = viiiElemento04::findOrFail($id);
+        $viii_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
     }
 
     // ==========Elemento viii 05===============Elemento viii 05===========Elemento viii 05============Elemento viii 05================Elemento viii 05=========Elemento viii 05
@@ -515,5 +551,14 @@ class viiiElementoController extends Controller
 
         Session::flash('success', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.viii_01_05');
+    }
+
+    public function destroy_05(Request $request, $id){
+
+        $viii_elemento = viiiElemento05::findOrFail($id);
+        $viii_elemento->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
     }
 }

@@ -76,9 +76,14 @@
                                                         <i class="fa fa-file-pdf-o" aria-hidden="true" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
                                                     </a>
 
+                                                    <a type="button" class="text-white" data-bs-toggle="modal" data-bs-target="#modaleliminar{{ $row->id }}">
+                                                        <i class="fa fa-trash" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
+                                                    </a>
+
                                                 </td>
                                             </tr>
                                             @include('difundir.update')
+                                            @include('difundir.eliminar')
                                             @endforeach
                                         </tbody>
                                     </table>

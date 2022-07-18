@@ -87,4 +87,13 @@ class PreventivaController extends Controller
         }
 
     }
+
+    public function destroy(Request $request, $id){
+
+        $preventiva = Preventiva::findOrFail($id);
+        $preventiva->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
+    }
 }
