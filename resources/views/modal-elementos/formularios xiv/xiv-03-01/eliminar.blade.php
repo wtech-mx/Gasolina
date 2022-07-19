@@ -15,7 +15,6 @@
                         <div class="col-12">
                             <h3 class="text-center p-2">¿Desea eliminar el registro? </h3>
                             <p class="text-center">Una vez eliminado no se puede recuperar</p>
-                           <p class="text-center"><img src="{{ asset('img/icon/color/warning.png') }}" style="width: 30%"></p>
 
                             <div class="modal-footer">
                                     <input type="submit" class="btn btn-danger text-white" value="Si">
