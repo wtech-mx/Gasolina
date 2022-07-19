@@ -33,9 +33,8 @@ class viiElementoController extends Controller
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
         if ($validator->fails()) {
-            return redirect()->back()
-                ->with('errorForm', $validator->errors()->getMessages())
-                ->withInput();
+            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
+            return redirect()->back();
         }
         try {
 
@@ -132,9 +131,8 @@ class viiElementoController extends Controller
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
         if ($validator->fails()) {
-            return redirect()->back()
-                ->with('errorForm', $validator->errors()->getMessages())
-                ->withInput();
+            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
+            return redirect()->back();
         }
         try {
 

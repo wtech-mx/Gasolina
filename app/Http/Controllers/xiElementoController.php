@@ -37,8 +37,8 @@ class xiElementoController extends Controller
             }
             $xi_elemento->save();
 
-            return redirect()->route('index.xi_01_01')
-                ->with('success', 'xi-01-01 Creada Exitosamente!');
+            Session::flash('success', 'Se ha actualizado sus datos con exito');
+            return redirect()->route('index.xi_01_01');
     }
 
     public function update(Request $request, $id)
@@ -62,7 +62,7 @@ class xiElementoController extends Controller
         $xi_elemento->update();
 
 
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
+        Session::flash('edit', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.xi_01_01');
     }
 

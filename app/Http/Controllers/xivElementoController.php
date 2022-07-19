@@ -45,8 +45,8 @@ class xivElementoController extends Controller
             }
             $xiv_elemento->save();
 
-            return redirect()->route('index.xiv_01_02')
-                ->with('success', 'xiv-01-02 Creada Exitosamente!');
+            Session::flash('success', 'Se ha actualizado sus datos con exito');
+            return redirect()->route('index.xiv_01_02');
     }
 
     public function update(Request $request, $id)
@@ -81,7 +81,7 @@ class xivElementoController extends Controller
         $xiv_elemento->update();
 
 
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
+        Session::flash('edit', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.xiv_01_02');
     }
 
@@ -121,8 +121,8 @@ class xivElementoController extends Controller
             }
             $xiv_elemento_06->save();
 
-            return redirect()->route('index.xiv_01_06')
-                ->with('success', 'xiv-01-02 Creada Exitosamente!');
+            Session::flash('success', 'Se ha actualizado sus datos con exito');
+            return redirect()->route('index.xiv_01_06');
     }
 
     public function update_xiv_01_06(Request $request, $id)
@@ -144,8 +144,8 @@ class xivElementoController extends Controller
             }
             $xiv_elemento_06->save();
 
-            return redirect()->route('index.xiv_01_06')
-                ->with('success', 'xiv-01-02 Creada Exitosamente!');
+            Session::flash('edit', 'Se ha actualizado sus datos con exito');
+            return redirect()->route('index.xiv_01_06');
     }
 
     public function destroy_xiv_01_06(Request $request, $id){

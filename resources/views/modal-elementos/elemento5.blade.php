@@ -70,16 +70,16 @@
 
                                 <div id="elementov" class="text-center" style="display: none;">
 
-                                    <a class="btn text-dark" href="{{route('pdf_otorgamiento_v.view')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important" target="_blank">
+                                    {{-- <a class="btn text-dark" href="{{route('pdf_otorgamiento_v.view')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important" target="_blank">
                                         Otorgamiento
                                     </a>
 
                                     <a class="btn text-dark" href="{{route('pdf_generar_v.view')}}" style="background-color:#001d3d;color:  #852ecc!important; border: 2px solid #852ecc!important" target="_blank">
                                         Generar
-                                    </a>
+                                    </a> --}}
 
-                                    <a class="btn text-dark" href="{{route('index.actualizar')}}" style="background-color:#001d3d;color:  #2e9fcc!important; border: 2px solid #2e9fcc!important">
-                                        Actializar
+                                    <a class="btn text-dark" href="{{route('index.actualizar')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important">
+                                        Ejecutar
                                     </a>
 
                                     <a class="btn" href="{{route('difundir_v_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">

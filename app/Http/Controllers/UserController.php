@@ -235,7 +235,7 @@ class UserController extends Controller
         $user->password = Hash::make($request->password);
         $email = $user->email;
 
-        Session::flash('success', 'Se ha actualizado su contrasena con exito');
+        Session::flash('edit', 'Se ha actualizado su contrasena con exito');
         return redirect()->route('index.usuario');
     }
 }

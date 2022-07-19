@@ -43,8 +43,8 @@ class viiiElementoController extends Controller
             }
             $viii_elemento->save();
 
-            return redirect()->route('index.viii_01_01')
-                ->with('success', 'Viii-01-01 Creada Exitosamente!');
+            Session::flash('success', 'Se ha actualizado sus datos con exito');
+            return redirect()->route('index.viii_01_01');
     }
 
     public function update(Request $request, $id)
@@ -66,7 +66,7 @@ class viiiElementoController extends Controller
         }
         $viii_elemento->update();
 
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
+        Session::flash('edit', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.viii_01_01');
     }
 
@@ -299,8 +299,8 @@ class viiiElementoController extends Controller
                 }
             }
 
-            return redirect()->route('index.viii_01_03')
-                ->with('success', 'Viii-01-03 Creada Exitosamente!');
+            Session::flash('success', 'Se ha actualizado sus datos con exito');
+            return redirect()->route('index.viii_01_03');
     }
 
     public function update_03(Request $request, $id)
@@ -416,7 +416,7 @@ class viiiElementoController extends Controller
         }
 
 
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
+        Session::flash('edit', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.viii_01_03');
     }
 
@@ -458,8 +458,8 @@ class viiiElementoController extends Controller
 
             $viii_elemento->save();
 
-            return redirect()->route('index.viii_01_04')
-                ->with('success', 'Viii-01-04 Creada Exitosamente!');
+            Session::flash('success', 'Se ha actualizado sus datos con exito');
+            return redirect()->route('index.viii_01_04');
     }
 
     public function update_04(Request $request, $id)
@@ -481,7 +481,7 @@ class viiiElementoController extends Controller
         $viii_elemento->update();
 
 
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
+        Session::flash('edit', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.viii_01_04');
     }
 

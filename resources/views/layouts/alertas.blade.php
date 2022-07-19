@@ -3,7 +3,7 @@
     Swal.fire({
         title: 'Exito!!',
         html: 'Se ha <b>agragado</b> </br> ',
-        imageUrl: '{{ asset('img/icon/checked.png') }}',
+        imageUrl: '{{ asset('alertas/checked.png') }}',
         background: '#fff',
         imageWidth: 150,
         imageHeight: 150,
@@ -17,7 +17,7 @@
     Swal.fire({
         title: 'Exito!!',
         html: 'Se ha <b>editado</b> </br>',
-        imageUrl: '{{ asset('img/icon/edit.png') }}',
+        imageUrl: '{{ asset('alertas/edit.png') }}',
         background: '#fff',
         imageWidth: 150,
         imageHeight: 150,
@@ -31,7 +31,7 @@
     Swal.fire({
         title: 'Error!!',
         html: 'Error <b>no se pudeo crear</b>favor de revisar datos ingresados </br>',
-        imageUrl: '{{ asset('img/icon/error.png') }}',
+        imageUrl: '{{ asset('alertas/close.png') }}',
         background: '#fff',
         imageWidth: 150,
         imageHeight: 150,
@@ -45,7 +45,7 @@
     Swal.fire({
         title: 'Exito!!',
         html: 'Se ha <b>eliminado</b> </br>',
-        imageUrl: '{{ asset('img/icon/delete.png') }}',
+        imageUrl: '{{ asset('alertas/delete.png') }}',
         background: '#fff',
         imageWidth: 150,
         imageHeight: 150,

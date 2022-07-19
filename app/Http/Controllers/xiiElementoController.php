@@ -56,8 +56,8 @@ class xiiElementoController extends Controller
 
             xiiElementoUsuarios::insert($insert_data);
 
-            return redirect()->route('index.xii_01_01')
-                ->with('success', 'xii-01-01 Creada Exitosamente!');
+            Session::flash('success', 'Se ha actualizado sus datos con exito');
+            return redirect()->route('index.xii_01_01');
     }
 
     public function update(Request $request, $id)
@@ -81,7 +81,7 @@ class xiiElementoController extends Controller
         $xii_elemento->update();
 
 
-        Session::flash('success', 'Se ha actualizado sus datos con exito');
+        Session::flash('edit', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.xii_01_01');
     }
 
