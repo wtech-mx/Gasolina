@@ -45,7 +45,7 @@
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Estatus</th>
                                     <th scope="col">Fecha</th>
-                                    <th scope="col">Estatus</th>
+                                    <th scope="col">Modificación</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>

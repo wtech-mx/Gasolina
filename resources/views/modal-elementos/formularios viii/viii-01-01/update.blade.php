@@ -34,8 +34,13 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>notificacion</label>
+                                    <label>Modificación</label>
                                     <input name="notificacion" type="date" class="form-control" id="notificacion" value="{{$item->notificacion}}">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Revision</label>
+                                    <input name="revision" type="number" class="form-control" id="revision" value="{{$item->revision}}">
                                 </div>
 
                                 <div class="form-group col-12 col-xs-12 col-sm-12 col-md-12 mt-4">
