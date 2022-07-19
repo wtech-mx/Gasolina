@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use DB;
+use Illuminate\Support\Facades\Session;
 
 class RoleController extends Controller
 {
@@ -64,8 +65,8 @@ class RoleController extends Controller
         $role = Role::create(['name' => $request->input('name')]);
         $role->syncPermissions($request->input('permission'));
 
-        return redirect()->route('roles.index')
-                        ->with('success','Role created successfully');
+        Session::flash('success', 'Se ha actualizado sus datos con exito');
+        return redirect()->route('roles.index');
     }
     /**
      * Display the specified resource.
@@ -120,8 +121,8 @@ class RoleController extends Controller
 
         $role->syncPermissions($request->input('permission'));
 
-        return redirect()->route('roles.index')
-                        ->with('success','Role updated successfully');
+        Session::flash('edit', 'Se ha actualizado sus datos con exito');
+        return redirect()->route('roles.index');
     }
     /**
      * Remove the specified resource from storage.
@@ -132,7 +133,7 @@ class RoleController extends Controller
     public function destroy($id)
     {
         DB::table("roles")->where('id',$id)->delete();
-        return redirect()->route('roles.index')
-                        ->with('success','Role deleted successfully');
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->route('roles.index');
     }
 }

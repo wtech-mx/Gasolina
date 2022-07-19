@@ -61,21 +61,15 @@ class UserController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191|unique:users',
-            'puesto' => 'required|string|max:191',
-            'password' => 'required|confirmed|min:9',
-            'telefono' => 'numeric|min:10|max:11',
-            'role' => 'required',
+            'password' => 'required|confirmed|min:9'
         ]);
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
         if ($validator->fails()) {
             Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
-            return redirect()->back()
-                ->with('errorForm', $validator->errors()->getMessages())
-                ->withInput();
+            return redirect()->back();
         }
         try {
-
             //3/3- Si la validacion es correcta se crea el registro
 
             $user = new User;
@@ -98,17 +92,15 @@ class UserController extends Controller
                 $user->firma = $fileName;
             }
 
-            if ($request->hasFile("foto")) {
+            // if ($request->hasFile("foto")) {
 
-                $imagen = $request->file("foto");
-                $nombreimagen = time() . "." . $imagen->guessExtension();
-                $ruta = public_path("foto/");
+            //     $imagen = $request->file("foto");
+            //     $nombreimagen = time() . "." . $imagen->guessExtension();
+            //     $ruta = public_path("foto/");
 
-                $imagen->move($ruta,$nombreimagen);
-               // copy($imagen->getRealPath(), $ruta . $nombreimagen);
-
-                $user->foto = $nombreimagen;
-            }
+            //     $imagen->move($ruta,$nombreimagen);
+            //     $user->foto = $nombreimagen;
+            // }
 
             $user->alta = $request->get('alta');
             $user->baja = $request->get('baja');
@@ -127,6 +119,8 @@ class UserController extends Controller
             $user->nombre_emergencia = $request->get('nombre_emergencia');
             $user->telefono_emergencia = $request->get('telefono_emergencia');
             $user->save();
+
+            $user->assignRole($request->input('roles'));
 
             $vi_elemento = new ViElemento;
             $vi_elemento->id_user = $user->id;
