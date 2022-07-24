@@ -13,6 +13,11 @@
     function mostrars15(id) {
         if (id == "xv-01-01") {
             $("#xv-01-01").show();
+            $("#xv-01-02").hide();
+        }
+        if (id == "xv-01-02") {
+            $("#xv-01-01").hide();
+            $("#xv-01-02").show();
         }
     }
 </script>

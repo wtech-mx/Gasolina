@@ -441,6 +441,11 @@ Route::group(['middleware' => ['auth']], function() {
     Route::patch('/update/xv-01-01/{id}', [App\Http\Controllers\xvElementoController::class, 'update'])->name('update.xv_01_01');
     Route::delete('/delete/xv-01-01/{id}', [App\Http\Controllers\xvElementoController::class, 'destroy'])->name('destroy.xv_01_01');
 
+    Route::get('/index/xv-01-02', [App\Http\Controllers\xvElementoController::class, 'index_02'])->name('index.xv_01_02');
+    Route::post('/store/xv-01-02', [App\Http\Controllers\xvElementoController::class, 'store_02'])->name('store.xv_01_02');
+    Route::patch('/update/xv-01-02/{id}', [App\Http\Controllers\xvElementoController::class, 'update_02'])->name('update.xv_01_02');
+    Route::delete('/delete/xv-01-02/{id}', [App\Http\Controllers\xvElementoController::class, 'destroy_02'])->name('destroy.xv_01_02');
+
     Route::get('ver/sasisopa-xv', [App\Http\Controllers\xvElementoController::class, 'pdf_sasisopa_xv'])->name('pdf_xv.view');
     Route::get('imprimir/sasisopa-xv', [App\Http\Controllers\xvElementoController::class, 'pdf_sasisopa_xv_download'])->name('pdf_xv.print');
 

@@ -81,12 +81,31 @@
                                             <select id="status" name="status" class="form-select"
                                                 onChange="mostrars15(this.value);">
                                                 <option value="">Seleccione Elemento</option>
-                                                <option value="xv-01-01">XV Plan y programa de auditoria.</option>
+                                                <option value="xv-01-01">XV Plan y programa de auditoria</option>
+                                                <option value="xv-01-02">XV Plan y programa de auditoria externa</option>
                                             </select>
                                         </form>
 
                                         <div id="xv-01-01" style="display: none;">
                                             <a class="btn" href="{{route('index.xv_01_01')}}"
+                                                style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                                                Ejecutar
+                                            </a>
+
+                                            <a class="btn text-dark"
+                                                href="{{route('difundir_xii_01_01.index')}}"
+                                                style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
+                                                Difundir
+                                            </a>
+
+                                            <a class="btn  " href="{{route('preventiva_xii_01_01.index')}}"
+                                                style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
+                                                Accion Correctiva
+                                            </a>
+                                        </div>
+
+                                        <div id="xv-01-02" style="display: none;">
+                                            <a class="btn" href="{{route('index.xv_01_02')}}"
                                                 style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
                                                 Ejecutar
                                             </a>

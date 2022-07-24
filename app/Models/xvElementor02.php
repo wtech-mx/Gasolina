@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class xvElemento extends Model
+class xvElementor02 extends Model
 {
     use HasFactory;
-    protected $table = "xv_elemento";
+    protected $table = "xv_elementor_02";
     protected $primarykey = "id";
     public $timestamps = false;
 
@@ -19,9 +19,9 @@ class xvElemento extends Model
         'estatus',
         'start',
         'end',
-        'tipo_auditoria',
-        'alcance',
-        'objetivo',
+        'fecha_elaboracion',
+        'fecha_auditoria',
+        'contratista',
         'pdf',
     ];
 }
