@@ -150,6 +150,29 @@
     </script>
 
     <script type="text/javascript">
+        $('#agregar2').click(function(){
+            agregar();
+        });
+
+        function agregar(){
+            var tipo_vinculacion=$('#tipo_vinculacion').val();
+            var nombre=$('#nombre').val();
+            var fila='<tr>'+
+            '<td><select name="tipo_vinculacion[]" class="form-control" id="tipo_vinculacion[]">'+
+                '<option value="">Seleccionar</option>'+
+                '<option value="Personal Interno">Personal Interno</option>'+
+                '<option value="Personal Externo">Personal Externo</option>'+
+                '<option value="Visitante/Cliente">Visitante/Cliente</option>'+
+                '<option value="Poblacion">Poblacion</option>'+
+                '</select></td>'+
+            '<td><input type="text" class="form-control" placeholder="Especificar" id="nombre[]" name="nombre[]"></td>'+
+            '</tr>';
+
+            $('#tabla_vinculacion').append(fila);
+        }
+    </script>
+
+    <script type="text/javascript">
         var agregar3 = document.getElementById('proveedor3');
         var contenedor3 = document.getElementById('nuevo-form3');
         var cont = 0;

@@ -2,24 +2,29 @@
 
 namespace App\Models;
 
-use Illuminate\Contracts\Auth\UserProvider;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class xiiElementoUsuarios extends Model
+class xviElemento02 extends Model
 {
     use HasFactory;
-    protected $table = "xii_elemento_usuarios";
+    protected $table = "xvi_elemento_02";
     protected $primarykey = "id";
     public $timestamps = false;
 
     protected $fillable = [
         'id_usuarios',
-        'id_xii',
+        'situacion_observada',
+        'tipo',
+        'lugar',
+        'descripcion',
+        'usuario',
+        'fecha',
+        'pdf',
     ];
 
     public function User()
     {
-       return $this->belongsTo(UserProvider::class,'id_usuarios');
+       return $this->belongsTo(User::class,'id_usuarios');
     }
 }

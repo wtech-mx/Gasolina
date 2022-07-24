@@ -433,4 +433,37 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('ver/sasisopa-xiv-03', [App\Http\Controllers\xivElementoController::class, 'pdf_sasisopa_xiv_03'])->name('pdf_xiv_03.view');
     Route::get('imprimir/sasisopa-xiv-03', [App\Http\Controllers\xivElementoController::class, 'pdf_sasisopa_xiv_03_download'])->name('pdf_xiv_03.print');
 
+    /*|--------------------------------------------------------------------------
+    |XV Elemento
+    |--------------------------------------------------------------------------*/
+    Route::get('/index/xv-01-01', [App\Http\Controllers\xvElementoController::class, 'index'])->name('index.xv_01_01');
+    Route::post('/store/xv-01-01', [App\Http\Controllers\xvElementoController::class, 'store'])->name('store.xv_01_01');
+    Route::patch('/update/xv-01-01/{id}', [App\Http\Controllers\xvElementoController::class, 'update'])->name('update.xv_01_01');
+    Route::delete('/delete/xv-01-01/{id}', [App\Http\Controllers\xvElementoController::class, 'destroy'])->name('destroy.xv_01_01');
+
+    Route::get('ver/sasisopa-xv', [App\Http\Controllers\xvElementoController::class, 'pdf_sasisopa_xv'])->name('pdf_xv.view');
+    Route::get('imprimir/sasisopa-xv', [App\Http\Controllers\xvElementoController::class, 'pdf_sasisopa_xv_download'])->name('pdf_xv.print');
+
+    Route::get('ver/sasisopa-xv-01', [App\Http\Controllers\xvElementoController::class, 'pdf_sasisopa_xv_01'])->name('pdf_xv_01.view');
+    Route::get('imprimir/sasisopa-xv-01', [App\Http\Controllers\xvElementoController::class, 'pdf_sasisopa_xv_01_download'])->name('pdf_xv_01.print');
+
+    /*|--------------------------------------------------------------------------
+    |XVI Elemento
+    |--------------------------------------------------------------------------*/
+    Route::get('/index/xvi-01-01', [App\Http\Controllers\xviElementoController::class, 'index'])->name('index.xvi_01_01');
+    Route::post('/store/xvi-01-01', [App\Http\Controllers\xviElementoController::class, 'store'])->name('store.xvi_01_01');
+    Route::patch('/update/xvi-01-01/{id}', [App\Http\Controllers\xviElementoController::class, 'update'])->name('update.xvi_01_01');
+    Route::delete('/delete/xvi-01-01/{id}', [App\Http\Controllers\xviElementoController::class, 'destroy'])->name('destroy.xvi_01_01');
+
+    Route::get('/index/xvi-01-02', [App\Http\Controllers\xviElementoController::class, 'index_02'])->name('index.xvi_01_02');
+    Route::post('/store/xvi-01-02', [App\Http\Controllers\xviElementoController::class, 'store_02'])->name('store.xvi_01_02');
+    Route::patch('/update/xvi-01-02/{id}', [App\Http\Controllers\xviElementoController::class, 'update_02'])->name('update.xvi_01_02');
+    Route::delete('/delete/xvi-01-02/{id}', [App\Http\Controllers\xviElementoController::class, 'destroy_02'])->name('destroy.xvi_01_02');
+
+    Route::get('ver/sasisopa-xvi', [App\Http\Controllers\xviElementoController::class, 'pdf_sasisopa_xvi'])->name('pdf_xvi.view');
+    Route::get('imprimir/sasisopa-xvi', [App\Http\Controllers\xviElementoController::class, 'pdf_sasisopa_xvi_download'])->name('pdf_xvi.print');
+
+    Route::get('ver/sasisopa-xvi-01', [App\Http\Controllers\xviElementoController::class, 'pdf_sasisopa_xvi_01'])->name('pdf_xvi_01.view');
+    Route::get('imprimir/sasisopa-xvi-01', [App\Http\Controllers\xviElementoController::class, 'pdf_sasisopa_xvi_01_download'])->name('pdf_xvi_01.print');
+
 });
