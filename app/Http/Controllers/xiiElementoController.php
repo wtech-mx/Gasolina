@@ -88,25 +88,25 @@ class xiiElementoController extends Controller
         }
         $xii_elemento->update();
 
-        $nombre = $request->nombre;
-        $correo = $request->correo;
-        $puesto = $request->puesto;
-        $telefono = $request->telefono;
-        $cargo = $request->cargo;
+        // $nombre = $request->nombre;
+        // $correo = $request->correo;
+        // $puesto = $request->puesto;
+        // $telefono = $request->telefono;
+        // $cargo = $request->cargo;
 
-        for ($count = 0; $count < count($nombre); $count++) {
-            $data = array(
-                'nombre' => $nombre[$count],
-                'correo' => $correo[$count],
-                'puesto' => $puesto[$count],
-                'telefono' => $telefono[$count],
-                'cargo' => $cargo[$count],
-                'id_xii' => $xii_elemento->id,
-            );
-            $insert_data[] = $data;
-        }
+        // for ($count = 0; $count < count($nombre); $count++) {
+        //     $data = array(
+        //         'nombre' => $nombre[$count],
+        //         'correo' => $correo[$count],
+        //         'puesto' => $puesto[$count],
+        //         'telefono' => $telefono[$count],
+        //         'cargo' => $cargo[$count],
+        //         'id_xii' => $xii_elemento->id,
+        //     );
+        //     $insert_data[] = $data;
+        // }
 
-        UserProveedor::insert($insert_data);
+        // UserProveedor::insert($insert_data);
 
         Session::flash('edit', 'Se ha actualizado sus datos con exito');
         return redirect()->route('index.xii_01_01');
