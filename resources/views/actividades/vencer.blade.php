@@ -24,6 +24,22 @@
                 <td>{{$item->end}}</td>
             </tr>
             @endforeach
+
+            @foreach ($xvElemento_vencer as $item)
+            <tr>
+                <td>{{$item->title}}</td>
+                <td>{{$item->tipo_auditoria}}</td>
+                <td>{{$item->end}}</td>
+            </tr>
+            @endforeach
+
+            @foreach ($xvElementor02_vencer as $item)
+            <tr>
+                <td>{{$item->title}}</td>
+                <td>{{$item->contratista}}</td>
+                <td>{{$item->end}}</td>
+            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>

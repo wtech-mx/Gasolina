@@ -143,10 +143,18 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/difundir/xi-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xi_01_01.index');
 
     Route::get('/difundir/xii-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xii_01_01.index');
-    // Route::get('imprimir/difundir/{id}', [App\Http\Controllers\DifundirController::class, 'pdf_difundir'])->name('print.difundir');
+
+    Route::get('/difundir/xiv-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xiv_01_01.index');
+    Route::get('/difundir/xiv-01-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xiv_01_02.index');
+    Route::get('/difundir/xiv-03-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xiv_03_01.index');
+
+    Route::get('/difundir/xv-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xv_01_01.index');
+    Route::get('/difundir/xv-01-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xv_01_02.index');
+
+    Route::get('/difundir/xvi-01-01', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xvi_01_01.index');
+    Route::get('/difundir/xvi-01-02', [App\Http\Controllers\DifundirController::class, 'index'])->name('difundir_xvi_01_02.index');
 
     Route::get('/graficas', [App\Http\Controllers\ElementosController::class, 'graficas'])->name('graficas');
-
     Route::get('/admin/graficas', [App\Http\Controllers\ElementosController::class, 'graficas_admin'])->name('graficas_admin');
 
     /*|--------------------------------------------------------------------------
@@ -197,6 +205,16 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('/preventiva/xi-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xi_01_01.index');
 
     Route::get('/preventiva/xii-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xii_01_01.index');
+
+    Route::get('/preventiva/xiv-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xiv_01_01.index');
+    Route::get('/preventiva/xiv-01-02', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xiv_01_02.index');
+    Route::get('/preventiva/xiv-03-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xiv_03_01.index');
+
+    Route::get('/preventiva/xv-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xv_01_01.index');
+    Route::get('/preventiva/xv-01-02', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xv_01_02.index');
+
+    Route::get('/preventiva/xvi-01-01', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xvi_01_01.index');
+    Route::get('/preventiva/xvi-01-02', [App\Http\Controllers\PreventivaController::class, 'index'])->name('preventiva_xvi_01_02.index');
 
     /*|--------------------------------------------------------------------------
     |Evaluacion (I-01-01)

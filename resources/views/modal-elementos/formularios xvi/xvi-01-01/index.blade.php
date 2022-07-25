@@ -76,6 +76,7 @@
                                     </td>
                                 </tr>
                                 @include('modal-elementos.formularios xvi.xvi-01-01.update')
+                                @include('modal-elementos.formularios xvi.xvi-01-01.eliminar')
                                 @endforeach
                             </tbody>
                         </table>
@@ -86,3 +87,16 @@
     </div>
 </div>
 @endsection
+
+<script>
+    function showInp(){
+        getSelectValue = document.getElementById("tipo_personal").value;
+        if(getSelectValue=="Personal interno"){
+            document.getElementById("interusuario").style.display = "inline-block";
+            document.getElementById("otrouser").style.display = "none";
+        }else if(getSelectValue=="Otro"){
+            document.getElementById("interusuario").style.display = "none";
+            document.getElementById("otrouser").style.display = "inline-block";
+        }
+    }
+</script>

@@ -57,6 +57,27 @@ $elemento = 'XI-01-01 Lista y catálogo de equipos críticos.';
 }elseif ($url == '/preventiva/xii-01-01') {
 $rest = substr($url, -9);
 $elemento = 'XII-01-01 Listado de proveedor o contratista.';
+}elseif ($url == '/preventiva/xiv-01-01') {
+$rest = substr($url, -9);
+$elemento = 'XIV-01-01 Matriz de calibración y monitoreo de dispensarios.';
+}elseif ($url == '/preventiva/xiv-01-02') {
+$rest = substr($url, -9);
+$elemento = 'XIV-01-02 Matriz de calibración y monitoreo de Tanque.';
+}elseif ($url == '/preventiva/xiv-03-01') {
+$rest = substr($url, -9);
+$elemento = 'XIV-03-01 Incidencias en operaciones';
+}elseif ($url == '/preventiva/xv-01-01') {
+$rest = substr($url, -8);
+$elemento = 'XV-01-01 Plan y Programa de auditoría interna.';
+}elseif ($url == '/preventiva/xv-01-02') {
+$rest = substr($url, -8);
+$elemento = 'XV-02-01 Plan y Programa de auditoría externa.';
+}elseif ($url == '/preventiva/xvi-01-01') {
+$rest = substr($url, -9);
+$elemento = 'XVI-01-01 Matriz para la investigación de accidentes e incidentes.';
+}elseif ($url == '/preventiva/xvi-01-02') {
+$rest = substr($url, -9);
+$elemento = 'XVI-02-02 Formato de consolidación mensual.';
 }
 
 @endphp

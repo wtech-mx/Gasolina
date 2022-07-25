@@ -95,6 +95,56 @@
                 <td>{{$item->end}}</td>
             </tr>
             @endforeach
+
+            @foreach ($calendario_pendientes as $item)
+            <tr>
+                <td>{{$item->title}}</td>
+                <td>
+                    @switch($item)
+                        @case($item->color == $config->color_diaria)
+                        <button type="button" class="btn" style="background-color: transparent; border: 1px solid transparent; color:#fff">
+                            Diaria <span class="badge" style="background-color: {{$config->color_diaria}}; color:{{$config->color_diaria}}">-</span>
+                        </button>
+                        @break;
+
+                        @case($item->color == $config->color_mensual)
+                        <button type="button" class="btn" style="background-color: transparent; border: 1px solid transparent; color:#fff">
+                            Mensual <span class="badge" style="background-color: {{$config->color_mensual}}; color:{{$config->color_mensual}}">-</span>
+                        </button>
+                        @break;
+
+                        @case($item->color == $config->color_semestral)
+                        <button type="button" class="btn" style="background-color: transparent; border: 1px solid transparent; color:#fff">
+                            Semestral <span class="badge" style="background-color: {{$config->color_semestral}}; color:{{$config->color_semestral}}">-</span>
+                        </button>
+                        @break;
+
+                        @case($item->color == $config->color_año)
+                        <button type="button" class="btn" style="background-color: transparent; border: 1px solid transparent; color:#fff">
+                            Anual <span class="badge" style="background-color: {{$config->color_año}}; color:{{$config->color_año}}">-</span>
+                        </button>
+                        @break;
+                    @endswitch
+                </td>
+                <td>{{$item->end}}</td>
+            </tr>
+            @endforeach
+
+            @foreach ($xvElemento_pendientes as $item)
+            <tr>
+                <td>{{$item->title}}</td>
+                <td>{{$item->tipo_auditoria}}</td>
+                <td>{{$item->end}}</td>
+            </tr>
+            @endforeach
+
+            @foreach ($xvElementor02_pendientes as $item)
+            <tr>
+                <td>{{$item->title}}</td>
+                <td>{{$item->contratista}}</td>
+                <td>{{$item->end}}</td>
+            </tr>
+            @endforeach
         </tbody>
     </table>
 </div>

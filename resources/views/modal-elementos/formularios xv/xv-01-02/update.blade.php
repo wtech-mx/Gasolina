@@ -31,6 +31,20 @@
                             <input name="contratista" type="text" class="form-control" id="contratista" value="{{$row->contratista}}">
                         </div>
 
+                        <div class="form-group col-6 mt-3">
+                            <label>Estatus</label>
+                            <select id="estatus" name="estatus" class="form-select">
+                                @if ($row->check == 0)
+                                <option value="0" selected>Pendiente</option>
+                                <option value="1">Realizado</option>
+                                @else
+                                <option value="1" selected>Realizado</option>
+                                <option value="0">Pendiente</option>
+                                @endif
+
+                            </select>
+                        </div>
+
                         <div class="col-sm-12 col-12">
                             <div class="form-group mb-3 position-relative">
                                 <label class="form-label label-custom-yellow">PDF</label>

@@ -35,15 +35,17 @@
                         <div class="form-group col-12">
                           <input class="form-control" type="hidden" name="txtID" id="txtID">
                         </div>
+                        
+                        <div class="row">
+                            <div class="form-group col-6 mb-3">
+                            <label class="text-white" for="">Fecha</label>
+                            <input class="form-control" type="date" name="txtFecha" id="txtFecha">
+                            </div>
 
-                        <div class="form-group col-12 mb-3">
-                          <label class="text-white" for="">Fecha</label>
-                          <input class="form-control" type="date" name="txtFecha" id="txtFecha">
-                        </div>
-
-                        <div class="form-group col-12 mb-3">
-                            <label class="text-white" for="">Fecha Fin</label>
-                            <input class="form-control" type="date" name="txtFechaEnd" id="txtFechaEnd">
+                            <div class="form-group col-6 mb-3">
+                                <label class="text-white" for="">Fecha Fin</label>
+                                <input class="form-control" type="date" name="txtFechaEnd" id="txtFechaEnd">
+                            </div>
                         </div>
 
                         <div class="form-group col-12">
@@ -63,7 +65,7 @@
                             <input class="form-control" type="text" name="txtTitle" id="txtTitle" >
                         </div>
 
-                        <label class="text-white" for="">Description</label>
+                        <label class="text-white" for="">Descripción</label>
                         <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="3"></textarea>
 
                         <div class="form-group col-12 mt-3">

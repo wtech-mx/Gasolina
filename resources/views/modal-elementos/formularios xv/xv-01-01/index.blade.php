@@ -57,7 +57,13 @@
                                     <td>{{$row->tipo_auditoria}}</td>
                                     <td>{{$row->alcance}}</td>
                                     <td>{{$row->objetivo}}</td>
-                                    <td>{{$row->estatus}}</td>
+
+                                    @if ($row->check == 0)
+                                    <td>Pendiente</td>
+                                    @else
+                                    <td>Realizado</td>
+                                    @endif
+
                                     <td>{{$row->start}}</td>
                                     <td>{{$row->end}}</td>
                                     <td>

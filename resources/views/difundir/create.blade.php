@@ -38,6 +38,20 @@ $rest = substr($url, -8);
 $rest = substr($url, -8);
 }elseif ($url == '/difundir/xii-01-01') {
 $rest = substr($url, -9);
+}elseif ($url == '/difundir/xiv-01-01') {
+$rest = substr($url, -9);
+}elseif ($url == '/difundir/xiv-01-02') {
+$rest = substr($url, -9);
+}elseif ($url == '/difundir/xiv-03-01') {
+$rest = substr($url, -9);
+}elseif ($url == '/difundir/xv-01-01') {
+$rest = substr($url, -8);
+}elseif ($url == '/difundir/xv-01-02') {
+$rest = substr($url, -8);
+}elseif ($url == '/difundir/xvi-01-01') {
+$rest = substr($url, -9);
+}elseif ($url == '/difundir/xvi-01-02') {
+$rest = substr($url, -9);
 }
 @endphp
 <!-- Modal -->

@@ -36,6 +36,14 @@
                                     <textarea class="form-control" id="objetivo" name="objetivo" rows="3"></textarea>
                                 </div>
 
+                                <div class="form-group col-6 mt-3">
+                                    <label>Estatus</label>
+                                    <select id="estatus" name="estatus" class="form-select">
+                                        <option value="0" selected>Pendiente</option>
+                                        <option value="1">Realizado</option>
+                                    </select>
+                                </div>
+
                                 <div class="col-sm-12 col-12">
                                     <div class="form-group mb-3 position-relative">
                                         <label class="form-label label-custom-yellow">PDF</label>

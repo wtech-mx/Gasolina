@@ -46,7 +46,13 @@ class xviElementoController extends Controller
             $xvi_elemento->area = $request->get('area');
             $xvi_elemento->daño_accidente = $request->get('daño_accidente');
             $xvi_elemento->tipo_personal = $request->get('tipo_personal');
-            $xvi_elemento->usuario = $request->get('usuario');
+            if($request->get('usuario') == null){
+                $xvi_elemento->usuario = $request->get('usuario_otro');
+            }else{
+                $xvi_elemento->usuario = $request->get('usuario');
+            }
+
+
             $xvi_elemento->descripcion = $request->get('descripcion');
 
             if ($request->hasFile("pdf")) {
@@ -67,7 +73,7 @@ class xviElementoController extends Controller
                 $data = array(
                     'tipo_vinculacion' => $tipo_vinculacion[$count],
                     'nombre' => $nombre[$count],
-                    'id_difundir' => $xvi_elemento->id,
+                    'id_xvi' => $xvi_elemento->id,
                 );
                 $insert_data[] = $data;
             }
@@ -77,7 +83,7 @@ class xviElementoController extends Controller
             Session::flash('success', 'Se ha guardado sus datos con exito');
             return redirect()->route('index.xvi_01_01');
         } catch (\Exception $e) {
-            Session::flash('error', 'opps error al crear usuario');
+            Session::flash('error', 'opps error al crear registro');
             return redirect()->back();
         }
     }

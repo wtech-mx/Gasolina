@@ -151,10 +151,10 @@
 
     <script type="text/javascript">
         $('#agregar2').click(function(){
-            agregar();
+            agregar2();
         });
 
-        function agregar(){
+        function agregar2(){
             var tipo_vinculacion=$('#tipo_vinculacion').val();
             var nombre=$('#nombre').val();
             var fila='<tr>'+
@@ -210,6 +210,29 @@
         // $("body").on("click",".remove",function(){
         //     $(this).parents("._form").remove();
         // });
+    </script>
+
+    <script type="text/javascript">
+        $('#agregar3').click(function(){
+            agregar3();
+        });
+
+        function agregar3(){
+            var nombre=$('#nombre').val();
+            var correo=$('#correo').val();
+            var puesto=$('#puesto').val();
+            var telefono=$('#telefono').val();
+            var cargo=$('#cargo').val();
+            var fila='<tr>'+
+            '<td><input type="text" class="form-control" placeholder="nombre" id="nombre_2[]" name="nombre_2[]"></td>'+
+            '<td><input type="text" class="form-control" placeholder="correo" id="correo[]" name="correo[]"></td>'+
+            '<td><input type="text" class="form-control" placeholder="puesto" id="puesto[]" name="puesto[]"></td>'+
+            '<td><input type="number" class="form-control" placeholder="telefono" id="telefono_2[]" name="telefono_2[]"></td>'+
+            '<td><input type="text" class="form-control" placeholder="cargo" id="cargo[]" name="cargo[]"></td>'+
+            '</tr>';
+
+            $('#tabla_proveedor').append(fila);
+        }
     </script>
 
     <script>

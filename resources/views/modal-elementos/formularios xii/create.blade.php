@@ -1,6 +1,6 @@
 <!-- Modal -->
 <div class="modal fade" id="exampleModalXII" tabindex="-1" aria-labelledby="exampleModalXI" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalXI">Crear XII-01-01</h5>
@@ -104,15 +104,20 @@
                         <div class="tab-pane fade" id="pills-calendario" role="tabpanel" aria-labelledby="pills-calendario-tab">
                             <div class="row">
 
-                                <div class="form-group col-6 mt-3">
-                                    <label>usuarios</label>
-                                    <select class="select2-multiple form-control" name="id_usuarios[]" multiple="multiple"
-                                    id="select2Multiple">
-                                        @foreach ($users as $user)
-                                            <option value="{{$user->id}}">{{$user->name}} {{$user->apellido}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                                <table class="table table-bordered" id="tabla_proveedor">
+                                    <thead class="table-dark">
+                                        <tr class="text-center">
+                                            <th>nombre</th>
+                                            <th>correo</th>
+                                            <th>puesto</th>
+                                            <th>telefono</th>
+                                            <th>cargo</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <a href="javascript:;" id="agregar3" class="btn" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">Agregar
+                                    usuario</a>
 
                             </div>
                         </div>

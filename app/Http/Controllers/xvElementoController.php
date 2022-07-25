@@ -35,10 +35,11 @@ class xvElementoController extends Controller
         try {
 
             $xvi_elemento = new xvElemento;
-            $xvi_elemento->title = $request->get('title');
-            $xvi_elemento->image = $request->get('image');
-            $xvi_elemento->color = $request->get('color');
+            $xvi_elemento->title = 'Auditoria ' . $request->get('tipo_auditoria');
+            $xvi_elemento->image = asset('assets/img/icons/checked.png');
+            $xvi_elemento->color = '#cc2e5c';
             $xvi_elemento->estatus = $request->get('estatus');
+            $xvi_elemento->check = $request->get('estatus');
             $xvi_elemento->start = $request->get('start');
             $xvi_elemento->end = $request->get('end');
             $xvi_elemento->tipo_auditoria = $request->get('tipo_auditoria');
@@ -67,10 +68,11 @@ class xvElementoController extends Controller
     public function update(Request $request, $id)
     {
         $xvi_elemento = xvElemento::findOrFail($id);
-        $xvi_elemento->title = $request->get('title');
-        $xvi_elemento->image = $request->get('image');
-        $xvi_elemento->color = $request->get('color');
+        $xvi_elemento->title = 'Auditoria ' . $request->get('tipo_auditoria');
+        $xvi_elemento->image = asset('assets/img/icons/checked.png');
+        $xvi_elemento->color = '#cc2e5c';
         $xvi_elemento->estatus = $request->get('estatus');
+        $xvi_elemento->check = $request->get('estatus');
         $xvi_elemento->start = $request->get('start');
         $xvi_elemento->end = $request->get('end');
         $xvi_elemento->tipo_auditoria = $request->get('tipo_auditoria');
@@ -123,12 +125,13 @@ class xvElementoController extends Controller
         try {
 
             $xv_elemento = new xvElementor02;
-            $xv_elemento->title = $request->get('title');
-            $xv_elemento->image = $request->get('image');
-            $xv_elemento->color = $request->get('color');
+            $xv_elemento->title = 'Auditoria Externa' . $request->get('tipo_auditoria');
+            $xv_elemento->image = asset('assets/img/icons/checked.png');
+            $xv_elemento->color = '#9acc2e';
             $xv_elemento->estatus = $request->get('estatus');
+            $xv_elemento->check = $request->get('estatus');
             $xv_elemento->start = $request->get('start');
-            $xv_elemento->end = $request->get('end');
+            $xv_elemento->end = $request->get('fecha_auditoria');
             $xv_elemento->fecha_elaboracion = $request->get('fecha_elaboracion');
             $xv_elemento->fecha_auditoria = $request->get('fecha_auditoria');
             $xv_elemento->contratista = $request->get('contratista');
@@ -155,12 +158,13 @@ class xvElementoController extends Controller
     public function update_02(Request $request, $id)
     {
         $xv_elemento = xvElementor02::findOrFail($id);
-        $xv_elemento->title = $request->get('title');
-        $xv_elemento->image = $request->get('image');
-        $xv_elemento->color = $request->get('color');
+        $xv_elemento->title = 'Auditoria Externa' . $request->get('tipo_auditoria');
+        $xv_elemento->image = asset('assets/img/icons/checked.png');
+        $xv_elemento->color = '#9acc2e';
         $xv_elemento->estatus = $request->get('estatus');
+        $xv_elemento->check = $request->get('estatus');
         $xv_elemento->start = $request->get('start');
-        $xv_elemento->end = $request->get('end');
+        $xv_elemento->end = $request->get('fecha_auditoria');
         $xv_elemento->fecha_elaboracion = $request->get('fecha_elaboracion');
         $xv_elemento->fecha_auditoria = $request->get('fecha_auditoria');
         $xv_elemento->contratista = $request->get('contratista');

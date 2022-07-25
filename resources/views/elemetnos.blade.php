@@ -78,7 +78,7 @@
                             </div>
                         <div class="card card-menu mt-3">
                                 <div class="card-body">
-                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento10">
+                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/10.png') }}">
                                         <h4 class="card-title card-menu-title-element">Control de actividades y procesos</h4>
                                     </a>
@@ -102,7 +102,7 @@
                             </div>
                         <div class="card card-menu mt-3">
                                 <div class="card-body">
-                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento13">
+                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/13.png') }}">
                                         <h4 class="card-title card-menu-title-element">Preparación y respuesta a emergencias</h4>
                                     </a>
@@ -134,7 +134,7 @@
                             </div>
                         <div class="card card-menu mt-3">
                                 <div class="card-body">
-                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento17">
+                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/17.png') }}">
                                         <h4 class="card-title card-menu-title-element">Revision de resultados<br>-<br></h4>
                                     </a>
@@ -142,7 +142,7 @@
                             </div>
                         <div class="card card-menu mt-3">
                                 <div class="card-body">
-                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento18">
+                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/18.png') }}">
                                         <h4 class="card-title card-menu-title-element">Informes de Desempeños<br>-<br></h4>
                                     </a>

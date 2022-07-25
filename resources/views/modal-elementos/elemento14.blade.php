@@ -106,12 +106,12 @@
                                             </a>
 
                                             <a class="btn text-dark"
-                                                href="{{route('difundir_vii_01_01.index')}}"
+                                                href="{{route('difundir_xiv_01_01.index')}}"
                                                 style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
                                                 Difundir
                                             </a>
 
-                                            <a class="btn  " href="{{route('preventiva_vii_01_01.index')}}"
+                                            <a class="btn  " href="{{route('preventiva_xiv_01_01.index')}}"
                                                 style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
                                                 Accion Correctiva
                                             </a>
@@ -124,12 +124,12 @@
                                             </a>
 
                                             <a class="btn text-dark"
-                                                href="{{route('difundir_vii_01_01.index')}}"
+                                                href="{{route('difundir_xiv_01_02.index')}}"
                                                 style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
                                                 Difundir
                                             </a>
 
-                                            <a class="btn  " href="{{route('preventiva_vii_01_01.index')}}"
+                                            <a class="btn  " href="{{route('preventiva_xiv_01_02.index')}}"
                                                 style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
                                                 Accion Correctiva
                                             </a>
@@ -160,12 +160,12 @@
                                             </a>
 
                                             <a class="btn text-dark"
-                                                href="{{route('difundir_vii_01_01.index')}}"
+                                                href="{{route('difundir_xiv_03_01.index')}}"
                                                 style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important;">
                                                 Difundir
                                             </a>
 
-                                            <a class="btn  " href="{{route('preventiva_vii_01_01.index')}}"
+                                            <a class="btn  " href="{{route('preventiva_xiv_03_01.index')}}"
                                                 style="background-color:#001d3d;color:  red!important; border: 2px solid red!important;">
                                                 Accion Correctiva
                                             </a>

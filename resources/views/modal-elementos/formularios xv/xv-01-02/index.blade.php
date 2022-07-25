@@ -57,7 +57,11 @@
                                     <td>{{$row->fecha_elaboracion}}</td>
                                     <td>{{$row->fecha_auditoria}}</td>
                                     <td>{{$row->contratista}}</td>
-                                    <td>{{$row->estatus}}</td>
+                                    @if ($row->check == 0)
+                                    <td>Pendiente</td>
+                                    @else
+                                    <td>Realizado</td>
+                                    @endif
                                     <td>
                                         @if ($row->pdf == NULL)
                                         <a data-bs-toggle="modal" data-bs-target="#updateModalXV{{$row->id}}"

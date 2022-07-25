@@ -45,6 +45,7 @@
             $('#txtFecha').val("");
 
             $('#txtFecha').val(info.dateStr);
+            $('#txtFechaEnd').val(info.dateStr);
             $("#btnAgregar").prop("disabled",false);
             $("#btnModificar").prop("disabled",true);
             $("#btnBorrar").prop("disabled",true);
@@ -67,6 +68,15 @@
                 dia = (dia<10)?"0"+dia:dia;
 
             $('#txtFecha').val(anio+"-"+mes+"-"+dia);
+
+                mes2 = (info.event.end.getMonth()+1)
+                dia2 = (info.event.end.getDate())
+                anio2 = (info.event.end.getFullYear())
+
+                mes2 = (mes2<10)?"0"+mes2:mes2;
+                dia2 = (dia2<10)?"0"+dia2:dia2;
+
+            $('#txtFechaEnd').val(anio2+"-"+mes2+"-"+dia2);
 
             $('#id_user').val(info.event.extendedProps.id_user);
             $('#txtTitle').val(info.event.title);
@@ -169,7 +179,7 @@
                 check:$('#check').val(),
                 image:$('#image').val(),
                 start:$('#txtFecha').val(),
-                end:$('#txtFecha').val(),
+                end:$('#txtFechaEnd').val(),
                 '_token':$("meta[name='csrf-token']").attr("content"),
                 '_method':method
             }
@@ -199,6 +209,7 @@
             $('#descripcion').val("");
             $('#id_user').val("");
             $('#txtFecha').val("");
+            $('#txtFechaEnd').val("");
             $('#color').val("");
             $('#estatus').val("");
             $('#check').val("");

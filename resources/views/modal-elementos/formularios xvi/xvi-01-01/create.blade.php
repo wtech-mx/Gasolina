@@ -51,7 +51,7 @@
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Tipo de personal que notificó</label>
-                                    <select id="tipo_personal" name="tipo_personal" class="form-select">
+                                    <select id="tipo_personal" name="tipo_personal" class="form-select" onchange="showInp()">
                                         <option value="">Seleccione</option>
                                         <option value="Personal interno">Personal interno</option>
                                         <option value="Otro">Otro</option>
@@ -60,14 +60,14 @@
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Notificado por</label>
-                                    <select id="usuario" name="usuario" class="form-select">
+                                    <select id="interusuario" name="usuario" class="form-select" style="display: none">
                                         <option value="">Seleccione</option>
                                         @foreach ($users as $item)
                                         <option value="{{$item->name}} {{$item->apellido}}">{{$item->name}} {{$item->apellido}}</option>
                                         @endforeach
                                     </select>
 
-                                    <input name="usuario" type="text" class="form-control" id="usuario">
+                                    <input name="usuario_otro" type="text" class="form-control" id="otrouser" style="display: none">
                                 </div>
 
                                 <table class="table table-bordered" id="tabla_vinculacion">

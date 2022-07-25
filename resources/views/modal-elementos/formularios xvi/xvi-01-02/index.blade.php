@@ -76,6 +76,7 @@
                                     </td>
                                 </tr>
                                 @include('modal-elementos.formularios xvi.xvi-01-02.update')
+                                @include('modal-elementos.formularios xvi.xvi-01-02.eliminar')
                                 @endforeach
                             </tbody>
                         </table>

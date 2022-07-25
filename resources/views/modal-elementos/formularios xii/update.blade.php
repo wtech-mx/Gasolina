@@ -110,33 +110,42 @@
                         <div class="tab-pane fade" id="pills-usuarios{{$item->id}}" role="tabpanel" aria-labelledby="pills-usuarios-tab">
                             <div class="row">
 
-                                <div class="form-group col-12 mt-3">
-                                    <label>usuarios</label>
-                                    <select class="select2-multiple form-control" name="id_usuarios[]" multiple="multiple"
-                                    id="select2Multiple">
-                                        @foreach ($users as $user)
-                                            <option value="{{$user->id}}">{{$user->name}} {{$user->apellido}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                                {{-- <div class="tab-pane fade" id="pills-calendario" role="tabpanel" aria-labelledby="pills-calendario-tab">
+                                    <div class="row">
+
+                                        <table class="table table-bordered" id="tabla_proveedor">
+                                            <thead class="table-dark">
+                                                <tr class="text-center">
+                                                    <th>nombre</th>
+                                                    <th>correo</th>
+                                                    <th>puesto</th>
+                                                    <th>telefono</th>
+                                                    <th>cargo</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+
+                                        <a href="javascript:;" id="agregar3" class="btn" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">Agregar
+                                            usuario</a>
+
+                                    </div>
+                                </div> --}}
 
                                 <hr>
 
                                 <div class="col-2" style="background-color: #212529; color: #fff">Nombre</div>
-                                <div class="col-2" style="background-color: #212529; color: #fff;">Correo</div>
+                                <div class="col-4" style="background-color: #212529; color: #fff;">Correo</div>
                                 <div class="col-2" style="background-color: #212529; color: #fff;">Puesto</div>
                                 <div class="col-2" style="background-color: #212529; color: #fff;">Telefono</div>
                                 <div class="col-2" style="background-color: #212529; color: #fff;">Cargo</div>
-                                <div class="col-2" style="background-color: #212529; color: #fff;">Tipo personal</div>
 
                                         @foreach ($xii_elemento_user as $xii_elemento)
                                             @if ($xii_elemento->id_xii == $item->id)
-                                                <div class="col-2">{{$xii_elemento->User->name}} {{$xii_elemento->User->apellido}}</div>
-                                                <div class="col-2">{{$xii_elemento->User->email}}</div>
-                                                <div class="col-2">{{$xii_elemento->User->puesto}}</div>
-                                                <div class="col-2">{{$xii_elemento->User->telefono_emergencia}}</div>
-                                                <div class="col-2">{{$xii_elemento->User->puesto}}</div>
-                                                <div class="col-2">{{$xii_elemento->User->personal}}</div>
+                                                <div class="col-2">{{$xii_elemento->nombre}}</div>
+                                                <div class="col-4">{{$xii_elemento->correo}}</div>
+                                                <div class="col-2">{{$xii_elemento->puesto}}</div>
+                                                <div class="col-2">{{$xii_elemento->telefono}}</div>
+                                                <div class="col-2">{{$xii_elemento->cargo}}</div>
                                             @endif
                                         @endforeach
 
