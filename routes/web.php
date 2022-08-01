@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RoleController;
+use App\Models\xiiElementoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -414,9 +415,19 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('ver/sasisopa-xii-01', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_01'])->name('pdf_xii_01.view');
     Route::get('imprimir/sasisopa-xii-01', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_01_download'])->name('pdf_xii_01.print');
 
+    Route::delete('/delete/{id}', function ($id) {
+        $xii_elemento = xiiElementoController::destroy($id);
+        return Response::json($xii_elemento);
+    });
+
     /*|--------------------------------------------------------------------------
     |XIV Elemento
     |--------------------------------------------------------------------------*/
+    Route::get('/index/xiv-01-01', [App\Http\Controllers\xivElementoController::class, 'index_01'])->name('index.xiv_01_01');
+    Route::post('/store/xiv-01-01', [App\Http\Controllers\xivElementoController::class, 'store_01'])->name('store.xiv_01_01');
+    Route::patch('/update/xiv-01-01/{id}', [App\Http\Controllers\xivElementoController::class, 'update_01'])->name('update.xiv_01_01');
+    Route::delete('/delete/xiv-01-01/{id}', [App\Http\Controllers\xivElementoController::class, 'destroy_01'])->name('destroy.xiv_01_01');
+
     Route::get('/index/xiv-01-02', [App\Http\Controllers\xivElementoController::class, 'index'])->name('index.xiv_01_02');
     Route::post('/store/xiv-01-02', [App\Http\Controllers\xivElementoController::class, 'store'])->name('store.xiv_01_02');
     Route::patch('/update/xiv-01-02/{id}', [App\Http\Controllers\xivElementoController::class, 'update'])->name('update.xiv_01_02');

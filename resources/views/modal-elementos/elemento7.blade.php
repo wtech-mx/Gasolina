@@ -10,7 +10,7 @@
 
             <div class="modal-header">
                 <h5 class="modal-title text-center" style="font-size: 16px;">
-                    Identificacion de peligros y aspectos ambientales
+                    Comunicación, participación y consulta
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -115,13 +115,17 @@
                                                     <select id="status" name="status" class="form-select"
                                                         onChange="mostrars7(this.value);">
                                                         <option value="">Seleccione Elemento</option>
-                                                        <option value="VII-01-01">VII-01-01</option>
-                                                        <option value="VII-02-02">VII-02-02</option>
-                                                        <option value="VII-03-02">VII-03-02</option>
+                                                        <option value="VII-01-01">VII-01-01 Matriz de registro y seguimiento de comunicación interna y externa.</option>
+                                                        <option value="VII-02-02">VII-02-02 Matriz de registro y seguimiento de actos o condiciones inseguras.</option>
+                                                        <option value="VII-03-02">VII-03-02 Matriz de control, seguimiento y cierre de quejas y sugerencias.</option>
                                                     </select>
                                                 </form>
 
                                                 <div id="VII-01-01" style="display: none;">
+                                                    <a class="btn" href="{{route('difundir_vii_01_01.index')}}"
+                                                        style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                                                        Ejecutar
+                                                    </a>
 
                                                     <a class="btn text-dark"
                                                         href="{{route('difundir_vii_01_01.index')}}"

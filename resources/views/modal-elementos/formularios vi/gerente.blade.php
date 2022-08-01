@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="col-12 p-4">
-                                <form method="POST" action="{{ route('update_empresario.evaluacion', $vi->id) }}" enctype="multipart/form-data" role="form">
+                                <form method="POST" action="{{ route('update_gerente.evaluacion', $vi->id) }}" enctype="multipart/form-data" role="form">
                                     @csrf
                                     <input type="hidden" name="_method" value="PATCH">
                                     <input type="hidden" class="form-control" id="elemento" name="elemento" value="VI-01-01">

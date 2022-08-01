@@ -38,13 +38,15 @@ class xvElementoController extends Controller
             $xvi_elemento->title = 'Auditoria ' . $request->get('tipo_auditoria');
             $xvi_elemento->image = asset('assets/img/icons/checked.png');
             $xvi_elemento->color = '#cc2e5c';
-            $xvi_elemento->estatus = $request->get('estatus');
-            $xvi_elemento->check = $request->get('estatus');
-            $xvi_elemento->start = $request->get('start');
-            $xvi_elemento->end = $request->get('end');
             $xvi_elemento->tipo_auditoria = $request->get('tipo_auditoria');
             $xvi_elemento->alcance = $request->get('alcance');
+            $xvi_elemento->contratista = $request->get('contratista');
             $xvi_elemento->objetivo = $request->get('objetivo');
+            $xvi_elemento->start = $request->get('start');
+            $xvi_elemento->fecha_inicio = $request->get('fecha_inicio');
+            $xvi_elemento->end = $request->get('end');
+            $xvi_elemento->estatus = $request->get('estatus');
+            $xvi_elemento->check = $request->get('estatus');
 
             if ($request->hasFile("pdf")) {
                 $file = $request->file('pdf');
@@ -71,13 +73,15 @@ class xvElementoController extends Controller
         $xvi_elemento->title = 'Auditoria ' . $request->get('tipo_auditoria');
         $xvi_elemento->image = asset('assets/img/icons/checked.png');
         $xvi_elemento->color = '#cc2e5c';
-        $xvi_elemento->estatus = $request->get('estatus');
-        $xvi_elemento->check = $request->get('estatus');
-        $xvi_elemento->start = $request->get('start');
-        $xvi_elemento->end = $request->get('end');
         $xvi_elemento->tipo_auditoria = $request->get('tipo_auditoria');
         $xvi_elemento->alcance = $request->get('alcance');
+        $xvi_elemento->contratista = $request->get('contratista');
         $xvi_elemento->objetivo = $request->get('objetivo');
+        $xvi_elemento->start = $request->get('start');
+        $xvi_elemento->fecha_inicio = $request->get('fecha_inicio');
+        $xvi_elemento->end = $request->get('end');
+        $xvi_elemento->estatus = $request->get('estatus');
+        $xvi_elemento->check = $request->get('estatus');
 
         if ($request->hasFile("pdf")) {
             $file = $request->file('pdf');

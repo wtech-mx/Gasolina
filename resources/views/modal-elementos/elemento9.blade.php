@@ -48,6 +48,13 @@
                                     <a href="{{route('pdf_ix.print')}}"><i class="icon_config fa fa-download"
                                             aria-hidden="true"></i></a>
                                 </div>
+
+                                <div id="ix-01" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_ix.view')}}" target="_blank"><i
+                                            class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_ix.print')}}"><i class="icon_config fa fa-download"
+                                            aria-hidden="true"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>

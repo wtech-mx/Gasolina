@@ -48,7 +48,7 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>Válido para la estación</label>
+                                    <label>¿Válido para la estación?</label>
                                     <input class="form-check-input" type="radio" name="configuracion" id="configuracion" value="1">
                                 </div>
 

@@ -73,6 +73,10 @@
                                 </form>
 
                                 <div id="elementoi" class="text-center" style="display: none;">
+                                    <a class="btn text-dark" href="{{route('pdf_i_01.view')}}" target="_blank" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important">
+                                        Ejecutar
+                                    </a>
+
                                     <a class="btn" href="{{route('difundir_i_01_01.index')}}" style="background-color:#001d3d;color:  yellow!important; border: 2px solid yellow!important">
                                         Difundir
                                     </a>

@@ -128,7 +128,7 @@ class UserController extends Controller
 
             // Redireccion  de suuces or fail dependiedno el caso
             Session::flash('success', 'Se ha guardado sus datos con exito');
-            return redirect()->route('index.usuario');
+            return redirect()->back();
         } catch (\Exception $e) {
             Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
             return redirect()->back();

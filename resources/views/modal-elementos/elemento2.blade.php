@@ -9,7 +9,7 @@
 
       <div class="modal-header">
         <h5 class="modal-title text-center" id="elemento1" style="font-size: 16px;">
-            Identificacion de peligros y aspectos ambientales
+            Identificación de peligros y aspectos ambientales
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -43,9 +43,9 @@
                                     <a href="{{route('pdf_ii_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
 
-                                <div id="ii-01" style="display: none;">
-                                    <a href="{{route('pdf_ii.view')}}" target="_blank"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_sasisopa_ii_download.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                <div id="ii-01" class="text-center" style="display: none;">
+                                    <a href="{{route('pdf_ii.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_sasisopa_ii_download.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
 
 

@@ -74,7 +74,7 @@
                                             <select id="status" name="status" class="form-select"
                                                 onChange="mostrars11(this.value);">
                                                 <option value="">Seleccione Elemento</option>
-                                                <option value="xi-01-01">xi-01-01 Matriz de mejores prácticas.</option>
+                                                <option value="xi-01-01">XI-01-01 Lista y Catálogo de equipos críticos</option>
                                             </select>
                                         </form>
 

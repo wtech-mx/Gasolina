@@ -18,12 +18,16 @@ class CreateXvElementoTable extends Migration
             $table->string('title')->nullable();
             $table->string('image')->nullable();
             $table->string('color')->nullable();
-            $table->string('estatus')->nullable();
-            $table->date('start')->nullable();
-            $table->date('end')->nullable();
+
             $table->string('tipo_auditoria')->nullable();
             $table->string('alcance')->nullable();
+            $table->string('contratista')->nullable();
             $table->string('objetivo')->nullable();
+            $table->date('start')->nullable();
+            $table->date('fecha_inicio')->nullable();
+            $table->date('end')->nullable();
+            $table->integer('estatus')->nullable();
+            $table->integer('check')->nullable();
             $table->string('pdf', 900)->nullable();
         });
     }

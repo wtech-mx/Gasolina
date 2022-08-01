@@ -83,6 +83,16 @@
                                 </div>
 
                                 <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group mb-3 position-relative" placeholder="Contraseña">
+                                            <i class="fa fa-lock icon-style-2"></i>
+                                            <label class="form-label label-custom-yellow">Confirmar contraseña</label>
+                                            <input type="password" class="form-control" id="password" name="password_confirmation" placeholder="****" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
                                     <div class="col-sm-6 col-6">
                                         <div class="form-group mb-3 position-relative" style="position: relative">
                                             <i class="fa fa-street-view icon-style-2"></i>

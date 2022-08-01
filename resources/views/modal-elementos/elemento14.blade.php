@@ -100,7 +100,7 @@
                                         </form>
 
                                         <div id="xiv-01-01" style="display: none;">
-                                            <a class="btn" href="{{route('index.ix_01_01')}}"
+                                            <a class="btn" href="{{route('index.xiv_01_01')}}"
                                                 style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
                                                 Ejecutar
                                             </a>

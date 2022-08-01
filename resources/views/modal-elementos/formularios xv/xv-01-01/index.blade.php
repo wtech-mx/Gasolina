@@ -44,10 +44,12 @@
                                 <tr>
                                     <th scope="col">Tipo auditoria</th>
                                     <th scope="col">Alcance</th>
+                                    <th scope="col">Contratista/Proveedor</th>
                                     <th scope="col">Objetivo</th>
+                                    <th scope="col">Fecha de programación</th>
+                                    <th scope="col">Fecha de inicio</th>
+                                    <th scope="col">Fecha de final</th>
                                     <th scope="col">Estatus</th>
-                                    <th scope="col">Inicio</th>
-                                    <th scope="col">Final</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
@@ -56,7 +58,11 @@
                                 <tr>
                                     <td>{{$row->tipo_auditoria}}</td>
                                     <td>{{$row->alcance}}</td>
+                                    <td>{{$row->contratista}}</td>
                                     <td>{{$row->objetivo}}</td>
+                                    <td>{{$row->start}}</td>
+                                    <td>{{$row->fecha_inicio}}</td>
+                                    <td>{{$row->end}}</td>
 
                                     @if ($row->check == 0)
                                     <td>Pendiente</td>
@@ -64,8 +70,6 @@
                                     <td>Realizado</td>
                                     @endif
 
-                                    <td>{{$row->start}}</td>
-                                    <td>{{$row->end}}</td>
                                     <td>
                                         @if ($row->pdf == NULL)
                                         <a data-bs-toggle="modal" data-bs-target="#updateModalXV{{$row->id}}"

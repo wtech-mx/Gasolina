@@ -49,6 +49,9 @@
                                     <th scope="col">Situación observada</th>
                                     <th scope="col">Tipo</th>
                                     <th scope="col">Descripción</th>
+                                    <th scope="col">Responsable de seguimiento</th>
+                                    <th scope="col">Estatus</th>
+                                    <th scope="col">Seguimiento</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
@@ -61,6 +64,9 @@
                                     <td>{{$item->observada}}</td>
                                     <td>{{$item->tipo}}</td>
                                     <td>{{$item->descripcion}}</td>
+                                    <td>{{$item->responsable}}</td>
+                                    <td>{{$item->estatus}}</td>
+                                    <td>{{$item->seguimiento}}</td>
 
                                     <td>
                                         @if ($item->pdf == NULL)

@@ -17,13 +17,23 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>Inicio</label>
-                                    <input name="start" type="date" class="form-control" id="start">
+                                    <label>Contratista/Proveedor</label>
+                                    <input name="contratista" type="text" class="form-control" id="contratista">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>Final</label>
+                                    <label>Fecha de inicio</label>
+                                    <input name="fecha_inicio" type="date" class="form-control" id="fecha_inicio">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Fecha final</label>
                                     <input name="end" type="date" class="form-control" id="end">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Objetivo</label>
+                                    <textarea class="form-control" id="objetivo" name="objetivo" rows="2"></textarea>
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
@@ -32,8 +42,8 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
-                                    <label>Objetivo</label>
-                                    <textarea class="form-control" id="objetivo" name="objetivo" rows="3"></textarea>
+                                    <label>Fecha de programación</label>
+                                    <input name="start" type="date" class="form-control" id="start">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
@@ -44,7 +54,7 @@
                                     </select>
                                 </div>
 
-                                <div class="col-sm-12 col-12">
+                                <div class="col-sm-12 col-12 mt-3">
                                     <div class="form-group mb-3 position-relative">
                                         <label class="form-label label-custom-yellow">PDF</label>
                                         <input type="file" class="custom-file-input input-group-text" id="pdf"

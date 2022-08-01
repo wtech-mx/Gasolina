@@ -57,6 +57,7 @@
                                 <thead class="text-white">
                                     <tr>
                                         <td>#</td>
+                                        <th>Elemento</th>
                                         <th>Descripcion</th>
                                         <th>Estatus</th>
                                         <th>Fecha</th>
@@ -68,6 +69,7 @@
                                     @foreach($preventivas as $row)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $row->elemento }}</td>
                                         <td>{{ $row->descripcion }}</td>
                                         <td>{{ $row->estatus }}</td>
                                         <td>{{ $row->fecha }}</td>

@@ -33,7 +33,7 @@
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar5(this.value);">
                                         <option value="">Documento*</option>
-                                        <option value="V">V - Funciones, responsabilidaes y autoridad</option>
+                                        <option value="V">V - Funciones, responsabilidades y autoridad</option>
                                         <option value="V-01">V-01 Procedimiento de funciones y responsabilidades</option>
                                     </select>
                                 </form>

@@ -220,7 +220,7 @@ class viiiElementoController extends Controller
                     $calendario->title = $viii_elemento->autorizacion;
                     $date = date("Y-m-d", strtotime($request->get('start')));
                     $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." month"));
-                    $calendario->end = $calendario->start;
+                    $calendario->end = date("Y-m-d", strtotime($calendario->start."+ 1 days"));
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
@@ -324,95 +324,98 @@ class viiiElementoController extends Controller
         }
         $viii_elemento->update();
 
-        $viii_elemento->tiempo = $request->get('tiempo');
-        $viii_elemento->start = $request->get('start');
-
         $config = DB::table('configuracion')->first();
-
-        if($viii_elemento->tiempo == 'tri'){
-            for($i=0; $i <= 18; $i = $i + 3){
-                $calendario = new Calendario;
-                $calendario->id_user = auth()->user()->id;
-                $calendario->title = $viii_elemento->autorizacion;
-                $date = date("Y-m-d", strtotime($request->get('start')));
-                $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." month"));
-                $calendario->end = $calendario->start;
-                $calendario->color = $config->color_temporalidad;
-                $calendario->check = 0;
-                $calendario->estatus = 0;
-                $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
-                $calendario->save();
-            }
-        }elseif($viii_elemento->tiempo == 'sem'){
-            for($i=0; $i <= 24; $i = $i + 6){
-                $calendario = new Calendario;
-                $calendario->id_user = auth()->user()->id;
-                $calendario->title = $viii_elemento->autorizacion;
-                $date = date("Y-m-d", strtotime($request->get('start')));
-                $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." month"));
-                $calendario->end = $calendario->start;
-                $calendario->color = $config->color_temporalidad;
-                $calendario->check = 0;
-                $calendario->estatus = 0;
-                $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
-                $calendario->save();
-            }
-        }elseif($viii_elemento->tiempo == 'uno'){
-            for($i=0; $i<=3; $i++){
-                $calendario = new Calendario;
-                $calendario->id_user = auth()->user()->id;
-                $calendario->title = $viii_elemento->autorizacion;
-                $date = date("Y-m-d", strtotime($request->get('start')));
-                $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
-                $calendario->end = $calendario->start;
-                $calendario->color = $config->color_temporalidad;
-                $calendario->check = 0;
-                $calendario->estatus = 0;
-                $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
-                $calendario->save();
-            }
-        }elseif($viii_elemento->tiempo == 'cinco'){
-            for($i=0; $i<=20; $i = $i + 5){
-                $calendario = new Calendario;
-                $calendario->id_user = auth()->user()->id;
-                $calendario->title = $viii_elemento->autorizacion;
-                $date = date("Y-m-d", strtotime($request->get('start')));
-                $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
-                $calendario->end = $calendario->start;
-                $calendario->color = $config->color_temporalidad;
-                $calendario->check = 0;
-                $calendario->estatus = 0;
-                $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
-                $calendario->save();
-            }
-        }elseif($viii_elemento->tiempo == 'diez'){
-            for($i=0; $i<=30; $i = $i + 10){
-                $calendario = new Calendario;
-                $calendario->id_user = auth()->user()->id;
-                $calendario->title = $viii_elemento->autorizacion;
-                $date = date("Y-m-d", strtotime($request->get('start')));
-                $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
-                $calendario->end = $calendario->start;
-                $calendario->color = $config->color_temporalidad;
-                $calendario->check = 0;
-                $calendario->estatus = 0;
-                $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
-                $calendario->save();
-            }
-        }elseif($viii_elemento->tiempo == 'treinta'){
-            for($i=0; $i<=90; $i = $i + 30){
-                $calendario = new Calendario;
-                $calendario->id_user = auth()->user()->id;
-                $calendario->title = $viii_elemento->autorizacion;
-                $date = date("Y-m-d", strtotime($request->get('start')));
-                $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
-                $calendario->end = $calendario->start;
-                $calendario->color = $config->color_temporalidad;
-                $calendario->check = 0;
-                $calendario->estatus = 0;
-                $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
-                $calendario->save();
-            }
+        switch($viii_elemento){
+            case($viii_elemento->tiempo == 'tri'):
+                for($i=0; $i <= 18; $i = $i + 3){
+                    $calendario = new Calendario;
+                    $calendario->id_user = auth()->user()->id;
+                    $calendario->title = $viii_elemento->autorizacion;
+                    $date = date("Y-m-d", strtotime($request->get('start')));
+                    $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." month"));
+                    $calendario->end = date("Y-m-d", strtotime($calendario->start."+ 1 days"));
+                    $calendario->color = $config->color_temporalidad;
+                    $calendario->check = 0;
+                    $calendario->estatus = 0;
+                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->save();
+                }
+            break;
+            case($viii_elemento->tiempo == 'sem'):
+                for($i=0; $i <= 24; $i = $i + 6){
+                    $calendario = new Calendario;
+                    $calendario->id_user = auth()->user()->id;
+                    $calendario->title = $viii_elemento->autorizacion;
+                    $date = date("Y-m-d", strtotime($request->get('start')));
+                    $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." month"));
+                    $calendario->end = $calendario->start;
+                    $calendario->color = $config->color_temporalidad;
+                    $calendario->check = 0;
+                    $calendario->estatus = 0;
+                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->save();
+                }
+            break;
+            case($viii_elemento->tiempo == 'uno'):
+                for($i=0; $i<=3; $i++){
+                    $calendario = new Calendario;
+                    $calendario->id_user = auth()->user()->id;
+                    $calendario->title = $viii_elemento->autorizacion;
+                    $date = date("Y-m-d", strtotime($request->get('start')));
+                    $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
+                    $calendario->end = $calendario->start;
+                    $calendario->color = $config->color_temporalidad;
+                    $calendario->check = 0;
+                    $calendario->estatus = 0;
+                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->save();
+                }
+            break;
+            case($viii_elemento->tiempo == 'cinco'):
+                for($i=0; $i<=20; $i = $i + 5){
+                    $calendario = new Calendario;
+                    $calendario->id_user = auth()->user()->id;
+                    $calendario->title = $viii_elemento->autorizacion;
+                    $date = date("Y-m-d", strtotime($request->get('start')));
+                    $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
+                    $calendario->end = $calendario->start;
+                    $calendario->color = $config->color_temporalidad;
+                    $calendario->check = 0;
+                    $calendario->estatus = 0;
+                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->save();
+                }
+            break;
+            case($viii_elemento->tiempo == 'diez'):
+                for($i=0; $i<=30; $i = $i + 10){
+                    $calendario = new Calendario;
+                    $calendario->id_user = auth()->user()->id;
+                    $calendario->title = $viii_elemento->autorizacion;
+                    $date = date("Y-m-d", strtotime($request->get('start')));
+                    $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
+                    $calendario->end = $calendario->start;
+                    $calendario->color = $config->color_temporalidad;
+                    $calendario->check = 0;
+                    $calendario->estatus = 0;
+                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->save();
+                }
+            break;
+            case($viii_elemento->tiempo == 'treinta'):
+                for($i=0; $i<=90; $i = $i + 30){
+                    $calendario = new Calendario;
+                    $calendario->id_user = auth()->user()->id;
+                    $calendario->title = $viii_elemento->autorizacion;
+                    $date = date("Y-m-d", strtotime($request->get('start')));
+                    $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
+                    $calendario->end = $calendario->start;
+                    $calendario->color = $config->color_temporalidad;
+                    $calendario->check = 0;
+                    $calendario->estatus = 0;
+                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->save();
+                }
+            break;
         }
 
 

@@ -29,57 +29,59 @@
                                 <i class="fa fa-arrow-circle-o-left btn-icon-back"></i>
                             </a>
 
-                            <h5 class="text-white">NOTIFICACIÓN INTERNA DE INCIDENTES/ACCIDENTES</h5>
+                            <h5 class="text-white">XIV-01-01 Matriz de calibración y monitoreo de dispensarios.</h5>
 
-                                <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalXVI">
+                                <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModalXIV">
                                     <i class="fa fa-plus btn-icon-back"></i>
                                 </a>
 
                         </div>
                     </div>
-                    @include('modal-elementos.formularios xvi.xvi-01-01.create')
+                    @include('modal-elementos.formularios xiv.xiv-01-01.create')
                     <div class="col-12 p-4">
                         <table class="table" id="table_id">
                             <thead class="text-white">
                                 <tr>
-                                    <th scope="col">Daño accidente</th>
-                                    <th scope="col">Area</th>
-                                    <th scope="col">Tipo personal</th>
-                                    <th scope="col">Observación</th>
-                                    <th scope="col">Fecha</th>
-                                    <th scope="col">Hora</th>
+                                    <th scope="col">subcomponente</th>
+                                    <th scope="col">nombre_unidad</th>
+                                    <th scope="col">numero_autorizacion</th>
+                                    <th scope="col">observaciones</th>
+                                    <th scope="col">estatus</th>
+                                    <th scope="col">fecha_solicitud</th>
+                                    <th scope="col">vigencia</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody class="text-white">
-                                @foreach ($xvi_elemento as $row)
-                                <tr>
-                                    <td>{{$row->daño_accidente}}</td>
-                                    <td>{{$row->area}}</td>
-                                    <td>{{$row->tipo_personal}}</td>
-                                    <td>{{$row->descripcion}}</td>
-                                    <td>{{$row->fecha}}</td>
-                                    <td>{{$row->hora}}</td>
+                                @foreach ($xiv_elemento as $item)
 
+                                <tr>
+                                    <td>{{$item->subcomponente}}</td>
+                                    <td>{{$item->nombre_unidad}}</td>
+                                    <td>{{$item->numero_autorizacion}}</td>
+                                    <td>{{$item->observaciones}}</td>
+                                    <td>{{$item->estatus}}</td>
+                                    <td>{{$item->fecha_solicitud}}</td>
+                                    <td>{{$item->vigencia}}</td>
                                     <td>
-                                        @if ($row->pdf == NULL)
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalXVI{{$row->id}}"
+                                        @if ($item->pdf == NULL)
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalXIV{{$item->id}}"
                                             style="color: #ffffff4d;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @else
-                                        <a data-bs-toggle="modal" data-bs-target="#updateModalXVI{{$row->id}}"
+                                        <a data-bs-toggle="modal" data-bs-target="#updateModalXIV{{$item->id}}"
                                             style="color: #ffffff;font-size: 16px;padding: 5px;">
                                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                         </a>
                                         @endif
-                                        <a type="button" class="text-white" data-bs-toggle="modal" data-bs-target="#modaleliminar{{ $row->id }}">
+                                        <a type="button" class="text-white" data-bs-toggle="modal" data-bs-target="#modaleliminar{{ $item->id }}">
                                             <i class="fa fa-trash" style="color: #ffffff;font-size: 16px;padding: 5px;"></i>
                                         </a>
                                     </td>
                                 </tr>
-                                @include('modal-elementos.formularios xvi.xvi-01-01.update')
-                                @include('modal-elementos.formularios xvi.xvi-01-01.eliminar')
+                                @include('modal-elementos.formularios xiv.xiv-01-01.update')
+                                @include('modal-elementos.formularios xiv.xiv-01-01.eliminar')
                                 @endforeach
                             </tbody>
                         </table>
@@ -90,16 +92,3 @@
     </div>
 </div>
 @endsection
-
-<script>
-    function showInp(){
-        getSelectValue = document.getElementById("tipo_personal").value;
-        if(getSelectValue=="Personal interno"){
-            document.getElementById("interusuario").style.display = "inline-block";
-            document.getElementById("otrouser").style.display = "none";
-        }else if(getSelectValue=="Otro"){
-            document.getElementById("interusuario").style.display = "none";
-            document.getElementById("otrouser").style.display = "inline-block";
-        }
-    }
-</script>

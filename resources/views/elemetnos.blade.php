@@ -16,7 +16,7 @@
                            <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento2">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/2.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Identificacion de peligros y aspectos ambientales</h4>
+                                    <h4 class="card-title card-menu-title-element">Identificación de peligros y aspectos ambientales</h4>
                                 </div>
                             </a>
                         </div>
@@ -32,7 +32,7 @@
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento4">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/4.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Objetivos,Metas e indicadores <br>-<br></h4>
+                                    <h4 class="card-title card-menu-title-element">Objetivos, Metas e indicadores <br>-<br></h4>
                                 </div>
                                 </a>
                             </div>
@@ -48,7 +48,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento6">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/6.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Competencia personal<br>- </h4>
+                                        <h4 class="card-title card-menu-title-element">Competencia del personal<br>- </h4>
                                     </a>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento7">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/7.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Identificacion de peligros y aspectos ambientales</h4>
+                                        <h4 class="card-title card-menu-title-element">Comunicación, participación y consulta.</h4>
                                     </a>
                                 </div>
                             </div>

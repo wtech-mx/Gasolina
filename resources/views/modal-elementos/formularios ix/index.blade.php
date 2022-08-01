@@ -49,7 +49,7 @@
                                     <th scope="col">Tipo</th>
                                     <th scope="col">Reglas y procedimientos</th>
                                     <th scope="col">Mecanismo especifico</th>
-                                    <th scope="col">¿Pre configuración?</th>
+                                    <th scope="col">¿Válido para la estación?</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>

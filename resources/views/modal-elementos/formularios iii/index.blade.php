@@ -42,6 +42,9 @@
                                 <tr>
                                     <th scope="col">Leyes, reglamentos o normas</th>
                                     <th scope="col">Marco normativo</th>
+                                    <th scope="col">Descripción del marco normativo</th>
+                                    <th scope="col">Ámbito de la aplicación</th>
+                                    <th scope="col">Mecanismo de cumplimiento SA</th>
                                     <th scope="col">Mecanismo específico</th>
                                     <th scope="col">Periocidad</th>
                                     <th scope="col">Obligatorio</th>
@@ -54,6 +57,9 @@
                                     <tr>
                                         <td>{{$row->leyes}}</td>
                                         <td>{{$row->marco}}</td>
+                                        <td>{{$row->descripcion}}</td>
+                                        <td>{{$row->ambito}}</td>
+                                        <td>{{$row->mecanismo_cumplimiento}}</td>
                                         <td>{{$row->mecanismo_especifico}}</td>
                                         <td>{{$row->periodicidad}}</td>
                                         @if ($row->obligatorio == null)

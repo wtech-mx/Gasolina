@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('css-custom')
+<link rel="stylesheet" href="{{ asset('assets/css/custom_table.css') }}">
+@endsection
 @section('content')
 <div class="container-fluid">
     <div class="row justify-content-center">
@@ -27,8 +29,8 @@
 
                             <h5 class="text-white">V-01-01 Matriz de responsabilidades.</h5>
 
-                            <a href="">
-
+                            <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <i class="fa fa-plus btn-icon-back"></i>
                             </a>
 
                         </div>
@@ -56,10 +58,6 @@
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-user" role="tabpanel" aria-labelledby="pills-user-tab">
                                 <div class="col-12 p-4">
-
-                                    <a type="button" class="btn btn-back" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <i class="fa fa-plus btn-icon-back"></i>
-                                    </a>
 
                                     <table class="table" id="table_id" >
                                         <thead class="text-white">

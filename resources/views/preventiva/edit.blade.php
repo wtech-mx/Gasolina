@@ -37,6 +37,20 @@ $elemento = 'IX-01-01 Matriz de mejores prácticas.';
 $elemento = 'XI-01-01 Lista y catálogo de equipos críticos.';
 }elseif ($row->elemento == 'xii-01-01') {
 $elemento = 'XII-01-01 Listado de proveedor o contratista.';
+}elseif ($row->elemento == 'xiv-01-01') {
+$elemento = 'XIV-01-01 Matriz de calibración y monitoreo de dispensarios.';
+}elseif ($row->elemento == 'xiv-01-02') {
+$elemento = 'XIV-01-02 Matriz de calibración y monitoreo de Tanque.';
+}elseif ($row->elemento == 'xiv-03-01') {
+$elemento = 'XIV-03-01 Incidencias en operaciones';
+}elseif ($row->elemento == 'xv-01-01') {
+$elemento = 'XV-01-01 Plan y Programa de auditoría interna.';
+}elseif ($row->elemento == 'xv-01-02') {
+$elemento = 'XV-02-01 Plan y Programa de auditoría externa.';
+}elseif ($row->elemento == 'xvi-01-01') {
+$elemento = 'XVI-01-01 Matriz para la investigación de accidentes e incidentes.';
+}elseif ($row->elemento == 'xvi-01-02') {
+$elemento = 'XVI-02-02 Formato de consolidación mensual.';
 }
 @endphp
 <!-- Modal -->

@@ -16,12 +16,15 @@ class xvElemento extends Model
         'title',
         'image',
         'color',
-        'estatus',
-        'start',
-        'end',
         'tipo_auditoria',
         'alcance',
+        'contratista',
         'objetivo',
+        'start',
+        'fecha_inicio',
+        'end',
+        'estatus',
+        'check',
         'pdf',
     ];
 }

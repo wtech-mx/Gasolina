@@ -48,10 +48,216 @@
                                     </thead>
                                     <tbody class="text-white">
                                         @foreach ($user as $item)
+                                        @if ($item->ViElemento->pregunta1 == NULL)
+                                        {{$count1 = 0}}
+                                            @else
+                                                @if ($item->ViElemento->pregunta1 == 'Si')
+                                                {{$count1 = 1}}
+                                                @endif
+
+                                        @endif
+                                        @if ($item->ViElemento->pregunta2 == NULL)
+                                            {{$count2 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta2 == 'Si')
+                                                {{$count2 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta3 == NULL)
+                                            {{$count3 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta3 == 'Si')
+                                                {{$count3 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta4 == NULL)
+                                            {{$count4 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta4 == 'Si')
+                                                {{$count4 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta5 == NULL)
+                                            {{$count5 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta5 == 'Si')
+                                                {{$count5 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta6 == NULL)
+                                        {{$count6 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta6 == 'Si')
+                                            {{$count6 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta7 == NULL)
+                                            {{$count7 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta7 == 'Si')
+                                                {{$count7 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta8 == NULL)
+                                            {{$count8 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta8 == 'Si')
+                                                {{$count8 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta9 == NULL)
+                                            {{$count9 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta9 == 'Si')
+                                            {{$count9 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta10 == NULL)
+                                            {{$count10 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta10 == 'Si')
+                                                {{$count10 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta11 == NULL)
+                                        {{$count11 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta11 == 'Si')
+                                            {{$count11 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta12 == NULL)
+                                            {{$count12 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta12 == 'Si')
+                                                {{$count12 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta13 == NULL)
+                                            {{$count13 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta13 == 'Si')
+                                                {{$count13 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta14 == NULL)
+                                            {{$count14 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta14 == 'Si')
+                                                {{$count14 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta15 == NULL)
+                                            {{$count15 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta15 == 'Si')
+                                                {{$count15 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta16 == NULL)
+                                            {{$count16 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta16 == 'Si')
+                                                {{$count16 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta17 == NULL)
+                                            {{$count17 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta17 == 'Si')
+                                                {{$count17 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta18 == NULL)
+                                            {{$count18 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta18 == 'Si')
+                                                {{$count18 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta19 == NULL)
+                                            {{$count19 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta19 == 'Si')
+                                                {{$count19 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta20 == NULL)
+                                            {{$count20 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta20 == 'Si')
+                                                {{$count20 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta21 == NULL)
+                                            {{$count21 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta21 == 'Si')
+                                                {{$count21 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta22 == NULL)
+                                            {{$count22 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta22 == 'Si')
+                                                {{$count22 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta23 == NULL)
+                                            {{$count23 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta23 == 'Si')
+                                                {{$count23 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta24 == NULL)
+                                            {{$count24 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta24 == 'Si')
+                                                {{$count24 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta25 == NULL)
+                                            {{$count25 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta25 == 'Si')
+                                                {{$count25 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta26 == NULL)
+                                        {{$count26 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta26 == 'Si')
+                                            {{$count26 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta27 == NULL)
+                                            {{$count27 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta27 == 'Si')
+                                                {{$count27 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta28 == NULL)
+                                            {{$count28 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta28 == 'Si')
+                                                {{$count28 = 1}}
+                                            @endif
+                                        @endif
+                                        @if ($item->ViElemento->pregunta29 == NULL)
+                                            {{$count29 = 0}}
+                                        @else
+                                            @if ($item->ViElemento->pregunta29 == 'Si')
+                                            {{$count29 = 1}}
+                                            @endif
+                                        @endif
+
+                                        {{$count = $count1 + $count2 + $count3 + $count4 + $count5 + $count6 + $count7 + $count8 + $count9 + $count10 + $count11 + $count12 + $count13 + $count14 + $count15 + $count16 + $count17 + $count18 + $count19 + $count20 + $count21 + $count22 + $count23 + $count24 + $count25 + $count26 + $count27 + $count28 + $count29}}
                                         <tr>
                                             <td>{{$item->name}} {{$item->apellido}}</td>
                                             <td>{{$item->puesto}}</td>
-                                            <td>0</td>
+                                            <td>{{$count}}</td>
                                             <td>
 
                                                     @if($item->puesto == 'Empresario Gasolinero')

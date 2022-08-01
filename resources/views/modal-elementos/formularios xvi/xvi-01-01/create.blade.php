@@ -70,6 +70,11 @@
                                     <input name="usuario_otro" type="text" class="form-control" id="otrouser" style="display: none">
                                 </div>
 
+                                <div class="form-group col-6 mt-3">
+                                    <label>Observación</label>
+                                    <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
+                                </div>
+
                                 <table class="table table-bordered" id="tabla_vinculacion">
                                     <thead class="table-dark">
                                         <tr class="text-center">

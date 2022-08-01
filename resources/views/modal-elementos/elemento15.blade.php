@@ -82,7 +82,7 @@
                                                 onChange="mostrars15(this.value);">
                                                 <option value="">Seleccione Elemento</option>
                                                 <option value="xv-01-01">XV Plan y programa de auditoria</option>
-                                                <option value="xv-01-02">XV Plan y programa de auditoria externa</option>
+                                                {{-- <option value="xv-01-02">XV Plan y programa de auditoria externa</option> --}}
                                             </select>
                                         </form>
 

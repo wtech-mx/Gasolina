@@ -15,9 +15,9 @@
                             <label>Tanque de almacenamiento subterráneo</label>
                             <select id="tanque" name="tanque" class="form-select">
                                 <option value="{{$item->tanque}}">{{$item->tanque}}</option>
-                                <option value="{{$config->tanque1}}">{{$config->tanque1}}</option>
-                                <option value="{{$config->tanque2}}">{{$config->tanque2}}</option>
-                                <option value="{{$config->tanque3}}">{{$config->tanque3}}</option>
+                                @foreach ($xi_elemento as $row)
+                                    <option value="{{$row->id_det}}-{{$row->componente}}">{{$row->id_det}}-{{$row->componente}}</option>
+                                @endforeach
                             </select>
                         </div>
 
@@ -37,7 +37,7 @@
 
                         <div class="form-group col-6 mt-3">
                             <label>Num autorizacion</label>
-                            <input name="num_autorizacion" type="number" class="form-control" id="num_autorizacion" value="{{$item->num_autorizacion}}">
+                            <input name="num_autorizacion" type="text" class="form-control" id="num_autorizacion" value="{{$item->num_autorizacion}}">
                         </div>
 
                         <div class="form-group col-6 mt-3">

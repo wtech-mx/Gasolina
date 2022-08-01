@@ -85,6 +85,11 @@
                                 <embed src="{{asset('xvi_elemento/'.$row->pdf)}}" class="img-firma">
                             </a>
                         </div>
+
+                        <div class="form-group col-6 mt-3">
+                            <label>Observación</label>
+                            <textarea class="form-control" id="descripcion" name="descripcion" rows="3">{{$row->descripcion}}</textarea>
+                        </div>
                     </div>
 
                     <div class="row mt-4">

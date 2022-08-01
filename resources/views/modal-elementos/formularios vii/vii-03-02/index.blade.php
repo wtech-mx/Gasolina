@@ -81,7 +81,7 @@
 
                                 </tr>
                                 @include('modal-elementos.formularios vii.vii-03-02.update')
-                                @include('modal-elementos.formularios vii.VII-03-02.eliminar')
+                                @include('modal-elementos.formularios vii.vii-03-02.eliminar')
                                 @endforeach
                             </tbody>
                         </table>

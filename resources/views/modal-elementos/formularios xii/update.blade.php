@@ -134,18 +134,20 @@
                                 <hr>
 
                                 <div class="col-2" style="background-color: #212529; color: #fff">Nombre</div>
-                                <div class="col-4" style="background-color: #212529; color: #fff;">Correo</div>
+                                <div class="col-2" style="background-color: #212529; color: #fff;">Correo</div>
                                 <div class="col-2" style="background-color: #212529; color: #fff;">Puesto</div>
                                 <div class="col-2" style="background-color: #212529; color: #fff;">Telefono</div>
                                 <div class="col-2" style="background-color: #212529; color: #fff;">Cargo</div>
+                                <div class="col-2" style="background-color: #212529; color: #fff;">Accion</div>
 
                                         @foreach ($xii_elemento_user as $xii_elemento)
                                             @if ($xii_elemento->id_xii == $item->id)
                                                 <div class="col-2">{{$xii_elemento->nombre}}</div>
-                                                <div class="col-4">{{$xii_elemento->correo}}</div>
+                                                <div class="col-2">{{$xii_elemento->correo}}</div>
                                                 <div class="col-2">{{$xii_elemento->puesto}}</div>
                                                 <div class="col-2">{{$xii_elemento->telefono}}</div>
                                                 <div class="col-2">{{$xii_elemento->cargo}}</div>
+                                                <div class="col-2"><button class="btn btn-danger delete-link" value="{{$xii_elemento->id}}" onclick="location.reload()"><i class="fa fa-trash" aria-hidden="true"></i></button></div>
                                             @endif
                                         @endforeach
 
