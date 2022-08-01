@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="accordionExample7">
+                <div class="accordion accordion-flush" id="accordionExample6">
 
                     {{-------Descarga---------}}
                     <div class="accordion-item">
@@ -60,7 +60,7 @@
                                 Formatos del elemento
                             </button>
                         </h2>
-                        <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
+                        <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample6">
                             <div class="accordion-body">
 
                                 {{--nav tittle ejecutar/calendario--}}

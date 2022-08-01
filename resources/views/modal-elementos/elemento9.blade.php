@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="element_9">
+                <div class="accordion accordion-flush" id="accordionExample9">
                     {{-------Descarga---------}}
                     <div class="accordion-item">
                         <h2 class="accordion-header">

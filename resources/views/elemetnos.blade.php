@@ -8,7 +8,7 @@
                             <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento1">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/1.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Política <br>-</h4>
+                                    <h4 class="card-title card-menu-title-element">Política <br><strong style="opacity: 0;">-</strong></h4>
                                 </div>
                             </a>
                         </div>
@@ -24,7 +24,7 @@
                             <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento3">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/3.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Requisitos legales <br>-</h4>
+                                    <h4 class="card-title card-menu-title-element">Requisitos legales <br><strong style="opacity: 0;">-</strong></h4>
                                 </div>
                             </a>
                         </div>
@@ -32,7 +32,7 @@
                                 <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento4">
                                 <div class="card-body">
                                     <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/4.png') }}">
-                                    <h4 class="card-title card-menu-title-element">Objetivos, Metas e indicadores <br>-<br></h4>
+                                    <h4 class="card-title card-menu-title-element">Objetivos, Metas e indicadores <br><strong style="opacity: 0;">-</strong><br></h4>
                                 </div>
                                 </a>
                             </div>
@@ -72,7 +72,7 @@
                                 <div class="card-body">
                                    <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento9">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/9.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Mejores prácticas y estándares  <br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Mejores prácticas y estándares  <br><strong style="opacity: 0;">-</strong><br></h4>
                                     </a>
                                 </div>
                             </div>
@@ -96,7 +96,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento12">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/12.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Seguridad de contratistas<br>-</h4>
+                                        <h4 class="card-title card-menu-title-element">Seguridad de contratistas<br><strong style="opacity: 0;">-</strong></h4>
                                     </a>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#elemento15">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/15.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Auditorías<br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Auditorías<br><strong style="opacity: 0;">-</strong><br></h4>
                                     </a>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/17.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Revision de resultados<br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Revision de resultados<br><strong style="opacity: 0;">-</strong><br></h4>
                                     </a>
                                 </div>
                             </div>
@@ -144,12 +144,13 @@
                                 <div class="card-body">
                                     <a style="text-decoration: none;" type="button" data-bs-toggle="modal" data-bs-target="#">
                                         <img class="img-card-menu-element" src=" {{ asset('assets/img/elementos/18.png') }}">
-                                        <h4 class="card-title card-menu-title-element">Informes de Desempeños<br>-<br></h4>
+                                        <h4 class="card-title card-menu-title-element">Informes de Desempeños<br><strong style="opacity: 0;">-</strong><br></h4>
                                     </a>
                                 </div>
                             </div>
                     </div>
                 </div>
+
 @include('modal-elementos.elemento1')
 @include('modal-elementos.elemento2')
 @include('modal-elementos.elemento3')

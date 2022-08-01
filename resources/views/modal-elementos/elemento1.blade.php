@@ -22,12 +22,14 @@
                 <div class="accordion accordion-flush" id="accordionExample7">
 
                     {{-------Documentos de consulta---------}}
+
                     <div class="accordion-item">
-                        <h2 class="accordion-header" >
+                        <h2 class="accordion-header">
                             <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
                                 Documentos de consulta
                             </button>
                         </h2>
+
                         <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_one" data-bs-parent="#accordionExample7">
                             <div class="accordion-body">
 
@@ -53,7 +55,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     {{-------Formatos del elemento---------}}
                     <div class="accordion-item">

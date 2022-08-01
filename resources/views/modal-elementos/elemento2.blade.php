@@ -3,12 +3,12 @@
 @endsection
 
 <!-- Modal -->
-<div class="modal fade" id="elemento2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="elemento1" aria-hidden="true">
+<div class="modal fade" id="elemento2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="elemento2" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title text-center" id="elemento1" style="font-size: 16px;">
+        <h5 class="modal-title text-center" id="elemento2" style="font-size: 16px;">
             Identificación de peligros y aspectos ambientales
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -19,16 +19,19 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="accordionExample7">
+                <div class="accordion accordion-flush" id="accordionExample2">
 
                     {{-------Documentos de consulta---------}}
+
                     <div class="accordion-item">
-                        <h2 class="accordion-header" >
-                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_one" aria-expanded="true" aria-controls="element7_one">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element2_one" aria-expanded="true" aria-controls="element2_one">
+
                                 Documentos de consulta
                             </button>
                         </h2>
-                        <div id="element7_one" class="accordion-collapse collapse show" aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
+
+                        <div id="element2_one" class="accordion-collapse collapse show" aria-labelledby="element2_one" data-bs-parent="#accordionExample2">
                             <div class="accordion-body">
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrar2(this.value);">
@@ -53,15 +56,15 @@
                         </div>
                     </div>
 
-
                     {{-------Formatos del elemento---------}}
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="element1">
-                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element7_tree" aria-expanded="true" aria-controls="element7_tree">
+                        <h2 class="accordion-header" id="elemento2">
+                            <button class="accordion-button btn-grid" type="button" data-bs-toggle="collapse" data-bs-target="#element2_tree" aria-expanded="true" aria-controls="element2_tree">
                                 Formatos del elemento
                             </button>
                         </h2>
-                        <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
+
+                        <div id="element2_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample2">
                             <div class="accordion-body">
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrars2(this.value);">

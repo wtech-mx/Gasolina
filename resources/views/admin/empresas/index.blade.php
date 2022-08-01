@@ -23,6 +23,10 @@
         background-color: #ffd60a!important;
     }
 
+    div.dataTables_wrapper div.dataTables_info {
+        color: #ccc;
+    }
+
 </style>
 
 <div class="container-fluid">

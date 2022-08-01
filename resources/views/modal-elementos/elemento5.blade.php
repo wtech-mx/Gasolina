@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-12 ">
 
-                <div class="accordion accordion-flush" id="accordionExample7">
+                <div class="accordion accordion-flush" id="accordionExample5">
 
                     {{-------Documentos de consulta---------}}
                     <div class="accordion-item">
@@ -59,7 +59,7 @@
                                 Formatos del elemento
                             </button>
                         </h2>
-                        <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
+                        <div id="element7_tree" class="accordion-collapse collapse " aria-labelledby="element7_2" data-bs-parent="#accordionExample5">
                             <div class="accordion-body">
                                 <form action="index.php" method="post">
                                     <select id="status" name="status" class="form-select" onChange="mostrars5(this.value);">

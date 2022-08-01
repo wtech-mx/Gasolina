@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-12 ">
 
-                        <div class="accordion accordion-flush" id="accordionExample7">
+                        <div class="accordion accordion-flush" id="accordionExample77">
 
                             {{-------Descarga---------}}
                             <div class="accordion-item">
@@ -30,9 +30,10 @@
                                         aria-controls="element7_one">
                                         Documentos de consulta
                                     </button>
+
                                 </h2>
                                 <div id="element7_one" class="accordion-collapse collapse show"
-                                    aria-labelledby="element7_1" data-bs-parent="#accordionExample7">
+                                    aria-labelledby="element7_1" data-bs-parent="#accordionExample77">
                                     <div class="accordion-body">
 
                                         <form action="index.php" method="post">
@@ -71,7 +72,6 @@
                                 </div>
                             </div>
 
-
                             {{-------Formulario---------}}
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="element1">
@@ -82,7 +82,8 @@
                                     </button>
                                 </h2>
                                 <div id="element7_tree" class="accordion-collapse collapse "
-                                    aria-labelledby="element7_2" data-bs-parent="#accordionExample7">
+                                    aria-labelledby="element7_2" data-bs-parent="#accordionExample77">
+
                                     <div class="accordion-body">
 
                                         {{--nav tittle ejecutar/calendario--}}
