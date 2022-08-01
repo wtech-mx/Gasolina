@@ -63,7 +63,7 @@
                                                 if ($item->ViElemento->pregunta2 == 'Si') {
                                                 $count2 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count2 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta3 == NULL) {
@@ -72,7 +72,7 @@
                                                 if ($item->ViElemento->pregunta3 == 'Si') {
                                                 $count3 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count3 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta4 == NULL) {
@@ -81,7 +81,7 @@
                                                 if ($item->ViElemento->pregunta4 == 'Si') {
                                                 $count4 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count4 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta5 == NULL) {
@@ -90,7 +90,7 @@
                                                 if ($item->ViElemento->pregunta5 == 'Si') {
                                                 $count5 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count5 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta6 == NULL) {
@@ -99,7 +99,7 @@
                                                 if ($item->ViElemento->pregunta6 == 'Si') {
                                                 $count6 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count6 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta7 == NULL) {
@@ -108,7 +108,7 @@
                                                 if ($item->ViElemento->pregunta7 == 'Si') {
                                                 $count7 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count7 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta8 == NULL) {
@@ -117,7 +117,7 @@
                                                 if ($item->ViElemento->pregunta8 == 'Si') {
                                                 $count8 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count8 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta9 == NULL) {
@@ -126,7 +126,7 @@
                                                 if ($item->ViElemento->pregunta9 == 'Si') {
                                                 $count9 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count9 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta10 == NULL) {
@@ -135,7 +135,7 @@
                                                 if ($item->ViElemento->pregunta10 == 'Si') {
                                                 $count10 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count10 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta11 == NULL) {
@@ -144,7 +144,7 @@
                                                 if ($item->ViElemento->pregunta11 == 'Si') {
                                                 $count11 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count11 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta12 == NULL) {
@@ -153,7 +153,7 @@
                                                 if ($item->ViElemento->pregunta12 == 'Si') {
                                                 $count12 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count12 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta13 == NULL) {
@@ -162,7 +162,7 @@
                                                 if ($item->ViElemento->pregunta13 == 'Si') {
                                                 $count13 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count13 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta14 == NULL) {
@@ -171,7 +171,7 @@
                                                 if ($item->ViElemento->pregunta14 == 'Si') {
                                                 $count14 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count14 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta15 == NULL) {
@@ -180,7 +180,7 @@
                                                 if ($item->ViElemento->pregunta15 == 'Si') {
                                                 $count15 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count15 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta16 == NULL) {
@@ -189,7 +189,7 @@
                                                 if ($item->ViElemento->pregunta16 == 'Si') {
                                                 $count16 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count16 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta17 == NULL) {
@@ -198,7 +198,7 @@
                                                 if ($item->ViElemento->pregunta17 == 'Si') {
                                                 $count17 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count17 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta18 == NULL) {
@@ -207,7 +207,7 @@
                                                 if ($item->ViElemento->pregunta18 == 'Si') {
                                                 $count18 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count18 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta19 == NULL) {
@@ -216,7 +216,7 @@
                                                 if ($item->ViElemento->pregunta19 == 'Si') {
                                                 $count19 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count19 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta20 == NULL) {
@@ -225,7 +225,7 @@
                                                 if ($item->ViElemento->pregunta20 == 'Si') {
                                                 $count20 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count20 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta21 == NULL) {
@@ -234,7 +234,7 @@
                                                 if ($item->ViElemento->pregunta21 == 'Si') {
                                                 $count21 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count21 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta22 == NULL) {
@@ -243,7 +243,7 @@
                                                 if ($item->ViElemento->pregunta22 == 'Si') {
                                                 $count22 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count22 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta23 == NULL) {
@@ -252,7 +252,7 @@
                                                 if ($item->ViElemento->pregunta23 == 'Si') {
                                                 $count23 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count23 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta24 == NULL) {
@@ -261,7 +261,7 @@
                                                 if ($item->ViElemento->pregunta24 == 'Si') {
                                                 $count24 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count24 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta25 == NULL) {
@@ -270,7 +270,7 @@
                                                 if ($item->ViElemento->pregunta25 == 'Si') {
                                                 $count25 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count25 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta26 == NULL) {
@@ -279,7 +279,7 @@
                                                 if ($item->ViElemento->pregunta26 == 'Si') {
                                                 $count26 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count26 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta27 == NULL) {
@@ -288,7 +288,7 @@
                                                 if ($item->ViElemento->pregunta27 == 'Si') {
                                                 $count27 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count27 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta28 == NULL) {
@@ -297,7 +297,7 @@
                                                 if ($item->ViElemento->pregunta28 == 'Si') {
                                                 $count28 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count28 = 0;
                                                 }
                                                 }
                                                 if ($item->ViElemento->pregunta29 == NULL) {
@@ -306,7 +306,7 @@
                                                 if ($item->ViElemento->pregunta29 == 'Si') {
                                                 $count29 = 1;
                                                 }else {
-                                                    $count1 = 0;
+                                                    $count29 = 0;
                                                 }
                                                 }
 
