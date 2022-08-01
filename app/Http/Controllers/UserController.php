@@ -24,10 +24,11 @@ class UserController extends Controller
 
     function index()
     {
-        $users = User::where('empresa', '=', NULL)
+        $users = User::
+            // where('empresa', '=', NULL)
             // ->where('id_empresa', '!=', NULL)
             // ->where('id_sucursal', '!=', NULL)
-            ->get();
+            get();
 
         return view('admin.usuarios.index', compact('users'));
     }
