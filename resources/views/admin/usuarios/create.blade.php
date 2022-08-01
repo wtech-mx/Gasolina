@@ -75,7 +75,13 @@
                                         <div class="form-group mb-3 position-relative" style="position: relative">
                                             <i class="fa fa-street-view icon-style-2"></i>
                                             <label class="form-label label-custom-yellow">Puesto</label>
-                                            <input type="text" class="form-control" id="puesto" name="puesto" placeholder="Puesto" value="{{ old('puesto') }}" required>
+                                            <select class="form-select" name="puesto" id="puesto" required>
+                                                <option value="Empresario Gasolinero">Empresario Gasolinero</option>
+                                                <option value="Gerente">Gerente</option>
+                                                <option value="Oficial Gasolinero">Oficial Gasolinero</option>
+                                                <option value="Auxiliar administrativo">Auxiliar administrativo</option>
+                                                <option value="Oficial de Mantenimiento">Oficial de Mantenimiento</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

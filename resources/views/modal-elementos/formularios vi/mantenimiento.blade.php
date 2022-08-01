@@ -63,9 +63,21 @@
                                                         Curso dirigido a todo el personal que labora en la Estación de Servicio, contratistas y/o prestadores de servicio.
                                                     </td>
                                                     <td>
+                                                        @if($vi->pregunta1 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta1 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta1 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha1}}
@@ -77,9 +89,21 @@
                                                     <td>El personal evaluado conoce las medidas de seguridad con las que deberá cumplir, al realizar trabajos de mantenimiento en las instalaciones de la Estación de Servicio y que sean considerados trabajos de alto riesgo.</td>
                                                     <td>El presente curso, va dirigido a todo el personal interno y externo que realice trabajos de mantenimiento considerados como trabajos peligrosos en la Estación de Servicio.</td>
                                                     <td>
+                                                        @if($vi->pregunta6 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta6" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta6" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta6 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta6" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta6" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta6 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta6" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta6" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha6}}
@@ -91,9 +115,21 @@
                                                     <td>El personal evaluado identifica y conoce los tipos de fuego, tipo de extintores y su uso así como la manera de combatir un incendio dentro de la Estación de Servicio.</td>
                                                     <td>El presente curso, va dirigido a todo personal de la Estación de Servicio, contratistas y/o proveedores de servicio.</td>
                                                     <td>
+                                                        @if($vi->pregunta8 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta8" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta8" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta8 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta8" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta8" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta8 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta8" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta8" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha8}}
@@ -106,9 +142,21 @@
                                                     <td>
                                                         El presente curso, va dirigido a todo el personal de la Estación de Servicio, contratistas y/o prestadores de servicio.</td>
                                                     <td>
+                                                        @if($vi->pregunta23 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta23" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta23" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta23 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta23" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta23" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta23 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta23" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta23" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha23}}
@@ -120,9 +168,21 @@
                                                     <td>El personal evaluado identifica las condiciones de seguridad, sistemas de protección y dispositivos de seguridad, para prevenir y proteger al personal contra riesgos de trabajo de la operación y mantenimiento de la maquinaria y equipo de la Estación de Servicio.</td>
                                                     <td> El presente curso, va dirigido al personal relacionado con las actividades de mantenimiento, supervisores de piso, despachadores y auxiliares generales.</td>
                                                     <td>
+                                                        @if($vi->pregunta24 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta24" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta24" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta24 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta24" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta24" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta24 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta24" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta24" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha24}}
@@ -135,9 +195,21 @@
                                                     <td>El presente curso, va dirigido al supervisor, despachadores, auxiliares y contratistas para que conozcan las condiciones de seguridad para prevenir los riesgos por electricidad estática.
                                                     </td>
                                                     <td>
+                                                        @if($vi->pregunta25 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta25" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta25" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta25 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta25" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta25" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta25 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta25" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta25" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha25}}
@@ -149,9 +221,21 @@
                                                     <td>El personal evaluado conoce e identifica el equipo de protección personal que debe de usar al realizar sus actividades.</td>
                                                     <td>El presente curso, va dirigido al supervisor de piso, despachadores, auxiliares generales y contratistas y/o prestadores de servicio.</td>
                                                     <td>
+                                                        @if($vi->pregunta11 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta11" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta11" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta11 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta11" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta11" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta11 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta11" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta11" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha11}}
@@ -163,9 +247,21 @@
                                                     <td>El personal evaluado conoce las condiciones de seguridad para realizar el etiquetado, bloqueo y candadeo en líneas de producto, derivados de los mantenimientos de la maquinaria y equipo en la Estación de Servicio.</td>
                                                     <td>El presente curso, está dirigido a despachadores, supervisores y auxiliares de la Estación de Servicio que realicen actividades de mantenimiento donde involucre actividades de bloqueo y candadeo de líneas de producto, con la finalidad de prevenir riesgos de trabajo generados durante el mantenimiento de maquinaria y equipo.</td>
                                                     <td>
+                                                        @if($vi->pregunta12 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta12" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta12" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta12 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta12" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta12" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta12 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta12" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta12" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha12}}
@@ -177,9 +273,21 @@
                                                     <td>El personal evaluado es capaz de identificar las condiciones de seguridad para realizar actividades de mantenimiento a instalaciones eléctricas de la Estación de Servicio, así como de identificación de los riesgos implícitos en estas actividades.</td>
                                                     <td>El presente curso, está dirigido a contratistas y/o prestadores de servicio, despachadores, supervisores y auxiliares que laboren en la Estación de Servicio y realicen actividades de mantenimiento a instalaciones eléctricas.</td>
                                                     <td>
+                                                        @if($vi->pregunta13 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta13" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta13" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta13 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta13" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta13" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta13 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta13" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta13" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha13}}
@@ -191,9 +299,21 @@
                                                     <td>El personal evaluado identifica y conoce los riesgos y peligros asociados a sus actividades diarias y conocer las medidas de seguridad aplicables a cada riesgo identificado.</td>
                                                     <td>El presente curso, va dirigido a todo el personal de la Estación de Servicio, contratistas y/o prestadores de servicios.</td>
                                                     <td>
+                                                        @if($vi->pregunta3 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta3 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta3 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha3}}
@@ -205,9 +325,21 @@
                                                     <td>El personal evaluado conoce la política establecida en la Estación de Servicio y sus alcances en materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambiente.</td>
                                                     <td>Curso dirigido a todo personal interno, contratista, proveedores y clientes de la Estación de Servicio.</td>
                                                     <td>
+                                                        @if($vi->pregunta4 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta4 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta4 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha4}}
@@ -219,9 +351,21 @@
                                                     <td>El personal evaluado es capaz de identificar, manejar, y almacenar correctamente, los residuos peligrosos generados, minimizando su generación dentro de la Estación de Servicio.</td>
                                                     <td>El presente curso, está dirigido a gerentes, supervisores, despachadores, auxiliares administrativos y generales, contratistas y prestadores de servicio que generen residuos peligrosos durante sus actividades dentro de la Estación de Servicio.</td>
                                                     <td>
+                                                        @if($vi->pregunta16 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta16" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta16" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta16 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta16" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta16" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta16 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta16" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta16" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha16}}
@@ -233,9 +377,21 @@
                                                     <td>El personal evaluado conoce e interpreta correctamente la señalización de seguridad ubicada dentro de la Estación de Servicio.</td>
                                                     <td>Curso dirigido al personal interno que labora en la Estación de Servicio así como contratistas y proveedores, para la correcta interpretación de la señalización aplicable en su área de trabajo de acuerdo a la NOM-005-ASEA-2016 y a la NOM-026-STPS-2008.</td>
                                                     <td>
+                                                        @if($vi->pregunta17 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta17" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta17" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta17 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta17" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta17" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta17 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta17" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta17" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha17}}
@@ -247,9 +403,21 @@
                                                     <td>Que todo el personal que labora en la estación de servicios, visitantes y brigadistas, tenga una reacción adecuada ante una emergencia real, siguiendo los protocolos de respuesta a emergencia representados en los simulacros.</td>
                                                     <td>Las representaciones de los simulacros serán lo más real posible a los riesgos identificados tanto internos como externos.</td>
                                                     <td>
+                                                        @if($vi->pregunta18 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta18" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta18" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta18 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta18" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta18" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta18 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta18" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta18" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha18}}
@@ -261,9 +429,21 @@
                                                     <td>El personal evaluado conoce las condiciones de seguridad para el manejo y almacenamiento de las sustancias químicas peligrosas dentro de la Estación de Servicio.</td>
                                                     <td>El presente curso, va dirigido al supervisor de piso, despachadores y auxiliares generales.</td>
                                                     <td>
+                                                        @if($vi->pregunta19 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta19" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta19" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta19 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta19" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta19" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta19 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta19" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta19" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha19}}
@@ -275,9 +455,21 @@
                                                     <td>El personal evaluado conoce los riesgos y condiciones de seguridad antes, durante y después de los trabajos de soldadura y corte.</td>
                                                     <td>El presente curso, está dirigido a contratistas, subcontratistas, supervisores y auxiliares generales de la Estación de Servicio, que realicen trabajos donde se generen fuentes de ignición de acuerdo al procedimiento para trabajos que generen fuente.</td>
                                                     <td>
+                                                        @if($vi->pregunta20 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta20" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta20" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta20 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta20" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta20" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta20 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta20" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta20" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha20}}
@@ -289,9 +481,21 @@
                                                     <td>El personal evaluado conoce las condiciones de seguridad antes, durante y después, de realizar trabajos en alturas.</td>
                                                     <td>El presente curso, va dirigido al supervisor de piso, despachadores, auxiliares generales, contratistas y/o prestadores de servicio.</td>
                                                     <td>
+                                                        @if($vi->pregunta21 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta21" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta21" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta21 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta21" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta21" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta21 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta21" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta21" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha21}}
@@ -303,9 +507,21 @@
                                                     <td>El personal evaluado es capaz de identificar los riesgos y condiciones de seguridad implícitas al realizar trabajos en espacios confinados, dentro de la Estación de Servicio.</td>
                                                     <td>El presente curso, está dirigido a supervisores, auxiliares, contratistas y prestadores de servicio que realicen trabajos en espacios confinados dentro de la Estación de Servicio, de acuerdo a la NOM-033-STPS-2015.</td>
                                                     <td>
+                                                        @if($vi->pregunta22 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta22" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta22" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta22 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta22" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta22" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta22 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta22" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta22" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha22}}

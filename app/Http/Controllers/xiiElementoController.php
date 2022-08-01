@@ -124,6 +124,16 @@ class xiiElementoController extends Controller
         return redirect()->back();
     }
 
+    public function eliminarArticulo($id) {
+        // delete
+        $articulo = xiiElemento::find($id);
+        $articulo->delete();
+
+        return response()->json([
+          'message' => 'Articulo Eliminado'
+        ]);
+      }
+
     public function pdf_sasisopa_xii()
     {
         $config = DB::table('configuracion')->first();

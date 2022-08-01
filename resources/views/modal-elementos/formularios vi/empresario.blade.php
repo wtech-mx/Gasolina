@@ -63,9 +63,21 @@
                                                         Curso dirigido a todo el personal que labora en la Estación de Servicio, contratistas y/o prestadores de servicio.
                                                     </td>
                                                     <td>
+                                                        @if($vi->pregunta1 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta1 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta1 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta1" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha1}}
@@ -79,9 +91,21 @@
                                                         El presente curso, está dirigido a todo trabajador y/o contratista de nuevo ingreso.
                                                     </td>
                                                     <td>
+                                                        @if($vi->pregunta2 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta2" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta2" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta2 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta2" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta2" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta2 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta2" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta2" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha2}}
@@ -93,9 +117,21 @@
                                                     <td>El personal evaluado identifica y conoce los riesgos y peligros asociados a sus actividades diarias y conocer las medidas de seguridad aplicables a cada riesgo identificado.</td>
                                                     <td>El presente curso, va dirigido a todo el personal de la Estación de Servicio, contratistas y/o prestadores de servicios.</td>
                                                     <td>
+                                                        @if($vi->pregunta3 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta3 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta3 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta3" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha3}}
@@ -107,9 +143,21 @@
                                                     <td>El personal evaluado conoce la política establecida en la Estación de Servicio y sus alcances en materia de Seguridad Industrial, Seguridad Operativa y Protección al Medio Ambiente.</td>
                                                     <td>Curso dirigido a todo personal interno, contratista, proveedores y clientes de la Estación de Servicio.</td>
                                                     <td>
+                                                        @if($vi->pregunta4 == 'Si')
+                                                        Si <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault1" value="Si" checked><br>
+                                                        @else
                                                         Si <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault1" value="Si"><br>
+                                                        @endif
+                                                        @if($vi->pregunta4 == 'No')
+                                                        No <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault2" value="No" checked><br>
+                                                        @else
                                                         No <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault2" value="No"><br>
+                                                        @endif
+                                                        @if($vi->pregunta4 == 'N/A')
+                                                        N/A <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault3" value="N/A" checked><br>
+                                                        @else
                                                         N/A <input class="form-check-input" type="radio" name="pregunta4" id="flexRadioDefault3" value="N/A"><br>
+                                                        @endif
                                                     </td>
                                                     <td>
                                                         {{$vi->fecha4}}

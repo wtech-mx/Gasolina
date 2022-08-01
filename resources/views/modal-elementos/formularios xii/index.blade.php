@@ -88,24 +88,14 @@
 </div>
 @endsection
 <script>
-    jQuery('.delete-link').click(function () {
-        var id = $(this).val();
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-            }
-        });
-        $.ajax({
-            type: "DELETE",
-            url: '/delete/' + id,
-            success: function (data) {
-                console.log(data);
-                $("#xii_elemento" + id).remove();
-            },
-            error: function (data) {
-                console.log('Error:', data);
-            }
-        });
-    });
+function eliminarArticulo(id) {
+ $.ajax({
+    url: '/eliminarArticulo/' + id,
+    type: 'DELETE',
+    success: function(result) {
+       //
+    }
+ });
+  }
 
 </script>
