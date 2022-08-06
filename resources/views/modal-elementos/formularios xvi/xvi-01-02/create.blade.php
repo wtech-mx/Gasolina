@@ -13,7 +13,7 @@
 
                                 <div class="form-group col-12 mt-3">
                                     <label>Reportado por</label>
-                                    <input name="id_usuarios" type="text" class="form-control" id="id_usuarios" value="{{auth()->user()->name}} {{auth()->user()->apellido}}" disabled>
+                                    <input name="id_usuarios" type="text" class="form-control" id="id_usuarios" value="{{auth()->user()->name}} {{auth()->user()->apellido}}">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">

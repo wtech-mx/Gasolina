@@ -82,7 +82,7 @@
                                                 onChange="mostrars16(this.value);">
                                                 <option value="">Seleccione Elemento</option>
                                                 <option value="xvi-01-01">XVI-01-01 Matriz para la investigación de accidentes e incidentes.</option>
-                                                <option value="xvi-01-02">XVI-02-02 Formato de consolidación mensual.</option>
+                                                <option value="xvi-01-02">XVI-02-02 Reporte de Acto y Condición Insegura.</option>
                                             </select>
                                         </form>
 

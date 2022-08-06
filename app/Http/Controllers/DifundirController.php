@@ -16,13 +16,11 @@ class DifundirController extends Controller
 {
     public function index()
     {
-            $empresa = User::
-            where('empresa', '=', 1)
-            ->get();
+            $users = User::get();
 
             $difundirs = Difundir::get();
 
-            return view('difundir.index', compact('empresa', 'difundirs'));
+            return view('difundir.index', compact('users', 'difundirs'));
     }
 
     public function create()
@@ -55,7 +53,7 @@ class DifundirController extends Controller
         //3/3- Si la validacion es correcta se crea el registro
         $current = Carbon::now()->toDateString();
         $difundir = new Difundir;
-        $difundir->id_user = auth()->user()->id;
+        $difundir->id_user = $request->get('id_user');
         $difundir->id_elemento = $request->get('id_elemento');
         $difundir->fecha = $current;
         $difundir->descripcion = $request->get('descripcion');
@@ -114,6 +112,7 @@ class DifundirController extends Controller
         try {
 
         $difundir = Difundir::findOrFail($id);
+        $difundir->id_user = $request->get('id_user');
         $difundir->descripcion = $request->get('descripcion');
         $difundir->id_elemento = $request->get('id_elemento');
         $difundir->tipo = $request->get('tipo');

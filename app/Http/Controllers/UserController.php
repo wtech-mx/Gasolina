@@ -93,15 +93,15 @@ class UserController extends Controller
                 $user->firma = $fileName;
             }
 
-            // if ($request->hasFile("foto")) {
+            if ($request->hasFile("foto")) {
 
-            //     $imagen = $request->file("foto");
-            //     $nombreimagen = time() . "." . $imagen->guessExtension();
-            //     $ruta = public_path("foto/");
+                $imagen = $request->file("foto");
+                $path = public_path() . '/foto';
+                $fileName = uniqid() . $file->getClientOriginalName();
 
-            //     $imagen->move($ruta,$nombreimagen);
-            //     $user->foto = $nombreimagen;
-            // }
+                $file->move($path, $fileName);
+                $user->foto = $fileName;
+            }
 
             $user->alta = $request->get('alta');
             $user->baja = $request->get('baja');
@@ -176,15 +176,12 @@ class UserController extends Controller
         }
 
         if ($request->hasFile("foto")) {
+            $file = $request->file('foto');
+            $path = public_path() . '/foto';
+            $fileName = uniqid() . $file->getClientOriginalName();
 
-            $imagen = $request->file("foto");
-            $nombreimagen = time() . "." . $imagen->guessExtension();
-            $ruta = public_path("foto/");
-
-            //$imagen->move($ruta,$nombreimagen);
-            copy($imagen->getRealPath(), $ruta . $nombreimagen);
-
-            $user->foto = $nombreimagen;
+            $file->move($path, $fileName);
+            $user->foto = $fileName;
         }
 
         $user->alta = $request->get('alta');

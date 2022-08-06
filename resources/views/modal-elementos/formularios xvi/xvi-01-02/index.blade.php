@@ -45,8 +45,12 @@
                                     <th scope="col">Situación observada</th>
                                     <th scope="col">Tipo</th>
                                     <th scope="col">Lugar</th>
+                                    <th scope="col">Descripcion</th>
                                     <th scope="col">Reportado por</th>
-                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Involucrados</th>
+                                    <th scope="col">Rep de seguimiento</th>
+                                    <th scope="col">Seguimiento</th>
+                                    <th scope="col">Estatus</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
@@ -56,8 +60,13 @@
                                     <td>{{$row->situacion_observada}}</td>
                                     <td>{{$row->tipo}}</td>
                                     <td>{{$row->lugar}}</td>
+                                    <td>{{$row->descripcion}}</td>
                                     <td>{{$row->User->name}}</td>
+                                    <td>{{$row->usuario}}</td>
                                     <td>{{$row->fecha}}</td>
+                                    <td>{{$row->situacion_observada}}</td>
+                                    <td>{{$row->fecha}}</td>
+
                                     <td>
                                         @if ($row->pdf == NULL)
                                         <a data-bs-toggle="modal" data-bs-target="#updateModalXVI{{$row->id}}"

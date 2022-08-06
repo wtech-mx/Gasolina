@@ -54,22 +54,22 @@
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Error max en certificado</label>
-                                    <input name="error_max" type="number" class="form-control" id="error_max">
+                                    <input name="error_max" type="text" class="form-control" id="error_max">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Valor patron</label>
-                                    <input name="valor_patron" type="number" class="form-control" id="valor_patron">
+                                    <input name="valor_patron" type="text" class="form-control" id="valor_patron">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Incertidumbre</label>
-                                    <input name="incertidumbre" type="number" class="form-control" id="incertidumbre">
+                                    <input name="incertidumbre" type="text" class="form-control" id="incertidumbre">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Resolucion del instrumento</label>
-                                    <input name="resolucion_instrumento" type="number" class="form-control" id="resolucion_instrumento">
+                                    <input name="resolucion_instrumento" type="text" class="form-control" id="resolucion_instrumento">
                                 </div>
 
                                 <div class="col-sm-12 col-12">

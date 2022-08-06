@@ -23,7 +23,7 @@
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Fecha de inicio</label>
-                                    <input name="fecha_inicio" type="date" class="form-control" id="fecha_inicio">
+                                    <input name="start" type="date" class="form-control" id="start">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
@@ -43,7 +43,7 @@
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Fecha de programación</label>
-                                    <input name="start" type="date" class="form-control" id="start">
+                                    <input name="fecha_inicio" type="date" class="form-control" id="fecha_inicio">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">

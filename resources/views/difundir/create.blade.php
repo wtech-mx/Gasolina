@@ -71,6 +71,16 @@ $rest = substr($url, -9);
                         <input type="hidden" class="form-control" id="id_elemento" name="id_elemento" value="{{$rest}}">
                     </div>
 
+                    <div class="form-group col-12 mt-3">
+                        <label for="producto">¿Quien solicita?</label>
+                        @error('producto') <span class="error text-danger">{{ $message }}</span> @enderror
+                        <select class="form-select" aria-label="Default select example" id="id_user" name="id_user" >
+                            @foreach ($users as $item)
+                                <option value="{{$item->id}}">{{$item->name}} {{$item->apellido}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="form-group mt-3">
                         <label for="descripcion">Descripción</label>
                         <textarea name="descripcion" class="form-control" id="descripcion" cols="20" rows="5" placeholder="Descripcion"></textarea>@error('descripcion') <span class="error text-danger">{{ $message }}</span> @enderror

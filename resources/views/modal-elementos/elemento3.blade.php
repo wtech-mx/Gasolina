@@ -40,12 +40,12 @@
 
                                 <div id="iii-01" class="text-center" style="display: none;">
                                     <a href="{{route('pdf_iii_01.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_iii_01.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_iii_01.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
 
                                 <div id="iii" class="text-center" style="display: none;">
                                     <a href="{{route('pdf_iii.view')}}" target="_blank"><i class="icon_config fa fa-eye" aria-hidden="true"></i></a>
-                                    <a href="{{route('pdf_iii.print')}}"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                    <a href="{{route('pdf_iii.print')}}"><i class="icon_config fa fa-download" aria-hidden="true"></i></a>
                                 </div>
                             </div>
                         </div>
