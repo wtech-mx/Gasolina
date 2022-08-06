@@ -147,7 +147,7 @@
                                                 <div class="col-2">{{$xii_elemento->puesto}}</div>
                                                 <div class="col-2">{{$xii_elemento->telefono}}</div>
                                                 <div class="col-2">{{$xii_elemento->cargo}}</div>
-                                                <button id="eliminarArticulo" onclick="eliminarArticulo({{$xii_elemento->id}})" class="btn btn-outline btn-danger"><i class="fa fa-trash"></i></button>
+                                                <button class="btn btn-danger delete-link" value="{{$xii_elemento->id}}" onclick="location.reload()"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                             @endif
                                         @endforeach
 

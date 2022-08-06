@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\RoleController;
-use App\Models\xiiElementoController;
+use App\Models\UserProveedor;
 
 /*
 |--------------------------------------------------------------------------
@@ -415,7 +415,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('ver/sasisopa-xii-01', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_01'])->name('pdf_xii_01.view');
     Route::get('imprimir/sasisopa-xii-01', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_01_download'])->name('pdf_xii_01.print');
 
-    Route::get('eliminarArticulo/{id}', [App\Http\Controllers\xiiElementoController::class, 'eliminarArticulo'])->name('eliminarArticulo');
+    Route::delete('/remision/{id}', function ($id) {
+        $xii_elemento = UserProveedor::destroy($id);
+        return Response::json($xii_elemento);
+    });
 
     /*|--------------------------------------------------------------------------
     |XIV Elemento

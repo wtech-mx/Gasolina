@@ -87,15 +87,4 @@
     </div>
 </div>
 @endsection
-<script>
-function eliminarArticulo(id) {
- $.ajax({
-    url: '/eliminarArticulo/' + id,
-    type: 'DELETE',
-    success: function(result) {
-       //
-    }
- });
-  }
 
-</script>
