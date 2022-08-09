@@ -26,7 +26,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::resource('roles', RoleController::class);
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+    Route::delete('/delete/home/{id}', [App\Http\Controllers\HomeController::class, 'destroy'])->name('destroy.home');
 
     /*|--------------------------------------------------------------------------
     |Usuario

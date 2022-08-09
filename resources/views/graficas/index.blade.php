@@ -92,7 +92,49 @@
                                         <td>{{$item->title}}</td>
                                         <td>
                                             @if ($item->check == 1)
-                                            <b>Terminada</b>
+                                               <b>Terminada</b>
+                                            @else
+                                                <b>No terminada</b>
+                                            @endif
+                                        </td>
+                                        <td>{{$item->end}}</td>
+                                    </tr>
+                                    @endforeach
+
+                                    @foreach ($T2 as $item)
+                                    <tr>
+                                        <td>{{$item->title}}</td>
+                                        <td>
+                                            @if ($item->check == 1)
+                                                <b>Terminada</b>
+                                            @else
+                                                <b>No terminada</b>
+                                            @endif
+                                        </td>
+                                        <td>{{$item->end}}</td>
+                                    </tr>
+                                    @endforeach
+
+                                    @foreach ($T3 as $item)
+                                    <tr>
+                                        <td>{{$item->title}}</td>
+                                        <td>
+                                            @if ($item->check == 1)
+                                               <b>Terminada</b>
+                                            @else
+                                                <b>No terminada</b>
+                                            @endif
+                                        </td>
+                                        <td>{{$item->end}}</td>
+                                    </tr>
+                                    @endforeach
+
+                                    @foreach ($T4 as $item)
+                                    <tr>
+                                        <td>{{$item->title}}</td>
+                                        <td>
+                                            @if ($item->check == 1)
+                                               <b>Terminada</b>
                                             @else
                                                 <b>No terminada</b>
                                             @endif
@@ -123,6 +165,48 @@
                                     </thead>
                                     <tbody class="text-white">
                                         @foreach ($T1_anual as $item)
+                                        <tr>
+                                            <td>{{$item->title}}</td>
+                                            <td>
+                                                @if ($item->check == 1)
+                                                <b>Terminada</b>
+                                                @else
+                                                    <b>No terminada</b>
+                                                @endif
+                                            </td>
+                                            <td>{{$item->end}}</td>
+                                        </tr>
+                                        @endforeach
+
+                                        @foreach ($T2_anual as $item)
+                                        <tr>
+                                            <td>{{$item->title}}</td>
+                                            <td>
+                                                @if ($item->check == 1)
+                                                <b>Terminada</b>
+                                                @else
+                                                    <b>No terminada</b>
+                                                @endif
+                                            </td>
+                                            <td>{{$item->end}}</td>
+                                        </tr>
+                                        @endforeach
+
+                                        @foreach ($T3_anual as $item)
+                                        <tr>
+                                            <td>{{$item->title}}</td>
+                                            <td>
+                                                @if ($item->check == 1)
+                                                <b>Terminada</b>
+                                                @else
+                                                    <b>No terminada</b>
+                                                @endif
+                                            </td>
+                                            <td>{{$item->end}}</td>
+                                        </tr>
+                                        @endforeach
+
+                                        @foreach ($T4_anual as $item)
                                         <tr>
                                             <td>{{$item->title}}</td>
                                             <td>

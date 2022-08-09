@@ -69,7 +69,7 @@
                                 </form>
 
                                 <div id="elementoiv" class="text-center" style="display: none;">
-                                    <a class="btn" href="{{route('graficas')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
+                                    <a class="btn" href="{{route('graficas_admin')}}" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">
                                         Ejecutar
                                     </a>
 

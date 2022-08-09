@@ -29,8 +29,7 @@
                     </ul>
 
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-proveedor{{$item->id}}" role="tabpanel"
-                            aria-labelledby="pills-proveedor-tab">
+                        <div class="tab-pane fade show active" id="pills-proveedor{{$item->id}}" role="tabpanel" aria-labelledby="pills-proveedor-tab">
                             <div class="row">
                                 <div class="form-group col-6 mt-3">
                                     <label>Fecha Alta</label>
@@ -108,31 +107,24 @@
                         </div>
 
                         <div class="tab-pane fade" id="pills-usuarios{{$item->id}}" role="tabpanel" aria-labelledby="pills-usuarios-tab">
-                            <div class="row">
+                                {{-- <div class="row">
+                                    <table class=" table-bordered" id="tabla_proveedor">
+                                        <thead class="table-dark">
+                                            <tr class="text-center">
+                                                <th>nombre</th>
+                                                <th>correo</th>
+                                                <th>puesto</th>
+                                                <th>telefono</th>
+                                                <th>cargo</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                {{-- <div class="tab-pane fade" id="pills-calendario" role="tabpanel" aria-labelledby="pills-calendario-tab">
-                                    <div class="row">
-
-                                        <table class="table table-bordered" id="tabla_proveedor">
-                                            <thead class="table-dark">
-                                                <tr class="text-center">
-                                                    <th>nombre</th>
-                                                    <th>correo</th>
-                                                    <th>puesto</th>
-                                                    <th>telefono</th>
-                                                    <th>cargo</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
-
-                                        <a href="javascript:;" id="agregar3" class="btn" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">Agregar
-                                            usuario</a>
-
-                                    </div>
+                                    <a href="javascript:;" id="agregar3" class="btn" style="background-color:#001d3d;color:  #41CC2E!important; border: 2px solid #41CC2E!important;">Agregar
+                                        usuario</a>
                                 </div> --}}
 
-                                <hr>
-
+                            <div class="row">
                                 <div class="col-2" style="background-color: #212529; color: #fff">Nombre</div>
                                 <div class="col-2" style="background-color: #212529; color: #fff;">Correo</div>
                                 <div class="col-2" style="background-color: #212529; color: #fff;">Puesto</div>
@@ -147,11 +139,13 @@
                                                 <div class="col-2">{{$xii_elemento->puesto}}</div>
                                                 <div class="col-2">{{$xii_elemento->telefono}}</div>
                                                 <div class="col-2">{{$xii_elemento->cargo}}</div>
-                                                <button class="btn btn-danger delete-link" value="{{$xii_elemento->id}}" onclick="location.reload()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                <button class="col-2 btn btn-danger delete-link" value="{{$xii_elemento->id}}" onclick="location.reload()"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                             @endif
                                         @endforeach
 
+
                             </div>
+
                         </div>
                     </div>
                 </div>

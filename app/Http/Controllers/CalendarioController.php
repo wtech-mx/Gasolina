@@ -20,9 +20,19 @@ class CalendarioController extends Controller
 
     public function store_calendar(Request $request)
     {
-        $datosEvento = request()->except(['_token', '_method'], []);
+        $alert = new Calendario;
+        $alert->id_user = auth()->user()->id;
+        $alert->title = $request->get('title');
+        $alert->image = $request->get('image');
+        $alert->descripcion = $request->get('descripcion');
+        $alert->start = $request->get('start');
+        $alert->end = $request->get('end');
+        $alert->color = $request->get('color');
+        $alert->estatus = 0;
+        $alert->check = 0;
 
-        Calendario::insert($datosEvento);
+        $alert->save();
+        return back();
     }
 
     public function show_calendar()
@@ -67,7 +77,7 @@ class CalendarioController extends Controller
         }elseif($color == '#9acc2e'){
             $respuesta = xvElementor02::where('id', '=', $id)->update($datosEvento);
         }elseif($color == '#D34E24'){
-            $respuesta = viiiElemento03::where('id', '=', $id)->update($datosEvento);
+            $respuesta = Calendario::where('id', '=', $id)->update($datosEvento);
         }else{
             $respuesta = Tareas::where('id', '=', $id)->update($datosEvento);
         }

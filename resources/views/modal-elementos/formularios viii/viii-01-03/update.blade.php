@@ -100,13 +100,12 @@
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Inicio</label>
-                                    <input name="start" type="date" class="form-control" id="start" value="{{$item->start}}">
+                                    <input type="date" class="form-control" id="start" name="start">
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Tiempo</label>
                                     <select name="tiempo" id="tiempo">
-                                        <option value="{{$item->tiempo}}">{{$item->tiempo}}</option>
                                         <option value="tri">Trimestral</option>
                                         <option value="sem">Semestral</option>
                                         <option value="uno">1 año</option>

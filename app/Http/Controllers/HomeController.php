@@ -11,6 +11,7 @@ use App\Models\ViElemento;
 use App\Models\xElemento;
 use App\Models\xvElemento;
 use App\Models\xvElementor02;
+use Illuminate\Support\Facades\Session;
 use Carbon\Carbon;
 
 class HomeController extends Controller
@@ -41,6 +42,12 @@ class HomeController extends Controller
 
         $calendario_pendientes = Calendario::
         where('check', '=', 0)
+        ->where('elemento', '==', null)
+        ->get();
+
+        $calendario_elemento = Calendario::
+        where('check', '=', 0)
+        ->where('elemento', '!=', null)
         ->get();
 
         $xvElemento_pendientes = xvElemento::
@@ -115,7 +122,16 @@ class HomeController extends Controller
 
 
 
-        return view('home', compact('tareas_pendientes', 'tareas_terminadas', 'xvElemento_pendientes', 'xvElementor02_pendientes', 'xvElemento_terminadas', 'xvElementor02_terminadas', 'tareas_vencer', 'xElemento' , 'xElemento_terminadas', 'xvElemento_vencer', 'xvElementor02_vencer', 'vi_elemento', 'difundir', 'config', 'calendario_pendientes', 'calendario_terminadas', 'calendario_vencer'));
+        return view('home', compact('tareas_pendientes', 'tareas_terminadas', 'xvElemento_pendientes', 'xvElementor02_pendientes', 'xvElemento_terminadas', 'xvElementor02_terminadas', 'tareas_vencer', 'xElemento' , 'xElemento_terminadas', 'xvElemento_vencer', 'xvElementor02_vencer', 'vi_elemento', 'difundir', 'config', 'calendario_elemento', 'calendario_pendientes', 'calendario_terminadas', 'calendario_vencer'));
+    }
+
+    public function destroy(Request $request, $id){
+
+        $calendario = Calendario::findOrFail($id);
+        $calendario->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
     }
 
     public function graficas()

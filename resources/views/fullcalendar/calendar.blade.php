@@ -145,7 +145,7 @@
         });
 
         function recolectarDatosGUI(method){
-            colorAlert =("#2ECC71");
+            colorAlert =("#2ecc71");
             estatusDefault = 0;
             checkDefault = 0;
             imageDefault = ("{{asset('assets/img/icons/checked.png') }}");
