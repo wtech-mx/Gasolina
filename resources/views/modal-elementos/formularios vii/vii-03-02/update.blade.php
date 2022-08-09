@@ -58,7 +58,7 @@
                                 <input type="file" class="custom-file-input input-group-text" id="pdf" name="pdf" value="{{$item->pdf }}">
 
                                 <a href="{{asset('vii_elemento_03/'.$item->pdf)}}">
-                                    <iframe width="400" height="400" src="{{asset('vii_elemento_03/'.$item->pdf)}}" frameborder="0"></iframe>
+                                    <embed src="{{asset('vii_elemento_03/'.$item->pdf)}}" class="img-firma">
                                 </a>
                             </div>
                         </div>
