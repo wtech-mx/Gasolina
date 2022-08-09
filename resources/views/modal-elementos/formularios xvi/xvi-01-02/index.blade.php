@@ -64,8 +64,8 @@
                                     <td>{{$row->User->name}}</td>
                                     <td>{{$row->usuario}}</td>
                                     <td>{{$row->fecha}}</td>
-                                    <td>{{$row->situacion_observada}}</td>
-                                    <td>{{$row->fecha}}</td>
+                                    <td>{{$row->seguimiento}}</td>
+                                    <td>{{$row->estatus}}</td>
 
                                     <td>
                                         @if ($row->pdf == NULL)

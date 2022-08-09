@@ -20,6 +20,8 @@ class xviElemento02 extends Model
         'descripcion',
         'usuario',
         'fecha',
+        'estatus',
+        'seguimiento',
         'pdf',
     ];
 

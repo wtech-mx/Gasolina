@@ -18,6 +18,16 @@
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
+                                    <label>Estatus</label>
+                                    <input name="estatus" type="text" class="form-control" id="estatus" value="{{$row->estatus}}">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
+                                    <label>Seguimiento</label>
+                                    <input name="seguimiento" type="text" class="form-control" id="seguimiento" value="{{$row->seguimiento}}">
+                                </div>
+
+                                <div class="form-group col-6 mt-3">
                                     <label>Fecha</label>
                                     <input name="fecha" type="date" class="form-control" id="fecha" value="{{$row->fecha}}">
                                 </div>

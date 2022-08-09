@@ -46,6 +46,7 @@ class xviElementoController extends Controller
             $xvi_elemento->area = $request->get('area');
             $xvi_elemento->daño_accidente = $request->get('daño_accidente');
             $xvi_elemento->tipo_personal = $request->get('tipo_personal');
+
             if($request->get('usuario') == null){
                 $xvi_elemento->usuario = $request->get('usuario_otro');
             }else{
@@ -159,6 +160,8 @@ class xviElementoController extends Controller
             $xvi_elemento->descripcion = $request->get('descripcion');
             $xvi_elemento->usuario = $request->get('usuario');
             $xvi_elemento->fecha = $request->get('fecha');
+            $xvi_elemento->estatus = $request->get('estatus');
+            $xvi_elemento->seguimiento = $request->get('seguimiento');
 
             if ($request->hasFile("pdf")) {
                 $file = $request->file('pdf');
@@ -188,6 +191,8 @@ class xviElementoController extends Controller
         $xvi_elemento->descripcion = $request->get('descripcion');
         $xvi_elemento->usuario = $request->get('usuario');
         $xvi_elemento->fecha = $request->get('fecha');
+        $xvi_elemento->estatus = $request->get('estatus');
+        $xvi_elemento->seguimiento = $request->get('seguimiento');
 
         if ($request->hasFile("pdf")) {
             $file = $request->file('pdf');
