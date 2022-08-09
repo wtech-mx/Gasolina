@@ -234,7 +234,7 @@ class viiiElementoController extends Controller
                     $calendario->title = $viii_elemento->autorizacion;
                     $date = date("Y-m-d", strtotime($request->get('start')));
                     $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." month"));
-                    $calendario->end = $calendario->start;
+                    $calendario->end = date("Y-m-d", strtotime($calendario->start."+ 1 days"));
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
@@ -248,7 +248,7 @@ class viiiElementoController extends Controller
                     $calendario->title = $viii_elemento->autorizacion;
                     $date = date("Y-m-d", strtotime($request->get('start')));
                     $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
-                    $calendario->end = $calendario->start;
+                    $calendario->end = date("Y-m-d", strtotime($calendario->start."+ 1 days"));
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
@@ -262,7 +262,7 @@ class viiiElementoController extends Controller
                     $calendario->title = $viii_elemento->autorizacion;
                     $date = date("Y-m-d", strtotime($request->get('start')));
                     $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
-                    $calendario->end = $calendario->start;
+                    $calendario->end = date("Y-m-d", strtotime($calendario->start."+ 1 days"));
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
@@ -276,7 +276,7 @@ class viiiElementoController extends Controller
                     $calendario->title = $viii_elemento->autorizacion;
                     $date = date("Y-m-d", strtotime($request->get('start')));
                     $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
-                    $calendario->end = $calendario->start;
+                    $calendario->end = date("Y-m-d", strtotime($calendario->start."+ 1 days"));
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
@@ -290,7 +290,7 @@ class viiiElementoController extends Controller
                     $calendario->title = $viii_elemento->autorizacion;
                     $date = date("Y-m-d", strtotime($request->get('start')));
                     $calendario->start = date("Y-m-d", strtotime($date."+ ".$i." year"));
-                    $calendario->end = $calendario->start;
+                    $calendario->end = date("Y-m-d", strtotime($calendario->start."+ 1 days"));
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
