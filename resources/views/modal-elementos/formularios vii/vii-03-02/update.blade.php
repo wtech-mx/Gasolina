@@ -41,10 +41,10 @@
                             <label for="nombre">Reportado por</label>
                             <select name="id_reportado" class="form-control" id="id_reportado">
                                     <option value="{{$item->id_reportado }}">{{$item->User->name }} {{ $item->apellido}}</option>
-                                    @foreach ($users as $item)
-                                        <option value="{{$item->id_empleado}}">{{$item->name}} {{ $item->apellido}}</option>
+                                    @foreach ($users as $item2)
+                                        <option value="{{$item2->id_empleado}}">{{$item2->name}} {{ $item2->apellido}}</option>
                                     @endforeach
-                                </select>
+                            </select>
                         </div>
 
                         <div class="form-group col-6 mt-3">
@@ -56,8 +56,9 @@
                             <div class="form-group mb-3 position-relative">
                                 <label class="form-label label-custom-yellow">Evidencia</label>
                                 <input type="file" class="custom-file-input input-group-text" id="pdf" name="pdf" value="{{$item->pdf }}">
-                                <a href="{{asset('vii_elemento_03/'.$item->pdf)}}" target="_blank">
-                                    <embed src="{{asset('vii_elemento_03/'.$item->pdf)}}" class="img-firma">
+
+                                <a href="{{asset('vii_elemento_03/'.$item->pdf)}}">
+                                    <iframe width="400" height="400" src="{{asset('vii_elemento_03/'.$item->pdf)}}" frameborder="0"></iframe>
                                 </a>
                             </div>
                         </div>
