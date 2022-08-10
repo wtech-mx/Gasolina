@@ -84,7 +84,7 @@
             });
             $.ajax({
                 type: "DELETE",
-                url: '/remision/' + id,
+                url: '/xii_elemento/delete/' + id,
                 success: function (data) {
                     console.log(data);
                     $("#xii_elemento" + id).remove();

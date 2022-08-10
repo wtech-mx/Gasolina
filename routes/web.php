@@ -415,7 +415,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('ver/sasisopa-xii-01', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_01'])->name('pdf_xii_01.view');
     Route::get('imprimir/sasisopa-xii-01', [App\Http\Controllers\xiiElementoController::class, 'pdf_sasisopa_xii_01_download'])->name('pdf_xii_01.print');
 
-    Route::delete('/remision/{id}', function ($id) {
+    Route::delete('xii_elemento/delete/{id}', function ($id) {
         $xii_elemento = UserProveedor::destroy($id);
         return Response::json($xii_elemento);
     });
