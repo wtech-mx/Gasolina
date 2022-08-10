@@ -6,9 +6,7 @@
                 <h5 class="modal-title" id="exampleModalXI">Editar XII-01-01</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form method="POST" action="{{ route('update.xii_01_01', $item->id) }}" enctype="multipart/form-data" role="form">
-                @csrf
-                <input type="hidden" name="_method" value="PATCH">
+
                 <div class="modal-body">
                     <ul class="nav nav-pills mb-3 d-flex " id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -29,6 +27,9 @@
                     </ul>
 
                     <div class="tab-content" id="pills-tabContent">
+                        <form method="POST" action="{{ route('update.xii_01_01', $item->id) }}" enctype="multipart/form-data" role="form">
+                            @csrf
+                            <input type="hidden" name="_method" value="PATCH">
                         <div class="tab-pane fade show active" id="pills-proveedor{{$item->id}}" role="tabpanel" aria-labelledby="pills-proveedor-tab">
                             <div class="row">
                                 <div class="form-group col-6 mt-3">
@@ -104,7 +105,13 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
                         </div>
+
+                    </form>
 
                         <div class="tab-pane fade" id="pills-usuarios{{$item->id}}" role="tabpanel" aria-labelledby="pills-usuarios-tab">
                                 {{-- <div class="row">
@@ -139,7 +146,13 @@
                                                 <div class="col-2">{{$xii_elemento->puesto}}</div>
                                                 <div class="col-2">{{$xii_elemento->telefono}}</div>
                                                 <div class="col-2">{{$xii_elemento->cargo}}</div>
-                                                <button class="col-2 btn btn-danger delete-link" value="{{$xii_elemento->id}}" onclick="location.reload()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                                <div class="col-2">
+                                                    <form method="POST" action="{{route('destroy.proveedor',$xii_elemento->id)}}">
+                                                        {{csrf_field() }}
+                                                        <input type="hidden" name="_method" value="DELETE">
+                                                        <input type="submit" class="btn btn-danger text-white" value="Borrar">
+                                                    </form>
+                                                </div>
                                             @endif
                                         @endforeach
 
@@ -149,12 +162,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                </div>
-            </form>
         </div>
     </div>
 </div>

@@ -74,28 +74,6 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 
-    <script>
-        jQuery('.delete-link').click(function () {
-            var id = $(this).val();
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
-                }
-            });
-            $.ajax({
-                type: "DELETE",
-                url: '/xii_elemento/delete/' + id,
-                success: function (data) {
-                    console.log(data);
-                    $("#xii_elemento" + id).remove();
-                },
-                error: function (data) {
-                    console.log('Error borrar:', data);
-                }
-            });
-        });
-
-    </script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#table_id').DataTable({

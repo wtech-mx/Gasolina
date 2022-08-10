@@ -44,4 +44,13 @@ class UserProveedorController extends Controller
                 ->with('error', 'Error en el registro!!');
         }
     }
+
+    public function destroy(Request $request, $id){
+
+        $user_proveedor = UserProveedor::findOrFail($id);
+        $user_proveedor->delete();
+
+        Session::flash('delete', 'Se Elimino su registro con exito');
+        return redirect()->back();
+    }
 }
