@@ -457,7 +457,7 @@ class viiiElementoController extends Controller
             $viii_elemento->area = $request->get('area');
             $viii_elemento->descripcion = $request->get('descripcion');
             $viii_elemento->revision = $request->get('revision');
-            $viii_elemento->fecha = $request->get('obtencion');
+            $viii_elemento->fecha = $request->get('fecha');
             if ($request->hasFile("pdf")) {
                 $file = $request->file('pdf');
                 $path = public_path() . '/viii_elemento_04';
@@ -480,7 +480,7 @@ class viiiElementoController extends Controller
         $viii_elemento->area = $request->get('area');
         $viii_elemento->descripcion = $request->get('descripcion');
         $viii_elemento->revision = $request->get('revision');
-        $viii_elemento->fecha = $request->get('obtencion');
+        $viii_elemento->fecha = $request->get('fecha');
         if ($request->hasFile("pdf")) {
             $file = $request->file('pdf');
             $path = public_path() . '/viii_elemento_04';

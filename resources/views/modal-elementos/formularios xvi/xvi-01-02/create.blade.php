@@ -33,17 +33,17 @@
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Situación observada</label>
-                                    <input name="situacion_observada" type="text" class="form-control" id="situacion_observada">
+                                    <input name="situacion_observada" type="text" class="form-control" id="situacion_observada" required>
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Tipo</label>
-                                    <input name="tipo" type="text" class="form-control" id="tipo">
+                                    <input name="tipo" type="text" class="form-control" id="tipo" required>
                                 </div>
 
                                 <div class="form-group col-6 mt-3">
                                     <label>Lugar</label>
-                                    <select id="lugar" name="lugar" class="form-select">
+                                    <select id="lugar" name="lugar" class="form-select" required>
                                         <option value="">Seleccione</option>
                                         <option value="Oficina administrativa">Oficina administrativa</option>
                                         <option value="Sanitarios de empleados">Sanitarios de empleados</option>

@@ -30,7 +30,7 @@
 <script>
     Swal.fire({
         title: 'Error!!',
-        html: 'Error <b>no se pudeo crear</b>favor de revisar datos ingresados </br>',
+        html: 'Error <b>no se pudeo crear</b> favor de revisar datos ingresados </br>',
         imageUrl: '{{ asset('alertas/close.png') }}',
         background: '#fff',
         imageWidth: 150,

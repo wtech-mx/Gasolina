@@ -218,12 +218,13 @@
                                     <div class="form-group mb-3 position-relative" >
                                         <i class="fa fa-lock icon-style-2"></i>
                                         <label for="">Tipo puesto</label>
-                                        <select class="form-select" aria-label="Default select example" id="puesto" name="puesto">
+                                        <select class="form-select" name="puesto" id="puesto" required>
                                             <option value="{{$item->puesto}}">{{$item->puesto}}</option>
-                                            <option value="Operativo">Operativo</option>
-                                            <option value="Supervisor">Supervisor</option>
-                                            <option value="Profesor o tecnico">Profesor o tecnico</option>
+                                            <option value="Empresario Gasolinero">Empresario Gasolinero</option>
                                             <option value="Gerente">Gerente</option>
+                                            <option value="Oficial Gasolinero">Oficial Gasolinero</option>
+                                            <option value="Auxiliar administrativo">Auxiliar administrativo</option>
+                                            <option value="Oficial de Mantenimiento">Oficial de Mantenimiento</option>
                                         </select>
                                     </div>
                                 </div>

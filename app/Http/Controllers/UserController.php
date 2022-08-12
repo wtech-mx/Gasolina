@@ -67,8 +67,10 @@ class UserController extends Controller
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
         if ($validator->fails()) {
-            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
-            return redirect()->back();
+         //Session::flash('error', $validator->errors()->getMessages());
+            return redirect()->back()
+              ->with('errorForm', $validator->errors()->getMessages())
+               ->withInput();
         }
         try {
             //3/3- Si la validacion es correcta se crea el registro
@@ -131,8 +133,10 @@ class UserController extends Controller
             Session::flash('success', 'Se ha guardado sus datos con exito');
             return redirect()->back();
         } catch (\Exception $e) {
-            Session::flash('error', 'opps error al crear usuario, favor de revisar bien los datos ingresados');
-            return redirect()->back();
+         //Session::flash('error', $validator->errors()->getMessages());
+         return redirect()->back()
+         ->with('errorForm', $validator->errors()->getMessages())
+          ->withInput();
         }
     }
     public function edit($id)
