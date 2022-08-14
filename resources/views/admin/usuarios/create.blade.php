@@ -55,7 +55,10 @@
                                         <div class="form-group mb-3 position-relative" style="position: relative">
                                             <i class="fa fa-envelope icon-style-2"></i>
                                             <label class="form-label label-custom-yellow">Correo</label>
-                                            <input class="form-control"  id="email" name="email" type="text" placeholder="Correo Electronico" value="{{ old('email') }}" required>
+                                            <input class="form-control @error('email') is-invalid @enderror"  id="email" name="email" type="text" placeholder="Correo Electronico" value="{{ old('email') }}" required>
+                                            @error('email')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
