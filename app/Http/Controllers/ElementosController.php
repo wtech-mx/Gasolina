@@ -121,18 +121,22 @@ class ElementosController extends Controller
         $T3 = xvElementor02::where('end', '>=', $fecha)->get();
         $conteoTotal3 = count($T3);
 
-        $T4 = Calendario::where('end', '>=', $fecha)->get();
+        $T4 = Calendario::where('end', '>=', $fecha)->where('elemento', '==', null)->get();
         $conteoTotal4 = count($T4);
 
-        $conteoTotal_suma= $conteoTotal + $conteoTotal2 + $conteoTotal3 + $conteoTotal4;
+        $T5 = Calendario::where('end', '>=', $fecha)->where('elemento', '!=', null)->get();
+        $conteoTotal5 = count($T5);
 
-    if($conteoTotal != 0 || $conteoTotal2 != 0 || $conteoTotal3 != 0 || $conteoTotal4 != 0){
+        $conteoTotal_suma= $conteoTotal + $conteoTotal2 + $conteoTotal3 + $conteoTotal4 + $conteoTotal5;
+
+    if($conteoTotal != 0 || $conteoTotal2 != 0 || $conteoTotal3 != 0 || $conteoTotal4 != 0 || $conteoTotal5 != 0){
         $V1 = Tareas::where('end', '>=', $fecha)->where('check', '=', 1)->get();
         $preventiva_term = DB::table('preventivas')->where('estado', '=', 1)->get();
         $xvElemento = xvElemento::where('end', '>=', $fecha)->where('check', '=', 1)->get();
         $xvElementor02 = xvElementor02::where('end', '>=', $fecha)->where('check', '=', 1)->get();
-        $calendario = Calendario::where('end', '>=', $fecha)->where('check', '=', 1)->get();
-        $suma = count($V1) + count($preventiva_term) + count($xvElemento) + count($xvElementor02) + count($calendario);
+        $calendario = Calendario::where('end', '>=', $fecha)->where('elemento', '==', null)->where('check', '=', 1)->get();
+        $viiiElemento = Calendario::where('end', '>=', $fecha)->where('elemento', '!=', null)->where('check', '=', 1)->get();
+        $suma = count($V1) + count($preventiva_term) + count($xvElemento) + count($xvElementor02) + count($calendario) + count($viiiElemento);
         $conteoTerminadas = $suma;
 
         $porcentajeTerminadas = (100 / $conteoTotal_suma) * $conteoTerminadas;
@@ -156,17 +160,21 @@ class ElementosController extends Controller
         $T3_anual = xvElementor02::where('end', '>=', $fecha_anual)->get();
         $conteoTotal_anual3 = count($T3_anual);
 
-        $T4_anual = Calendario::where('end', '>=', $fecha_anual)->get();
+        $T4_anual = Calendario::where('end', '>=', $fecha_anual)->where('elemento', '==', null)->get();
         $conteoTotal_anual4 = count($T4_anual);
 
-        $conteoTotal_anual_suma= $conteoTotal_anual + $conteoTotal_anual2 + $conteoTotal_anual3 + $conteoTotal_anual4;
+        $T5_anual = Calendario::where('end', '>=', $fecha_anual)->where('elemento', '!=', null)->get();
+        $conteoTotal_anual5 = count($T5_anual);
+
+        $conteoTotal_anual_suma= $conteoTotal_anual + $conteoTotal_anual2 + $conteoTotal_anual3 + $conteoTotal_anual4 + $conteoTotal_anual5;
 
     if($conteoTotal_anual != 0 || $conteoTotal_anual2 != 0 || $conteoTotal_anual3 != 0 || $conteoTotal_anual4 != 0){
         $V1_anual = Tareas::where('end', '>=', $fecha_anual)->where('check', '=', 1)->get();
         $xvElemento = xvElemento::where('end', '>=', $fecha_anual)->where('check', '=', 1)->get();
         $xvElementor02 = xvElementor02::where('end', '>=', $fecha_anual)->where('check', '=', 1)->get();
         $calendario = Calendario::where('end', '>=', $fecha_anual)->where('check', '=', 1)->get();
-        $conteoTerminadas_anual = count($V1_anual) + count($xvElemento) + count($xvElementor02) + count($calendario);
+        $viiiElemento = Calendario::where('end', '>=', $fecha_anual)->where('elemento', '!=', null)->where('check', '=', 1)->get();
+        $conteoTerminadas_anual = count($V1_anual) + count($xvElemento) + count($xvElementor02) + count($calendario) + count($viiiElemento);
 
         $porcentajeTerminadas_anual = (100 / $conteoTotal_anual_suma) * $conteoTerminadas_anual;
 
@@ -176,7 +184,7 @@ class ElementosController extends Controller
         $porcentajeTerminadas_anual = 0;
         $porcentajeNoTerminadas_anual = 0;
     }
-        return view('admin.graficas.index', compact('porcentajeTerminadas', 'porcentajeNoTerminadas', 'T1', 'T2', 'T3', 'T4','porcentajeTerminadas_anual', 'porcentajeNoTerminadas_anual', 'T1_anual', 'T2_anual', 'T3_anual', 'T4_anual'));
+        return view('admin.graficas.index', compact('porcentajeTerminadas', 'porcentajeNoTerminadas', 'T1', 'T2', 'T3', 'T4', 'T5','porcentajeTerminadas_anual', 'porcentajeNoTerminadas_anual', 'T1_anual', 'T2_anual', 'T3_anual', 'T4_anual', 'T5_anual'));
 
     }
 

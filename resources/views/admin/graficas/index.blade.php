@@ -70,6 +70,7 @@
                         <th scope="col">Nombre</th>
                         <th scope="col">Estatus</th>
                         <th scope="col">Fecha Fin</th>
+                        <th scope="col">Acciones</th>
                     </tr>
                     </thead>
                     <tbody class="text-white">
@@ -84,7 +85,84 @@
                                 @endif
                             </td>
                             <td>{{$item->end}}</td>
+                            <td></td>
                         </tr>
+                        @endforeach
+
+                        @foreach ($T2 as $item)
+                        <tr>
+                            <td>{{$item->title}}</td>
+                            <td>
+                                @if ($item->check == 1)
+                                    <b>Terminada</b>
+                                @else
+                                    <b>No terminada</b>
+                                @endif
+                            </td>
+                            <td>{{$item->end}}</td>
+                            <td>
+                                <a href="{{ route('index.xv_01_01') }}" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                    <i class="fa fa-eye"></i>
+                                </a >
+                            </td>
+                        </tr>
+                        @endforeach
+
+                        @foreach ($T3 as $item)
+                        <tr>
+                            <td>{{$item->title}}</td>
+                            <td>
+                                @if ($item->check == 1)
+                                   <b>Terminada</b>
+                                @else
+                                    <b>No terminada</b>
+                                @endif
+                            </td>
+                            <td>{{$item->end}}</td>
+                            <td>
+                                <a href="{{ route('index.xv_01_02') }}" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                    <i class="fa fa-eye"></i>
+                                </a >
+                            </td>
+                        </tr>
+                        @endforeach
+
+                        @foreach ($T4 as $item)
+                        <tr>
+                            <td>{{$item->title}}</td>
+                            <td>
+                                @if ($item->check == 1)
+                                   <b>Terminada</b>
+                                @else
+                                    <b>No terminada</b>
+                                @endif
+                            </td>
+                            <td>{{$item->end}}</td>
+                            <td></td>
+                        </tr>
+                        @endforeach
+
+                        @foreach ($T5 as $item)
+                        <tr>
+                            <td>{{$item->title}}</td>
+                            <td>
+                                @if ($item->check == 1)
+                                   <b>Terminada</b>
+                                @else
+                                    <b>No terminada</b>
+                                @endif
+                            </td>
+                            <td>{{$item->end}}</td>
+                            <td>
+                                <a data-bs-toggle="modal" data-bs-target="#modal{{$item->id}}" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </a>
+                                <a href="{{ route('index.viii_01_03') }}" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                    <i class="fa fa-eye"></i>
+                                </a >
+                            </td>
+                        </tr>
+                        @include('actividades.eliminar')
                         @endforeach
                     </tbody>
                 </table>
@@ -105,6 +183,7 @@
                             <th scope="col">Nombre</th>
                             <th scope="col">Estatus</th>
                             <th scope="col">Fecha Fin</th>
+                            <th scope="col">Acciones</th>
                         </tr>
                         </thead>
                         <tbody class="text-white">
@@ -119,7 +198,84 @@
                                     @endif
                                 </td>
                                 <td>{{$item->end}}</td>
+                                <td></td>
                             </tr>
+                            @endforeach
+
+                            @foreach ($T2_anual as $item)
+                            <tr>
+                                <td>{{$item->title}}</td>
+                                <td>
+                                    @if ($item->check == 1)
+                                    <b>Terminada</b>
+                                    @else
+                                        <b>No terminada</b>
+                                    @endif
+                                </td>
+                                <td>{{$item->end}}</td>
+                                <td>
+                                    <a href="{{ route('index.xv_01_01') }}" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                        <i class="fa fa-eye"></i>
+                                    </a >
+                                </td>
+                            </tr>
+                            @endforeach
+
+                            @foreach ($T3_anual as $item)
+                            <tr>
+                                <td>{{$item->title}}</td>
+                                <td>
+                                    @if ($item->check == 1)
+                                    <b>Terminada</b>
+                                    @else
+                                        <b>No terminada</b>
+                                    @endif
+                                </td>
+                                <td>{{$item->end}}</td>
+                                <td>
+                                    <a href="{{ route('index.xv_01_02') }}" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                        <i class="fa fa-eye"></i>
+                                    </a >
+                                </td>
+                            </tr>
+                            @endforeach
+
+                            @foreach ($T4_anual as $item)
+                            <tr>
+                                <td>{{$item->title}}</td>
+                                <td>
+                                    @if ($item->check == 1)
+                                    <b>Terminada</b>
+                                    @else
+                                        <b>No terminada</b>
+                                    @endif
+                                </td>
+                                <td>{{$item->end}}</td>
+                                <td></td>
+                            </tr>
+                            @endforeach
+
+                            @foreach ($T5_anual as $item)
+                            <tr>
+                                <td>{{$item->title}}</td>
+                                <td>
+                                    @if ($item->check == 1)
+                                    <b>Terminada</b>
+                                    @else
+                                        <b>No terminada</b>
+                                    @endif
+                                </td>
+                                <td>{{$item->end}}</td>
+                                <td>
+                                    <a data-bs-toggle="modal" data-bs-target="#modal{{$item->id}}" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="{{ route('index.viii_01_03') }}" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                        <i class="fa fa-eye"></i>
+                                    </a >
+                                </td>
+                            </tr>
+                            @include('actividades.eliminar')
                             @endforeach
                         </tbody>
                     </table>
