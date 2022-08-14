@@ -224,7 +224,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             }elseif($viii_elemento->tiempo == 'sem'){
@@ -238,7 +238,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             }elseif($viii_elemento->tiempo == 'uno'){
@@ -252,7 +252,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             }elseif($viii_elemento->tiempo == 'cinco'){
@@ -266,7 +266,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             }elseif($viii_elemento->tiempo == 'diez'){
@@ -280,7 +280,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             }elseif($viii_elemento->tiempo == 'treinta'){
@@ -294,7 +294,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             }
@@ -339,7 +339,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
 
                     $calendario->save();
                 }
@@ -356,7 +356,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             break;
@@ -372,7 +372,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             break;
@@ -388,7 +388,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             break;
@@ -404,7 +404,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             break;
@@ -420,7 +420,7 @@ class viiiElementoController extends Controller
                     $calendario->color = $config->color_temporalidad;
                     $calendario->check = 0;
                     $calendario->estatus = 0;
-                    $calendario->image = 'http://gasolina.test/assets/img/icons/checked.png';
+                    $calendario->image = 'http://protenergy.com.mx/assets/img/icons/checked.png';
                     $calendario->save();
                 }
             break;
