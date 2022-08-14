@@ -26,7 +26,11 @@ class CalendarioController extends Controller
         $alert->image = $request->get('image');
         $alert->descripcion = $request->get('descripcion');
         $alert->start = $request->get('start');
-        $alert->end = $request->get('end');
+        if($request->get('end') == $request->get('start')){
+            $alert->end = date("Y-m-d", strtotime($alert->start."+ 1 days"));
+        }else{
+            $alert->end = $request->get('end');
+        }
         $alert->color = $request->get('color');
         $alert->estatus = 0;
         $alert->check = 0;
