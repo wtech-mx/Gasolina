@@ -65,9 +65,9 @@
                                     <td>{{$item->reglas}}</td>
                                     <td>{{$item->mecanismos}}</td>
                                     <td> @if ($item->configuracion == '1')
-                                        <input class="form-check-input" type="radio" name="configuracion" id="configuracion" checked disabled>
+                                        <input class="form-check-input" type="radio" checked disabled>
                                     @else
-                                        <input class="form-check-input" type="radio" name="configuracion" id="configuracion" disabled>
+                                        <input class="form-check-input" type="radio" disabled>
                                     @endif</td>
                                     <td>
                                         @if ($item->pdf == NULL)

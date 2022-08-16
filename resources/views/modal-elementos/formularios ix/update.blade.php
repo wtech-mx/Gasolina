@@ -50,9 +50,9 @@
                                 <div class="form-group col-6 mt-3">
                                     <label>Válido para la estación</label>
                                     @if ($item->configuracion == '1')
-                                        <input class="form-check-input" type="radio" name="configuracion" id="configuracion" checked>
+                                        <input class="form-check-input" type="radio" name="configuracion" id="configuracion" value="1" checked>
                                     @else
-                                        <input class="form-check-input" type="radio" name="configuracion" id="configuracion">
+                                        <input class="form-check-input" type="radio" name="configuracion" id="configuracion" value="1">
                                     @endif
 
                                 </div>
