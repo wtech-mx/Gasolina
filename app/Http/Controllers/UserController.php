@@ -70,7 +70,7 @@ class UserController extends Controller
         if ($validator->fails()) {
          //Session::flash('error', $validator->errors()->getMessages());
 //            return redirect()->back()->with('errorForm', $validator->errors()->getMessages())->withInput();
-            return redirect()->back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validator)->with('errorForm', $validator->errors()->getMessages())->withInput();
         }
         try {
             //3/3- Si la validacion es correcta se crea el registro
