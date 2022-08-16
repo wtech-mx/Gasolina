@@ -37,7 +37,10 @@
                                         <div class="form-group mb-3 position-relative">
                                             <i class="fa fa-user icon-style-2"></i>
                                             <label class="form-label label-custom-yellow">Nombre</label>
-                                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" value="{{ old('name') }}" required>
+                                            <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Nombre" value="{{ old('name') }}" required>
+                                            @error('name')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
 
@@ -94,7 +97,10 @@
                                         <div class="form-group mb-3 position-relative" >
                                             <i class="fa fa-lock icon-style-2"></i>
                                             <label class="form-label label-custom-yellow">Contraseña</label>
-                                            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+                                            <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Contraseña" required>
+                                            @error('password')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -138,6 +144,9 @@
                                             <i class="fa fa-cubes icon-style-2"></i>
                                             <label class="form-label label-custom-yellow">Role</label>
                                             {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
+                                            @error('roles')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
 

@@ -33,7 +33,10 @@
                                         <div class="form-group mb-3 position-relative">
                                             <i class="fa fa-user icon-style-2"></i>
                                             <label class="form-label label-custom-yellow">Nombre</label>
-                                            <input type="text" class="form-control input-style" id="name" name="name" placeholder="Nombre" value="{{ old('name') }}">
+                                            <input type="text" class="form-control input-style @error('name') is-invalid @enderror" id="name" name="name" placeholder="Nombre" value="{{ old('name') }}">
+                                            @error('name')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
 
@@ -51,7 +54,10 @@
                                         <div class="form-group mb-3 position-relative" style="position: relative">
                                             <i class="fa fa-envelope icon-style-2"></i>
                                             <label class="form-label label-custom-yellow">Correo</label>
-                                            <input class="form-control input-style"  id="email" name="email" type="text" placeholder="Correo Electronico" value="{{ old('email') }}">
+                                            <input class="form-control input-style @error('email') is-invalid @enderror"  id="email" name="email" type="text" placeholder="Correo Electronico" value="{{ old('email') }}">
+                                            @error('email')
+                                                <div class="alert alert-danger">{{ $message }}</div>
+                                            @enderror
                                         </div>
                                     </div>
 
@@ -83,7 +89,10 @@
                                         <div class="form-group mb-3 position-relative" >
                                             <i class="fa fa-lock icon-style-2"></i>
                                             <label class="form-label label-custom-yellow">Contraseña</label>
-                                            <input type="password" class="form-control input-style" id="password" name="password" placeholder="Contraseña" value="{{ old('Contraseña') }}">
+                                            <input type="password" class="form-control input-style @error('password') is-invalid @enderror" id="password" name="password" placeholder="Contraseña" value="{{ old('Contraseña') }}">
+                                            @error('password')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -170,6 +179,9 @@
                                             <i class="fa fa-cubes icon-style-2"></i>
                                             <label class="form-label label-custom-yellow">Role</label>
                                             {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
+                                            @error('roles')
+                                            <div class="alert alert-danger">{{ $message }}</div>
+                                        @enderror
                                         </div>
                                     </div>
 

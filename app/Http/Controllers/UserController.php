@@ -62,7 +62,8 @@ class UserController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:191',
             'email' => 'required|string|email|max:191|unique:users',
-            'password' => 'required|confirmed|min:9'
+            'password' => 'required|confirmed|min:9',
+            'roles' => 'required'
         ]);
 
         //2/3- Envia Mensaje de validacion en la Sweetalert
