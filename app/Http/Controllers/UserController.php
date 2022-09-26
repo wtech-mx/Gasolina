@@ -69,7 +69,7 @@ class UserController extends Controller
         //2/3- Envia Mensaje de validacion en la Sweetalert
         if ($validator->fails()) {
          //Session::flash('error', $validator->errors()->getMessages());
-//            return redirect()->back()->with('errorForm', $validator->errors()->getMessages())->withInput();
+            // return redirect()->back()->with('errorForm', $validator->errors()->getMessages())->withInput();
             return redirect()->back()->withErrors($validator)->with('errorForm', $validator->errors()->getMessages())->withInput();
         }
         try {
@@ -221,15 +221,15 @@ class UserController extends Controller
 
     public function update_usuario_password(Request $request, $id)
     {
-        $validate = $this->validate($request, [
+        $validator = $this->validate($request, [
             'password' => 'required|string|confirmed|min:8',
         ]);
 
         $user = User::findOrFail($id);
 
         $pass = $user->password = $request->password;
-        $user->password = Hash::make($request->password);
-        $email = $user->email;
+        $user->password = Hash::make($pass);
+        $user->update();
 
         Session::flash('edit', 'Se ha actualizado su contrasena con exito');
         return redirect()->route('index.usuario');

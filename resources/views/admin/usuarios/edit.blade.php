@@ -27,6 +27,16 @@
                         </div>
                     </div>
 
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
                     <ul class="nav nav-pills d-flex justify-content-center mb-3 mt-5" id="pills-tab" role="tablist">
 
                         <li class="nav-item p-2" role="presentation">
@@ -206,6 +216,9 @@
                                             <label class="form-label label-custom-yellow">Contraseña</label>
                                             <input type="password" class="form-control " id="password"
                                                 name="password" placeholder="****">
+                                                @error('password')
+                                                    <div class="alert alert-danger">{{ $message }}</div>
+                                                @enderror
                                         </div>
                                     </div>
                                 </div>

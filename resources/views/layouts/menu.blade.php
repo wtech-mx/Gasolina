@@ -32,7 +32,7 @@
       </li> --}}
 
       <li class="">
-        <a href="{{ route('graficas') }}" class="nav-link nav-menuiem text-white">
+        <a href="{{ route('graficas_admin') }}" class="nav-link nav-menuiem text-white">
           <img class="img-card-menu2" src=" {{ asset('assets/img/barra-grafica.png') }}">
           Metas
         </a>
