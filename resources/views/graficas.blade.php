@@ -18,7 +18,7 @@
         </div>
         @else --}}
         <div class="card card-menu" style="background-color: #ffffff!important">
-            <a style="text-decoration: none;color: #000000" href="{{ route('graficas') }}">
+            <a style="text-decoration: none;color: #000000" href="{{ route('graficas_admin') }}">
                 <div class="card-body">
                     <img class="img-card-menu" src=" {{ asset('assets/img/icons/grafico-de-barras.png') }}">
                     <h4 class="card-title card-menu-title">Mis Actividades</h4>
