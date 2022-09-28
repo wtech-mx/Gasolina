@@ -25,6 +25,7 @@ class EmpresaController extends Controller
 function index()
 {
         $empresa = User::
+        where('delete', '=', NULL)->
         where('empresa', '=', 1)
         ->get();
 
@@ -34,6 +35,7 @@ function index()
 public function create()
 {
         $user = DB::table('users')
+            ->where('delete', '=', NULL)
             ->get();
 
         return view('admin.empresas.create', compact('user'));
@@ -87,6 +89,7 @@ public function edit($id)
         $empresa = User::findOrFail($id);
 
         $empresas = DB::table('users')
+            ->where('delete', '=', NULL)
             ->where('empresa', '=', 1)
             ->get();
 

@@ -25,10 +25,10 @@ class UserController extends Controller
     function index()
     {
         $users = User::
-            // where('empresa', '=', NULL)
+             where('delete', '=', NULL)
             // ->where('id_empresa', '!=', NULL)
             // ->where('id_sucursal', '!=', NULL)
-            get();
+            ->get();
 
         return view('admin.usuarios.index', compact('users'));
     }
@@ -43,10 +43,12 @@ class UserController extends Controller
     public function create()
     {
         $empresa = DB::table('users')
+            ->where('delete', '=', NULL)
             ->where('empresa', '=', 1)
             ->get();
 
         $sucursal = DB::table('users')
+            ->where('delete', '=', NULL)
             ->where('empresa', '=', 2)
             ->get();
 
@@ -148,10 +150,12 @@ class UserController extends Controller
         $userRole = $usuario->roles->pluck('name','name')->all();
 
         $empresa = DB::table('users')
+            ->where('delete', '=', NULL)
             ->where('empresa', '=', 1)
             ->get();
 
         $sucursal = DB::table('users')
+            ->where('delete', '=', NULL)
             ->where('empresa', '=', 2)
             ->get();
 
@@ -232,6 +236,17 @@ class UserController extends Controller
         $user->update();
 
         Session::flash('edit', 'Se ha actualizado su contrasena con exito');
+        return redirect()->route('index.usuario');
+    }
+
+    public function destroy(Request $request, $id)
+    {
+
+        $user = User::findOrFail($id);
+        $user->delete = '1';
+        $user->update();
+
+        Session::flash('edit', 'El usuario se a eliminado');
         return redirect()->route('index.usuario');
     }
 }

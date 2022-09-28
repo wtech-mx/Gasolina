@@ -16,7 +16,7 @@ class DifundirController extends Controller
 {
     public function index()
     {
-            $users = User::get();
+            $users = User::where('delete', '=', NULL)->get();
 
             $difundirs = Difundir::get();
 
@@ -26,7 +26,7 @@ class DifundirController extends Controller
     public function create()
     {
         $user = DB::table('users')
-            ->get();
+            ->where('delete', '=', NULL)->get();
 
         return view('difundir.create', compact('user'));
     }

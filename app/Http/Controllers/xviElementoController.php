@@ -17,7 +17,7 @@ class xviElementoController extends Controller
     {
         $xvi_elemento = xviElemento::get();
         $xvi_elemento_vinculacion = xviElementoVinculacion::get();
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         $config = DB::table('configuracion')->first();
 
@@ -129,7 +129,7 @@ class xviElementoController extends Controller
     public function index_02()
     {
         $xvi_elemento = xviElemento02::get();
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         $config = DB::table('configuracion')->first();
 

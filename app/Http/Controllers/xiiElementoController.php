@@ -16,7 +16,7 @@ class xiiElementoController extends Controller
     public function index()
     {
         $xii_elemento = xiiElemento::get();
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
         $xii_elemento_user = UserProveedor::get();
 
         return view('modal-elementos.formularios xii.index', compact('xii_elemento', 'users', 'xii_elemento_user'));

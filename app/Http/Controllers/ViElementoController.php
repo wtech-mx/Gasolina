@@ -19,7 +19,7 @@ class ViElementoController extends Controller
 
     public function index()
     {
-        $user = User::get();
+        $user = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.formularios vi.index', compact('user'));
     }
@@ -58,20 +58,20 @@ class ViElementoController extends Controller
 
     public function puesto()
     {
-        $user = User::get();
+        $user = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.formularios vi.puesto', compact('user'));
     }
     public function puesto_formato()
     {
-        $user = User::get();
+        $user = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.formularios vi.visualizar_puesto', compact('user'));
     }
 
     public function edit_empresario($id)
     {
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
         $vi = ViElemento::findOrFail($id);
 
         return view('modal-elementos.formularios vi.empresario', compact('users', 'vi'));
@@ -79,7 +79,7 @@ class ViElementoController extends Controller
 
     public function edit_gerente($id)
     {
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
         $vi = ViElemento::findOrFail($id);
 
         return view('modal-elementos.formularios vi.gerente', compact('users', 'vi'));
@@ -87,7 +87,7 @@ class ViElementoController extends Controller
 
     public function edit_gasolinero($id)
     {
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
         $vi = ViElemento::findOrFail($id);
 
         return view('modal-elementos.formularios vi.gasolinero', compact('users', 'vi'));
@@ -95,7 +95,7 @@ class ViElementoController extends Controller
 
     public function edit_administrativo($id)
     {
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
         $vi = ViElemento::findOrFail($id);
 
         return view('modal-elementos.formularios vi.administrativo', compact('users', 'vi'));
@@ -103,7 +103,7 @@ class ViElementoController extends Controller
 
     public function edit_mantenimiento($id)
     {
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
         $vi = ViElemento::findOrFail($id);
 
         return view('modal-elementos.formularios vi.mantenimiento', compact('users', 'vi'));

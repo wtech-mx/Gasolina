@@ -70,14 +70,14 @@ class xElementoController extends Controller
 
     public function create_preguntas()
     {
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.fomularios X.x-01-02', compact('users'));
     }
 
     public function create_x_02_01()
     {
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.fomularios X.x-02-01', compact('users'));
     }

@@ -34,6 +34,7 @@ class User extends Authenticatable
 
         'alta',
         'baja',
+        'delete',
         'enfermedad',
         'alergias',
         'seguro_social',

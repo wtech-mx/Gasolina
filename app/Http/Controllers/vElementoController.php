@@ -10,13 +10,15 @@ use Spatie\Permission\Models\Role;
 class vElementoController extends Controller
 {
     public function index(){
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         $empresa = DB::table('users')
+            ->where('delete', '=', NULL)
             ->where('empresa', '=', 1)
             ->get();
 
         $sucursal = DB::table('users')
+            ->where('delete', '=', NULL)
             ->where('empresa', '=', 2)
             ->get();
 

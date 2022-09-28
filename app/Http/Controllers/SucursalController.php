@@ -21,15 +21,18 @@ class SucursalController extends Controller
     function index()
     {
             $sucursal_admin = User::
+            where('delete', '=', NULL)->
             where('empresa', '=', 2)
             ->get();
 
             $sucursal_empresa = User::
+            where('delete', '=', NULL)->
             where('empresa', '=', 2)
             ->where('id_empresa', '=', auth()->user()->id)
             ->get();
 
             $empresa = User::
+            where('delete', '=', NULL)->
             where('empresa', '=', 1)
             ->first();
 
@@ -39,6 +42,7 @@ class SucursalController extends Controller
     public function create()
     {
             $empresa = DB::table('users')
+                ->where('delete', '=', NULL)
                 ->where('empresa', '=', 1)
                 ->get();
 
@@ -90,6 +94,7 @@ class SucursalController extends Controller
             $sucursal = User::findOrFail($id);
 
             $empresas = DB::table('users')
+                ->where('delete', '=', NULL)
                 ->where('empresa', '=', 1)
                 ->get();
 

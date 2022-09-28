@@ -510,7 +510,7 @@ class viiiElementoController extends Controller
     public function index_05()
     {
         $viii_elemento = viiiElemento05::get();
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.formularios viii.viii-01-05.index', compact('viii_elemento', 'users'));
     }

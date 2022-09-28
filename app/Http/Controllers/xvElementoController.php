@@ -14,7 +14,7 @@ class xvElementoController extends Controller
 {
     public function index(){
         $xv_elemento = xvElemento::get();
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.formularios xv.xv-01-01.index', compact('xv_elemento', 'users'));
     }
@@ -108,7 +108,7 @@ class xvElementoController extends Controller
 
     public function index_02(){
         $xv_elemento = xvElementor02::get();
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.formularios xv.xv-01-02.index', compact('xv_elemento', 'users'));
     }

@@ -14,7 +14,7 @@ class PreventivaController extends Controller
 {
     public function index()
     {
-            $users = User::get();
+            $users = User::where('delete', '=', NULL)->get();
 
             $preventivas = Preventiva::get();
 

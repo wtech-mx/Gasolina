@@ -17,7 +17,7 @@ class viiElementoController extends Controller
     public function index()
     {
         $vii_elemento = viiElemento::get();
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.formularios vii.VII-02-02.index', compact('vii_elemento', 'users'));
     }
@@ -115,7 +115,7 @@ class viiElementoController extends Controller
     public function index_03()
     {
         $vii_elemento = viiElemento03::get();
-        $users = User::get();
+        $users = User::where('delete', '=', NULL)->get();
 
         return view('modal-elementos.formularios vii.vii-03-02.index', compact('vii_elemento', 'users'));
     }

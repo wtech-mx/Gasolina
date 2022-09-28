@@ -64,8 +64,12 @@
                                                 <a href="{{ route('edit.usuario', $item->id) }}" style="color: #ffffff;font-size: 16px;padding: 5px;">
                                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                 </a>
+                                                <a data-bs-toggle="modal" data-bs-target="#modal{{$item->id}}" style="color: #ffffff;font-size: 16px;padding: 5px;">
+                                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                                </a>
                                             </td>
                                         </tr>
+                                        @include('admin.usuarios.eliminar')
                                         @endforeach
                                     </tbody>
                                 </table>
